@@ -1,0 +1,53 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Carte' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Carte
+# Rx 系列
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'RxFlow'
+
+# UI 框架
+pod 'IGListKit', '~> 3.0'
+pod "CollectionKit"
+pod 'SnapKit'
+pod 'MJRefresh'
+pod 'PasswordTextField'
+pod 'Colours'
+pod 'Onboard' # 引导页
+
+# 键盘
+pod 'IQKeyboardManagerSwift'
+
+# 网络框架
+pod 'Alamofire', '~> 4.5'
+pod 'Moya', '~> 10.0'
+pod 'Kingfisher'
+pod 'Unbox'
+pod "PromiseKit", "~> 4.4"
+
+# 存储
+pod 'SwiftyUserDefaults'
+
+# 动画
+pod 'pop', '~> 1.0'
+
+# Misc.
+pod 'Then'
+
+
+  target 'CarteTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CarteUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
