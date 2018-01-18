@@ -129,12 +129,14 @@
 		9FF5598B200F8D28004EB3F2 /* Carte */ = {
 			isa = PBXGroup;
 			children = (
+				9FF559BF20108427004EB3F2 /* Infrastructure */,
+				9FF559BE201083DD004EB3F2 /* Extensions */,
+				9FF559BD201083C4004EB3F2 /* Module */,
+				9FF559C020108436004EB3F2 /* Resource */,
 				9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */,
 				9FF5598E200F8D28004EB3F2 /* ViewController.swift */,
 				9FF55990200F8D28004EB3F2 /* Main.storyboard */,
-				9FF55996200F8D28004EB3F2 /* Assets.xcassets */,
 				9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */,
-				9FF5599B200F8D28004EB3F2 /* Info.plist */,
 				9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */,
 			);
 			path = Carte;
@@ -156,6 +158,44 @@
 				9FF559B1200F8D28004EB3F2 /* Info.plist */,
 			);
 			path = CarteUITests;
+			sourceTree = "<group>";
+		};
+		9FF559BD201083C4004EB3F2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		9FF559BE201083DD004EB3F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				9FF559C12010845D004EB3F2 /* Base */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		9FF559C020108436004EB3F2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9FF5599B200F8D28004EB3F2 /* Info.plist */,
+				9FF55996200F8D28004EB3F2 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9FF559C12010845D004EB3F2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		BA6121D50CD57D5C9036AA88 /* Frameworks */ = {
@@ -393,8 +433,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carte/Pods-Carte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -416,8 +456,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -670,12 +710,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X3F3UD5EQ;
-				INFOPLIST_FILE = Carte/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Carte/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wrappers.Carte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -686,12 +726,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X3F3UD5EQ;
-				INFOPLIST_FILE = Carte/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Carte/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wrappers.Carte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
