@@ -26,12 +26,23 @@ pod 'RxFlow'
 
 # UI 框架
 pod 'IGListKit', '~> 3.0'
-pod "CollectionKit"
+pod 'CollectionKit'
 pod 'SnapKit', '~> 4.0.0'
 pod 'MJRefresh'
 pod 'PasswordTextField'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'Onboard' # 引导页
+
+# 动画
+pod 'SkeletonView'
+pod 'Hero'
+pod 'ViewAnimator'
+# pod 'pruce‘, '~> 1.0.0'
+pod 'pop', '~> 1.0'
+pod 'Gemini'
+
+# AR
+pod 'ARCL'
 
 # 键盘
 pod 'IQKeyboardManagerSwift'
@@ -41,13 +52,18 @@ pod 'Alamofire', '~> 4.5'
 pod 'Moya', '~> 10.0'
 pod 'Kingfisher'
 pod 'Unbox'
-pod "PromiseKit", "~> 4.4"
+pod 'PromiseKit', '~> 4.4'
 
-# 存储
+# 本地化
 pod 'SwiftyUserDefaults'
 
-# 动画
-pod 'pop', '~> 1.0'
+
+# log
+pod 'SwiftyBeaver'
+pod 'Dotzu'
+
+# Lint
+pod 'SwiftLint'
 
 # Misc.
 pod 'Then'

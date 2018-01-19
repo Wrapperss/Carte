@@ -16,6 +16,8 @@
 		9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */; };
 		9FF559A5200F8D28004EB3F2 /* CarteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559A4200F8D28004EB3F2 /* CarteTests.swift */; };
 		9FF559B0200F8D28004EB3F2 /* CarteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559AF200F8D28004EB3F2 /* CarteUITests.swift */; };
+		9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559C220118693004EB3F2 /* BaseViewController.swift */; };
+		9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559C520118DEE004EB3F2 /* Logger.swift */; };
 		C837E4BE3CCF11F03BF11A25 /* Pods_CarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7BDE7715F3F44EAEE5B499 /* Pods_CarteTests.framework */; };
 		F173AECADA4D021358DA06D0 /* Pods_CarteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBE461822E4F6AB3C95C1A6 /* Pods_CarteUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		9FF559AB200F8D28004EB3F2 /* CarteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF559AF200F8D28004EB3F2 /* CarteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteUITests.swift; sourceTree = "<group>"; };
 		9FF559B1200F8D28004EB3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF559C220118693004EB3F2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9FF559C520118DEE004EB3F2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D629745E2790814377F9A931 /* Pods_Carte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D7E1E190C5C4C65CDC2B7E /* Pods-CarteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarteUITests/Pods-CarteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +181,7 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9FF559C420118DCE004EB3F2 /* Log */,
 				9FF559C12010845D004EB3F2 /* Base */,
 			);
 			path = Infrastructure;
@@ -194,8 +199,17 @@
 		9FF559C12010845D004EB3F2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9FF559C220118693004EB3F2 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9FF559C420118DCE004EB3F2 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				9FF559C520118DEE004EB3F2 /* Logger.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		BA6121D50CD57D5C9036AA88 /* Frameworks */ = {
@@ -432,9 +446,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carte/Pods-Carte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Dotzu/Dotzu.framework",
+				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -447,17 +465,24 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxFlow/RxFlow.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dotzu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -470,10 +495,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxFlow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +567,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
+				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
 				9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
 			);
