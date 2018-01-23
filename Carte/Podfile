@@ -47,6 +47,9 @@ pod 'ARCL'
 # 键盘
 pod 'IQKeyboardManagerSwift'
 
+# 手势
+pod 'SJFullscreenPopGesture' #全局返回手势
+
 # 网络框架
 pod 'Alamofire', '~> 4.5'
 pod 'Moya', '~> 10.0'
@@ -56,11 +59,17 @@ pod 'PromiseKit', '~> 4.4'
 
 # 本地化
 pod 'SwiftyUserDefaults'
+pod 'Realm'
 
+#图表
+pod 'Charts'
+
+# Extension
+pod 'SwifterSwift'
 
 # log
 pod 'SwiftyBeaver'
-pod 'Dotzu'
+#pod 'Dotzu'
 
 # Lint
 pod 'SwiftLint'
