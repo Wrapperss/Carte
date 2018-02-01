@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		627A96EFA4B9DD0CA890EF0C /* Pods_Carte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D629745E2790814377F9A931 /* Pods_Carte.framework */; };
+		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
+		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598E200F8D28004EB3F2 /* ViewController.swift */; };
 		9FF55992200F8D28004EB3F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55990200F8D28004EB3F2 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		7C0F38E3A9C10E981489A03D /* Pods-Carte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carte/Pods-Carte.debug.xcconfig"; sourceTree = "<group>"; };
 		9B867A70FAE529265551217B /* Pods-Carte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carte/Pods-Carte.release.xcconfig"; sourceTree = "<group>"; };
 		9EBE461822E4F6AB3C95C1A6 /* Pods_CarteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
+		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF5598E200F8D28004EB3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,8 +115,8 @@
 		9F4E54EB201863B900FFFF33 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				9F671E262022ECA1004C4D51 /* Factory */,
 				9F4E54F12018644800FFFF33 /* Flow */,
-				9F4E54F02018641C00FFFF33 /* Services */,
 				9F4E54EF201863F200FFFF33 /* Controller */,
 				9F4E54EE201863EA00FFFF33 /* Model */,
 				9F4E54ED201863E200FFFF33 /* ViewModel */,
@@ -149,18 +153,27 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9F4E54F02018641C00FFFF33 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		9F4E54F12018644800FFFF33 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		9F671E232022E990004C4D51 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9F671E242022E9D2004C4D51 /* DataFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9F671E262022ECA1004C4D51 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9F671E272022ECCD004C4D51 /* MineFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		9FF55980200F8D28004EB3F2 = {
@@ -237,6 +250,7 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9F671E232022E990004C4D51 /* Factory */,
 				9FF559C420118DCE004EB3F2 /* Log */,
 				9FF559C12010845D004EB3F2 /* Base */,
 			);
@@ -635,7 +649,9 @@
 			files = (
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
+				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
+				9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */,
 				9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
 			);
