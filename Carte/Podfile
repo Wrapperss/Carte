@@ -27,7 +27,6 @@ pod 'ReactorKit'
 
 # UI
 pod 'IGListKit', '~> 3.0'
-pod 'CollectionKit'
 pod 'SnapKit', '~> 4.0.0'
 pod 'MJRefresh'
 pod 'PasswordTextField'
