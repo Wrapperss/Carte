@@ -24,6 +24,7 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxFlow'
 pod 'ReactorKit'
+pod 'RxGesture'
 
 # UI
 pod 'IGListKit', '~> 3.0'
@@ -32,6 +33,7 @@ pod 'MJRefresh'
 pod 'PasswordTextField'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'Onboard' # 引导页
+pod 'ImagePicker'
 
 # 动画
 pod 'SkeletonView'
