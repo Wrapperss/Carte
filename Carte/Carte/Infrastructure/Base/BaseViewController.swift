@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ChameleonFramework
 
 class BaseViewController: UIViewController {
     
@@ -18,6 +19,10 @@ class BaseViewController: UIViewController {
     
     // MARk: Rx
     var disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     deinit {
         log.verbose("DEINIT: \(self.className)")

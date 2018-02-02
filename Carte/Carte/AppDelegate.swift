@@ -21,9 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tab = MainTabBarController()
         
-        let nav = MainNavigationController.init(rootViewController: tab)
-        
-        window?.rootViewController = nav
+        window?.rootViewController = tab
         
         window?.makeKeyAndVisible()
         
