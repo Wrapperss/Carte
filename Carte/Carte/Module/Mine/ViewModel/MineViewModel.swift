@@ -9,7 +9,6 @@
 import Foundation
 import ReactorKit
 import RxSwift
-import RxFlow
 
 class MineViewModel: Reactor {
     
@@ -26,12 +25,4 @@ class MineViewModel: Reactor {
     }
 }
 
-extension MineViewModel: Stepper {
-    func pick(id: Int) {
-        self.step.accept(MineStep.info(id: id))
-    }
-    
-    func setting() {
-        self.step.accept(MineStep.setting)
-    }
-}
+

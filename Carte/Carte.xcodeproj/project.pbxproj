@@ -15,7 +15,6 @@
 		9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E2B2022EF57004C4D51 /* MineViewModel.swift */; };
 		9F671E2E2022EFBF004C4D51 /* BaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E2D2022EFBF004C4D51 /* BaseListViewController.swift */; };
 		9F671E322022F7B5004C4D51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E312022F7B5004C4D51 /* User.swift */; };
-		9F671E342022F94D004C4D51 /* MineFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E332022F94D004C4D51 /* MineFlow.swift */; };
 		9F671E362023096F004C4D51 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E352023096F004C4D51 /* UIColor+Extension.swift */; };
 		9F671E3820230994004C4D51 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E3720230994004C4D51 /* UIView+Extension.swift */; };
 		9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E3E20235F58004C4D51 /* MainTabBarController.swift */; };
@@ -65,7 +64,6 @@
 		9F671E2B2022EF57004C4D51 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
 		9F671E2D2022EFBF004C4D51 /* BaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewController.swift; sourceTree = "<group>"; };
 		9F671E312022F7B5004C4D51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9F671E332022F94D004C4D51 /* MineFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFlow.swift; sourceTree = "<group>"; };
 		9F671E352023096F004C4D51 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9F671E3720230994004C4D51 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9F671E3E20235F58004C4D51 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				9F671E262022ECA1004C4D51 /* Factory */,
-				9F4E54F12018644800FFFF33 /* Flow */,
 				9F4E54EF201863F200FFFF33 /* Controller */,
 				9F4E54EE201863EA00FFFF33 /* Model */,
 				9F4E54ED201863E200FFFF33 /* ViewModel */,
@@ -174,14 +171,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9F4E54F12018644800FFFF33 /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				9F671E332022F94D004C4D51 /* MineFlow.swift */,
-			);
-			path = Flow;
-			sourceTree = "<group>";
-		};
 		9F671E232022E990004C4D51 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,16 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				9F671E3D20235F2C004C4D51 /* Controller */,
-				9F671E3A20231C11004C4D51 /* Flow */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		9F671E3A20231C11004C4D51 /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Flow;
 			sourceTree = "<group>";
 		};
 		9F671E3D20235F2C004C4D51 /* Controller */ = {
@@ -587,7 +568,6 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxFlow/RxFlow.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework",
@@ -624,7 +604,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxFlow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFullscreenPopGesture.framework",
@@ -717,7 +696,6 @@
 				9F671E322022F7B5004C4D51 /* User.swift in Sources */,
 				9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
-				9F671E342022F94D004C4D51 /* MineFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

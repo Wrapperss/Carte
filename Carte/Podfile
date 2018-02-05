@@ -22,7 +22,6 @@ end
 # Rx 系列
 pod 'RxSwift'
 pod 'RxCocoa'
-pod 'RxFlow'
 pod 'ReactorKit'
 pod 'RxGesture'
 

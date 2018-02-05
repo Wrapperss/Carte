@@ -62,11 +62,11 @@ class MineController: BaseListViewController, View {
     
     @objc
     func clickInfoBotton() {
-        viewModel?.pick(id: 10)
+        
     }
     @objc
     func clickSettingButton() {
-        viewModel?.setting()
+        
     }
     func bind(reactor: MineViewModel) {
         
