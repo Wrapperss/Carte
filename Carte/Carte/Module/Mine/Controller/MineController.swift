@@ -28,7 +28,6 @@ class MineController: BaseListViewController, View {
         super.viewDidLoad()
         adapter.dataSource = self
         view.backgroundColor = UIColor.flatRed
-        title = "我的"
         
         let infoButton = UIButton().then {
             $0.backgroundColor = UIColor.flatBlue

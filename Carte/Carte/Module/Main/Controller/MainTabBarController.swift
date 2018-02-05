@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import Then
 
 class MainTabBarController: UITabBarController {
     
@@ -21,30 +22,38 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        tabBar.tintColor = UIColor.black
     }
     
     private func setup() {
-        //精选
-        home.view.backgroundColor = UIColor.flatMint
-        addVC(tabBarItem: UITabBarItem(title: "精选", image: nil, selectedImage: nil), viewController: home)
-        //分类
-        fenlei.view.backgroundColor = UIColor.flatRed
-        addVC(tabBarItem: UITabBarItem(title: "分类", image: nil, selectedImage: nil), viewController: fenlei)
-        //慢用
-        fenlei.view.backgroundColor = UIColor.flatBlue
-        addVC(tabBarItem: UITabBarItem(title: "慢用", image: nil, selectedImage: nil), viewController: man)
-        //购物车
-        car.view.backgroundColor = UIColor.flatLime
-        addVC(tabBarItem: UITabBarItem(title: "购物车", image: nil, selectedImage: nil), viewController: car)
-        //我的
-        addVC(tabBarItem: UITabBarItem(title: "我的", image: nil, selectedImage: nil), viewController: mine)
-    }
-    
-    private func addVC(tabBarItem item: UITabBarItem,  viewController vc: BaseViewController) {
-        vc.tabBarItem = item
-        if viewControllers == nil {
-            viewControllers = [UIViewController]()
+        let vc1 = UIViewController().then {
+            $0.view.backgroundColor = UIColor.flatLime
+            $0.title = "精选"
         }
-        viewControllers?.append(vc)
+        
+        let vc2 = UIViewController().then {
+            $0.view.backgroundColor = UIColor.flatBlue
+            $0.title = "分类"
+        }
+
+        let vc3 = UIViewController().then {
+            $0.view.backgroundColor = UIColor.flatMint
+            $0.title = "慢用"
+        }
+        
+        let vc4 = UIViewController().then {
+            $0.view.backgroundColor = UIColor.flatGray
+            $0.title = "购物车"
+        }
+
+        let mine = MineController().then {
+            $0.title = "我的"
+        }
+        
+        self.viewControllers = [MainNavigationController(rootViewController: vc1),
+                                MainNavigationController(rootViewController: vc2),
+                                MainNavigationController(rootViewController: vc3),
+                                MainNavigationController(rootViewController: vc4),
+                                MainNavigationController(rootViewController: mine)]
     }
 }
