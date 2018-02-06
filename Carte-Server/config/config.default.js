@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = appInfo => {
-  const config = exports = {};
+  const config = {};
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1516678145399_2380';
@@ -28,14 +28,12 @@ module.exports = appInfo => {
     agent: false,
   };
 
-  return config;
-};
-
-//关闭Crsrf防范
-module.exports = {
-  security: {
+  //关闭Crsrf防范
+  config.security= {
     csrf: {
       enable: false,
     },
-  },
+  };
+
+  return config;
 };
