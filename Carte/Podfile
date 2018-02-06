@@ -7,7 +7,7 @@ target 'Carte' do
 
 post_install do |installer|
     # 需要指定编译版本的第三方的名称
-    myTargets = ['PasswordTextField', 'ChameleonFramework/Swift']
+    myTargets = ['PasswordTextField', 'ChameleonFramework/Swift', 'SwiftRichString', 'AttributedLib']
     
     installer.pods_project.targets.each do |target|
         if myTargets.include? target.name
@@ -79,7 +79,6 @@ pod 'SwiftLint'
 pod 'Then'
 pod 'Reusable'
 
-
   target 'CarteTests' do
     inherit! :search_paths
     # Pods for testing
@@ -89,5 +88,5 @@ pod 'Reusable'
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end

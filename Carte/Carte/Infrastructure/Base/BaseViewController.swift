@@ -24,6 +24,16 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addConstraints()
+    }
+    
+    //添加约束
+    internal func addConstraints() {
+        
+    }
+    
     deinit {
         log.verbose("DEINIT: \(self.className)")
     }

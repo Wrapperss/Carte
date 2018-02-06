@@ -8,6 +8,7 @@
 
 import UIKit
 import IGListKit
+import SnapKit
 
 class BaseListViewController: BaseViewController {
     
@@ -22,9 +23,18 @@ class BaseListViewController: BaseViewController {
         return ListAdapter.init(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 4)
     }()
     
+    internal var source = [ListDiffable]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         adapter.collectionView = collectionView
+    }
+    
+    override func addConstraints() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 }
 

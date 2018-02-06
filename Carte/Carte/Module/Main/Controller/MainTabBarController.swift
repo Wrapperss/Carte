@@ -26,8 +26,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setup() {
-        let vc1 = UIViewController().then {
-            $0.view.backgroundColor = UIColor.flatLime
+        let vc1 = HomeViewController().then {
             $0.title = "精选"
         }
         
