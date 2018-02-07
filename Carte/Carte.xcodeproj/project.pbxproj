@@ -27,7 +27,7 @@
 		9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */; };
 		9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */; };
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
-		9F7CFBC1202AF165004F3ABE /* CarouseItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */; };
+		9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598E200F8D28004EB3F2 /* ViewController.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
@@ -85,7 +85,7 @@
 		9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineSectionController.swift; sourceTree = "<group>"; };
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
-		9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseItemCell.swift; sourceTree = "<group>"; };
+		9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionCell.swift; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF5598E200F8D28004EB3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 				9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */,
 				9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */,
 				9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */,
-				9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */,
+				9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -810,6 +810,7 @@
 				9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
+				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,
 				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,
 				9F671E2E2022EFBF004C4D51 /* BaseListViewController.swift in Sources */,
 				9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */,
@@ -821,7 +822,6 @@
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
 				9F737E70202954B1006D08A4 /* Associate.swift in Sources */,
-				9F7CFBC1202AF165004F3ABE /* CarouseItemCell.swift in Sources */,
 				9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */,
 				9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */,
 				9F671E362023096F004C4D51 /* UIColor+Extension.swift in Sources */,

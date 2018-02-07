@@ -1,5 +1,5 @@
 //
-//  CarouseItemCell.swift
+//  CarouseCompositionCell.swift
 //  Carte
 //
 //  Created by Wrappers Zhang on 2018/2/7.
@@ -12,7 +12,15 @@ import SnapKit
 import ChameleonFramework
 import Kingfisher
 
-class CarouseItemCell: UICollectionViewCell {
+struct CarouseCompositionRequired {
+    let imageUrl: String
+    let redTitle: String
+    let mediumTitle: String
+    let grayTitle: String
+}
+
+
+class CarouseCompositionCell: UICollectionViewCell {
     
     let imageView = UIImageView().then {
         $0.cornerRadius = 10
@@ -71,7 +79,11 @@ class CarouseItemCell: UICollectionViewCell {
         }
     }
     
-    func config() {
-        
+    func config(_ model: CarouseCompositionRequired) {
+        imageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.imageUrl)!))
+        redLabel.text = model.redTitle
+        mediumLabel.text = model.mediumTitle
+        grayLabel.text = model.grayTitle
     }
 }
+
