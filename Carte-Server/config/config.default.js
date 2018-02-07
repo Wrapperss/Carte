@@ -29,10 +29,15 @@ module.exports = appInfo => {
   };
 
   //关闭Crsrf防范
-  config.security= {
+  config.security = {
     csrf: {
       enable: false,
     },
+  };
+
+  config.oauth2Server = {
+    debug: config.env === 'local',
+    grants: [ 'password' ],
   };
 
   return config;
