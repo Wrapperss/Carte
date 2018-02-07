@@ -33,6 +33,7 @@ pod 'PasswordTextField'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'Onboard' # 引导页
 pod 'ImagePicker'
+pod 'ImageViewer'
 
 # 动画
 pod 'SkeletonView'

@@ -24,6 +24,10 @@
 		9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E7120295505006D08A4 /* IGListDiffableItem.swift */; };
 		9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E732029554D006D08A4 /* SeparatorLine.swift */; };
 		9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E7520295728006D08A4 /* UIScreen+Extension.swift */; };
+		9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */; };
+		9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */; };
+		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
+		9F7CFBC1202AF165004F3ABE /* CarouseItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598E200F8D28004EB3F2 /* ViewController.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
@@ -78,6 +82,10 @@
 		9F737E7120295505006D08A4 /* IGListDiffableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGListDiffableItem.swift; sourceTree = "<group>"; };
 		9F737E732029554D006D08A4 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		9F737E7520295728006D08A4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
+		9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineSectionController.swift; sourceTree = "<group>"; };
+		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseItemCell.swift; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF5598E200F8D28004EB3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +269,10 @@
 		9F737E2B20294AD5006D08A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */,
+				9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */,
+				9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */,
+				9F7CFBC0202AF165004F3ABE /* CarouseItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,6 +679,7 @@
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageViewer/ImageViewer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -688,6 +701,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -703,6 +717,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageViewer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -724,6 +739,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -794,14 +810,18 @@
 				9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
+				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,
 				9F671E2E2022EFBF004C4D51 /* BaseListViewController.swift in Sources */,
 				9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */,
+				9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */,
 				9F737E3120294B04006D08A4 /* HomeViewController.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
+				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
 				9F737E70202954B1006D08A4 /* Associate.swift in Sources */,
+				9F7CFBC1202AF165004F3ABE /* CarouseItemCell.swift in Sources */,
 				9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */,
 				9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */,
 				9F671E362023096F004C4D51 /* UIColor+Extension.swift in Sources */,
