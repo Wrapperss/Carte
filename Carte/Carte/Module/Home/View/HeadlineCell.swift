@@ -70,7 +70,7 @@ class HeadlineCell: UICollectionViewCell {
     
     let disposeBag = DisposeBag()
     
-    static let height: CGFloat = 100
+    static let height: CGFloat = 80
     
     override init(frame: CGRect) {
         super.init(frame: .zero)

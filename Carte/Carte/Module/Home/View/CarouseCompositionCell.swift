@@ -60,24 +60,25 @@ class CarouseCompositionCell: UICollectionViewCell {
         addSubview(grayLabel)
         
         imageView.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(150)
         }
         
         redLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
             make.top.equalTo(imageView.snp.bottom).offset(5)
         }
         
         mediumLabel.snp.makeConstraints { (make) in
             make.top.equalTo(redLabel.snp.bottom).offset(5)
-            make.leading.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
         }
         
         grayLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
             make.top.equalTo(mediumLabel.snp.bottom).offset(5)
-            make.bottom.equalToSuperview().offset(-5)
         }
     }
     

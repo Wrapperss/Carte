@@ -21,10 +21,12 @@ class CarouseCell: UICollectionViewCell {
     
      private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: UIScreen.screenWidth - 20, height: 250)
+        layout.itemSize = CGSize(width: UIScreen.screenWidth, height: 250)
         layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.white
+        view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
 
@@ -42,13 +44,10 @@ class CarouseCell: UICollectionViewCell {
     func setup() {
         
         collectionView.register(CarouseCompositionCell.self, forCellWithReuseIdentifier: "CarouseItem")
-        collectionView.isPagingEnabled = true
         
         addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-10)
+            make.top.bottom.leading.trailing.equalToSuperview()
         }
         
         collectionView.delegate = self
