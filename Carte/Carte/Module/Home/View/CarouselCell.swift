@@ -8,14 +8,27 @@
 
 import UIKit
 import Then
+import IGListKit
+import ChameleonFramework
 
 struct CarouseCellRequired {
-    
+    var data: [CarouseCompositionRequired]
 }
 
 class CarouseCell: UICollectionViewCell {
     
-    static let height: CGFloat = 100
+    static let height: CGFloat = 250
+    
+     private var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: UIScreen.screenWidth - 20, height: 250)
+        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+
+    var model: CarouseCellRequired?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -28,6 +41,35 @@ class CarouseCell: UICollectionViewCell {
     
     func setup() {
         
+        collectionView.register(CarouseCompositionCell.self, forCellWithReuseIdentifier: "CarouseItem")
+        collectionView.isPagingEnabled = true
+        
+        addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+        }
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    func config(_ model: CarouseCellRequired?) {
+        self.model = model
+        collectionView.reloadData()
     }
 }
 
+extension CarouseCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return model?.data.count ?? 0
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: CarouseCompositionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouseItem", for: indexPath) as! CarouseCompositionCell
+        cell.config(model?.data[indexPath.row])
+        return cell
+    }
+}

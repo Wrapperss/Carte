@@ -10,7 +10,7 @@ import Foundation
 import IGListKit
 
 class HeadlineSectionItem: NormalDiffableItem {
-    var data: HeadlineRequired
+    let data: HeadlineRequired
     
     init(_ data: HeadlineRequired) {
         self.data = data

@@ -19,8 +19,9 @@ struct CarouseCompositionRequired {
     let grayTitle: String
 }
 
-
 class CarouseCompositionCell: UICollectionViewCell {
+    
+    static let size = CGSize(width: UIScreen.screenWidth - 20, height: 200)
     
     let imageView = UIImageView().then {
         $0.cornerRadius = 10
@@ -76,14 +77,17 @@ class CarouseCompositionCell: UICollectionViewCell {
         grayLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview()
             make.top.equalTo(mediumLabel.snp.bottom).offset(5)
+            make.bottom.equalToSuperview().offset(-5)
         }
     }
     
-    func config(_ model: CarouseCompositionRequired) {
+    func config(_ model: CarouseCompositionRequired?) {
+        guard let model = model else {
+            return
+        }
         imageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.imageUrl)!))
         redLabel.text = model.redTitle
         mediumLabel.text = model.mediumTitle
         grayLabel.text = model.grayTitle
     }
 }
-

@@ -80,6 +80,10 @@ pod 'SwiftLint'
 pod 'Then'
 pod 'Reusable'
 
+#工具
+pod 'Reveal-SDK', '~> 4', :configurations => ['Debug']
+
+
   target 'CarteTests' do
     inherit! :search_paths
     # Pods for testing

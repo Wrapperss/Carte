@@ -27,7 +27,7 @@ struct HeadlineRequired {
     var imageCount: Int?
     var seeMoreButtonClick: (() -> Void)?
     
-    init(title: String, description: String, type: HeadlineType, imageCount: Int?, seeMoreButtonClick: (() -> Void)?) {
+    init(title: String, description: String, type: HeadlineType, imageCount: Int?, seeMoreButtonClick: (() -> Void)? = nil) {
         self.title = title
         self.description = description
         self.type = type
@@ -70,7 +70,7 @@ class HeadlineCell: UICollectionViewCell {
     
     let disposeBag = DisposeBag()
     
-    static let height: CGFloat = 50
+    static let height: CGFloat = 100
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -86,14 +86,13 @@ class HeadlineCell: UICollectionViewCell {
         addSubview(descriptionLabel)
         
         titleLabel.snp.makeConstraints { (make) in
-            make.top.leading.equalToSuperview().offset(10)
+            make.top.leading.equalToSuperview().offset(15)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(15)
         }
-        
     }
     
     func config(_ model: HeadlineRequired?) {
@@ -110,7 +109,7 @@ class HeadlineCell: UICollectionViewCell {
             addSubview(instructionsLabel)
             
             instructionsLabel.snp.makeConstraints({ (make) in
-                make.trailing.equalToSuperview().offset(20)
+                make.trailing.equalToSuperview().offset(-20)
                 make.bottom.equalTo(titleLabel.snp.bottom)
             })
             

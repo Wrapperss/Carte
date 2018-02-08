@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class MainNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
-        navigationBar.backgroundColor = UIColor.white
+        navigationBar.barTintColor = UIColor.flatBlack
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.flatWhite]
     }
 }

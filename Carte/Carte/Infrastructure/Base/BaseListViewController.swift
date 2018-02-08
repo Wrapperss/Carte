@@ -20,7 +20,7 @@ class BaseListViewController: BaseViewController {
     }()
     
     internal lazy var adapter: ListAdapter = {
-        return ListAdapter.init(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 4)
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 4)
     }()
     
     internal var source = [ListDiffable]()
