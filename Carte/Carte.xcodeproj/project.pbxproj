@@ -30,6 +30,7 @@
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
 		9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */; };
 		9F7CFBC5202B0222004F3ABE /* CarouseCompositionSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */; };
+		9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598E200F8D28004EB3F2 /* ViewController.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
@@ -90,6 +91,7 @@
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionCell.swift; sourceTree = "<group>"; };
 		9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionSectionController.swift; sourceTree = "<group>"; };
+		9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF5598E200F8D28004EB3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				9F671E3E20235F58004C4D51 /* MainTabBarController.swift */,
 				9F3B33AF202443E800259540 /* MainNavigationController.swift */,
+				9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -680,6 +683,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/GLog/glog.framework",
 				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
@@ -692,6 +698,7 @@
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -711,6 +718,7 @@
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -718,6 +726,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
@@ -730,6 +741,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -749,6 +761,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -825,6 +838,7 @@
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
+				9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
 				9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */,

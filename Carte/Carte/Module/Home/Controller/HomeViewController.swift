@@ -41,7 +41,14 @@ class HomeViewController: BaseListViewController {
                                                                                       mediumTitle: "喜迎春节，超值闪购低至3折！",
                                                                                       grayTitle: "更多福利请进入活动页，一起HIGH起来吧！")]))]
         adapter.reloadData(completion: nil)
-    }   
+    }
+    
+    override func addConstraints() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
 }
 
 extension HomeViewController: ListAdapterDataSource {

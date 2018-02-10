@@ -31,10 +31,7 @@ class BaseListViewController: BaseViewController {
     }
     
     override func addConstraints() {
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
+
     }
 }
 
