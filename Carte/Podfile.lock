@@ -9,7 +9,6 @@ PODS:
     - boost/preprocessor-includes (= 1.59.0)
     - boost/shared_ptr-includes (= 1.59.0)
     - boost/string_algorithms-includes (= 1.59.0)
-  - boost-for-react-native (1.63.0)
   - boost/graph-includes (1.59.0)
   - boost/math-includes (1.59.0)
   - boost/numeric-includes (1.59.0)
@@ -25,7 +24,7 @@ PODS:
   - Charts/Core (3.0.5)
   - DoubleConversion (1.1.5)
   - Folly (2016.09.26.00):
-    - boost-for-react-native
+    - boost
     - DoubleConversion
     - GLog
   - Gemini (1.2.0)
@@ -60,6 +59,8 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.5.1):
     - PromiseKit/CorePromise
+  - React/ART (0.51.0):
+    - React/Core
   - React/Core (0.51.0):
     - yoga (= 0.51.0.React)
   - React/CxxBridge (0.51.0):
@@ -80,9 +81,18 @@ PODS:
   - React/PrivateDatabase (0.51.0)
   - React/RCTBlob (0.51.0):
     - React/Core
+  - React/RCTImage (0.51.0):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.51.0):
+    - React/Core
   - React/RCTNetwork (0.51.0):
     - React/Core
+  - React/RCTSettings (0.51.0):
+    - React/Core
   - React/RCTText (0.51.0):
+    - React/Core
+  - React/RCTVibration (0.51.0):
     - React/Core
   - React/RCTWebSocket (0.51.0):
     - React/Core
@@ -137,10 +147,10 @@ DEPENDENCIES:
   - ARCL
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Charts
-  - DoubleConversion (from `./ReactNative/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - Folly (from `./ReactNative/node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - DoubleConversion (from `./ReactComponent/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Folly (from `./ReactComponent/node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - Gemini
-  - GLog (from `./ReactNative/node_modules/react-native/third-party-podspecs/GLog.podspec`)
+  - GLog (from `./ReactComponent/node_modules/react-native/third-party-podspecs/GLog.podspec`)
   - Hero
   - IGListKit (~> 3.0)
   - ImagePicker
@@ -153,12 +163,17 @@ DEPENDENCIES:
   - PasswordTextField
   - pop (~> 1.0)
   - PromiseKit (~> 4.4)
-  - React/Core (from `./ReactNative/node_modules/react-native`)
-  - React/CxxBridge (from `./ReactNative/node_modules/react-native`)
-  - React/DevSupport (from `./ReactNative/node_modules/react-native`)
-  - React/RCTNetwork (from `./ReactNative/node_modules/react-native`)
-  - React/RCTText (from `./ReactNative/node_modules/react-native`)
-  - React/RCTWebSocket (from `./ReactNative/node_modules/react-native`)
+  - React/ART (from `./ReactComponent/node_modules/react-native`)
+  - React/Core (from `./ReactComponent/node_modules/react-native`)
+  - React/CxxBridge (from `./ReactComponent/node_modules/react-native`)
+  - React/DevSupport (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTImage (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTLinkingIOS (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTNetwork (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTSettings (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTText (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTVibration (from `./ReactComponent/node_modules/react-native`)
+  - React/RCTWebSocket (from `./ReactComponent/node_modules/react-native`)
   - ReactorKit
   - Realm
   - Reusable
@@ -176,21 +191,21 @@ DEPENDENCIES:
   - Then
   - Unbox
   - ViewAnimator
-  - yoga (from `./ReactNative/node_modules/react-native/ReactCommon/yoga`)
+  - yoga (from `./ReactComponent/node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
   ChameleonFramework:
     :git: https://github.com/ViccAlexander/Chameleon.git
   DoubleConversion:
-    :podspec: ./ReactNative/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+    :podspec: ./ReactComponent/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
   Folly:
-    :podspec: ./ReactNative/node_modules/react-native/third-party-podspecs/Folly.podspec
+    :podspec: ./ReactComponent/node_modules/react-native/third-party-podspecs/Folly.podspec
   GLog:
-    :podspec: ./ReactNative/node_modules/react-native/third-party-podspecs/GLog.podspec
+    :podspec: ./ReactComponent/node_modules/react-native/third-party-podspecs/GLog.podspec
   React:
-    :path: ./ReactNative/node_modules/react-native
+    :path: ./ReactComponent/node_modules/react-native
   yoga:
-    :path: ./ReactNative/node_modules/react-native/ReactCommon/yoga
+    :path: ./ReactComponent/node_modules/react-native/ReactCommon/yoga
 
 CHECKOUT OPTIONS:
   ChameleonFramework:
@@ -201,13 +216,12 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   ARCL: 88300cadfbdd6a9288ca17ad18d3ac972d6cb1e6
   boost: 61736773165d41c9367246936c0db5cf9352fc7f
-  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
-  Folly: 0e765a0b56a1bf180dcbd51ee178cd3a1e2ab986
+  Folly: b7255b29f1d693c375d642d0f04f0592181156d9
   Gemini: acff98012273066f1b83c887731260abfaf18ec5
-  GLog: ed471a3ad6ad53eefb343a530f15dad283e5ef51
+  GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
   Hero: cee286821578e170d8c0c9c9cda7897357401112
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
   ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
@@ -242,6 +256,6 @@ SPEC CHECKSUMS:
   ViewAnimator: 1f3fa25f3c9010ab0dda06cf9e3e49a4b55834ff
   yoga: b5d96400ca8b2936965a7a6516da7c1177f432a3
 
-PODFILE CHECKSUM: e73ae570d292fef31bfa4fef1459531711185540
+PODFILE CHECKSUM: 753f713fb3b3092811b28a69a61808619648dfdd
 
 COCOAPODS: 1.3.1
