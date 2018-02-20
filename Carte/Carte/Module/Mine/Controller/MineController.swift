@@ -61,7 +61,7 @@ class MineController: BaseListViewController, View {
     
     @objc
     func clickInfoBotton() {
-        navigationController?.pushViewController(RNViewController(), animated: true)
+        navigationController?.pushViewController(RNViewController.init(fileName: "index", initProps: nil), animated: true)
     }
     @objc
     func clickSettingButton() {

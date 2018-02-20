@@ -18,16 +18,9 @@ export default class App extends Component<{}> {
     render() {
         return (
                 <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    //这里的name 和 age 就是从原生界面传过来的数据
-                    我的名字是:{this.props.name}
-                </Text>
-                <Text style={styles.welcome}>
-                我今年{this.props.age}岁
-                </Text>
-                <Text style={styles.instructions}>
-                {instructions}
-                </Text>
+                    <Text style={styles.welcome}>
+                        你好
+                    </Text>
                 </View>
                 );
     }
