@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import {
-    AppRegistry,
-    Platform,
     StyleSheet,
     Text,
     View,
     ScrollView
 } from 'react-native';
 import ImageCell from "./imageCell"
-import SeparateLine from '../tool/separateLine'
-import Dimensions from 'Dimensions';
-let screenWidth = Dimensions.get("window").width;
+
 
 export default class CarouselCell extends Component {
     render() {
@@ -37,9 +33,6 @@ export default class CarouselCell extends Component {
                             <ImageCell></ImageCell>
                             <ImageCell></ImageCell>
                     </ScrollView>
-                    <SeparateLine 
-                        width={screenWidth-30} 
-                        toLeft={15}/>
                 </View>
             </View>
         );

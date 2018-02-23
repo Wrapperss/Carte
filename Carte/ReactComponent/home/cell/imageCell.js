@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import {
-    AppRegistry,
-    Platform,
     StyleSheet,
     Text,
     View,
-    ScrollView,
     Image
 } from 'react-native';
 
