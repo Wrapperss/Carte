@@ -17,10 +17,12 @@ export default class ImageCell extends Component {
     render() {
         return(
             <View style={ styles.container }>
-                <Image 
-                source={{uri: 'cover'}} 
-                style={styles.coverImage} 
-                ></Image>
+                <View style={ styles.imageView }>
+                    <Image 
+                    source={{uri: 'cover'}} 
+                    style={styles.coverImage} 
+                    ></Image>
+                </View>
                 <Text style={styles.redTitle} >今日福利</Text>
                 <Text style={styles.headTitle} >喜迎春节，超值闪购低至3折！</Text>
                 <Text style={styles.subTitle} >更多福利请进入活动页，一起HIGH起来吧！</Text>
@@ -35,33 +37,39 @@ const styles = StyleSheet.create({
         height: 255,
     },
 
-    coverImage: {
-        backgroundColor: 'yellow',
+    imageView: {
         width: screenWidth-30,
         height: 175,
         marginLeft: 15,
         borderRadius: 10,
-        shadowColor: 'red',
-        shadowOffset: {width: 2, height: 2},
-        shadowOpacity: 1,
+        elevation: 20,
+        shadowColor: 'black',
+        shadowOffset: {width: 2, height: 3},
+        shadowOpacity: 0.2,
+        shadowRadius: 1,
+    },
+
+    coverImage: {
+        flex: 1,
+        borderRadius: 10,
     },
 
     redTitle: {
         color: '#FE3131',
         marginTop: 5,
-        marginLeft: 15,
+        marginLeft: 13,
     },
 
     headTitle: {
-        marginLeft: 15,
+        marginLeft: 13,
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 17,
         fontWeight: 'bold',
     },
 
     subTitle: {
         marginTop: 5,
-        marginLeft: 15,
+        marginLeft: 11,
         color: '#9B9B9B',
     }
 })

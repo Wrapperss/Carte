@@ -7,15 +7,13 @@ import {
     View,
     ScrollView
 } from 'react-native';
-import CarouselCell from './carouselCell'
+import CarouselCell from './cell/carouselCell'
 
 export default class HomePage extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    <CarouselCell></CarouselCell>
-                    <CarouselCell></CarouselCell>
                     <CarouselCell></CarouselCell>
                 </ScrollView>
             </View>

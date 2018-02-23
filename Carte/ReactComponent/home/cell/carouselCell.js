@@ -8,7 +8,7 @@ import {
     ScrollView
 } from 'react-native';
 import ImageCell from "./imageCell"
-import SeparateLine from '../main/separateLine'
+import SeparateLine from '../tool/separateLine'
 import Dimensions from 'Dimensions';
 let screenWidth = Dimensions.get("window").width;
 
@@ -48,7 +48,7 @@ export default class CarouselCell extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        height: 320,
+        height: 315,
     },
 
     top: {
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         fontSize: 20,
         fontWeight: 'bold',
+        marginTop: 5,
     },
 
     subTitle: {
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     },
 
     bottom: {
-        height: 260,
+        height: 255,
     },
 
     page: {
