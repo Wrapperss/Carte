@@ -7,23 +7,40 @@ import {
     View,
     ScrollView
 } from 'react-native';
+import ImageCell from "./imageCell"
+import SeparateLine from '../main/separateLine'
+import Dimensions from 'Dimensions';
+let screenWidth = Dimensions.get("window").width;
 
 export default class CarouselCell extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View sytle={styles.top}>
-                    {/* <View style={{ backgroundColor: 'red' }}>
+                <View style={styles.top}>
+                    <View style={{ flex: 8 }}>
                         <Text style={styles.headTitle}>今日推荐</Text>
                         <Text style={styles.subTitle}>全方位的生活指南，每天都有新乐趣</Text>
                     </View>
-                    <View style={{ backgroundColor: 'green' }}>
-                        <Text>1/6</Text>
-                    </View> */}
+                    <Text style={ styles.indicator } >1/6</Text>
                 </View>
                 
 
-                <View style={styles.bottom}></View>
+                <View style={styles.bottom}>
+                    <ScrollView 
+                    style={{
+                        height: 255,
+                    }}
+                    horizontal={true}
+                    pagingEnabled={true}
+                    showsHorizontalScrollIndicator={false} >
+                            <ImageCell></ImageCell>
+                            <ImageCell></ImageCell>
+                            <ImageCell></ImageCell>
+                    </ScrollView>
+                    <SeparateLine 
+                        width={screenWidth-30} 
+                        toLeft={15}/>
+                </View>
             </View>
         );
     }
@@ -32,21 +49,15 @@ export default class CarouselCell extends Component {
 const styles = StyleSheet.create({
     container: {
         height: 320,
-        borderColor: 'red',
-        borderWidth: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
     },
 
     top: {
-        flex: 12,
+        height: 60,
         flexDirection: 'row',
-        backgroundColor: 'red'
+        alignItems: 'center',
     },     
 
     headTitle: {
-        marginTop: 20,
         marginLeft: 15,
         fontSize: 20,
         fontWeight: 'bold',
@@ -58,8 +69,16 @@ const styles = StyleSheet.create({
         color: '#9B9B9B',
     },
 
+    indicator: {
+        fontSize: 15,
+        marginRight: 20,
+    },
+
     bottom: {
-        flex: 20,
-        backgroundColor: 'yellow',
+        height: 260,
+    },
+
+    page: {
+
     },
 })
