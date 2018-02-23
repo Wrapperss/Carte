@@ -12,13 +12,13 @@ import React
 class RNViewController: BaseViewController {
     
     private static let BaseUrl: String = "http://localhost:8081/"
-    private var fileName: String = ""
+    private var fileUrl: String = ""
     private var initProps: Dictionary<String, Any>? = nil
     private var isDev: Bool = false
     
-    init(fileName: String, initProps: Dictionary<String, Any>?, isDev: Bool = false) {
+    init(fileUrl: String, initProps: Dictionary<String, Any>?, isDev: Bool = false) {
         super.init(nibName: nil, bundle: nil)
-        self.fileName = fileName
+        self.fileUrl = fileUrl
         self.initProps = initProps
         self.isDev = isDev
     }
@@ -30,7 +30,7 @@ class RNViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var urlString = ""
-        urlString = urlString.appending(RNViewController.BaseUrl).appending("\(fileName).bundle?platform=ios")
+        urlString = urlString.appending(RNViewController.BaseUrl).appending("\(fileUrl).bundle?platform=ios")
         if isDev {
             urlString = urlString.appending("&dev=true")
         }
