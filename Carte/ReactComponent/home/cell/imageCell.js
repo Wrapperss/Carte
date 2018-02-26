@@ -31,7 +31,6 @@ export default class ImageCell extends Component {
 const styles = StyleSheet.create({
     container: {
         width: screenWidth,
-        height: 255,
     },
 
     imageView: {
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         elevation: 20,
         shadowColor: 'black',
-        shadowOffset: {width: 2, height: 3},
+        shadowOffset: { width: 2, height: 3 },
         shadowOpacity: 0.2,
         shadowRadius: 1,
     },
@@ -53,12 +52,12 @@ const styles = StyleSheet.create({
 
     redTitle: {
         color: '#FE3131',
-        marginTop: 5,
-        marginLeft: 13,
+        marginTop: 8,
+        marginLeft: 15,
     },
 
     headTitle: {
-        marginLeft: 13,
+        marginLeft: 15,
         marginTop: 5,
         fontSize: 17,
         fontWeight: 'bold',
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
 
     subTitle: {
         marginTop: 5,
-        marginLeft: 11,
+        marginLeft: 15,
         color: '#9B9B9B',
     }
 })

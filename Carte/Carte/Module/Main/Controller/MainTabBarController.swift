@@ -30,7 +30,7 @@ class MainTabBarController: UITabBarController {
 //            $0.title = "精选"
 //        }
 
-        let vc1 = RNViewController(fileUrl: "home/page", initProps: nil).then {
+        let vc1 = RNViewController(fileUrl: "Home/Page", initProps: nil).then {
             $0.title = "精选"
         }
         

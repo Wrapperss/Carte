@@ -8,6 +8,7 @@ export default class SeparateLine extends Component {
         this.state = {
             width: props.width,
             toLeft: props.toLeft,
+            toTop: props.toTop
         };
     }
 
@@ -22,7 +23,8 @@ export default class SeparateLine extends Component {
                 backgroundColor: '#D3D3D3',
                 height: 0.5,
                 width: this.state.width,
-                marginLeft: this.state.toLeft
+                marginLeft: this.state.toLeft,
+                marginTop: this.state.toTop
             }} >
             </View>
         );

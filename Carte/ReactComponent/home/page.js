@@ -7,9 +7,11 @@ import {
     View,
     ScrollView
 } from 'react-native';
-import CarouselCell from './cell/carouselCell'
-import SeparateLine from '../main/separateLine'
-import TitleView from './View/titleView'
+import CarouselCell from './Cell/CarouselCell'
+import SeparateLine from '../Main/SeparateLine'
+import TitleView from './View/TitleView'
+import MiddleCell from "./Cell/MiddleCell";
+import MultiItemCell from './Cell/MultiItemCell'
 import Dimensions from 'Dimensions';
 let screenWidth = Dimensions.get("window").width;
 
@@ -21,10 +23,18 @@ export default class HomePage extends Component {
                     <CarouselCell></CarouselCell>
                     <SeparateLine 
                         width={screenWidth-30} 
-                        toLeft={15}/>
-                    <TitleView 
-                        headTile={'鲜肉驾到'}
-                        subTile={'唯有鲜肉和爱情不能辜负!'} ></TitleView>
+                        toLeft={15}
+                        toTop={5}/>
+                    <MiddleCell></MiddleCell>
+                    <SeparateLine 
+                        width={screenWidth-30} 
+                        toLeft={15}
+                        toTop={5}/>
+                    <MultiItemCell></MultiItemCell>
+                    <SeparateLine 
+                        width={screenWidth-30} 
+                        toLeft={15}
+                        toTop={5}/>
                 </ScrollView>
             </View>
         );

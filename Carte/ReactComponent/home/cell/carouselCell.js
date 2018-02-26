@@ -5,7 +5,7 @@ import {
     View,
     ScrollView
 } from 'react-native';
-import ImageCell from "./imageCell"
+import ImageCell from "./ImageCell"
 
 
 export default class CarouselCell extends Component {
@@ -23,9 +23,6 @@ export default class CarouselCell extends Component {
 
                 <View style={styles.bottom}>
                     <ScrollView 
-                    style={{
-                        height: 255,
-                    }}
                     horizontal={true}
                     pagingEnabled={true}
                     showsHorizontalScrollIndicator={false} >
@@ -41,11 +38,9 @@ export default class CarouselCell extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        height: 315,
     },
 
     top: {
-        height: 60,
         flexDirection: 'row',
         alignItems: 'center',
     },     
@@ -54,7 +49,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         fontSize: 20,
         fontWeight: 'bold',
-        marginTop: 5,
+        marginTop: 10,
     },
 
     subTitle: {
@@ -69,7 +64,8 @@ const styles = StyleSheet.create({
     },
 
     bottom: {
-        height: 255,
+        marginTop: 10,
+        marginBottom: 0,
     },
 
     page: {

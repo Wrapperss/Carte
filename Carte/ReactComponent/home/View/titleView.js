@@ -3,8 +3,9 @@ import {
     View,
     StyleSheet,
     Text,
-    Button,
-    Animated
+    TouchableOpacity,
+    Animated,
+    Alert
 } from 'react-native';
 
 export default class TitleView extends Component {
@@ -24,25 +25,22 @@ export default class TitleView extends Component {
                     <Text style={ styles.headTitle }>{this.state.headTile}</Text>
                     <Text style={ styles.subTile }>{this.state.subTitle}</Text>
                 </View>
-                <Button 
-                    style={ styles.seeMoreButton } 
-                    title='查看更多' 
-                    color='#D0021B'
-                    onPress={this.click}
-                    ></Button>
+                <TouchableOpacity onPress={this.click}>
+                    <Text style={styles.seeMoreButton}>查看更多</Text>
+                </TouchableOpacity>
             </View>
         );
     }
 
     click() {
-        console.log('点击')
+        Alert.alert('点击');
     }
 }
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        height: 80,
+        height: 60,
     },
 
     title: {
@@ -63,7 +61,9 @@ const styles = StyleSheet.create({
 
     seeMoreButton: {
         flex: 3,
-        fontSize: 11,
+        fontSize: 14,
         marginTop: 15,
+        marginRight: 25,
+        color: '#D0021B',
     }
 })
