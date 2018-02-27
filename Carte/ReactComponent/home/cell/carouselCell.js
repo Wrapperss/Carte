@@ -9,13 +9,20 @@ import ImageCell from "./ImageCell"
 
 
 export default class CarouselCell extends Component {
+
+    constructor(props) {
+        super(props);
+        this.props.content = props.content
+    }
+    
+
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.top}>
                     <View style={{ flex: 8 }}>
-                        <Text style={styles.headTitle}>今日推荐</Text>
-                        <Text style={styles.subTitle}>全方位的生活指南，每天都有新乐趣</Text>
+                        <Text style={styles.headTitle}>{this.props.content.headTitle}</Text>
+                        <Text style={styles.subTitle}>{this.props.content.subTitle}</Text>
                     </View>
                     <Text style={ styles.indicator } >1/6</Text>
                 </View>

@@ -19,8 +19,15 @@ export default class HomePage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ScrollView>
-                    <CarouselCell></CarouselCell>
+                <ScrollView
+                    scrollsToTop={true}
+                    showsVerticalScrollIndicator={false}>
+                    <CarouselCell
+                        content={{
+                            headTitle: '今日推荐',
+                            subTitle: '全方位的生活指南，每天都有新乐趣',
+                        }}
+                        ></CarouselCell>
                     <SeparateLine 
                         width={screenWidth-30} 
                         toLeft={15}
@@ -31,6 +38,21 @@ export default class HomePage extends Component {
                         toLeft={15}
                         toTop={5}/>
                     <MultiItemCell></MultiItemCell>
+                    <SeparateLine 
+                        width={screenWidth-30} 
+                        toLeft={15}
+                        toTop={5}/>
+                    <MultiItemCell></MultiItemCell>
+                    <SeparateLine 
+                        width={screenWidth-30} 
+                        toLeft={15}
+                        toTop={5}/>
+                    <CarouselCell
+                        content={{
+                            headTitle: '三十分钟闪购',
+                            subTitle: 'SOS 30min内必达，慢必赔，扫除生活窘迫  ',
+                        }}
+                        ></CarouselCell>
                     <SeparateLine 
                         width={screenWidth-30} 
                         toLeft={15}

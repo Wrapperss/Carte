@@ -50,9 +50,7 @@ import TitleView from '../View/TitleView'
                             }
                         ]}></ImageList>
                 </View>
-                
-                
-             </View>  
+             </View>
          );
      }
  }
@@ -63,7 +61,6 @@ import TitleView from '../View/TitleView'
      },
 
      bottom: {
-        height: 120,
      }
  })
 
@@ -73,7 +70,6 @@ import TitleView from '../View/TitleView'
         super(props);
         this.props.item = props.item
     }
-    
 
      _onPress = ()  => {
         console.log('点击');
@@ -82,10 +78,29 @@ import TitleView from '../View/TitleView'
      render() {
          return (
              <View style={listStyles.itemContainer}>
-                 <Image></Image>
-                 <Text>{this.props.item.title}</Text>
-                 <Text>{this.props.item.price}</Text>
-                 <Text>{this.props.item.originalPrice}</Text>
+                 <Image 
+                    source={{url: 'xx'}}
+                    style={{
+                        width: 150,
+                        height: 100,
+                    }}
+                    ></Image>
+                 <Text 
+                    numberOfLines={0} 
+                    style={listStyles.itemTitle}
+                    >{this.props.item.title}</Text>
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'flex-end',
+                    marginBottom: 3
+                    }}>
+                    <Text
+                        style={listStyles.itemPrice}
+                        >{this.props.item.price}</Text>
+                    <Text
+                        style={listStyles.itemOriginalPrice}
+                        >{this.props.item.originalPrice}</Text>
+                </View>
              </View>
          );
      }
@@ -99,8 +114,10 @@ import TitleView from '../View/TitleView'
     
     _keyExtractor = (item, index) => item.key;
 
-    _renderItem = ({item}) => {
-        <ImageItem item={item}></ImageItem>
+    _renderItem = ({item, index}) => {
+        return (
+            <ImageItem item={item}></ImageItem>
+        );
     }
     
      render() {
@@ -111,6 +128,7 @@ import TitleView from '../View/TitleView'
                 renderItem={this._renderItem}
                 horizontal={true}
                 keyExtractor={this._keyExtractor}
+                showsHorizontalScrollIndicator={false}
                 />
          );
      }
@@ -118,9 +136,24 @@ import TitleView from '../View/TitleView'
 
  const listStyles = StyleSheet.create({
      itemContainer: {
-        backgroundColor: 'black',
+         width: 150,
+         marginLeft: 10,
      },
+
+     itemTitle: {
+        marginTop: 5,
+     },
+
+     itemPrice: {
+        color: '#D0021B',
+     },
+
+     itemOriginalPrice: {
+        marginLeft: 5,
+        fontSize: 12,
+     },
+
      container: {
-        backgroundColor: 'red',
+
      },
  })
