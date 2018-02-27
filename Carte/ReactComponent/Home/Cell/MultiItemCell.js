@@ -61,6 +61,7 @@ import TitleView from '../View/TitleView'
      },
 
      bottom: {
+         marginTop: 5,
      }
  })
 

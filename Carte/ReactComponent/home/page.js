@@ -14,6 +14,7 @@ import MiddleCell from "./Cell/MiddleCell";
 import MultiItemCell from './Cell/MultiItemCell'
 import Dimensions from 'Dimensions';
 let screenWidth = Dimensions.get("window").width;
+let screenHeight = Dimensions.get("window").height
 
 export default class HomePage extends Component {
     render() {
@@ -21,7 +22,9 @@ export default class HomePage extends Component {
             <View style={styles.container}>
                 <ScrollView
                     scrollsToTop={true}
-                    showsVerticalScrollIndicator={false}>
+                    showsVerticalScrollIndicator={false}
+                    style={styles.mainView}
+                    contentContainerStyle={styles.contentContainer}>
                     <CarouselCell
                         content={{
                             headTitle: '今日推荐',
@@ -68,6 +71,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F8F8F8'
+    },
+
+    mainView: {
+        // height: screenHeight-100,
+        paddingVertical: 10,
     },
 })
 
