@@ -58,6 +58,6 @@ class MainTabBarController: UITabBarController {
                                 MainNavigationController(rootViewController: vc2),
                                 MainNavigationController(rootViewController: vc3),
                                 MainNavigationController(rootViewController: vc4),
-                                mine]
+                                MainNavigationController(rootViewController: mine)]
     }
 }

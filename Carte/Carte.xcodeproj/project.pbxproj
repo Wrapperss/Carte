@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		627A96EFA4B9DD0CA890EF0C /* Pods_Carte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D629745E2790814377F9A931 /* Pods_Carte.framework */; };
+		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
 		9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B33AF202443E800259540 /* MainNavigationController.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
@@ -71,6 +72,7 @@
 		7C0F38E3A9C10E981489A03D /* Pods-Carte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carte/Pods-Carte.debug.xcconfig"; sourceTree = "<group>"; };
 		9B867A70FAE529265551217B /* Pods-Carte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carte/Pods-Carte.release.xcconfig"; sourceTree = "<group>"; };
 		9EBE461822E4F6AB3C95C1A6 /* Pods_CarteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		9F3B33AF202443E800259540 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9F671E292022EF19004C4D51 /* MineController.swift */,
+				9F3778172078939700DFCC38 /* SettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3778182078939700DFCC38 /* SettingController.swift in Sources */,
 				9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
