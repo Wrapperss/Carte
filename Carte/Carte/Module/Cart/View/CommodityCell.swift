@@ -53,6 +53,13 @@ class CommodityCell: UICollectionViewCell {
         reduceButton.cornerRadius = 2
         reduceButton.layer.borderColor = UIColor.black.cgColor
         reduceButton.layer.borderWidth = 1
+        
+        checkButton.onFillColor = UIColor(251, 30, 44, 1)
+        checkButton.onTintColor = UIColor(251, 30, 44, 1)
+        checkButton.onCheckColor = .white
+        checkButton.tintColor = .lightGray
+        checkButton.onAnimationType = .fill
+        checkButton.offAnimationType = .fill
     }
     
     func config() {
