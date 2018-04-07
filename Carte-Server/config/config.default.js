@@ -37,7 +37,7 @@ module.exports = appInfo => {
 
   config.oauth2Server = {
     debug: config.env === 'local',
-    grants: [ 'password' ],
+    grants: [ 'client_credentials' ],
   };
 
   return config;

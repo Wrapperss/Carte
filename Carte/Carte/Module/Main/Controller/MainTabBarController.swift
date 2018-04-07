@@ -16,8 +16,7 @@ class MainTabBarController: UITabBarController {
     let fenlei = BaseViewController()
     let man = BaseViewController()
     let car = BaseViewController()
-    let mine = MineController(viewModel: MineViewModel())
-    
+    let mine = MineController.initFromStoryboard(name: .mine)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,11 @@ class MainTabBarController: UITabBarController {
 //            $0.title = "精选"
 //        }
 
-        let vc1 = RNViewController(fileUrl: "Home/Page", initProps: nil).then {
+//        let vc1 = RNViewController(fileUrl: "Home/Page", initProps: nil).then {
+//            $0.title = "精选"
+//        }
+        
+        let vc1 = UIViewController().then {
             $0.title = "精选"
         }
         
@@ -48,15 +51,13 @@ class MainTabBarController: UITabBarController {
             $0.view.backgroundColor = UIColor.flatGray
             $0.title = "购物车"
         }
-
-        let mine = MineController().then {
-            $0.title = "我的"
-        }
+        
+        mine.title = "我的"
         
         self.viewControllers = [MainNavigationController(rootViewController: vc1),
                                 MainNavigationController(rootViewController: vc2),
                                 MainNavigationController(rootViewController: vc3),
                                 MainNavigationController(rootViewController: vc4),
-                                MainNavigationController(rootViewController: mine)]
+                                mine]
     }
 }
