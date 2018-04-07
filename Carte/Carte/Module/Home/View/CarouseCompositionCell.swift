@@ -36,7 +36,7 @@ class CarouseCompositionCell: UICollectionViewCell {
     
     let mediumLabel = UILabel().then {
         $0.textColor = UIColor.flatBlack
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        $0.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium)
     }
     
     let grayLabel = UILabel().then {

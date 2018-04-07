@@ -52,7 +52,7 @@ class HeadlineCell: UICollectionViewCell {
     
     var titleLabel = UILabel().then {
         $0.textColor = UIColor.flatBlack
-        $0.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        $0.font = UIFont.systemFont(ofSize: 25, weight: UIFontWeightMedium)
     }
     
     var descriptionLabel = UILabel().then {

@@ -47,8 +47,7 @@ class MainTabBarController: UITabBarController {
             $0.title = "慢用"
         }
         
-        let vc4 = UIViewController().then {
-            $0.view.backgroundColor = UIColor.flatGray
+        let vc4 = CartController().then {
             $0.title = "购物车"
         }
         

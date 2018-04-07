@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (4.6.0)
+  - AttributedLib (1.3.0)
+  - BEMCheckBox (1.4.1)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Charts (3.0.5):
-    - Charts/Core (= 3.0.5)
-  - Charts/Core (3.0.5)
+  - DGActivityIndicatorView (2.1.1)
   - Gemini (1.2.0)
   - Hero (1.0.1)
   - IGListKit (3.1.1):
@@ -13,8 +13,6 @@ PODS:
   - IGListKit/Default (3.1.1):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.1.1)
-  - ImagePicker (3.0.0)
-  - ImageViewer (5.0.0)
   - IQKeyboardManagerSwift (5.0.7)
   - Kingfisher (4.6.1)
   - MJRefresh (3.1.15.1)
@@ -59,21 +57,9 @@ PODS:
     - SJObserverHelper
   - SJObserverHelper (1.0.3)
   - SkeletonView (1.0.4)
-  - SnapKit (4.0.0)
-  - SwifterSwift (4.1.1):
-    - SwifterSwift/AppKit (= 4.1.1)
-    - SwifterSwift/CoreGraphics (= 4.1.1)
-    - SwifterSwift/CoreLocation (= 4.1.1)
-    - SwifterSwift/Foundation (= 4.1.1)
-    - SwifterSwift/SwiftStdlib (= 4.1.1)
-    - SwifterSwift/UIKit (= 4.1.1)
-  - SwifterSwift/AppKit (4.1.1)
-  - SwifterSwift/CoreGraphics (4.1.1)
-  - SwifterSwift/CoreLocation (4.1.1)
-  - SwifterSwift/Foundation (4.1.1)
-  - SwifterSwift/SwiftStdlib (4.1.1)
-  - SwifterSwift/UIKit (4.1.1)
+  - SnapKit (3.2.0)
   - SwiftLint (0.24.2)
+  - SwiftRichString (0.9.10)
   - SwiftyBeaver (1.5.1)
   - SwiftyUserDefaults (3.0.0)
   - Then (2.3.0)
@@ -82,16 +68,17 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - AttributedLib (= 1.3.0)
+  - BEMCheckBox
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
-  - Charts
+  - DGActivityIndicatorView
   - Gemini
   - Hero
   - IGListKit (~> 3.0)
-  - ImagePicker
-  - ImageViewer
   - IQKeyboardManagerSwift
   - Kingfisher
   - MJRefresh
+  - MJRefresh (~> 3.1.12)
   - Moya (~> 10.0)
   - Onboard
   - PasswordTextField
@@ -106,9 +93,9 @@ DEPENDENCIES:
   - RxSwift
   - SJFullscreenPopGesture
   - SkeletonView
-  - SnapKit (~> 4.0.0)
-  - SwifterSwift
+  - SnapKit (~> 3.2.0)
   - SwiftLint
+  - SwiftRichString (= 0.9.10)
   - SwiftyBeaver
   - SwiftyUserDefaults
   - Then
@@ -126,13 +113,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AttributedLib: 75e8b68200d9e7db0a4f463476c78582aa598fc8
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   Gemini: acff98012273066f1b83c887731260abfaf18ec5
   Hero: cee286821578e170d8c0c9c9cda7897357401112
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
-  ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
-  ImageViewer: 3def6e39c6979ce3e9d001c78eec0d8b895f2f73
   IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
@@ -152,15 +139,15 @@ SPEC CHECKSUMS:
   SJFullscreenPopGesture: b2c9e5d2903bdb3645c40f260114be8f5cc983cb
   SJObserverHelper: b270d707cd18ab76538596aa4e98cf798c9e9868
   SkeletonView: 933a9442b08c3550f61c2ae38a02456a74ad86f4
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwifterSwift: bfcae9d659dfd306d164f13f72cad09198f30723
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
+  SwiftRichString: 1e31aec5666feea03f802f41fc237160cf7119b6
   SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
   ViewAnimator: 1f3fa25f3c9010ab0dda06cf9e3e49a4b55834ff
 
-PODFILE CHECKSUM: 27422981597bb8660f7ab8971133d7e85ecc4c3f
+PODFILE CHECKSUM: 527ace0ab35e8087fd130b28f374f03d80688254
 
 COCOAPODS: 1.4.0

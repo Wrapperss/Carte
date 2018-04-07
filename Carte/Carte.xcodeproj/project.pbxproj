@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		627A96EFA4B9DD0CA890EF0C /* Pods_Carte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D629745E2790814377F9A931 /* Pods_Carte.framework */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
+		9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37781B2078A18B00DFCC38 /* CartController.swift */; };
+		9F3778262078A79B00DFCC38 /* CommodityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778242078A79B00DFCC38 /* CommodityCell.swift */; };
+		9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3778252078A79B00DFCC38 /* CommodityCell.xib */; };
+		9F3778292078AF0C00DFCC38 /* CommoditySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778282078AF0C00DFCC38 /* CommoditySectionController.swift */; };
+		9F37782B2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37782A2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift */; };
+		9F37782D2078B7A800DFCC38 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37782C2078B7A800DFCC38 /* String+Extension.swift */; };
+		9F3778302078C1F300DFCC38 /* CartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37782F2078C1F300DFCC38 /* CartFactory.swift */; };
+		9F3778322078C83D00DFCC38 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778312078C83D00DFCC38 /* UIScrollViewExtension.swift */; };
+		9F37785D2078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37784F2078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.m */; };
+		9F37785E2078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778512078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m */; };
+		9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778532078CBC000DFCC38 /* CreamsRefreshView.swift */; };
+		9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F3778542078CBC000DFCC38 /* simple_loader.json */; };
+		9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F3778552078CBC000DFCC38 /* loader_ring.json */; };
+		9F3778622078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778572078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.m */; };
+		9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37785A2078CBC000DFCC38 /* SVPullToRefreshLoadingView.m */; };
+		9F3778642078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37785C2078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m */; };
+		9F3778662078CD0700DFCC38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778652078CD0600DFCC38 /* Constants.swift */; };
 		9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B33AF202443E800259540 /* MainNavigationController.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
@@ -35,7 +52,6 @@
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
 		9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
-		9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598E200F8D28004EB3F2 /* ViewController.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
 		9FF55997200F8D28004EB3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55996200F8D28004EB3F2 /* Assets.xcassets */; };
 		9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */; };
@@ -73,6 +89,30 @@
 		9B867A70FAE529265551217B /* Pods-Carte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carte/Pods-Carte.release.xcconfig"; sourceTree = "<group>"; };
 		9EBE461822E4F6AB3C95C1A6 /* Pods_CarteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		9F37781B2078A18B00DFCC38 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		9F3778242078A79B00DFCC38 /* CommodityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityCell.swift; sourceTree = "<group>"; };
+		9F3778252078A79B00DFCC38 /* CommodityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommodityCell.xib; sourceTree = "<group>"; };
+		9F3778282078AF0C00DFCC38 /* CommoditySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommoditySectionController.swift; sourceTree = "<group>"; };
+		9F37782A2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IGListCollectionContext+Extension.swift"; sourceTree = "<group>"; };
+		9F37782C2078B7A800DFCC38 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9F37782F2078C1F300DFCC38 /* CartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartFactory.swift; sourceTree = "<group>"; };
+		9F3778312078C83D00DFCC38 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		9F37784C2078CA9200DFCC38 /* Carte-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Carte-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F37784E2078CBC000DFCC38 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		9F37784F2078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		9F3778502078CBC000DFCC38 /* SVPullToRefreshLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefreshLoadingView.h; sourceTree = "<group>"; };
+		9F3778512078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVInfiniteNoMoreDataView.m; sourceTree = "<group>"; };
+		9F3778532078CBC000DFCC38 /* CreamsRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreamsRefreshView.swift; sourceTree = "<group>"; };
+		9F3778542078CBC000DFCC38 /* simple_loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = simple_loader.json; sourceTree = "<group>"; };
+		9F3778552078CBC000DFCC38 /* loader_ring.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_ring.json; sourceTree = "<group>"; };
+		9F3778562078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVInfiniteScrollingLoadingView.h; sourceTree = "<group>"; };
+		9F3778572078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		9F3778582078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		9F3778592078CBC000DFCC38 /* SVInfiniteNoMoreDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVInfiniteNoMoreDataView.h; sourceTree = "<group>"; };
+		9F37785A2078CBC000DFCC38 /* SVPullToRefreshLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPullToRefreshLoadingView.m; sourceTree = "<group>"; };
+		9F37785B2078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		9F37785C2078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVInfiniteScrollingLoadingView.m; sourceTree = "<group>"; };
+		9F3778652078CD0600DFCC38 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3B33AF202443E800259540 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
@@ -100,7 +140,6 @@
 		9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FF5598E200F8D28004EB3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FF55994200F8D28004EB3F2 /* Carte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Carte.xcdatamodel; sourceTree = "<group>"; };
 		9FF55996200F8D28004EB3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF55999200F8D28004EB3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,6 +195,79 @@
 				1506921C87B5F9DD747FF2A9 /* Pods-CarteUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F3778192078A15500DFCC38 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9F37782F2078C1F300DFCC38 /* CartFactory.swift */,
+				9F37781E2078A19F00DFCC38 /* Model */,
+				9F37781D2078A19800DFCC38 /* View */,
+				9F37781A2078A16600DFCC38 /* Controller */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		9F37781A2078A16600DFCC38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F37781B2078A18B00DFCC38 /* CartController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F37781D2078A19800DFCC38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F3778242078A79B00DFCC38 /* CommodityCell.swift */,
+				9F3778252078A79B00DFCC38 /* CommodityCell.xib */,
+				9F3778282078AF0C00DFCC38 /* CommoditySectionController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F37781E2078A19F00DFCC38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F3778332078C97400DFCC38 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				9F37784D2078CBC000DFCC38 /* CreamsPullToRefresh */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		9F37784D2078CBC000DFCC38 /* CreamsPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9F37784E2078CBC000DFCC38 /* SVPullToRefresh.h */,
+				9F37784F2078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.m */,
+				9F3778502078CBC000DFCC38 /* SVPullToRefreshLoadingView.h */,
+				9F3778512078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m */,
+				9F3778522078CBC000DFCC38 /* SORefreshView */,
+				9F3778562078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.h */,
+				9F3778572078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.m */,
+				9F3778582078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.h */,
+				9F3778592078CBC000DFCC38 /* SVInfiniteNoMoreDataView.h */,
+				9F37785A2078CBC000DFCC38 /* SVPullToRefreshLoadingView.m */,
+				9F37785B2078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.h */,
+				9F37785C2078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m */,
+			);
+			path = CreamsPullToRefresh;
+			sourceTree = "<group>";
+		};
+		9F3778522078CBC000DFCC38 /* SORefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				9F3778532078CBC000DFCC38 /* CreamsRefreshView.swift */,
+				9F3778542078CBC000DFCC38 /* simple_loader.json */,
+				9F3778552078CBC000DFCC38 /* loader_ring.json */,
+			);
+			path = SORefreshView;
 			sourceTree = "<group>";
 		};
 		9F4E54EB201863B900FFFF33 /* Mine */ = {
@@ -370,7 +482,6 @@
 				9FF559BD201083C4004EB3F2 /* Module */,
 				9FF559C020108436004EB3F2 /* Resource */,
 				9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */,
-				9FF5598E200F8D28004EB3F2 /* ViewController.swift */,
 				9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */,
 				9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */,
 			);
@@ -398,6 +509,7 @@
 		9FF559BD201083C4004EB3F2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9F3778192078A15500DFCC38 /* Cart */,
 				9F671E3920231C01004C4D51 /* Main */,
 				9F737E2A20294AD0006D08A4 /* Home */,
 				9F4E54EB201863B900FFFF33 /* Mine */,
@@ -408,6 +520,9 @@
 		9FF559BE201083DD004EB3F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9F3778312078C83D00DFCC38 /* UIScrollViewExtension.swift */,
+				9F37782C2078B7A800DFCC38 /* String+Extension.swift */,
+				9F37782A2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift */,
 				9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */,
 				9F737E7520295728006D08A4 /* UIScreen+Extension.swift */,
 				9F671E352023096F004C4D51 /* UIColor+Extension.swift */,
@@ -419,6 +534,8 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9F3778652078CD0600DFCC38 /* Constants.swift */,
+				9F3778332078C97400DFCC38 /* Objective-C */,
 				9F737E6C202953A6006D08A4 /* Utilities */,
 				9F737E3220295237006D08A4 /* View */,
 				9F671E232022E990004C4D51 /* Factory */,
@@ -433,6 +550,7 @@
 			children = (
 				9FF5599B200F8D28004EB3F2 /* Info.plist */,
 				9FF55996200F8D28004EB3F2 /* Assets.xcassets */,
+				9F37784C2078CA9200DFCC38 /* Carte-Bridging-Header.h */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -583,6 +701,9 @@
 			files = (
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
 				9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */,
+				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
+				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
+				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FF55997200F8D28004EB3F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,14 +811,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carte/Pods-Carte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AttributedLib/AttributedLib.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
-				"${BUILT_PRODUCTS_DIR}/ImageViewer/ImageViewer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -716,7 +837,7 @@
 				"${BUILT_PRODUCTS_DIR}/SJObserverHelper/SJObserverHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -727,14 +848,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AttributedLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageViewer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -753,7 +874,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJObserverHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -827,19 +948,31 @@
 				9F3778182078939700DFCC38 /* SettingController.swift in Sources */,
 				9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
+				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
+				9F3778622078CBC000DFCC38 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,
 				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,
+				9F3778662078CD0700DFCC38 /* Constants.swift in Sources */,
 				9F671E2E2022EFBF004C4D51 /* BaseListViewController.swift in Sources */,
 				9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */,
+				9F37782D2078B7A800DFCC38 /* String+Extension.swift in Sources */,
 				9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */,
+				9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */,
+				9F3778262078A79B00DFCC38 /* CommodityCell.swift in Sources */,
+				9F3778322078C83D00DFCC38 /* UIScrollViewExtension.swift in Sources */,
+				9F37785D2078CBC000DFCC38 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				9F3778302078C1F300DFCC38 /* CartFactory.swift in Sources */,
 				9F737E3120294B04006D08A4 /* HomeViewController.swift in Sources */,
+				9F3778642078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
+				9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */,
 				9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
+				9F3778292078AF0C00DFCC38 /* CommoditySectionController.swift in Sources */,
 				9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */,
 				9F737E70202954B1006D08A4 /* Associate.swift in Sources */,
 				9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */,
@@ -852,7 +985,8 @@
 				9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */,
 				9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */,
 				9F671E322022F7B5004C4D51 /* User.swift in Sources */,
-				9FF5598F200F8D28004EB3F2 /* ViewController.swift in Sources */,
+				9F37785E2078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m in Sources */,
+				9F37782B2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1018,7 +1152,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wrappers.Carte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Wrappers/Carte/Carte/Carte/Resource/Carte-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1034,7 +1169,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wrappers.Carte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Wrappers/Carte/Carte/Carte/Resource/Carte-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
