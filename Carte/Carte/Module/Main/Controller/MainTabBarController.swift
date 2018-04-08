@@ -29,13 +29,14 @@ class MainTabBarController: UITabBarController {
 //            $0.title = "精选"
 //        }
 
-//        let vc1 = RNViewController(fileUrl: "Home/Page", initProps: nil).then {
+        let vc1 = RNViewController(fileUrl: "Home/Page", initProps: nil).then {
+            $0.title = "精选"
+            $0.tabBarItem = UITabBarItem(title: "精选", image: UIImage.init(named: "all"), selectedImage: nil)
+        }
+        
+//        let vc1 = UIViewController().then {
 //            $0.title = "精选"
 //        }
-        
-        let vc1 = UIViewController().then {
-            $0.title = "精选"
-        }
         
         let vc2 = UIViewController().then {
             $0.view.backgroundColor = UIColor.flatBlue
@@ -44,7 +45,7 @@ class MainTabBarController: UITabBarController {
 
         let vc3 = UIViewController().then {
             $0.view.backgroundColor = UIColor.flatMint
-            $0.title = "慢用"
+            $0.title = "杂志"
         }
         
         let vc4 = CartController().then {
@@ -58,5 +59,9 @@ class MainTabBarController: UITabBarController {
                                 MainNavigationController(rootViewController: vc3),
                                 MainNavigationController(rootViewController: vc4),
                                 MainNavigationController(rootViewController: mine)]
+        
+//        let tab1 = UITabBarItem(title: "精选", image: UIImage.init(named: "all"), selectedImage: nil)
+//
+//        self.tabBar.items = [tab1]
     }
 }

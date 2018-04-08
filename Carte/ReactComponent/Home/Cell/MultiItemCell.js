@@ -13,7 +13,7 @@ import TitleView from '../View/TitleView'
          super(props);
 
      }
-     
+
      render() {
          return(
              <View style={styles.container}>

@@ -53,7 +53,6 @@
 		9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
-		9FF55997200F8D28004EB3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55996200F8D28004EB3F2 /* Assets.xcassets */; };
 		9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */; };
 		9FF559A5200F8D28004EB3F2 /* CarteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559A4200F8D28004EB3F2 /* CarteTests.swift */; };
 		9FF559B0200F8D28004EB3F2 /* CarteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF559AF200F8D28004EB3F2 /* CarteUITests.swift */; };
@@ -141,7 +140,6 @@
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF55994200F8D28004EB3F2 /* Carte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Carte.xcdatamodel; sourceTree = "<group>"; };
-		9FF55996200F8D28004EB3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF55999200F8D28004EB3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FF5599B200F8D28004EB3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF559A0200F8D28004EB3F2 /* CarteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,7 +346,6 @@
 			children = (
 				9F671E3E20235F58004C4D51 /* MainTabBarController.swift */,
 				9F3B33AF202443E800259540 /* MainNavigationController.swift */,
-				9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -452,6 +449,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9F96C29A2079F49B004970D2 /* React-Native */ = {
+			isa = PBXGroup;
+			children = (
+				9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */,
+			);
+			path = "React-Native";
+			sourceTree = "<group>";
+		};
 		9FF55980200F8D28004EB3F2 = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +539,7 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9F96C29A2079F49B004970D2 /* React-Native */,
 				9F3778652078CD0600DFCC38 /* Constants.swift */,
 				9F3778332078C97400DFCC38 /* Objective-C */,
 				9F737E6C202953A6006D08A4 /* Utilities */,
@@ -549,7 +555,6 @@
 			isa = PBXGroup;
 			children = (
 				9FF5599B200F8D28004EB3F2 /* Info.plist */,
-				9FF55996200F8D28004EB3F2 /* Assets.xcassets */,
 				9F37784C2078CA9200DFCC38 /* Carte-Bridging-Header.h */,
 			);
 			path = Resource;
@@ -704,7 +709,6 @@
 				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
-				9FF55997200F8D28004EB3F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,6 +819,9 @@
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/GLog/glog.framework",
 				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
@@ -825,6 +832,7 @@
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -844,6 +852,7 @@
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -852,6 +861,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
@@ -862,6 +874,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -881,6 +894,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
