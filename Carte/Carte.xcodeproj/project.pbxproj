@@ -48,6 +48,7 @@
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
 		9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */; };
 		9F7CFBC5202B0222004F3ABE /* CarouseCompositionSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */; };
+		9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F96C29B2079FF82004970D2 /* Assets.xcassets */; };
 		9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
 		9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */; };
@@ -134,6 +135,7 @@
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionCell.swift; sourceTree = "<group>"; };
 		9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionSectionController.swift; sourceTree = "<group>"; };
+		9F96C29B2079FF82004970D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 		9FF559C020108436004EB3F2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F96C29B2079FF82004970D2 /* Assets.xcassets */,
 				9FF5599B200F8D28004EB3F2 /* Info.plist */,
 				9F37784C2078CA9200DFCC38 /* Carte-Bridging-Header.h */,
 			);
@@ -708,6 +711,7 @@
 				9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */,
 				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
+				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
