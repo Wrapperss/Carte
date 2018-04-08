@@ -282,6 +282,12 @@ extension Optional where Wrapped == String {
     }
 }
 
+extension String {
+    public func toUrl() -> URL? {
+        return URL(string: self)
+    }
+}
+
 //extension Optional where Wrapped == String {
 //    public func toUrl() -> URL {
 //        guard let str = self else {

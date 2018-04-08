@@ -49,6 +49,12 @@
 		9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */; };
 		9F7CFBC5202B0222004F3ABE /* CarouseCompositionSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */; };
 		9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F96C29B2079FF82004970D2 /* Assets.xcassets */; };
+		9F96C2A0207A0453004970D2 /* MagazineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96C29F207A0453004970D2 /* MagazineController.swift */; };
+		9F96C2A8207A06C9004970D2 /* MagazineCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96C2A6207A06C9004970D2 /* MagazineCoverCell.swift */; };
+		9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F96C2A7207A06C9004970D2 /* MagazineCoverCell.xib */; };
+		9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96C2AA207A0A7F004970D2 /* MagazineFactory.swift */; };
+		9F96C2AD207A47E6004970D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F96C2AC207A47E6004970D2 /* Main.storyboard */; };
+		9F96C2B1207A523C004970D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96C2B0207A523C004970D2 /* LoginViewController.swift */; };
 		9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
 		9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */; };
@@ -136,6 +142,12 @@
 		9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionCell.swift; sourceTree = "<group>"; };
 		9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseCompositionSectionController.swift; sourceTree = "<group>"; };
 		9F96C29B2079FF82004970D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F96C29F207A0453004970D2 /* MagazineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineController.swift; sourceTree = "<group>"; };
+		9F96C2A6207A06C9004970D2 /* MagazineCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCoverCell.swift; sourceTree = "<group>"; };
+		9F96C2A7207A06C9004970D2 /* MagazineCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagazineCoverCell.xib; sourceTree = "<group>"; };
+		9F96C2AA207A0A7F004970D2 /* MagazineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineFactory.swift; sourceTree = "<group>"; };
+		9F96C2AC207A47E6004970D2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9F96C2B0207A523C004970D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -339,6 +351,7 @@
 				9F737E2820294A7E006D08A4 /* Model */,
 				9F737E2720294A76006D08A4 /* ViewModel */,
 				9F737E2620294A6C006D08A4 /* View */,
+				9F96C2AC207A47E6004970D2 /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -459,6 +472,49 @@
 			path = "React-Native";
 			sourceTree = "<group>";
 		};
+		9F96C29D207A042F004970D2 /* Magazine */ = {
+			isa = PBXGroup;
+			children = (
+				9F96C2AA207A0A7F004970D2 /* MagazineFactory.swift */,
+				9F96C2A1207A04C8004970D2 /* View */,
+				9F96C29E207A043B004970D2 /* Controller */,
+			);
+			path = Magazine;
+			sourceTree = "<group>";
+		};
+		9F96C29E207A043B004970D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F96C29F207A0453004970D2 /* MagazineController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F96C2A1207A04C8004970D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F96C2A6207A06C9004970D2 /* MagazineCoverCell.swift */,
+				9F96C2A7207A06C9004970D2 /* MagazineCoverCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F96C2AE207A50A9004970D2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9F96C2AF207A50B1004970D2 /* Controller */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9F96C2AF207A50B1004970D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F96C2B0207A523C004970D2 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9FF55980200F8D28004EB3F2 = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +572,8 @@
 		9FF559BD201083C4004EB3F2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9F96C2AE207A50A9004970D2 /* Authentication */,
+				9F96C29D207A042F004970D2 /* Magazine */,
 				9F3778192078A15500DFCC38 /* Cart */,
 				9F671E3920231C01004C4D51 /* Main */,
 				9F737E2A20294AD0006D08A4 /* Home */,
@@ -710,8 +768,10 @@
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
 				9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */,
 				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
+				9F96C2AD207A47E6004970D2 /* Main.storyboard in Resources */,
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
+				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -990,6 +1050,7 @@
 				9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
+				9F96C2A0207A0453004970D2 /* MagazineController.swift in Sources */,
 				9F3778292078AF0C00DFCC38 /* CommoditySectionController.swift in Sources */,
 				9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */,
 				9F737E70202954B1006D08A4 /* Associate.swift in Sources */,
@@ -1000,12 +1061,15 @@
 				9F671E362023096F004C4D51 /* UIColor+Extension.swift in Sources */,
 				9F671E3820230994004C4D51 /* UIView+Extension.swift in Sources */,
 				9F737E6E2029542E006D08A4 /* Storable.swift in Sources */,
+				9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */,
 				9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */,
+				9F96C2B1207A523C004970D2 /* LoginViewController.swift in Sources */,
 				9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */,
 				9F671E322022F7B5004C4D51 /* User.swift in Sources */,
 				9F37785E2078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m in Sources */,
 				9F37782B2078B3FD00DFCC38 /* IGListCollectionContext+Extension.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
+				9F96C2A8207A06C9004970D2 /* MagazineCoverCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,7 +44,7 @@ class MainTabBarController: UITabBarController {
             $0.tabBarItem = UITabBarItem(title: "分类", image: UIImage(named: "classify"), selectedImage: nil)
         }
 
-        let vc3 = UIViewController().then {
+        let vc3 = MagazineController().then {
             $0.view.backgroundColor = UIColor.flatMint
             $0.title = "杂志"
             $0.tabBarItem = UITabBarItem(title: "杂志", image: UIImage(named: "magazine"), selectedImage: nil)

@@ -33,6 +33,7 @@ pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chamel
 pod 'Onboard' # 引导页
 #pod 'ImagePicker'
 #pod 'ImageViewer'
+pod 'PasswordTextField'
 pod 'BEMCheckBox' #确认操作的动画库
 
 # 动画
