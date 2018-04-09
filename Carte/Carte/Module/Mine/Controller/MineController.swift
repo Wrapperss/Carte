@@ -24,3 +24,14 @@ class MineController: UITableViewController {
     }
     
 }
+
+extension MineController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            self.present(UINavigationController(rootViewController: LoginViewController.initFromStoryboard()),
+                         animated: true,
+                         completion: nil)
+        }
+    }
+}
