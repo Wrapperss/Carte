@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3da-ub-eq5">
-                        <rect key="frame" x="0.0" y="10" width="5" height="62.5"/>
+                        <rect key="frame" x="0.0" y="15" width="5" height="52.5"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="WoK-Z5-MLO"/>
@@ -35,9 +35,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="3da-ub-eq5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0kw-Qd-M4m"/>
-                    <constraint firstAttribute="bottom" secondItem="3da-ub-eq5" secondAttribute="bottom" constant="10" id="Cxn-bc-pHd"/>
+                    <constraint firstAttribute="bottom" secondItem="3da-ub-eq5" secondAttribute="bottom" constant="15" id="Cxn-bc-pHd"/>
                     <constraint firstItem="iu2-Qx-RtF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GEs-uy-FWk"/>
-                    <constraint firstItem="3da-ub-eq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MqL-pb-9xJ"/>
+                    <constraint firstItem="3da-ub-eq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="MqL-pb-9xJ"/>
                     <constraint firstItem="iu2-Qx-RtF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wwk-FA-pQ3"/>
                 </constraints>
             </tableViewCellContentView>
