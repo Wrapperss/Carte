@@ -16,7 +16,6 @@ class MainNavigationController: UINavigationController {
         navigationBar.isTranslucent = false
         
         navigationBar.tintColor = UIColor.flatBlack
-        navigationBar.shadowImage = UIImage()
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

@@ -38,8 +38,7 @@ class MainTabBarController: UITabBarController {
 //            $0.title = "精选"
 //        }
         
-        let vc2 = UIViewController().then {
-            $0.view.backgroundColor = UIColor.flatBlue
+        let vc2 = ClassifyController().then {
             $0.title = "分类"
             $0.tabBarItem = UITabBarItem(title: "分类", image: UIImage(named: "classify"), selectedImage: nil)
         }
