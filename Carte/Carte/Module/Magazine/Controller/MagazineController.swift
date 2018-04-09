@@ -36,6 +36,14 @@ class MagazineController: BaseViewController {
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        
+        tableView.addPullToRefreshWithBlock {
+            self.tableView.endRefreshing()
+        }
+        
+        tableView.addLoadMoreRefreshWithBlock {
+            self.tableView.endUpdates()
+        }
     }
 }
 
