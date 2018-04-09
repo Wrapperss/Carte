@@ -18,29 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9t-oG-07p">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@copyright 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8R-2C-LRe">
-                                        <rect key="frame" x="132.5" y="173" width="110" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.3564858490566038" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2gx-wV-C6u"/>
-                                    <constraint firstAttribute="bottom" secondItem="r8R-2C-LRe" secondAttribute="bottom" constant="10" id="OiN-Lj-MHK"/>
-                                    <constraint firstItem="r8R-2C-LRe" firstAttribute="centerX" secondItem="Z9t-oG-07p" secondAttribute="centerX" id="QaO-Ys-YcC"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysn-Gf-Zy0">
                                 <rect key="frame" x="100" y="170" width="176" height="84"/>
                                 <attributedString key="attributedText">
                                     <fragment content="C">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="72" name=".SFNSDisplay"/>
                                         </attributes>
                                     </fragment>
@@ -52,23 +35,28 @@
                                     </fragment>
                                     <fragment content="e">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="72" name=".SFNSDisplay"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@copyright 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8R-2C-LRe">
+                                <rect key="frame" x="132" y="650" width="110" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.35999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ysn-Gf-Zy0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="E5A-qt-GP5"/>
-                            <constraint firstItem="Z9t-oG-07p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EGv-Ch-1lc"/>
-                            <constraint firstItem="Ysn-Gf-Zy0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="PVl-uD-Ofq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z9t-oG-07p" secondAttribute="bottom" id="fIA-uK-SV1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z9t-oG-07p" secondAttribute="trailing" id="ogq-5F-uKn"/>
+                            <constraint firstItem="CbF-di-imb" firstAttribute="bottom" secondItem="r8R-2C-LRe" secondAttribute="bottom" id="9QB-E8-ZhX"/>
+                            <constraint firstItem="Ysn-Gf-Zy0" firstAttribute="centerX" secondItem="CbF-di-imb" secondAttribute="centerX" id="E5A-qt-GP5"/>
+                            <constraint firstItem="Ysn-Gf-Zy0" firstAttribute="top" secondItem="CbF-di-imb" secondAttribute="top" constant="150" id="PVl-uD-Ofq"/>
+                            <constraint firstItem="r8R-2C-LRe" firstAttribute="centerX" secondItem="CbF-di-imb" secondAttribute="centerX" id="RRz-6y-Bgx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="CbF-di-imb"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

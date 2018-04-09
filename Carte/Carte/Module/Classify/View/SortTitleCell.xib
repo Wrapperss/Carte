@@ -20,15 +20,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3da-ub-eq5">
-                        <rect key="frame" x="0.0" y="10" width="20" height="62.5"/>
+                        <rect key="frame" x="0.0" y="10" width="5" height="62.5"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="WoK-Z5-MLO"/>
+                            <constraint firstAttribute="width" constant="5" id="WoK-Z5-MLO"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精选餐厅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu2-Qx-RtF">
-                        <rect key="frame" x="25" y="29.5" width="270" height="24"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <rect key="frame" x="131.5" y="33.5" width="57.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,8 +38,6 @@
                     <constraint firstAttribute="bottom" secondItem="3da-ub-eq5" secondAttribute="bottom" constant="10" id="Cxn-bc-pHd"/>
                     <constraint firstItem="iu2-Qx-RtF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GEs-uy-FWk"/>
                     <constraint firstItem="3da-ub-eq5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MqL-pb-9xJ"/>
-                    <constraint firstItem="iu2-Qx-RtF" firstAttribute="leading" secondItem="3da-ub-eq5" secondAttribute="trailing" constant="5" id="RvR-5Z-KQE"/>
-                    <constraint firstAttribute="trailing" secondItem="iu2-Qx-RtF" secondAttribute="trailing" constant="25" id="pLf-6b-3JN"/>
                     <constraint firstItem="iu2-Qx-RtF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wwk-FA-pQ3"/>
                 </constraints>
             </tableViewCellContentView>

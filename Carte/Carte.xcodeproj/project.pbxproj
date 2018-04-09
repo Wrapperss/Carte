@@ -11,6 +11,7 @@
 		9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08EE99207B1B220021F4DD /* ClassifyController.swift */; };
 		9F08EE9E207B38920021F4DD /* SortTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08EE9C207B38920021F4DD /* SortTitleCell.swift */; };
 		9F08EE9F207B38920021F4DD /* SortTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EE9D207B38920021F4DD /* SortTitleCell.xib */; };
+		9F08EEA1207B3F170021F4DD /* ClassifyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
 		9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37781B2078A18B00DFCC38 /* CartController.swift */; };
 		9F3778262078A79B00DFCC38 /* CommodityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778242078A79B00DFCC38 /* CommodityCell.swift */; };
@@ -100,6 +101,7 @@
 		9F08EE99207B1B220021F4DD /* ClassifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyController.swift; sourceTree = "<group>"; };
 		9F08EE9C207B38920021F4DD /* SortTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTitleCell.swift; sourceTree = "<group>"; };
 		9F08EE9D207B38920021F4DD /* SortTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortTitleCell.xib; sourceTree = "<group>"; };
+		9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyFactory.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		9F37781B2078A18B00DFCC38 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
 		9F3778242078A79B00DFCC38 /* CommodityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				9F08EE9B207B382E0021F4DD /* View */,
 				9F08EE98207B1B0D0021F4DD /* Controller */,
+				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
 			);
 			path = Classify;
 			sourceTree = "<group>";
@@ -1085,6 +1088,7 @@
 				9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
+				9F08EEA1207B3F170021F4DD /* ClassifyFactory.swift in Sources */,
 				9F96C2A0207A0453004970D2 /* MagazineController.swift in Sources */,
 				9F3778292078AF0C00DFCC38 /* CommoditySectionController.swift in Sources */,
 				9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */,

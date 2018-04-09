@@ -12,7 +12,6 @@ import MJRefresh
 
 class CartController: BaseListViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -25,14 +24,6 @@ class CartController: BaseListViewController {
         view.backgroundColor = .white
         
         adapter.dataSource = self
-        
-        collectionView.addPullToRefreshWithBlock {
-            self.collectionView.endRefreshing()
-        }
-        
-        collectionView.addLoadMoreRefreshWithBlock {
-            self.collectionView.endRefreshing()
-        }
     }
     
     func setNavigationBar()  {
