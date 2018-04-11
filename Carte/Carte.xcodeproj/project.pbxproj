@@ -33,6 +33,7 @@
 		9F3778642078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37785C2078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m */; };
 		9F3778662078CD0700DFCC38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778652078CD0600DFCC38 /* Constants.swift */; };
 		9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B33AF202443E800259540 /* MainNavigationController.swift */; };
+		9F427F4D207E55C5009ACA76 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F427F4C207E55C5009ACA76 /* RegistViewController.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
 		9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E292022EF19004C4D51 /* MineController.swift */; };
@@ -133,6 +134,7 @@
 		9F37785C2078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVInfiniteScrollingLoadingView.m; sourceTree = "<group>"; };
 		9F3778652078CD0600DFCC38 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3B33AF202443E800259540 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9F427F4C207E55C5009ACA76 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
 		9F671E292022EF19004C4D51 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 			isa = PBXGroup;
 			children = (
 				9F96C2B0207A523C004970D2 /* LoginViewController.swift */,
+				9F427F4C207E55C5009ACA76 /* RegistViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1074,6 +1077,7 @@
 				9F737E7620295728006D08A4 /* UIScreen+Extension.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9F08EEAA207BA6A50021F4DD /* CommodityContentCell.swift in Sources */,
+				9F427F4D207E55C5009ACA76 /* RegistViewController.swift in Sources */,
 				9F08EE9E207B38920021F4DD /* SortTitleCell.swift in Sources */,
 				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,

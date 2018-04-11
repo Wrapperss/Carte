@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: PasswordTextField!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -34,5 +33,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func dismissButtonClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func registerButtonClick(_ sender: Any) {
+        navigationController?.pushViewController(RegistViewController.initFromStoryboard(), animated: true)
     }
 }
