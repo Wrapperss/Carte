@@ -64,6 +64,7 @@
 		9FB8D991202E9D2900F6B2C7 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
 		9FCC7DBF2078617900E5B89F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */; };
+		9FD7BC0C207E4D0600660639 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7BC0B207E4D0600660639 /* UIButton+Extension.swift */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
 		9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF55998200F8D28004EB3F2 /* LaunchScreen.storyboard */; };
@@ -163,6 +164,7 @@
 		9FB8D990202E9D2900F6B2C7 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9FCC7DBE2078617800E5B89F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9FD7BC0B207E4D0600660639 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF55994200F8D28004EB3F2 /* Carte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Carte.xcdatamodel; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 				9F737E7520295728006D08A4 /* UIScreen+Extension.swift */,
 				9F671E352023096F004C4D51 /* UIColor+Extension.swift */,
 				9F671E3720230994004C4D51 /* UIView+Extension.swift */,
+				9FD7BC0B207E4D0600660639 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1108,6 +1111,7 @@
 				9F671E362023096F004C4D51 /* UIColor+Extension.swift in Sources */,
 				9F671E3820230994004C4D51 /* UIView+Extension.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
+				9FD7BC0C207E4D0600660639 /* UIButton+Extension.swift in Sources */,
 				9F737E6E2029542E006D08A4 /* Storable.swift in Sources */,
 				9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */,
 				9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */,

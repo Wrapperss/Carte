@@ -13,9 +13,21 @@ import SnapKit
 
 class MineController: UITableViewController {
     
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        
+        button1.setButtonVerticalStyle(imageName: "waitForPay", title: "待付款")
+        button2.setButtonVerticalStyle(imageName: "fahuo", title: "待发货")
+        button3.setButtonVerticalStyle(imageName: "shouhuo", title: "待收货")
+        button4.setButtonVerticalStyle(imageName: "fankui", title: "待反馈")
+        button5.setButtonVerticalStyle(imageName: "tuikuan", title: "退款")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,4 +46,6 @@ extension MineController {
                          completion: nil)
         }
     }
+    
+
 }
