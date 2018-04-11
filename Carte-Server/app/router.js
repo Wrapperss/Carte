@@ -10,4 +10,6 @@ module.exports = app => {
   router.get('/user', controller.home.userr);
 
  router.post('/user/registe', controller.user.registe);
+ router.post('/user/login', controller.user.login)
+
 };

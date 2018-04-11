@@ -8,6 +8,13 @@ class UserController extends Controller {
     const result = this.app.mysql.insert('user', meg);
     this.ctx.body = result
   }
+
+  async login() {
+    let meg = this.ctx.request.body
+    const result = this.app.mysql.get('user', { meg });
+    this.ctx.body = result;
+  }
+  
 }
 
 module.exports = UserController;
