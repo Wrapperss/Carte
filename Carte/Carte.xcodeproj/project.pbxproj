@@ -842,6 +842,10 @@
 			children = (
 				9FAF7581208C6ADC00009449 /* RegexHelper.swift */,
 				9FAF757F208C69EC00009449 /* Typealias.swift */,
+				9FAF74E8208C21FF00009449 /* UIAppearance.swift */,
+				9F3778652078CD0600DFCC38 /* Constants.swift */,
+				9FAF7511208C31E700009449 /* API.swift */,
+				9FAF7512208C31E700009449 /* UploadAPI.swift */,
 			);
 			path = Utillties;
 			sourceTree = "<group>";
@@ -871,9 +875,9 @@
 		9FF5598B200F8D28004EB3F2 /* Carte */ = {
 			isa = PBXGroup;
 			children = (
-				9FAF757E208C69C100009449 /* Utillties */,
-				9FAF7551208C68A400009449 /* Extensions */,
 				9FF559BF20108427004EB3F2 /* Infrastructure */,
+				9FAF7551208C68A400009449 /* Extensions */,
+				9FAF757E208C69C100009449 /* Utillties */,
 				9FF559BD201083C4004EB3F2 /* Module */,
 				9FF559C020108436004EB3F2 /* Resource */,
 				9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */,
@@ -919,13 +923,9 @@
 			isa = PBXGroup;
 			children = (
 				9FAF7515208C325F00009449 /* Storage */,
-				9FAF7511208C31E700009449 /* API.swift */,
-				9FAF7512208C31E700009449 /* UploadAPI.swift */,
 				9FAF7502208C313600009449 /* Request */,
 				9FAF74F7208C2F6600009449 /* Indicator */,
 				9FAF74EA208C2F1C00009449 /* Service */,
-				9FAF74E8208C21FF00009449 /* UIAppearance.swift */,
-				9F3778652078CD0600DFCC38 /* Constants.swift */,
 				9FAF747D208C1F3700009449 /* Form */,
 				9F3778332078C97400DFCC38 /* Objective-C */,
 				9F737E6C202953A6006D08A4 /* Utilities */,
