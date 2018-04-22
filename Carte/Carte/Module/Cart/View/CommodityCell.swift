@@ -54,8 +54,8 @@ class CommodityCell: UICollectionViewCell {
         reduceButton.layer.borderColor = UIColor.black.cgColor
         reduceButton.layer.borderWidth = 1
         
-        checkButton.onFillColor = UIColor(251, 30, 44, 1)
-        checkButton.onTintColor = UIColor(251, 30, 44, 1)
+        checkButton.onFillColor = UIColor.init(r: 251, g: 38, b: 44)
+        checkButton.onTintColor = UIColor(r: 251, g: 38, b: 44)
         checkButton.onCheckColor = .white
         checkButton.tintColor = .lightGray
         checkButton.onAnimationType = .fill

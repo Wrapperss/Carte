@@ -31,8 +31,7 @@ class CommoditySectionController: ListSectionController {
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell: CommodityCell = collectionContext!.dequeue(withNibType: CommodityCell.self, for: self, at: index)
-        
+        let cell: CommodityCell = collectionContext?.dequeueReusableCell(withNibName: "CommodityCell", bundle: nil, for: self, at: index) as! CommodityCell
         guard let data = object?.data else {
             return cell
         }

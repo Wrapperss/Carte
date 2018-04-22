@@ -1,61 +1,127 @@
 //
-//  UIButton+Extension.swift
-//  Carte
+//  UIButtonExtension.swift
+//  creams
 //
-//  Created by Wrappers Zhang on 2018/4/11.
-//  Copyright © 2018年 Wrappers. All rights reserved.
+//  Created by Jahov on 08/12/2016.
+//  Copyright © 2016 jiangren. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ClosureWrapper: NSObject, NSCopying {
+    public func copy(with zone: NSZone? = nil) -> Any {
+        let wrapper: ClosureWrapper = ClosureWrapper()
+        wrapper.closure = closure
+        return wrapper
+    }
+
+    var closure: (() -> Void)?
+    convenience init(closure: (() -> Void)?) {
+        self.init()
+        self.closure = closure
+    }
+}
 
 extension UIButton {
-    
-    @objc func set(image anImage: UIImage?, title: String,
-                   titlePosition: UIViewContentMode, additionalSpacing: CGFloat, state: UIControlState){
-        self.imageView?.contentMode = .center
-        self.setImage(anImage, for: state)
-        
-        positionLabelRespectToImage(title: title, position: titlePosition, spacing: additionalSpacing)
-        
-        self.titleLabel?.contentMode = .center
-        self.setTitle(title, for: state)
+
+    private struct AssociatedKeys {
+        static var whenTappedKey = "whenTappedKey"
+    }
+
+    public func whenTapped(handler: (() -> Void)!) {
+        let aBlockClassWrapper = ClosureWrapper(closure: handler)
+        objc_setAssociatedObject(self, &AssociatedKeys.whenTappedKey, aBlockClassWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+        self.addTarget(self, action: #selector(UIButton.touchUpInside), for: UIControlEvents.touchUpInside)
+    }
+
+    func touchUpInside() {
+        let actionBlockAnyObject = objc_getAssociatedObject(self, &AssociatedKeys.whenTappedKey) as? ClosureWrapper
+        actionBlockAnyObject?.closure?()
+        self.tag = 0
     }
     
-    private func positionLabelRespectToImage(title: String, position: UIViewContentMode,
-                                             spacing: CGFloat) {
-        let imageSize = self.imageRect(forContentRect: self.frame)
-        let titleFont = self.titleLabel?.font!
-        let titleSize = title.size(attributes: [NSFontAttributeName: titleFont!])
-        
-        var titleInsets: UIEdgeInsets
-        var imageInsets: UIEdgeInsets
-        
-        switch (position){
-        case .top:
-            titleInsets = UIEdgeInsets(top: -(imageSize.height + titleSize.height + spacing),
-                                       left: -(imageSize.width), bottom: 0, right: 0)
-            imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -titleSize.width)
-        case .bottom:
-            titleInsets = UIEdgeInsets(top: (imageSize.height + titleSize.height + spacing),
-                                       left: -(imageSize.width), bottom: 0, right: 0)
-            imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -titleSize.width)
-        case .left:
-            titleInsets = UIEdgeInsets(top: 0, left: -(imageSize.width * 2), bottom: 0, right: 0)
-            imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0,
-                                       right: -(titleSize.width * 2 + spacing))
-        case .right:
-            titleInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -spacing)
-            imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        default:
-            titleInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+}
+
+class NavigationButton: UIButton {
+    var alignmentRectInsetsOverride: UIEdgeInsets?
+    override var alignmentRectInsets: UIEdgeInsets {
+        return alignmentRectInsetsOverride ?? super.alignmentRectInsets
+    }
+    
+    static func create(offset: CGFloat = 0, image: UIImage?, action: @escaping () -> ()) -> UIButton {
+        let button = NavigationButton(frame: CGRect(x:0, y: 0, width: 24, height: 24))
+        button.setImage(image, for: .normal)
+        button.alignmentRectInsetsOverride = UIEdgeInsets(top: 0, left: -offset, bottom: 0, right: offset)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTapAction {
+            action()
         }
-        
-        self.titleEdgeInsets = titleInsets
-        self.imageEdgeInsets = imageInsets
+        return button
     }
-    
-    func setButtonVerticalStyle(imageName: String, title: String = "") {
-        set(image: UIImage(named: imageName), title: title, titlePosition: .bottom, additionalSpacing: 0, state: .normal)
+}
+
+
+extension UILabel {
+
+    private struct AssociatedKeys {
+        static var whenTappedKey   = "whenTappedKey"
+    }
+
+    public func whenTapped(handler: @escaping () -> Void) {
+        let aBlockClassWrapper = ClosureWrapper(closure: handler)
+        objc_setAssociatedObject(self, &AssociatedKeys.whenTappedKey, aBlockClassWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(UIButton.touchUpInside))
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGestureRecognizer)
+    }
+
+    func touchUpInside() {
+        let actionBlockAnyObject = objc_getAssociatedObject(self, &AssociatedKeys.whenTappedKey) as? ClosureWrapper
+        actionBlockAnyObject?.closure?()
+        self.tag = 0
+    }
+}
+
+extension UITextField {
+
+    private struct AssociatedKeys {
+        static var whenTappedKey   = "whenTappedKey"
+    }
+
+    public func whenTapped(handler: @escaping () -> Void) {
+        let aBlockClassWrapper = ClosureWrapper(closure: handler)
+        objc_setAssociatedObject(self, &AssociatedKeys.whenTappedKey, aBlockClassWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+        self.addTarget(self, action: #selector(UIButton.touchUpInside), for: UIControlEvents.touchUpInside)
+    }
+
+    func touchUpInside() {
+        let actionBlockAnyObject = objc_getAssociatedObject(self, &AssociatedKeys.whenTappedKey) as? ClosureWrapper
+        actionBlockAnyObject?.closure?()
+        self.tag = 0
+    }
+}
+
+extension UIImageView {
+
+    private struct AssociatedKeys {
+        static var whenTappedKey   = "whenTappedKey"
+    }
+
+    public func whenTapped(handler: @escaping () -> Void) {
+        let aBlockClassWrapper = ClosureWrapper(closure: handler)
+        objc_setAssociatedObject(self, &AssociatedKeys.whenTappedKey, aBlockClassWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(UIButton.touchUpInside))
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGestureRecognizer)
+    }
+
+    func touchUpInside() {
+        let actionBlockAnyObject = objc_getAssociatedObject(self, &AssociatedKeys.whenTappedKey) as? ClosureWrapper
+        actionBlockAnyObject?.closure?()
+        self.tag = 0
     }
 }

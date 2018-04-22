@@ -14,7 +14,7 @@ class ClassifyController: BaseListViewController {
     
     private lazy var tableView: UITableView = {
         let view = UITableView()
-        view.backgroundColor = UIColor(244, 244, 244, 1)
+//        view.backgroundColor = UIColor(244, 244, 244, 1)
         view.separatorStyle = .none
         view.tableFooterView = UIView()
         return view

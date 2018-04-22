@@ -35,7 +35,7 @@ pod 'Onboard' # 引导页
 #pod 'ImageViewer'
 pod 'PasswordTextField'
 pod 'BEMCheckBox' #确认操作的动画库
-
+pod 'WMPageController', :git => 'https://github.com/LeeShiYoung/WMPageController.git'
 # 动画
 pod 'SkeletonView'
 pod 'Hero'
@@ -70,8 +70,13 @@ pod 'Realm'
 #图表
 #pod 'Charts'
 
+pod 'UIFontComplete'
+
 # Extension
 #pod 'SwifterSwift'
+
+pod 'XXNibBridge', :git => 'https://github.com/sunnyxx/XXNibBridge.git'
+
 
 # log
 pod 'SwiftyBeaver'
@@ -84,38 +89,24 @@ pod 'SwiftLint'
 pod 'Then'
 pod 'Reusable'
 
+pod 'RTRootNavigationController'
+
 pod 'AttributedLib', '1.3.0'
 
 pod 'DGActivityIndicatorView'
 
+pod 'NVActivityIndicatorView', :git => 'https://github.com/LeeShiYoung/NVActivityIndicatorView.git'
+
+pod 'SVProgressHUD', :git => 'https://github.com/LeeShiYoung/SVProgressHUD.git'
+
+pod 'YYText'
+
 #工具
 pod 'Reveal-SDK', '~> 4', :configurations => ['Debug']
 
+pod 'UPYUN', '~> 2.0.2'
 #键盘
 pod 'IQKeyboardManagerSwift'
-
-#React Native
-pod 'React', :path => './ReactComponent/node_modules/react-native', :subspecs => [
-'Core',
-'ART',
-'RCTImage',
-'RCTNetwork',
-'RCTSettings',
-'RCTText',
-'RCTVibration',
-'RCTLinkingIOS',
-'CxxBridge', # 如果RN版本 >= 0.45则加入此行
-'DevSupport', # 如果RN版本 >= 0.43，则需要加入此行才能开启开发者菜单
-'RCTWebSocket', # 这个模块是用于调试功能的
-# 在这里继续添加你所需要的RN模块
-]
-# 如果你的RN版本 >= 0.42.0，则加入下面这行
-pod "yoga", :path => "./ReactComponent/node_modules/react-native/ReactCommon/yoga"
-
-# 如果RN版本 >= 0.45则加入下面三个第三方编译依赖
-pod 'DoubleConversion', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
-pod 'GLog', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/GLog.podspec'
-pod 'Folly', :podspec => './ReactComponent/node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
   target 'CarteTests' do

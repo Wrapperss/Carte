@@ -37,13 +37,14 @@ class MagazineController: BaseViewController {
             make.edges.equalToSuperview()
         }
         
-        tableView.addPullToRefreshWithBlock {
-            self.tableView.endRefreshing()
-        }
         
-        tableView.addLoadMoreRefreshWithBlock {
-            self.tableView.endUpdates()
-        }
+//        tableView.addPullToRefreshWithBlock {
+//            self.tableView.endRefreshing()
+//        }
+//
+//        tableView.addLoadMoreRefreshWithBlock {
+//            self.tableView.endUpdates()
+//        }
     }
 }
 

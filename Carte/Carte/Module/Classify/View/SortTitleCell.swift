@@ -27,7 +27,7 @@ class SortTitleCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         redMark.isHidden = false
-        backgroundColor = UIColor(244, 244, 244, 1)
+        backgroundColor = UIColor.init(r: 244, g: 244, b: 244)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,7 +36,7 @@ class SortTitleCell: UITableViewCell {
             redMark.isHidden = false
             titileLabel.font = UIFont.systemFont(ofSize: 17)
         } else {
-            backgroundColor = UIColor(244, 244, 244, 1)
+            backgroundColor = UIColor.init(r: 244, g: 244, b: 244)
             redMark.isHidden = true
             titileLabel.font = UIFont.systemFont(ofSize: 14)
         }
