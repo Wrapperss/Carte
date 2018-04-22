@@ -4,10 +4,14 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "egg": "^2.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "egg": "^1.9.0",
+    "egg-cors": "^1.2.0",
     "egg-mysql": "^3.0.0",
-    "egg-scripts": "^2.1.0",
-    "egg-validate": "^1.0.0"
+    "egg-scripts": "^1.1.1",
+    "egg-validate": "^1.0.0",
+    "node-uuid": "^1.4.8",
+    "stream-wormhole": "^1.0.3"
   },
   "devDependencies": {
     "autod": "^3.0.1",

@@ -2,19 +2,50 @@
 
 const Controller = require('egg').Controller;
 
+const createRule = {
+  name: {type: 'string', required: false},
+  mobile: 'string',
+  email: {type: 'string', required: false},
+  blance: {type: 'string', required: false}
+}
+
 class UserController extends Controller {
-  async registe() {
-    let meg = this.ctx.request.body
-    const result = this.app.mysql.insert('user', meg);
-    this.ctx.body = result
+  async create() {
+    const { ctx, service } = this;
+    ctx.validate(Object.assign(createRule, {
+      password: { type: 'string', required: true },
+    }));
+    const user = await service.user.create(ctx.request.body);
+    ctx.body = {
+      user
+    };
+    ctx.status = 201
   }
 
-  async login() {
-    let meg = this.ctx.request.body
-    const result = this.app.mysql.get('user', { meg });
-    this.ctx.body = result;
+  async show() {
+    const { ctx, service } = this;
+    const { id } = ctx.params;
+    const user = await service.user.find(id);
+    ctx.body = {
+      user
+    };
+    ctx.status = 200;
   }
-  
+
+  async update() {
+    const { ctx, service } = this;
+    const { id } = ctx.params;
+    ctx.validate(Object.assign(createRule, {
+      password: { type: 'string', required: false },
+    }));
+    let user = ctx.request.body;
+    user.id = id
+    await service.user.update(user);
+    ctx.body = {
+      id
+    };
+    ctx.status = 200;
+  }
 }
 
 module.exports = UserController;
