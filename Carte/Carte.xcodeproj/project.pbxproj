@@ -39,6 +39,7 @@
 		9F671E322022F7B5004C4D51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E312022F7B5004C4D51 /* User.swift */; };
 		9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E3E20235F58004C4D51 /* MainTabBarController.swift */; };
 		9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86D4202C36F400C6AF17 /* CarouseSectionController.swift */; };
+		9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F704521208C792C00561480 /* PersonalInfoController.swift */; };
 		9F737E3120294B04006D08A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E3020294B04006D08A4 /* HomeViewController.swift */; };
 		9F737E6E2029542E006D08A4 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E6D2029542E006D08A4 /* Storable.swift */; };
 		9F737E70202954B1006D08A4 /* Associate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E6F202954B1006D08A4 /* Associate.swift */; };
@@ -206,6 +207,7 @@
 		9F671E312022F7B5004C4D51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F671E3E20235F58004C4D51 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9F6F86D4202C36F400C6AF17 /* CarouseSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseSectionController.swift; sourceTree = "<group>"; };
+		9F704521208C792C00561480 /* PersonalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoController.swift; sourceTree = "<group>"; };
 		9F737E3020294B04006D08A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9F737E6D2029542E006D08A4 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 		9F737E6F202954B1006D08A4 /* Associate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Associate.swift; sourceTree = "<group>"; };
@@ -462,7 +464,7 @@
 		9F4E54EB201863B900FFFF33 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				9F671E262022ECA1004C4D51 /* Factory */,
+				9F671E272022ECCD004C4D51 /* MineFactory.swift */,
 				9F4E54EF201863F200FFFF33 /* Controller */,
 				9F4E54EE201863EA00FFFF33 /* Model */,
 				9F4E54ED201863E200FFFF33 /* ViewModel */,
@@ -500,6 +502,7 @@
 			children = (
 				9F671E292022EF19004C4D51 /* MineController.swift */,
 				9F3778172078939700DFCC38 /* SettingController.swift */,
+				9F704521208C792C00561480 /* PersonalInfoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,14 +511,6 @@
 			isa = PBXGroup;
 			children = (
 				9F671E242022E9D2004C4D51 /* DataFactory.swift */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		9F671E262022ECA1004C4D51 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				9F671E272022ECCD004C4D51 /* MineFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -908,12 +903,12 @@
 		9FF559BD201083C4004EB3F2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				9F08EE97207B1A3A0021F4DD /* Classify */,
+				9F671E3920231C01004C4D51 /* Main */,
 				9F96C2AE207A50A9004970D2 /* Authentication */,
+				9F737E2A20294AD0006D08A4 /* Home */,
+				9F08EE97207B1A3A0021F4DD /* Classify */,
 				9F96C29D207A042F004970D2 /* Magazine */,
 				9F3778192078A15500DFCC38 /* Cart */,
-				9F671E3920231C01004C4D51 /* Main */,
-				9F737E2A20294AD0006D08A4 /* Home */,
 				9F4E54EB201863B900FFFF33 /* Mine */,
 			);
 			path = Module;
@@ -1363,6 +1358,7 @@
 				9FAF7519208C325F00009449 /* UserDefaultsExtension.swift in Sources */,
 				9FAF7500208C2F6700009449 /* UIScrollView+MJRefresh+RxSwift.swift in Sources */,
 				9FAF756E208C68A500009449 /* UIButton+Extension.swift in Sources */,
+				9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */,
 				9FAF7576208C68A500009449 /* UIScreen+Extension.swift in Sources */,
 				9FAF74A4208C1F3700009449 /* ButtonElement.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,

@@ -1,12 +1,19 @@
 'use strict';
 
-const Service = require('egg').Service
+const Service = require('egg').Service;
 
 class UserService extends Service {
-    async find() {
-        const user = await this.app.mysql.get('user', { id: 1 });
-        return { "user": user.nikename };
-    }
+  async create(target) {
+    const currentTime = this.ctx.helper.currentTime();
+      const result = await app.mysql.insert('User', Object.assign({
+        created_at: currentTime,
+        updated_at: currentTime
+      }, target))
+      return result.insertId;
+  }
+
+
+  
 }
 
-module.exports = UserService
+module.exports = UserService;

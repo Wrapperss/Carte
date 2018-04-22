@@ -22,12 +22,6 @@ class MineController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        
-//        button1.setButtonVerticalStyle(imageName: "waitForPay", title: "待付款")
-//        button2.setButtonVerticalStyle(imageName: "fahuo", title: "待发货")
-//        button3.setButtonVerticalStyle(imageName: "shouhuo", title: "待收货")
-//        button4.setButtonVerticalStyle(imageName: "fankui", title: "待反馈")
-//        button5.setButtonVerticalStyle(imageName: "tuikuan", title: "退款")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,10 +34,23 @@ class MineController: UITableViewController {
 extension MineController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row == 0 {
-            self.present(MainNavigationController(rootViewController: LoginViewController.initFromStoryboard()),
-                         animated: true,
-                         completion: nil)
+
+        if indexPath.row == 0 { // 个人信息
+            
+        } else if indexPath.row == 1 { //我的订单
+            
+        } else if indexPath.row == 2 { //订单分类
+            
+        } else if indexPath.row == 3 { //我喜欢的商品
+            
+        } else if indexPath.row == 4 { //我的礼券
+            
+        } else if indexPath.row == 6 { //设置
+            
+        } else if indexPath.row == 7 { //用户协议
+            
+        } else if indexPath.row == 8 { //联系我们
+            
         }
     }
     
