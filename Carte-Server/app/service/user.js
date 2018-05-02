@@ -19,7 +19,7 @@ class UserService extends Service {
   }
 
   async remove(id) {
-    const result = await app.mysql.delete('User', { id });
+    const result = await this.app.mysql.delete('User', { id });
     return result.affectedRows === 1;
   }
   

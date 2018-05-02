@@ -31,8 +31,7 @@ pod 'SnapKit', '~> 3.2.0'
 pod 'PasswordTextField'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'Onboard' # 引导页
-#pod 'ImagePicker'
-#pod 'ImageViewer'
+pod 'HBDNavigationBar'
 pod 'PasswordTextField'
 pod 'BEMCheckBox' #确认操作的动画库
 pod 'WMPageController', :git => 'https://github.com/LeeShiYoung/WMPageController.git'
@@ -46,9 +45,6 @@ pod 'Gemini'
 
 pod 'MJRefresh', '~> 3.1.12'
 pod 'SwiftRichString', '0.9.10'
-
-# AR
-#pod 'ARCL'
 
 # 键盘
 pod 'IQKeyboardManagerSwift'
@@ -67,20 +63,13 @@ pod 'PromiseKit', '~> 4.4'
 pod 'SwiftyUserDefaults'
 pod 'Realm'
 
-#图表
-#pod 'Charts'
-
 pod 'UIFontComplete'
-
-# Extension
-#pod 'SwifterSwift'
 
 pod 'XXNibBridge', :git => 'https://github.com/sunnyxx/XXNibBridge.git'
 
 
 # log
 pod 'SwiftyBeaver'
-#pod 'Dotzu'
 
 # Lint
 pod 'SwiftLint'
@@ -103,7 +92,6 @@ pod 'YYText'
 
 #工具
 pod 'Reveal-SDK', '~> 4', :configurations => ['Debug']
-
 pod 'UPYUN', '~> 2.0.2'
 #键盘
 pod 'IQKeyboardManagerSwift'

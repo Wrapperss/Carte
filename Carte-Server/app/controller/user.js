@@ -46,6 +46,16 @@ class UserController extends Controller {
     };
     ctx.status = 200;
   }
+
+  async destroy() {
+    const { ctx, service } = this;
+    const { id } = ctx.params;
+    await service.user.remove(id);
+    ctx.body = {
+      id
+    };
+    ctx.status = 200
+  }
 }
 
 module.exports = UserController;
