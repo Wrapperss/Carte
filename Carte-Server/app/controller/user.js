@@ -26,9 +26,7 @@ class UserController extends Controller {
     const { ctx, service } = this;
     const { id } = ctx.params;
     const user = await service.user.find(id);
-    ctx.body = {
-      user
-    };
+    ctx.body = user;
     ctx.status = 200;
   }
 

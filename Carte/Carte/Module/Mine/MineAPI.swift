@@ -10,18 +10,19 @@ import Foundation
 import Moya
 import PromiseKit
 
-enum MineApi {
+enum MineAPI {
     case info(Int)
+    case updateInfo(User)
 }
 
-extension MineApi: TargetType {
+extension MineAPI: TargetType {
     
     var path: String {
         switch self {
         case .info(let id):
-            return "api/user/\(id)"
-        default:
-            return ""
+            return "api/users/\(id)"
+        case .updateInfo(let user):
+            return "api/users/\(user.id ?? 0)"
         }
     }
     
@@ -29,10 +30,28 @@ extension MineApi: TargetType {
         switch self {
         case .info:
             return .get
+        case .updateInfo:
+            return .put
         }
     }
     
     var parameters: [String : Any]? {
-        return nil
+        switch self {
+        case .updateInfo(let user):
+            return user.toDictionary()
+        default:
+            return nil
+        }
+    }
+}
+
+
+extension MineAPI {
+    static func fetchUserInfo(_ userId: Int) -> Promise<User> {
+        return Request<MineAPI>().request(.info(userId))
+    }
+    
+    static func updateUserInfo(_ user: User) -> Promise<BlankResponse> {
+        return  Request<MineAPI>().request(.updateInfo(user))
     }
 }

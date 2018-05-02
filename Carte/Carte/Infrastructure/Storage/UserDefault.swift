@@ -11,18 +11,10 @@ import Foundation
 
 struct Default {
     
-    struct Account: StringDefaultSettable, BoolDefaultSettable, IntegerDefaultSettable {
-        
-        enum StringKey: String {
-            case lastLoginUserName
-        }
-        
-        enum BoolKey: String {
-            case firstLoginConfig
-        }
+    struct Account: IntegerDefaultSettable {
         
         enum IntegerKey: String {
-            case iconBadge
+            case userId
         }
         
     }

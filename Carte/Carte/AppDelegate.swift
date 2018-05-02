@@ -27,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-         IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enable = true
         
+        Default.Account.set(1, forKey: .userId)
         return true
     }
 

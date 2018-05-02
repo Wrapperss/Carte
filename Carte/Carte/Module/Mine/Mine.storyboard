@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -453,6 +454,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1A-mD-VzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1884" y="-63"/>
+        </scene>
+        <!--Modify User Info Controller-->
+        <scene sceneID="qbk-iT-il4">
+            <objects>
+                <viewController storyboardIdentifier="ModifyUserInfoController" id="7I7-6J-UI3" customClass="ModifyUserInfoController" customModule="Carte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jf6-6s-H8z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QzK-Jm-aXx">
+                                <rect key="frame" x="5" y="30" width="365" height="40"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="s5C-86-Ihb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QzK-Jm-aXx" firstAttribute="top" secondItem="DuQ-IA-AHk" secondAttribute="top" constant="10" id="06Z-hu-rTV"/>
+                            <constraint firstItem="QzK-Jm-aXx" firstAttribute="leading" secondItem="DuQ-IA-AHk" secondAttribute="leading" constant="5" id="Lep-e8-bUa"/>
+                            <constraint firstItem="DuQ-IA-AHk" firstAttribute="trailing" secondItem="QzK-Jm-aXx" secondAttribute="trailing" constant="5" id="dNV-gy-TfM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DuQ-IA-AHk"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="QzK-Jm-aXx" id="ffk-jC-PwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiO-iD-GHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1169" y="-63"/>
         </scene>
         <!--账户设置-->
         <scene sceneID="HCd-P4-3b7">

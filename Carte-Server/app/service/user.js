@@ -9,8 +9,8 @@ class UserService extends Service {
   }
 
   async find(id) {
-    let user = await this.app.mysql.get('User', { id });
-    return user;
+    const user = await this.app.mysql.get('User', { id });
+    return user
   }
 
   async findAll() {
@@ -25,7 +25,7 @@ class UserService extends Service {
   
   async update(target) {
     const currentTime = this.ctx.helper.currentTime();
-    const result = await app.mysql.update('User', Object.assign({
+    const result = await this.app.mysql.update('User', Object.assign({
       updated_at: currentTime
     }, target));
     return result.affectedRows === 1;
