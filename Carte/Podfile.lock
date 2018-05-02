@@ -28,16 +28,16 @@ PODS:
   - Onboard (2.3.1)
   - PasswordTextField (1.0.5)
   - pop (1.0.10)
-  - PromiseKit (4.5.1):
-    - PromiseKit/Foundation (= 4.5.1)
-    - PromiseKit/QuartzCore (= 4.5.1)
-    - PromiseKit/UIKit (= 4.5.1)
-  - PromiseKit/CorePromise (4.5.1)
-  - PromiseKit/Foundation (4.5.1):
+  - PromiseKit (4.2.2):
+    - PromiseKit/Foundation (= 4.2.2)
+    - PromiseKit/QuartzCore (= 4.2.2)
+    - PromiseKit/UIKit (= 4.2.2)
+  - PromiseKit/CorePromise (4.2.2)
+  - PromiseKit/Foundation (4.2.2):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.5.1):
+  - PromiseKit/QuartzCore (4.2.2):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.5.1):
+  - PromiseKit/UIKit (4.2.2):
     - PromiseKit/CorePromise
   - ReactorKit (1.1.0):
     - RxSwift (>= 4.0.0)
@@ -60,12 +60,23 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.1)
-  - SJFullscreenPopGesture (1.2.2):
-    - SJObserverHelper
-  - SJObserverHelper (1.0.3)
+  - SJFullscreenPopGesture (1.4.0.4)
   - SkeletonView (1.0.4)
   - SnapKit (3.2.0)
   - SVProgressHUD (2.2.5)
+  - SwifterSwift (3.2.0):
+    - SwifterSwift/AppKit (= 3.2.0)
+    - SwifterSwift/CoreGraphics (= 3.2.0)
+    - SwifterSwift/CoreLocation (= 3.2.0)
+    - SwifterSwift/Foundation (= 3.2.0)
+    - SwifterSwift/SwiftStdlib (= 3.2.0)
+    - SwifterSwift/UIKit (= 3.2.0)
+  - SwifterSwift/AppKit (3.2.0)
+  - SwifterSwift/CoreGraphics (3.2.0)
+  - SwifterSwift/CoreLocation (3.2.0)
+  - SwifterSwift/Foundation (3.2.0)
+  - SwifterSwift/SwiftStdlib (3.2.0)
+  - SwifterSwift/UIKit (3.2.0)
   - SwiftLint (0.24.2)
   - SwiftRichString (0.9.10)
   - SwiftyBeaver (1.5.1)
@@ -101,7 +112,7 @@ DEPENDENCIES:
   - Onboard
   - PasswordTextField
   - pop (~> 1.0)
-  - PromiseKit (~> 4.4)
+  - PromiseKit (~> 4.2.2)
   - ReactorKit
   - Realm
   - Reusable
@@ -114,6 +125,7 @@ DEPENDENCIES:
   - SkeletonView
   - SnapKit (~> 3.2.0)
   - SVProgressHUD (from `https://github.com/LeeShiYoung/SVProgressHUD.git`)
+  - SwifterSwift (~> 3.2.0)
   - SwiftLint
   - SwiftRichString (= 0.9.10)
   - SwiftyBeaver
@@ -174,7 +186,7 @@ SPEC CHECKSUMS:
   Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
   PasswordTextField: 1c19b7a67574872a0d41ae21f04664bcc339d76e
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  PromiseKit: 445dac9b2c3c3b4b31b5f842bc325700b848a8bd
+  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
   ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
   Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -184,11 +196,11 @@ SPEC CHECKSUMS:
   RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
   RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
   RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
-  SJFullscreenPopGesture: b2c9e5d2903bdb3645c40f260114be8f5cc983cb
-  SJObserverHelper: b270d707cd18ab76538596aa4e98cf798c9e9868
+  SJFullscreenPopGesture: b0a00e8d72811f8e0ea7b0a60e514ea9082ae2d2
   SkeletonView: 933a9442b08c3550f61c2ae38a02456a74ad86f4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: e009210d995737f54c1fbffc5a3f004c8467ab1d
   SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
   SwiftRichString: 1e31aec5666feea03f802f41fc237160cf7119b6
   SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
@@ -202,6 +214,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: d376dcdff426f26a3d4b7ff8e4d47ca5ac0ec45b
+PODFILE CHECKSUM: 233236107b953c1e98fad605323f7611ff760c70
 
 COCOAPODS: 1.4.0

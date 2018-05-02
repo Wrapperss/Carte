@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import SJFullscreenPopGesture
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

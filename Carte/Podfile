@@ -48,7 +48,6 @@ pod 'SwiftRichString', '0.9.10'
 
 # 键盘
 pod 'IQKeyboardManagerSwift'
-
 # 手势
 pod 'SJFullscreenPopGesture' #全局返回手势
 
@@ -57,7 +56,6 @@ pod 'Alamofire', '~> 4.5'
 pod 'Moya', '~> 10.0'
 pod 'Kingfisher'
 pod 'Unbox'
-pod 'PromiseKit', '~> 4.4'
 
 # 本地化
 pod 'SwiftyUserDefaults'
@@ -95,6 +93,8 @@ pod 'Reveal-SDK', '~> 4', :configurations => ['Debug']
 pod 'UPYUN', '~> 2.0.2'
 #键盘
 pod 'IQKeyboardManagerSwift'
+pod 'SwifterSwift', '~> 3.2.0'
+pod 'PromiseKit', '~> 4.2.2'
 
 
   target 'CarteTests' do

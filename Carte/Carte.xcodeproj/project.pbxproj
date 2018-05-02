@@ -31,6 +31,7 @@
 		9F3778662078CD0700DFCC38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778652078CD0600DFCC38 /* Constants.swift */; };
 		9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B33AF202443E800259540 /* MainNavigationController.swift */; };
 		9F427F4D207E55C5009ACA76 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F427F4C207E55C5009ACA76 /* RegistViewController.swift */; };
+		9F4459712099B04800892F9B /* MineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4459702099B04800892F9B /* MineApi.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
 		9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E292022EF19004C4D51 /* MineController.swift */; };
@@ -132,6 +133,8 @@
 		9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7567208C68A400009449 /* Array+Extension.swift */; };
 		9FAF7580208C69EC00009449 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF757F208C69EC00009449 /* Typealias.swift */; };
 		9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7581208C6ADC00009449 /* RegexHelper.swift */; };
+		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
+		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
 		9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */; };
 		9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF55993200F8D28004EB3F2 /* Carte.xcdatamodeld */; };
@@ -199,6 +202,7 @@
 		9F3778652078CD0600DFCC38 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3B33AF202443E800259540 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9F427F4C207E55C5009ACA76 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		9F4459702099B04800892F9B /* MineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApi.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
 		9F671E292022EF19004C4D51 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 		9FAF7567208C68A400009449 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		9FAF757F208C69EC00009449 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		9FAF7581208C6ADC00009449 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
+		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
+		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		9FF55989200F8D28004EB3F2 /* Carte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF5598C200F8D28004EB3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -465,11 +471,12 @@
 			isa = PBXGroup;
 			children = (
 				9F671E272022ECCD004C4D51 /* MineFactory.swift */,
+				9F4459702099B04800892F9B /* MineApi.swift */,
+				9FCC7DBA20785D7200E5B89F /* Mine.storyboard */,
 				9F4E54EF201863F200FFFF33 /* Controller */,
 				9F4E54EE201863EA00FFFF33 /* Model */,
 				9F4E54ED201863E200FFFF33 /* ViewModel */,
 				9F4E54EC201863DB00FFFF33 /* View */,
-				9FCC7DBA20785D7200E5B89F /* Mine.storyboard */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -503,6 +510,7 @@
 				9F671E292022EF19004C4D51 /* MineController.swift */,
 				9F3778172078939700DFCC38 /* SettingController.swift */,
 				9F704521208C792C00561480 /* PersonalInfoController.swift */,
+				9FC8BB912099A47100A3CF02 /* UserInfoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -845,6 +853,14 @@
 			path = Utillties;
 			sourceTree = "<group>";
 		};
+		9FC8BB8E20999FAD00A3CF02 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 		9FF55980200F8D28004EB3F2 = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +933,7 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9FC8BB8E20999FAD00A3CF02 /* Refresh */,
 				9FAF7515208C325F00009449 /* Storage */,
 				9FAF7502208C313600009449 /* Request */,
 				9FAF74F7208C2F6600009449 /* Indicator */,
@@ -1229,11 +1246,11 @@
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/SJObserverHelper/SJObserverHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -1275,11 +1292,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJObserverHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -1363,6 +1380,7 @@
 				9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */,
 				9FAF7576208C68A500009449 /* UIScreen+Extension.swift in Sources */,
 				9FAF74A4208C1F3700009449 /* ButtonElement.swift in Sources */,
+				9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9FAF750F208C313600009449 /* RequestLoggerPlugin.swift in Sources */,
 				9F08EEAA207BA6A50021F4DD /* CommodityContentCell.swift in Sources */,
@@ -1451,9 +1469,11 @@
 				9FAF74B6208C1F3700009449 /* PasswordTextFieldElement.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
+				9F4459712099B04800892F9B /* MineApi.swift in Sources */,
 				9F737E6E2029542E006D08A4 /* Storable.swift in Sources */,
 				9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */,
 				9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */,
+				9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */,
 				9F96C2B1207A523C004970D2 /* LoginViewController.swift in Sources */,
 				9FAF7570208C68A500009449 /* UIView+Extension.swift in Sources */,
 				9FAF757B208C68A500009449 /* Number+Date.swift in Sources */,
