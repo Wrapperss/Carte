@@ -6,167 +6,133 @@
 //  Copyright © 2017 Hangzhou Craftsman Network Technology Co.,Ltd. All rights reserved.
 //
 
-import Moya
 import Result
+import Moya
+import Foundation
 
-public enum RequestError: Swift.Error {
+public typealias RequestComplection = (_ result: Result<Moya.Response, MoyaError>) -> Void
 
+enum RequestError: Swift.Error {
     case unkonwn
-
     case statusCode(Int, String)
-
-    case jsonMapping(String)
-
-    case imageMapping(String)
-
-    case stringMapping(String)
-
-    case underlying(Swift.Error, Moya.Response?)
-
-    case requestMapping(String)
+    case jsonMapError
 }
 
 extension RequestError: LocalizedError {
-
     public var errorDescription: String {
         switch self {
         case .unkonwn:
-            return "服务器休息了\n程序员GG正在拼命修复中…"
-        case .statusCode( _, let info):
-            return info
-        case .jsonMapping(let info):
-            return info
-        case .imageMapping(let info):
-            return info
-        case .stringMapping(let info):
-            return info
-        case .underlying(let error, _):
-            return error.localizedDescription
-        case .requestMapping(let info):
-            return info
-        }
-    }
-
-    public var message: String {
-        switch self {
-        case .unkonwn:
-            return "服务器休息了\n程序员GG正在拼命修复中…"
+            return "服务器发生内部错误"
         case .statusCode(let code, let info):
             switch code {
-            case 404, 500, 502, 504:
-                return "服务器休息了\n程序员GG正在拼命修复中…"
+                //            case 400:
+                //                return "无法解析你所提交的数据(\(info))"
+                //            case 401:
+                //                return "无权限操作该接口(\(info))"
+                //            case 404:
+                //                return "你所请求的接口或资源不存在(\(info))"
+                //            case 415:
+                //                return "请求头中缺少ContentType(\(info))"
+                //            case 422:
+            //                return "修改或创建一个资源时发生一个验证错误(\(info))"
             default:
                 return info
             }
-        case .jsonMapping(let info):
-            return info
-        case .imageMapping(let info):
-            return info
-        case .stringMapping(let info):
-            return info
-        case .underlying(let error, _):
-            let systemError = error as NSError
-            if systemError.code <= -1_001 && systemError.code >= -1_009 {
-                return "网络貌似断开了"
-            } else {
-                return error.localizedDescription
-            }
-        case .requestMapping(let info):
-            return info
+        case .jsonMapError:
+            return "接受数据发生格式化错误"
         }
     }
 }
 
-public protocol RequestErrorPluginStaticFetchable {
-    var errorPlugin: RequestErrorPlugin { get }
+protocol ErrorShowProtocol {
+    func showHUD()
 }
 
-extension RequestErrorPluginStaticFetchable {
-    public var errorPlugin: RequestErrorPlugin {
-        return RequestErrorPlugin.default
+extension Swift.Error {
+    
+    func showHUD() {
+        if let requestError = self as? RequestError {
+            requestError.showHUD()
+        } else if let moyaError = self as? MoyaError {
+            moyaError.showHUD()
+        }
     }
 }
 
-/// 转化所有请求的错误为自定义错误
-public final class RequestErrorPlugin: PluginType {
+extension RequestError: ErrorShowProtocol {
+    
+    func showHUD() {
+        switch self {
+        case .statusCode(_, let error):
+            HUD.showError(error)
+        default :
+            HUD.showError(self.errorDescription)
+        }
+    }
+}
 
-    fileprivate static let `default`: RequestErrorPlugin = {
+extension MoyaError: ErrorShowProtocol {
+    
+    func showHUD() {
+        switch self {
+        case .underlying(let error):
+            if let requestError =  error as? RequestError {
+                if case let .statusCode(code, errorstr) = requestError, code == 401, errorstr == "invalid_token" {
+                    DispatchQueue.main.async {
+                        Delay(time: 0.1, task: {
+                            HUD.showError("登录信息已过期, 请重新登录")
+//                            LoginViewController.show()
+                        })
+                    }
+                    return
+                }
+                HUD.showError((error as! RequestError).errorDescription)
+            } else {
+                HUD.showError(error.localizedDescription)
+            }
+        default :
+            HUD.showError(self.errorDescription!)
+        }
+    }
+}
+
+/// 转化常规的错误
+public final class RequestErrorPlugin: PluginType {
+    
+    static var `default`: RequestErrorPlugin = {
         return RequestErrorPlugin()
     }()
-
+    
     public func process(_ result: Result<Moya.Response, MoyaError>, target: TargetType) -> Result<Moya.Response, MoyaError> {
-
-        switch result {
-        case .success(let response):
-
+        
+        if case .success(let response) = result {
+            
             guard response.statusCode >= 200, response.statusCode <= 299 else {
-
+                
                 do {
                     let data = try response.mapJSON()
-
+                    
                     guard let errorInfo = (data as? [String: Any])?["error"] as? String else {
                         let internalError = RequestError.unkonwn
-                        let error = MoyaError.underlying(internalError, response)
+                        let error = MoyaError.underlying(internalError)
                         return Result(error: error)
                     }
-
+                    
                     let internalError = RequestError.statusCode(response.statusCode, errorInfo)
-                    let error = MoyaError.underlying(internalError, nil)
+                    let error = MoyaError.underlying(internalError)
                     return Result(error: error)
+                    
                 } catch {
-                    return Result(error: MoyaError.underlying(RequestError.jsonMapping(error.localizedDescription), response))
+                    debugPrint("Http请求在输出内置错误的时候发生错误：\(error)")
                 }
+                
+                return result
             }
-
+            
             return result
-
-        case .failure(let error):
-            switch error {
-            case .imageMapping(_):
-                return Result(error: MoyaError.underlying(RequestError.imageMapping("服务器休息了\n程序员GG正在拼命修复中…"), nil))
-            case .jsonMapping(_):
-                return Result(error: MoyaError.underlying(RequestError.jsonMapping("服务器休息了\n程序员GG正在拼命修复中…"), nil))
-            case .stringMapping(_):
-                return Result(error: MoyaError.underlying(RequestError.stringMapping("服务器休息了\n程序员GG正在拼命修复中…"), nil))
-            case .statusCode(let response):
-                return Result(error: MoyaError.underlying(RequestError.statusCode(response.statusCode, "错误\(response.statusCode)"), nil))
-            case .underlying(let error, let response):
-                return Result(error: MoyaError.underlying(RequestError.underlying(error, response), nil))
-            case .requestMapping(let info):
-                return Result(error: MoyaError.underlying(RequestError.requestMapping(info), nil))
-            }
         }
+        
+        return result
     }
-
+    
 }
-
-/*
- kCFURLErrorUnknown   = -998,
- kCFURLErrorCancelled = -999,
- kCFURLErrorBadURL    = -1000,
- kCFURLErrorTimedOut  = -1001,
- kCFURLErrorUnsupportedURL = -1002,
- kCFURLErrorCannotFindHost = -1003,
- kCFURLErrorCannotConnectToHost    = -1004,
- kCFURLErrorNetworkConnectionLost  = -1005,
- kCFURLErrorDNSLookupFailed        = -1006,
- kCFURLErrorHTTPTooManyRedirects   = -1007,
- kCFURLErrorResourceUnavailable    = -1008,
- kCFURLErrorNotConnectedToInternet = -1009,
- kCFURLErrorRedirectToNonExistentLocation = -1010,
- kCFURLErrorBadServerResponse             = -1011,
- kCFURLErrorUserCancelledAuthentication   = -1012,
- kCFURLErrorUserAuthenticationRequired    = -1013,
- kCFURLErrorZeroByteResource        = -1014,
- kCFURLErrorCannotDecodeRawData     = -1015,
- kCFURLErrorCannotDecodeContentData = -1016,
- kCFURLErrorCannotParseResponse     = -1017,
- kCFURLErrorInternationalRoamingOff = -1018,
- kCFURLErrorCallIsActive               = -1019,
- kCFURLErrorDataNotAllowed             = -1020,
- kCFURLErrorRequestBodyStreamExhausted = -1021,
- kCFURLErrorFileDoesNotExist           = -1100,
- kCFURLErrorFileIsDirectory            = -1101,
- kCFURLErrorNoPermissionsToReadFile    = -1102,
- kCFURLErrorDataLengthExceedsMaximum   = -1103,
- */

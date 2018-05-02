@@ -8,18 +8,18 @@
 
 import Foundation
 
-extension Error {
-
-    func showHUD() {
-
-        if self is RequestError {
-            switch (self as! RequestError) {
-            case .statusCode( _, let error):
-                HUD.showError(error)
-            default :
-                HUD.showError((self as! RequestError).message)
-            }
-        }
-    }
-
-}
+//extension Error {
+//
+//    func showHUD() {
+//
+//        if self is RequestError {
+//            switch (self as! RequestError) {
+//            case .statusCode( _, let error):
+//                HUD.showError(error)
+//            default :
+//                HUD.showError((self as! RequestError).message)
+//            }
+//        }
+//    }
+//
+//}

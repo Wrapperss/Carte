@@ -537,8 +537,6 @@ extension String {
             url = self
         } else if self.isEmpty {
             url = "https://www"
-        } else {
-            url = Constants.APIKey.upyunRootURL + self
         }
         return URL(string: url)!
     }

@@ -15,6 +15,7 @@ enum MineApi {
 }
 
 extension MineApi: TargetType {
+    
     var path: String {
         switch self {
         case .info(let id):
@@ -24,18 +25,14 @@ extension MineApi: TargetType {
         }
     }
     
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .info:
             return .get
         }
     }
     
-
-    
-    var headers: [String : String]? {
-        <#code#>
+    var parameters: [String : Any]? {
+        return nil
     }
-    
-    
 }

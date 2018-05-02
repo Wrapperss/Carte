@@ -53,7 +53,7 @@ pod 'SJFullscreenPopGesture' #全局返回手势
 
 # 网络框架
 pod 'Alamofire', '~> 4.5'
-pod 'Moya', '~> 10.0'
+pod 'Moya', '~> 8.0.5'
 pod 'Kingfisher'
 pod 'Unbox'
 

@@ -28,8 +28,6 @@ internal func configAppearance() {
     
     UINavigationBar.appearance().titleTextAttributes = navbarTitleTextAttributes
     
-    HUD.defaultDeploy()
-    
     if #available(iOS 10, *) {
         UICollectionView.appearance().isPrefetchingEnabled = false
     }
