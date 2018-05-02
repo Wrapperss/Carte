@@ -15,4 +15,8 @@ module.exports = app => {
 
   //所有分类
   app.get('/api/category', app.controller.category.showAll);
+
+  //新建订单 修改订单 删除订单
+  app.resources('order', '/api/order', 'order')
+
 };

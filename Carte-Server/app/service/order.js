@@ -24,8 +24,8 @@ class OrderService extends Service {
   }
 
   async update(target) {
-    const result = await this.app.mysql.update('Order', { target })
-    return result
+    const result = await this.app.mysql.update('Order', target)
+    return result.affectedRows === 1;
   }
 }
 
