@@ -10,10 +10,6 @@ const createRule = {
 }
 
 class OrderController extends Controller {
-  async create() {
-    const { ctx, service } = this;
-    
-  }
 }
 
 module.exports = OrderController;
