@@ -9,22 +9,11 @@
 import Foundation
 
 extension DataFactory.viewRequired {
-    public static func matchSortTitleCellRequired() -> [SortTitleCellRequired] {
-        return [
-                SortTitleCellRequired(title: "热门"),
-                SortTitleCellRequired(title: "新鲜水果"),
-                SortTitleCellRequired(title: "蔬菜净菜"),
-                SortTitleCellRequired(title: "新鲜水产"),
-                SortTitleCellRequired(title: "肉禽蛋品"),
-                SortTitleCellRequired(title: "冷冻冷藏"),
-                SortTitleCellRequired(title: "乳制品"),
-                SortTitleCellRequired(title: "餐饮烘焙"),
-                SortTitleCellRequired(title: "烹饪快手"),
-                SortTitleCellRequired(title: "粮油副食"),
-                SortTitleCellRequired(title: "休闲零售"),
-                SortTitleCellRequired(title: "酒水饮料"),
-                SortTitleCellRequired(title: "厨卫百货")
-                ]
+    
+    public static func matchSortTitleCellRequired(_ categorys: [Category]) -> [SortTitleCellRequired] {
+        return categorys
+            .filter { $0.superCategory == nil }
+            .map { SortTitleCellRequired.init(title: $0.name ?? "-") }
     }
 }
 

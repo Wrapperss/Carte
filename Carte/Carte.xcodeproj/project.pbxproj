@@ -55,6 +55,7 @@
 		9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E7120295505006D08A4 /* IGListDiffableItem.swift */; };
 		9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E732029554D006D08A4 /* SeparatorLine.swift */; };
 		9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1D209AA2EA00B9F414 /* RechargeController.swift */; };
+		9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */; };
 		9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */; };
 		9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */; };
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
@@ -136,6 +137,7 @@
 		9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7567208C68A400009449 /* Array+Extension.swift */; };
 		9FAF7580208C69EC00009449 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF757F208C69EC00009449 /* Typealias.swift */; };
 		9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7581208C6ADC00009449 /* RegexHelper.swift */; };
+		9FBEBEF5209AC48700C03102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF4209AC48700C03102 /* Category.swift */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -230,6 +232,7 @@
 		9F737E7120295505006D08A4 /* IGListDiffableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGListDiffableItem.swift; sourceTree = "<group>"; };
 		9F737E732029554D006D08A4 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		9F755B1D209AA2EA00B9F414 /* RechargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
+		9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyAPI.swift; sourceTree = "<group>"; };
 		9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineSectionController.swift; sourceTree = "<group>"; };
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
@@ -311,6 +314,7 @@
 		9FAF7567208C68A400009449 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		9FAF757F208C69EC00009449 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		9FAF7581208C6ADC00009449 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
+		9FBEBEF4209AC48700C03102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -375,9 +379,11 @@
 		9F08EE97207B1A3A0021F4DD /* Classify */ = {
 			isa = PBXGroup;
 			children = (
+				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
+				9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */,
+				9FBEBEF3209AC47000C03102 /* Model */,
 				9F08EE9B207B382E0021F4DD /* View */,
 				9F08EE98207B1B0D0021F4DD /* Controller */,
-				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
 			);
 			path = Classify;
 			sourceTree = "<group>";
@@ -885,6 +891,14 @@
 				9FAF7511208C31E700009449 /* API.swift */,
 			);
 			path = Utillties;
+			sourceTree = "<group>";
+		};
+		9FBEBEF3209AC47000C03102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FBEBEF4209AC48700C03102 /* Category.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9FC8BB8E20999FAD00A3CF02 /* Refresh */ = {
@@ -1449,6 +1463,7 @@
 				9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */,
 				9FAF7580208C69EC00009449 /* Typealias.swift in Sources */,
 				9FAF74B8208C1F3700009449 /* BlankFormItem.swift in Sources */,
+				9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */,
 				9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */,
 				9FAF750E208C313600009449 /* Request.swift in Sources */,
 				9FAF74E9208C220000009449 /* UIAppearance.swift in Sources */,
@@ -1501,6 +1516,7 @@
 				9FAF749F208C1F3700009449 /* FormStorable.swift in Sources */,
 				9FAF7568208C68A500009449 /* TopViewController.swift in Sources */,
 				9FAF74B6208C1F3700009449 /* PasswordTextFieldElement.swift in Sources */,
+				9FBEBEF5209AC48700C03102 /* Category.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
 				9F4459712099B04800892F9B /* MineAPI.swift in Sources */,

@@ -39,6 +39,30 @@ final class Request<Target>: MoyaProvider<Target> where Target: TargetType {
     }
     
     // 返回一组数据
+    public func requestList<T: Unboxable>(_ target: Target) -> Promise<[T]> {
+        return Promise { fullfill, reject in
+            self.request(target, queue: CreamsDispatchQueueGetForQOS(.default)) { result in
+                switch result {
+                case let .success(response):
+                    do {
+                        guard let jsonArray = try response.mapJSON() as? [UnboxableDictionary] else {
+                            reject(RequestError.jsonMapError)
+                            return
+                        }
+                        
+                        let data: [T] = try Unbox.unbox(dictionaries: jsonArray, allowInvalidElements: false)
+                        
+                        fullfill(data)
+                    } catch {
+                        reject(RequestError.jsonMapError)
+                    }
+                case let .failure(error):
+                    reject(error)
+                }
+            }
+        }
+    }
+    
     public func request<T: Unboxable>(_ target: Target) -> Promise<[T]> {
         return Promise { fullfill, reject in
             self.request(target, queue: CreamsDispatchQueueGetForQOS(.default)) { result in

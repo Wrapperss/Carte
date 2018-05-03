@@ -6,9 +6,7 @@ class CategoryController extends Controller {
   async showAll() {
       const { ctx, service } = this;
       const categorys = await service.category.findAll();
-      ctx.body = {
-          categorys
-      };
+      ctx.body = categorys;
       ctx.status = 200;
   }
 }

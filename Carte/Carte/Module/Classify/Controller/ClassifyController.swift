@@ -12,9 +12,8 @@ class ClassifyController: BaseListViewController {
     
     var titleSource = [SortTitleCellRequired]()
     
-    private lazy var tableView: UITableView = {
+    fileprivate lazy var tableView: UITableView = {
         let view = UITableView()
-//        view.backgroundColor = UIColor(244, 244, 244, 1)
         view.separatorStyle = .none
         view.tableFooterView = UIView()
         return view
@@ -23,7 +22,7 @@ class ClassifyController: BaseListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setuoUI()
-        titleSource = DataFactory.viewRequired.matchSortTitleCellRequired()
+        fetch()
     }
     
     func setuoUI() {
@@ -33,8 +32,6 @@ class ClassifyController: BaseListViewController {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.register(UINib.init(nibName: "SortTitleCell", bundle: nil), forCellReuseIdentifier: "SortTitleCell")
-        
-        
         collectionView.backgroundColor = .white
     }
     
@@ -71,5 +68,24 @@ extension ClassifyController: UITableViewDelegate, UITableViewDataSource {
         let cell: SortTitleCell = tableView.dequeueReusableCell(withIdentifier: "SortTitleCell", for: indexPath) as! SortTitleCell
         cell.model = titleSource[indexPath.row]
         return cell
+    }
+}
+
+extension ClassifyController {
+    fileprivate func fetch() {
+        HUD.wait()
+        ClassifyAPI
+            .fetchAllCategory()
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (categorys) -> Void in
+                self?.titleSource = DataFactory.viewRequired.matchSortTitleCellRequired(categorys)
+                self?.tableView.reloadData()
+                self?.tableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.top)
+            }
+            .catch { (_) in
+                HUD.showError("发生错误")
+            }
     }
 }
