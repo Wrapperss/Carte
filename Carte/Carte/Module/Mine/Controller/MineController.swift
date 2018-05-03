@@ -19,6 +19,8 @@ class MineController: UITableViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -27,6 +29,7 @@ class MineController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        fetch()
     }
     
 }
@@ -53,6 +56,21 @@ extension MineController {
             
         }
     }
-    
+}
 
+extension MineController {
+    fileprivate func fetch() {
+        HUD.wait()
+        MineAPI
+            .fetchUserInfo(Default.Account.integer(forKey: .userId))
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (user) -> Void in
+                self?.nameLabel.text = user.name ?? "-"
+            }
+            .catch { (error) in
+                HUD.showInfo("获取用户信息失败")
+        }
+    }
 }

@@ -15,6 +15,7 @@
 		9F08EEAA207BA6A50021F4DD /* CommodityContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08EEA8207BA6A50021F4DD /* CommodityContentCell.swift */; };
 		9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EEA9207BA6A50021F4DD /* CommodityContentCell.xib */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
+		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
 		9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37781B2078A18B00DFCC38 /* CartController.swift */; };
 		9F3778262078A79B00DFCC38 /* CommodityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778242078A79B00DFCC38 /* CommodityCell.swift */; };
@@ -53,6 +54,7 @@
 		9F737E70202954B1006D08A4 /* Associate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E6F202954B1006D08A4 /* Associate.swift */; };
 		9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E7120295505006D08A4 /* IGListDiffableItem.swift */; };
 		9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E732029554D006D08A4 /* SeparatorLine.swift */; };
+		9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1D209AA2EA00B9F414 /* RechargeController.swift */; };
 		9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */; };
 		9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */; };
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
@@ -180,6 +182,7 @@
 		9F08EEA8207BA6A50021F4DD /* CommodityContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityContentCell.swift; sourceTree = "<group>"; };
 		9F08EEA9207BA6A50021F4DD /* CommodityContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommodityContentCell.xib; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
+		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		9F37781B2078A18B00DFCC38 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
 		9F3778242078A79B00DFCC38 /* CommodityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityCell.swift; sourceTree = "<group>"; };
@@ -226,6 +229,7 @@
 		9F737E6F202954B1006D08A4 /* Associate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Associate.swift; sourceTree = "<group>"; };
 		9F737E7120295505006D08A4 /* IGListDiffableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGListDiffableItem.swift; sourceTree = "<group>"; };
 		9F737E732029554D006D08A4 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
+		9F755B1D209AA2EA00B9F414 /* RechargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineSectionController.swift; sourceTree = "<group>"; };
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
@@ -543,6 +547,8 @@
 				9F704521208C792C00561480 /* PersonalInfoController.swift */,
 				9FC8BB912099A47100A3CF02 /* UserInfoController.swift */,
 				9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */,
+				9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */,
+				9F755B1D209AA2EA00B9F414 /* RechargeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1499,6 +1505,7 @@
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
 				9F4459712099B04800892F9B /* MineAPI.swift in Sources */,
 				9F737E6E2029542E006D08A4 /* Storable.swift in Sources */,
+				9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */,
 				9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */,
 				9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */,
 				9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */,
@@ -1519,6 +1526,7 @@
 				9FAF74A0208C1F3700009449 /* FormUtil.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
 				9FAF74B2208C1F3700009449 /* ImageElementBox.swift in Sources */,
+				9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */,
 				9FAF74FD208C2F6700009449 /* MJRefresh+RxSwift.swift in Sources */,
 				9FAF756D208C68A500009449 /* Optional+Extension.swift in Sources */,
 				9F96C2A8207A06C9004970D2 /* MagazineCoverCell.swift in Sources */,

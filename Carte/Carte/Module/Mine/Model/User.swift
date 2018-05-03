@@ -13,7 +13,7 @@ import Unbox
 
 struct User: Unboxable, DictionaryConvertible {
     
-    let balance : Double?
+    var balance : Double?
     var email : String?
     let id : Int?
     let mobile : String?
