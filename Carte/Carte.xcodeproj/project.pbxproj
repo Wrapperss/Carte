@@ -138,6 +138,9 @@
 		9FAF7580208C69EC00009449 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF757F208C69EC00009449 /* Typealias.swift */; };
 		9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7581208C6ADC00009449 /* RegexHelper.swift */; };
 		9FBEBEF5209AC48700C03102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF4209AC48700C03102 /* Category.swift */; };
+		9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */; };
+		9FBEBEF9209AE6A400C03102 /* CommoditySubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */; };
+		9FBEBEFB209AE9CB00C03102 /* CommodityContentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEFA209AE9CB00C03102 /* CommodityContentSectionController.swift */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -315,6 +318,9 @@
 		9FAF757F208C69EC00009449 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		9FAF7581208C6ADC00009449 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		9FBEBEF4209AC48700C03102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommoditySubItemCell.swift; sourceTree = "<group>"; };
+		9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommoditySubItemCell.xib; sourceTree = "<group>"; };
+		9FBEBEFA209AE9CB00C03102 /* CommodityContentSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityContentSectionController.swift; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -403,6 +409,9 @@
 				9F08EE9D207B38920021F4DD /* SortTitleCell.xib */,
 				9F08EEA8207BA6A50021F4DD /* CommodityContentCell.swift */,
 				9F08EEA9207BA6A50021F4DD /* CommodityContentCell.xib */,
+				9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */,
+				9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */,
+				9FBEBEFA209AE9CB00C03102 /* CommodityContentSectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1163,6 +1172,7 @@
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
+				9FBEBEF9209AE6A400C03102 /* CommoditySubItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1466,6 +1476,7 @@
 				9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */,
 				9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */,
 				9FAF750E208C313600009449 /* Request.swift in Sources */,
+				9FBEBEFB209AE9CB00C03102 /* CommodityContentSectionController.swift in Sources */,
 				9FAF74E9208C220000009449 /* UIAppearance.swift in Sources */,
 				9FAF74AB208C1F3700009449 /* FourArrange.swift in Sources */,
 				9FAF74A5208C1F3700009449 /* TextViewElement.swift in Sources */,
@@ -1520,6 +1531,7 @@
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
 				9F4459712099B04800892F9B /* MineAPI.swift in Sources */,
+				9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */,
 				9F737E6E2029542E006D08A4 /* Storable.swift in Sources */,
 				9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */,
 				9F96C2AB207A0A7F004970D2 /* MagazineFactory.swift in Sources */,

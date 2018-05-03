@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import IGListKit
 
 class ClassifyController: BaseListViewController {
     
-    var titleSource = [SortTitleCellRequired]()
+    fileprivate var titleSource = [SortTitleCellRequired]()
+    fileprivate var contentSource = [CommodityContentItem]()
     
     fileprivate lazy var tableView: UITableView = {
         let view = UITableView()
@@ -25,16 +27,29 @@ class ClassifyController: BaseListViewController {
         fetch()
     }
     
-    func setuoUI() {
-        view.backgroundColor = .white
+    private func setuoUI() {
+        setupNavigation()
         
+        view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.register(UINib.init(nibName: "SortTitleCell", bundle: nil), forCellReuseIdentifier: "SortTitleCell")
+        
+        
         collectionView.backgroundColor = .white
+        adapter.dataSource = self
     }
     
+    private func setupNavigation() {
+        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(toSearch))
+        navigationItem.rightBarButtonItem = item
+    }
+    
+    @objc
+    func toSearch() {
+        
+    }
     
     override func addConstraints() {
         view.addSubview(tableView)
@@ -71,6 +86,21 @@ extension ClassifyController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ClassifyController: ListAdapterDataSource {
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return emptyLabel(message: "暂无数据")
+    }
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return contentSource
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return CommodityContentSectionController()
+    }
+}
+
+
 extension ClassifyController {
     fileprivate func fetch() {
         HUD.wait()
@@ -82,7 +112,13 @@ extension ClassifyController {
             .then { [weak self] (categorys) -> Void in
                 self?.titleSource = DataFactory.viewRequired.matchSortTitleCellRequired(categorys)
                 self?.tableView.reloadData()
-                self?.tableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.top)
+                self?.tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.top)
+                
+                let superCateGory = categorys.filter { $0.superCategory == nil }
+                self?.contentSource = superCateGory
+                                            .map { DataFactory.viewRequired.matchCommodityCellRequired(mainCategory: $0, allCategory: categorys) }
+                                            .map { DataFactory.sectionItem.prapareCommodityContentItem($0) }
+                self?.adapter.reloadData(completion: nil)
             }
             .catch { (_) in
                 HUD.showError("发生错误")

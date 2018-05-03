@@ -13,10 +13,12 @@ struct Category: Unboxable {
     let id : Int?
     let name : String?
     let superCategory : Int?
+    let cover: String?
     
     init(unboxer: Unboxer) throws {
         id = unboxer.unbox(key: "id")
         name = unboxer.unbox(key: "name")
         superCategory = unboxer.unbox(key: "superCategory")
+        cover = unboxer.unbox(key: "cover")
     }
 }
