@@ -28,7 +28,6 @@ class CommoditySubItemCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         coverImage.cornerRadius = 5
-        backgroundColor = .red
     }
     
     
@@ -36,7 +35,7 @@ class CommoditySubItemCell: UICollectionViewCell {
         guard let model = model else {
             return
         }
-        coverImage.kf.setImage(with: URL(string: "\(Constants.APIKey.serverURL)\(model.cover)"))
+        coverImage.kf.setImage(with: model.cover.imageUrl)
         titleLabel.text = model.title
     }
     

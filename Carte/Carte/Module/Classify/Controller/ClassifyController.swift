@@ -39,6 +39,7 @@ class ClassifyController: BaseListViewController {
         
         collectionView.backgroundColor = .white
         adapter.dataSource = self
+        adapter.scrollViewDelegate = self
     }
     
     private func setupNavigation() {
@@ -84,9 +85,13 @@ extension ClassifyController: UITableViewDelegate, UITableViewDataSource {
         cell.model = titleSource[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        collectionView.contentOffset = CGPoint(x: 0, y: indexPath.row * 400)
+    }
 }
 
-extension ClassifyController: ListAdapterDataSource {
+extension ClassifyController: ListAdapterDataSource, UIScrollViewDelegate {
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return emptyLabel(message: "暂无数据")
     }
@@ -97,6 +102,11 @@ extension ClassifyController: ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         return CommodityContentSectionController()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let row =  Int(scrollView.contentOffset.y / 400)
+        tableView.selectRow(at: IndexPath.init(row: row, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle )
     }
 }
 
