@@ -13,6 +13,8 @@ import PromiseKit
 enum ClassifyAPI {
     case allCategory
     case goodsInCategory(Int)
+    case goodsInCategoryByVolume(Int)
+    case goodsInCategoryByPrice(Int)
 }
 
 
@@ -23,19 +25,23 @@ extension ClassifyAPI: TargetType {
             return "api/category"
         case .goodsInCategory(let categoryId):
             return "api/goods/category/\(categoryId)"
+        case .goodsInCategoryByPrice(let categoryId):
+            return "api/goods/category/price/\(categoryId)"
+        case .goodsInCategoryByVolume(let categoryId):
+            return "api/goods/category/volume/\(categoryId)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .allCategory, .goodsInCategory:
+        default:
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .allCategory, .goodsInCategory:
+        default:
             return nil
         }
     }
@@ -49,5 +55,13 @@ extension ClassifyAPI {
     
     static func fetchGoodsInCategory(_ categoyrId: Int) -> Promise<[Goods]> {
         return Request<ClassifyAPI>().requestList(.goodsInCategory(categoyrId))
+    }
+    
+    static func fetchGoodsInCategoryByVolume(_ categoyrId: Int) -> Promise<[Goods]> {
+        return Request<ClassifyAPI>().requestList(.goodsInCategoryByVolume(categoyrId))
+    }
+    
+    static func fetchGoodsInCategoryByPrice(_ categoyrId: Int) -> Promise<[Goods]> {
+        return Request<ClassifyAPI>().requestList(.goodsInCategoryByPrice(categoyrId))
     }
 }

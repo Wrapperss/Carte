@@ -71,19 +71,51 @@ class GoodsListController: BaseListViewController {
 extension GoodsListController {
     fileprivate func fetch() {
         HUD.wait()
-        ClassifyAPI
-//            .fetchGoodsInCategory(category.categoryId)
-            .fetchGoodsInCategory(1)
-            .always {
+        
+        switch currentSelect {
+        case .defaultSelect:
+            ClassifyAPI
+                //            .fetchGoodsInCategory(category.categoryId)
+                .fetchGoodsInCategory(1)
+                .always {
                     HUD.clear()
+                }
+                .then { [weak self] goods -> Void in
+                    self?.source = DataFactory.sectionItem.prepareGoodsItem(DataFactory.viewRequired.matchGoodsCellRequired(goods))
+                    self?.adapter.reloadData(completion: nil)
+                }
+                .catch { _ in
+                    HUD.showError("发送错误")
             }
-            .then { [weak self] goods -> Void in
-                self?.source = DataFactory.sectionItem.prepareGoodsItem(DataFactory.viewRequired.matchGoodsCellRequired(goods))
-                self?.adapter.reloadData(completion: nil)
+        case .sales:
+            ClassifyAPI
+                //            .fetchGoodsInCategoryByVolume(category.categoryId)
+                .fetchGoodsInCategoryByVolume(1)
+                .always {
+                    HUD.clear()
+                }
+                .then { [weak self] goods -> Void in
+                    self?.source = DataFactory.sectionItem.prepareGoodsItem(DataFactory.viewRequired.matchGoodsCellRequired(goods))
+                    self?.adapter.reloadData(completion: nil)
+                }
+                .catch { _ in
+                    HUD.showError("发送错误")
             }
-            .catch { _ in
-                HUD.showError("发送错误")
+        case .price:
+            ClassifyAPI
+                //            .fetchGoodsInCategoryByPrice(category.categoryId)
+                .fetchGoodsInCategoryByPrice(1)
+                .always {
+                    HUD.clear()
+                }
+                .then { [weak self] goods -> Void in
+                    self?.source = DataFactory.sectionItem.prepareGoodsItem(DataFactory.viewRequired.matchGoodsCellRequired(goods))
+                    self?.adapter.reloadData(completion: nil)
+                }
+                .catch { _ in
+                    HUD.showError("发送错误")
             }
+        }
     }
 }
 
@@ -104,6 +136,7 @@ extension GoodsListController: ListAdapterDataSource {
 extension GoodsListController: TopSelectViewDelegate {
     func selectItem(_ type: TopSelectView.SelectType) {
         currentSelect = type
+        fetch()
     }
 }
 

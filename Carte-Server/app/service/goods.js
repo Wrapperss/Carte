@@ -13,6 +13,26 @@ async showPartGoods(categoryId) {
   return goods
 }
 
+async showPartGoodsOrderByVolume(categoryId) {
+  let goods = await this.app.mysql.query(`
+  SELECT * FROM Goods 
+  WHERE id in (SELECT goodsId 
+                FROM Category_Goods
+                WHERE categoryId = ?)
+                ORDER BY volume DESC`, [categoryId]);
+  return goods
+}
+
+async showClassifyGoodsOrderByPrice(categoryId) {
+  let goods = await this.app.mysql.query(`
+  SELECT * FROM Goods 
+  WHERE id in (SELECT goodsId 
+                FROM Category_Goods
+                WHERE categoryId = ?)
+                ORDER BY price`, [categoryId]);
+  return goods
+}
+
   async create(target) {
       const result = await this.app.mysql.insert('Goods', { target });
       return result.insertId;
