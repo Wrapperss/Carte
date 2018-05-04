@@ -113,11 +113,11 @@ extension ClassifyController: ListAdapterDataSource, UIScrollViewDelegate {
 }
 
 extension ClassifyController: CommodityContentSectionControllerDelegate {
-    func didSelectCategory(_ id: Int?) {
-        guard let id = id else {
+    func didSelectCategory(_ category: CommoditySubItemCellRequired?) {
+        guard let category = category else {
             return
         }
-        
+        navigationController?.pushViewController(GoodsListController(category: category), animated: true)
     }
 }
 

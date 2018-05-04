@@ -10,7 +10,7 @@ import Foundation
 import IGListKit
 
 protocol CommodityContentSectionControllerDelegate: class {
-    func didSelectCategory(_ id: Int?)
+    func didSelectCategory(_ category: CommoditySubItemCellRequired?)
 }
 
 class CommodityContentItem: NormalDiffableItem {
@@ -54,7 +54,7 @@ class CommodityContentSectionController: ListSectionController {
 }
 
 extension CommodityContentSectionController: CommodityContentCellDelegate {
-    func didSelectCommodityContentCell(_ id: Int?) {
-        delegate.didSelectCategory(id)
+    func didSelectCommodityContentCell(_ category: CommoditySubItemCellRequired?) {
+        delegate.didSelectCategory(category)
     }
 }

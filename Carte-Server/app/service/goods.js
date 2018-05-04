@@ -7,9 +7,9 @@ class GoodsService extends Service {
 async showPartGoods(categoryId) {
   let goods = await this.app.mysql.query(`
   SELECT * FROM Goods 
-  WHERE id in (SELECT goods_id 
-                FROM Category_Goods 
-                WHERE category_id = 1)`, [categoryId]);
+  WHERE id in (SELECT goodsId 
+                FROM Category_Goods
+                WHERE categoryId = ?)`, [categoryId]);
   return goods
 }
 

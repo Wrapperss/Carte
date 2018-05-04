@@ -7,9 +7,7 @@ class GoodsController extends Controller {
       const { ctx, service } = this;
       const categoryId = ctx.params;
       const goods = await service.goods.showPartGoods(categoryId);
-      ctx.body = {
-          goods
-      };
+      ctx.body = goods;
       ctx.state = 200;
   }
 

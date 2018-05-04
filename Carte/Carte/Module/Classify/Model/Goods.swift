@@ -1,0 +1,41 @@
+//
+//  Goods.swift
+//  Carte
+//
+//  Created by Wrappers Zhang on 2018/5/4.
+//  Copyright © 2018 Wrappers. All rights reserved.
+//
+
+import Foundation
+import Unbox
+
+struct Goods: Unboxable {
+    
+    let brand : String?
+    let descriptionField : String?
+    let id : Int?
+    let name : String?
+    let origin : String?
+    let originalPrice : Double?
+    let price : Double?
+    let shelfLife : String?
+    let stock : Int?
+    let storage : String?
+    let unit : String?
+    
+    
+    init(unboxer: Unboxer) throws {
+        brand = unboxer.unbox(key: "brand")
+        descriptionField = unboxer.unbox(key: "description")
+        id = unboxer.unbox(key: "id")
+        name = unboxer.unbox(key: "name")
+        origin = unboxer.unbox(key: "origin")
+        originalPrice = unboxer.unbox(key: "original_price")
+        price = unboxer.unbox(key: "price")
+        shelfLife = unboxer.unbox(key: "shelf_life")
+        stock = unboxer.unbox(key: "stock")
+        storage = unboxer.unbox(key: "storage")
+        unit = unboxer.unbox(key: "unit")
+    }
+    
+}

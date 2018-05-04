@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CommodityContentCellDelegate: class {
-    func didSelectCommodityContentCell(_ id: Int?)
+    func didSelectCommodityContentCell(_ category: CommoditySubItemCellRequired?)
 }
 
 struct CommodityContentCellRequired {
@@ -67,6 +67,6 @@ extension CommodityContentCell: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectCommodityContentCell(model?.subItemRequireds[indexPath.row].categoryId)
+        delegate?.didSelectCommodityContentCell(model?.subItemRequireds[indexPath.row])
     }
 }

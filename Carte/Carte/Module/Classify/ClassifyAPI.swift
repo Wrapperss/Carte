@@ -12,6 +12,7 @@ import PromiseKit
 
 enum ClassifyAPI {
     case allCategory
+    case goodsInCategory(Int)
 }
 
 
@@ -20,19 +21,21 @@ extension ClassifyAPI: TargetType {
         switch self {
         case .allCategory:
             return "api/category"
+        case .goodsInCategory(let categoryId):
+            return "api/goods/category/\(categoryId)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .allCategory:
+        case .allCategory, .goodsInCategory:
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .allCategory:
+        case .allCategory, .goodsInCategory:
             return nil
         }
     }
@@ -42,5 +45,9 @@ extension ClassifyAPI: TargetType {
 extension ClassifyAPI {
     static func fetchAllCategory() -> Promise<[Category]> {
         return Request<ClassifyAPI>().requestList(.allCategory)
+    }
+    
+    static func fetchGoodsInCategory(_ categoyrId: Int) -> Promise<[Goods]> {
+        return Request<ClassifyAPI>().requestList(.goodsInCategory(categoyrId))
     }
 }
