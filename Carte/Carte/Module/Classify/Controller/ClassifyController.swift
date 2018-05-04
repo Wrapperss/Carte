@@ -33,6 +33,8 @@ class ClassifyController: BaseListViewController {
         view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.isScrollEnabled = false
+        tableView.backgroundColor = UIColor(r: 244, g: 244, b: 244)
         tableView.showsVerticalScrollIndicator = false
         tableView.register(UINib.init(nibName: "SortTitleCell", bundle: nil), forCellReuseIdentifier: "SortTitleCell")
         
@@ -105,7 +107,7 @@ extension ClassifyController: ListAdapterDataSource, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let row =  Int(scrollView.contentOffset.y / 400)
+        let row =  Int((scrollView.contentOffset.y + 200) / 400)
         tableView.selectRow(at: IndexPath.init(row: row, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle )
     }
 }
