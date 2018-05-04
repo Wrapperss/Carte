@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CommodityContentCellDelegate: class {
+    func didSelectCommodityContentCell(_ id: Int?)
+}
+
 struct CommodityContentCellRequired {
     let title: String
     let subItemRequireds: [CommoditySubItemCellRequired]
@@ -18,6 +22,8 @@ class CommodityContentCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentCollection: UICollectionView!
+    
+    var delegate: CommodityContentCellDelegate?
     
     var model: CommodityContentCellRequired? {
         didSet {
@@ -58,5 +64,9 @@ extension CommodityContentCell: UICollectionViewDelegate, UICollectionViewDataSo
         let cell: CommoditySubItemCell = collectionView.dequeue(CommoditySubItemCell.self, forIndexPath: indexPath)
         cell.model = model?.subItemRequireds[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectCommodityContentCell(model?.subItemRequireds[indexPath.row].categoryId)
     }
 }

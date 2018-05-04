@@ -103,12 +103,21 @@ extension ClassifyController: ListAdapterDataSource, UIScrollViewDelegate {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return CommodityContentSectionController()
+        return CommodityContentSectionController(delegate: self)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let row =  Int((scrollView.contentOffset.y + 200) / 400)
         tableView.selectRow(at: IndexPath.init(row: row, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle )
+    }
+}
+
+extension ClassifyController: CommodityContentSectionControllerDelegate {
+    func didSelectCategory(_ id: Int?) {
+        guard let id = id else {
+            return
+        }
+        
     }
 }
 

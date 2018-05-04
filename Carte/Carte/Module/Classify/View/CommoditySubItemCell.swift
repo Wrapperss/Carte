@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 
 struct CommoditySubItemCellRequired {
+    let categoryId: Int
     let cover: String
     let title: String
 }

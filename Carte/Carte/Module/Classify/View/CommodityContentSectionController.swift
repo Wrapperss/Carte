@@ -9,6 +9,10 @@
 import Foundation
 import IGListKit
 
+protocol CommodityContentSectionControllerDelegate: class {
+    func didSelectCategory(_ id: Int?)
+}
+
 class CommodityContentItem: NormalDiffableItem {
     var data: CommodityContentCellRequired
     
@@ -20,6 +24,13 @@ class CommodityContentItem: NormalDiffableItem {
 
 class CommodityContentSectionController: ListSectionController {
     var object: CommodityContentItem?
+    
+    var delegate: CommodityContentSectionControllerDelegate
+    
+    init(delegate: CommodityContentSectionControllerDelegate) {
+        self.delegate = delegate
+         super.init()
+    }
     
     override func numberOfItems() -> Int {
         return object?.data != nil ? 1 : 0
@@ -33,10 +44,17 @@ class CommodityContentSectionController: ListSectionController {
         let cell: CommodityContentCell = collectionContext?.dequeueReusableCell(withNibName: CommodityContentCell.reuseIdentifier, bundle: nil, for: self, at: index) as! CommodityContentCell
         cell.model = object?.data
         cell.addSeparatorLine()
+        cell.delegate = self
         return cell
     }
     
     override func didUpdate(to object: Any) {
         self.object = object as? CommodityContentItem
+    }
+}
+
+extension CommodityContentSectionController: CommodityContentCellDelegate {
+    func didSelectCommodityContentCell(_ id: Int?) {
+        delegate.didSelectCategory(id)
     }
 }

@@ -24,7 +24,7 @@ extension DataFactory.viewRequired {
     }
     
     private static  func matchCommoditySubItemCellRequired(_ category: Category) -> CommoditySubItemCellRequired {
-        return CommoditySubItemCellRequired(cover: category.cover ?? "", title: category.name ?? "")
+        return CommoditySubItemCellRequired(categoryId: category.id ?? 0, cover: category.cover ?? "", title: category.name ?? "")
     }
 }
 
