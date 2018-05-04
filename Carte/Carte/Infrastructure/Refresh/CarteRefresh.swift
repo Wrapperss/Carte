@@ -10,8 +10,6 @@ import Foundation
 import MJRefresh
 
 extension UICollectionView {
-    
-    
     func addPullToRefresh(_ block: @escaping () -> Void) {
         mj_header = MJRefreshNormalHeader(refreshingBlock: {
             block()

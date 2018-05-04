@@ -9,9 +9,11 @@
 import Foundation
 import PromiseKit
 import RxSwift
+import IGListKit
 import SnapKit
 
 class GoodsListController: BaseListViewController {
+
     let category: CommoditySubItemCellRequired
     
     let topView = TopSelectView.initFromNib()
@@ -36,6 +38,16 @@ class GoodsListController: BaseListViewController {
         title = category.title
         topView.setInitialIndex()
         topView.delegate = self
+        
+        adapter.dataSource = self
+        
+        collectionView.addPullToRefresh {
+            
+        }
+        
+        collectionView.addLoadMore {
+            
+        }
     }
     
     override func addConstraints() {
@@ -43,6 +55,12 @@ class GoodsListController: BaseListViewController {
         topView.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(50)
+        }
+        
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(topView.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
 }
@@ -52,12 +70,14 @@ extension GoodsListController {
     fileprivate func fetch() {
         HUD.wait()
         ClassifyAPI
-            .fetchGoodsInCategory(category.categoryId)
+//            .fetchGoodsInCategory(category.categoryId)
+            .fetchGoodsInCategory(1)
             .always {
                     HUD.clear()
             }
-            .then { goods in
-                print(goods)
+            .then { [weak self] goods -> Void in
+                self?.source = DataFactory.sectionItem.prepareGoodsItem(DataFactory.viewRequired.matchGoodsCellRequired(goods))
+                self?.adapter.reloadData(completion: nil)
             }
             .catch { _ in
                 HUD.showError("发送错误")
@@ -65,9 +85,22 @@ extension GoodsListController {
     }
 }
 
+extension GoodsListController: ListAdapterDataSource {
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return source
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return GoodsSectionController()
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return emptyLabel(message: "暂无数据")
+    }
+}
+
 extension GoodsListController: TopSelectViewDelegate {
     func selectItem(_ index: Int) {
-        
         
     }
 }

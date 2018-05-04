@@ -145,6 +145,9 @@
 		9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B1F5209C36A100A05E83 /* Goods.swift */; };
 		9FC3B1F8209C3DB400A05E83 /* TopSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B1F7209C3DB400A05E83 /* TopSelectView.swift */; };
 		9FC3B1FA209C3DC300A05E83 /* TopSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B1F9209C3DC300A05E83 /* TopSelectView.xib */; };
+		9FC3B1FD209C4F3E00A05E83 /* GoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B1FB209C4F3E00A05E83 /* GoodsCell.swift */; };
+		9FC3B1FE209C4F3F00A05E83 /* GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B1FC209C4F3E00A05E83 /* GoodsCell.xib */; };
+		9FC3B200209C534E00A05E83 /* GoodsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B1FF209C534E00A05E83 /* GoodsSectionController.swift */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -329,6 +332,9 @@
 		9FC3B1F5209C36A100A05E83 /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		9FC3B1F7209C3DB400A05E83 /* TopSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSelectView.swift; sourceTree = "<group>"; };
 		9FC3B1F9209C3DC300A05E83 /* TopSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSelectView.xib; sourceTree = "<group>"; };
+		9FC3B1FB209C4F3E00A05E83 /* GoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCell.swift; sourceTree = "<group>"; };
+		9FC3B1FC209C4F3E00A05E83 /* GoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCell.xib; sourceTree = "<group>"; };
+		9FC3B1FF209C534E00A05E83 /* GoodsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsSectionController.swift; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -423,6 +429,9 @@
 				9FBEBEFA209AE9CB00C03102 /* CommodityContentSectionController.swift */,
 				9FC3B1F7209C3DB400A05E83 /* TopSelectView.swift */,
 				9FC3B1F9209C3DC300A05E83 /* TopSelectView.xib */,
+				9FC3B1FB209C4F3E00A05E83 /* GoodsCell.swift */,
+				9FC3B1FC209C4F3E00A05E83 /* GoodsCell.xib */,
+				9FC3B1FF209C534E00A05E83 /* GoodsSectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1181,6 +1190,7 @@
 				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
 				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
 				9F08EE9F207B38920021F4DD /* SortTitleCell.xib in Resources */,
+				9FC3B1FE209C4F3F00A05E83 /* GoodsCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
@@ -1454,6 +1464,7 @@
 				9FAF74A4208C1F3700009449 /* ButtonElement.swift in Sources */,
 				9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
+				9FC3B200209C534E00A05E83 /* GoodsSectionController.swift in Sources */,
 				9FAF750F208C313600009449 /* RequestLoggerPlugin.swift in Sources */,
 				9F08EEAA207BA6A50021F4DD /* CommodityContentCell.swift in Sources */,
 				9F427F4D207E55C5009ACA76 /* RegistViewController.swift in Sources */,
@@ -1473,6 +1484,7 @@
 				9FAF7579208C68A500009449 /* SwiftError+Extension.swift in Sources */,
 				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,
 				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,
+				9FC3B1FD209C4F3E00A05E83 /* GoodsCell.swift in Sources */,
 				9FAF750A208C313600009449 /* RequestErrorPlugin.swift in Sources */,
 				9FAF7578208C68A500009449 /* Number+Extension.swift in Sources */,
 				9F44597E2099B98A00892F9B /* Adaptor.swift in Sources */,

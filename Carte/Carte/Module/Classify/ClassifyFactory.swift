@@ -23,8 +23,20 @@ extension DataFactory.viewRequired {
         return CommodityContentCellRequired(title: mainCategory.name ?? "-", subItemRequireds: subItemRequireds)
     }
     
-    private static  func matchCommoditySubItemCellRequired(_ category: Category) -> CommoditySubItemCellRequired {
+    private static func matchCommoditySubItemCellRequired(_ category: Category) -> CommoditySubItemCellRequired {
         return CommoditySubItemCellRequired(categoryId: category.id ?? 0, cover: category.cover ?? "", title: category.name ?? "")
+    }
+    
+    public static func matchGoodsCellRequired(_ goodes: [Goods]) -> [GoodsCellRequired] {
+        return goodes.map({ goods -> GoodsCellRequired in
+            return GoodsCellRequired(image: goods.picture ?? "-",
+                                     title: goods.name ?? "-",
+                                     description: goods.descriptionField ?? "-",
+                                     comment: "",
+                                     price: "¥\(goods.price ?? 0.0)",
+                                     orginalPrice: "¥\(goods.originalPrice ?? 0.0)",
+                                     postage: "  邮费：\(goods.postage ?? 0/0)  ")
+        })
     }
 }
 
@@ -32,5 +44,9 @@ extension DataFactory.sectionItem {
     
     public static func prapareCommodityContentItem(_ required: CommodityContentCellRequired) -> CommodityContentItem {
         return CommodityContentItem(required)
+    }
+    
+    public static func prepareGoodsItem(_ requireds: [GoodsCellRequired]) -> [GoodsSectionItem] {
+        return requireds.map { GoodsSectionItem(data: $0) }
     }
 }

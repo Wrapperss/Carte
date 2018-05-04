@@ -11,18 +11,20 @@ import Unbox
 
 struct Goods: Unboxable {
     
-    let brand : String?
-    let descriptionField : String?
-    let id : Int?
-    let name : String?
-    let origin : String?
-    let originalPrice : Double?
-    let price : Double?
-    let shelfLife : String?
-    let stock : Int?
-    let storage : String?
-    let unit : String?
-    
+    let brand: String?
+    let descriptionField: String?
+    let id: Int?
+    let name: String?
+    let origin: String?
+    let originalPrice: Double?
+    let price: Double?
+    let shelfLife: String?
+    let stock: Int?
+    let storage: String?
+    let unit: String?
+    let postage: Double?
+    let picture: String?
+    let volume: Int?
     
     init(unboxer: Unboxer) throws {
         brand = unboxer.unbox(key: "brand")
@@ -36,6 +38,9 @@ struct Goods: Unboxable {
         stock = unboxer.unbox(key: "stock")
         storage = unboxer.unbox(key: "storage")
         unit = unboxer.unbox(key: "unit")
+        postage = unboxer.unbox(key: "postage")
+        picture = unboxer.unbox(key: "picture")
+        volume = unboxer.unbox(key: "volume")
     }
     
 }
