@@ -17,6 +17,7 @@ struct GoodsCellRequired {
     let price: String
     let orginalPrice: String
     let postage: String
+    let goodsId: Int
 }
 
 class GoodsCell: UICollectionViewCell {
@@ -24,7 +25,6 @@ class GoodsCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var orginalPriceLabel: UILabel!
     @IBOutlet weak var postageLabel: UILabel!
@@ -48,7 +48,6 @@ class GoodsCell: UICollectionViewCell {
         imageView.kf.setImage(with: model.image.imageUrl)
         titleLabel.text = model.title
         descriptionLabel.text = model.description
-        commentLabel.text = model.comment
         priceLabel.text = model.price
         orginalPriceLabel.text = model.orginalPrice
         postageLabel.text = model.postage

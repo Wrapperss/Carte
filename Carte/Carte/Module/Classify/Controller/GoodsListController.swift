@@ -18,6 +18,8 @@ class GoodsListController: BaseListViewController {
     
     let topView = TopSelectView.initFromNib()
     
+    var currentSelect = TopSelectView.SelectType.defaultSelect
+    
     init(category: CommoditySubItemCellRequired) {
         self.category = category
         super.init(nibName: nil, bundle: nil)
@@ -42,7 +44,7 @@ class GoodsListController: BaseListViewController {
         adapter.dataSource = self
         
         collectionView.addPullToRefresh {
-            
+            self.fetch()
         }
         
         collectionView.addLoadMore {
@@ -91,7 +93,7 @@ extension GoodsListController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return GoodsSectionController()
+        return GoodsSectionController(delegate: self)
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
@@ -100,8 +102,13 @@ extension GoodsListController: ListAdapterDataSource {
 }
 
 extension GoodsListController: TopSelectViewDelegate {
-    func selectItem(_ index: Int) {
-        
+    func selectItem(_ type: TopSelectView.SelectType) {
+        currentSelect = type
     }
 }
 
+extension GoodsListController: GoodsSectionControllerDelegate {
+    func selectGoodsItem(_ id: Int) {
+        print(id)
+    }
+}

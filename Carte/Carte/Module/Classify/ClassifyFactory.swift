@@ -35,7 +35,8 @@ extension DataFactory.viewRequired {
                                      comment: "",
                                      price: "¥\(goods.price ?? 0.0)",
                                      orginalPrice: "¥\(goods.originalPrice ?? 0.0)",
-                                     postage: "  邮费：\(goods.postage ?? 0/0)  ")
+                                     postage: "  邮费：\(goods.postage ?? 0/0)  ",
+                                     goodsId: goods.id ?? 0)
         })
     }
 }

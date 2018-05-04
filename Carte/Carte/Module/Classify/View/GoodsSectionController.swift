@@ -9,6 +9,10 @@
 import Foundation
 import IGListKit
 
+protocol GoodsSectionControllerDelegate: class {
+    func selectGoodsItem(_ id: Int)
+}
+
 class GoodsSectionItem: NormalDiffableItem {
     var data: GoodsCellRequired
     
@@ -21,9 +25,11 @@ class GoodsSectionItem: NormalDiffableItem {
 class GoodsSectionController: ListSectionController {
     
     var object: GoodsSectionItem?
+    var delegate: GoodsSectionControllerDelegate?
     
-    override init() {
+    init(delegate: GoodsSectionControllerDelegate?) {
         super.init()
+        self.delegate = delegate
         inset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
     }
     
@@ -40,6 +46,13 @@ class GoodsSectionController: ListSectionController {
         
         cell.model = object?.data
         return cell
+    }
+    
+    override func didSelectItem(at index: Int) {
+        guard let goodsId = object?.data.goodsId else {
+            return
+        }
+        delegate?.selectGoodsItem(goodsId)
     }
     
     override func didUpdate(to object: Any) {
