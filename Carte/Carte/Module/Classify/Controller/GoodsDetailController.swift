@@ -32,7 +32,6 @@ class GoodsDetailController: BaseListViewController {
     private func setupUI() {
         setupNavigation()
         view.backgroundColor = UIColor.backgroundColor
-        
         adapter.dataSource = self
     }
     
@@ -58,11 +57,20 @@ extension GoodsDetailController: ListAdapterDataSource {
         if object is GoodsHeaderSectionItem {
             return GoodsHeaderSectionController()
         }
+        if object is GoodsInfoSectionItem {
+            return GoodsInfoSectionController(delegate: self)
+        }
         return ListSectionController()
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return emptyLabel(message: "暂无数据")
+    }
+}
+
+extension GoodsDetailController: GoodsInfoSectionControllerDelegate{
+    func tapToMoreInfo() {
+        navigationController?.pushViewController(MoreInfoController.init(goodsId: goodsId), animated: true)
     }
 }
 

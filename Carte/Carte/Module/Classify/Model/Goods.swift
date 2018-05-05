@@ -25,6 +25,9 @@ struct Goods: Unboxable {
     let postage: Double?
     let picture: String?
     let volume: Int?
+    let manufacturer: String?
+    let type: String?
+    let packing: String?
     
     init(unboxer: Unboxer) throws {
         brand = unboxer.unbox(key: "brand")
@@ -41,6 +44,9 @@ struct Goods: Unboxable {
         postage = unboxer.unbox(key: "postage")
         picture = unboxer.unbox(key: "picture")
         volume = unboxer.unbox(key: "volume")
+        manufacturer = unboxer.unbox(key: "manufacturer")
+        type = unboxer.unbox(key: "type")
+        packing = unboxer.unbox(key: "packing")
     }
     
 }

@@ -22,6 +22,11 @@ class GoodsHeaderSectionItem: NormalDiffableItem {
 class GoodsHeaderSectionController: ListSectionController {
     var object: GoodsHeaderSectionItem?
     
+    override init() {
+        super.init()
+        inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+    }
+    
     override func numberOfItems() -> Int {
         return object != nil ? 1 : 0
     }

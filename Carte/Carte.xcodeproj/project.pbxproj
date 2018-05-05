@@ -152,6 +152,10 @@
 		9FC3B205209D4B0A00A05E83 /* GoodsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B203209D4B0A00A05E83 /* GoodsHeaderCell.swift */; };
 		9FC3B206209D4B0A00A05E83 /* GoodsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B204209D4B0A00A05E83 /* GoodsHeaderCell.xib */; };
 		9FC3B208209D4DB500A05E83 /* GoodsHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B207209D4DB500A05E83 /* GoodsHeaderSectionController.swift */; };
+		9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B209209D7B0600A05E83 /* GoodsInfoCell.swift */; };
+		9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */; };
+		9FC3B20E209D801500A05E83 /* GoodsInfoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */; };
+		9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B20F209D865600A05E83 /* MoreInfoController.swift */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -343,6 +347,10 @@
 		9FC3B203209D4B0A00A05E83 /* GoodsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsHeaderCell.swift; sourceTree = "<group>"; };
 		9FC3B204209D4B0A00A05E83 /* GoodsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsHeaderCell.xib; sourceTree = "<group>"; };
 		9FC3B207209D4DB500A05E83 /* GoodsHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsHeaderSectionController.swift; sourceTree = "<group>"; };
+		9FC3B209209D7B0600A05E83 /* GoodsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsInfoCell.swift; sourceTree = "<group>"; };
+		9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsInfoCell.xib; sourceTree = "<group>"; };
+		9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsInfoSectionController.swift; sourceTree = "<group>"; };
+		9FC3B20F209D865600A05E83 /* MoreInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoController.swift; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -422,6 +430,7 @@
 				9F08EE99207B1B220021F4DD /* ClassifyController.swift */,
 				9FC3B1F3209C34C600A05E83 /* GoodsListController.swift */,
 				9FC3B201209D488200A05E83 /* GoodsDetailController.swift */,
+				9FC3B20F209D865600A05E83 /* MoreInfoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,6 +453,9 @@
 				9FC3B203209D4B0A00A05E83 /* GoodsHeaderCell.swift */,
 				9FC3B204209D4B0A00A05E83 /* GoodsHeaderCell.xib */,
 				9FC3B207209D4DB500A05E83 /* GoodsHeaderSectionController.swift */,
+				9FC3B209209D7B0600A05E83 /* GoodsInfoCell.swift */,
+				9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */,
+				9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1204,6 +1216,7 @@
 				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
 				9F08EE9F207B38920021F4DD /* SortTitleCell.xib in Resources */,
 				9FC3B1FE209C4F3F00A05E83 /* GoodsCell.xib in Resources */,
+				9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
@@ -1496,6 +1509,7 @@
 				9FAF74F2208C2F1C00009449 /* DataPrepareService.swift in Sources */,
 				9FAF7579208C68A500009449 /* SwiftError+Extension.swift in Sources */,
 				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,
+				9FC3B20E209D801500A05E83 /* GoodsInfoSectionController.swift in Sources */,
 				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,
 				9FC3B1FD209C4F3E00A05E83 /* GoodsCell.swift in Sources */,
 				9FAF750A208C313600009449 /* RequestErrorPlugin.swift in Sources */,
@@ -1531,6 +1545,7 @@
 				9FAF7501208C2F6700009449 /* UIViewController+Loading+RxSwift.swift in Sources */,
 				9FAF74A3208C1F3700009449 /* TextFieldElement.swift in Sources */,
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
+				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
@@ -1539,6 +1554,7 @@
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
 				9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */,
 				9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */,
+				9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */,
 				9FAF7577208C68A500009449 /* UICollectionView+Extension.swift in Sources */,
 				9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
