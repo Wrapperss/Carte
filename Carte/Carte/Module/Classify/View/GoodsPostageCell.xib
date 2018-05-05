@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GoodsPostageCell" customModule="Carte" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送及售后说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K71-ms-ujg">
+                        <rect key="frame" x="116.5" y="15" width="143" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-kQ-zWx">
+                        <rect key="frame" x="126.5" y="49" width="123" height="5"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="GGK-8W-jaY"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运费：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ER-MY-pfR">
+                        <rect key="frame" x="15" y="70" width="49" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm5-vN-OvU">
+                        <rect key="frame" x="69" y="70" width="44" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="textColor" red="0.9882352941176471" green="0.11372549019607843" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发货周期：下单后将尽快安排配送" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03Q-fv-kcW">
+                        <rect key="frame" x="15" y="99.5" width="345" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.25490196078431371" green="0.26666666666666666" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C24-d1-Yrt">
+                        <rect key="frame" x="15" y="130" width="345" height="153"/>
+                        <string key="text">关于签收及破损：如遇外包装已有明显之破损，污损，变形或折封等现象，或是拆包验货中发现商品存有破损，污损，变形等情况，请您现场立即向派送人员提出反馈并拒绝签收；如遇代收签字情况，亦请代收人现场拆包验货，否则依照物流运送规章将视同正常派送完成。同时请您在拒收后48小时内向Carte客户服务中心或商家提出反馈，以确保您的权益；</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.25490196078431371" green="0.26666666666666666" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退换货重量提示：食品类商品非质量问题状况下，原密封包装被打开导致破损，不完整或损坏的，将不适用七日无理由退换货，提请您下单前务必留意此类产品的免除或限制责任的条款说明；" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-8l-TaE">
+                        <rect key="frame" x="15" y="293" width="345" height="95.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.25490196078431371" green="0.26666666666666666" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EKa-kQ-zWx" firstAttribute="leading" secondItem="K71-ms-ujg" secondAttribute="leading" constant="10" id="13J-yK-dEv"/>
+                <constraint firstItem="03Q-fv-kcW" firstAttribute="top" secondItem="3ER-MY-pfR" secondAttribute="bottom" constant="10" id="63x-vR-pXS"/>
+                <constraint firstItem="1rF-8l-TaE" firstAttribute="leading" secondItem="C24-d1-Yrt" secondAttribute="leading" id="8Ug-3f-B88"/>
+                <constraint firstAttribute="trailing" secondItem="03Q-fv-kcW" secondAttribute="trailing" constant="15" id="DEZ-N1-VoE"/>
+                <constraint firstItem="C24-d1-Yrt" firstAttribute="leading" secondItem="03Q-fv-kcW" secondAttribute="leading" id="GRk-ch-dbc"/>
+                <constraint firstItem="EKa-kQ-zWx" firstAttribute="top" secondItem="K71-ms-ujg" secondAttribute="bottom" constant="10" id="HL8-Cx-LNX"/>
+                <constraint firstItem="EKa-kQ-zWx" firstAttribute="trailing" secondItem="K71-ms-ujg" secondAttribute="trailing" constant="-10" id="Qzi-z6-knd"/>
+                <constraint firstItem="C24-d1-Yrt" firstAttribute="top" secondItem="03Q-fv-kcW" secondAttribute="bottom" constant="10" id="TLD-cD-SdP"/>
+                <constraint firstItem="1rF-8l-TaE" firstAttribute="trailing" secondItem="C24-d1-Yrt" secondAttribute="trailing" id="TTb-IQ-jsE"/>
+                <constraint firstItem="3ER-MY-pfR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="V5C-od-sIo"/>
+                <constraint firstItem="C24-d1-Yrt" firstAttribute="trailing" secondItem="03Q-fv-kcW" secondAttribute="trailing" id="bni-RE-R26"/>
+                <constraint firstItem="rm5-vN-OvU" firstAttribute="centerY" secondItem="3ER-MY-pfR" secondAttribute="centerY" id="d41-kW-7r6"/>
+                <constraint firstItem="03Q-fv-kcW" firstAttribute="leading" secondItem="3ER-MY-pfR" secondAttribute="leading" id="pNi-jj-PrC"/>
+                <constraint firstItem="K71-ms-ujg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sro-ti-f4Y"/>
+                <constraint firstItem="3ER-MY-pfR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="vDY-4e-HIt"/>
+                <constraint firstItem="1rF-8l-TaE" firstAttribute="top" secondItem="C24-d1-Yrt" secondAttribute="bottom" constant="10" id="xOs-M1-Gxy"/>
+                <constraint firstItem="rm5-vN-OvU" firstAttribute="leading" secondItem="3ER-MY-pfR" secondAttribute="trailing" constant="5" id="zah-o7-1F1"/>
+                <constraint firstItem="K71-ms-ujg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="zdV-zX-5e8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="375" height="400"/>
+            <connections>
+                <outlet property="label1" destination="C24-d1-Yrt" id="erg-So-hSe"/>
+                <outlet property="label2" destination="1rF-8l-TaE" id="oYb-LO-bxZ"/>
+                <outlet property="lineView" destination="EKa-kQ-zWx" id="Coz-9A-fKr"/>
+                <outlet property="postageLabel" destination="rm5-vN-OvU" id="fgN-VB-S3t"/>
+            </connections>
+            <point key="canvasLocation" x="-46.5" y="-71"/>
+        </collectionViewCell>
+    </objects>
+</document>

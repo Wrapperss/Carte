@@ -75,6 +75,7 @@ extension DataFactory.sectionItem {
         let headerItem = GoodsHeaderSectionItem(data:  DataFactory.viewRequired.matchGoodsHeaderCellRequired(goods))
         let infoItem = GoodsInfoSectionItem(data: DataFactory.viewRequired.matchGoodsInfoSectionItem(goods))
         let featureItem = GoodsFeaturesSectionItem(data: DataFactory.viewRequired.matchGoodsFeaturesCellRequired(goods))
-        return [headerItem, infoItem, featureItem]
+        let postageItem = GoodsPostageSectionItem(data: "¥\(goods.postage ?? 0)")
+        return [headerItem, infoItem, featureItem, postageItem]
     }
 }

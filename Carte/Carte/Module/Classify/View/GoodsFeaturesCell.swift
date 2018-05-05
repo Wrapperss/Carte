@@ -22,6 +22,7 @@ class GoodsFeaturesCell: UICollectionViewCell {
     var model: GoodsFeaturesCellRequired? {
         didSet {
             config()
+            contentLabel.setLineSpacing(5)
         }
     }
     
@@ -44,7 +45,6 @@ class GoodsFeaturesCell: UICollectionViewCell {
         guard let model = model else {
             return
         }
-        
         contentLabel.text = model.content
         imageView.kf.setImage(with: model.image.imageUrl)
     }

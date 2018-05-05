@@ -76,6 +76,9 @@ extension GoodsDetailController: ListAdapterDataSource {
         if object is GoodsFeaturesSectionItem {
             return GoodsFeaturesSectionController()
         }
+        if object is GoodsPostageSectionItem {
+            return GoodsPostageSectionController()
+        }
         return ListSectionController()
     }
     

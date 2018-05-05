@@ -161,6 +161,12 @@
 		9FC3B218209D961B00A05E83 /* GoodsFeaturesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */; };
 		9FC3B21A209DAF7E00A05E83 /* GoodBanerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */; };
 		9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */; };
+		9FC3B221209DD27D00A05E83 /* GoodsPostageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B21F209DD27D00A05E83 /* GoodsPostageCell.swift */; };
+		9FC3B222209DD27D00A05E83 /* GoodsPostageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B220209DD27D00A05E83 /* GoodsPostageCell.xib */; };
+		9FC3B224209DD74000A05E83 /* GoodsPostageSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B223209DD74000A05E83 /* GoodsPostageSectionItem.swift */; };
+		9FC3B226209DD99A00A05E83 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B225209DD99A00A05E83 /* UILabel+Extension.swift */; };
+		9FC3B229209DE0E400A05E83 /* GoodsCommentCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */; };
+		9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -361,6 +367,12 @@
 		9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsFeaturesSectionController.swift; sourceTree = "<group>"; };
 		9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBanerView.swift; sourceTree = "<group>"; };
 		9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodBanerView.xib; sourceTree = "<group>"; };
+		9FC3B21F209DD27D00A05E83 /* GoodsPostageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsPostageCell.swift; sourceTree = "<group>"; };
+		9FC3B220209DD27D00A05E83 /* GoodsPostageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsPostageCell.xib; sourceTree = "<group>"; };
+		9FC3B223209DD74000A05E83 /* GoodsPostageSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsPostageSectionItem.swift; sourceTree = "<group>"; };
+		9FC3B225209DD99A00A05E83 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCommentCoverCell.swift; sourceTree = "<group>"; };
+		9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentCoverCell.xib; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -471,6 +483,11 @@
 				9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */,
 				9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */,
 				9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */,
+				9FC3B21F209DD27D00A05E83 /* GoodsPostageCell.swift */,
+				9FC3B220209DD27D00A05E83 /* GoodsPostageCell.xib */,
+				9FC3B223209DD74000A05E83 /* GoodsPostageSectionItem.swift */,
+				9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */,
+				9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -943,6 +960,7 @@
 				9FAF7565208C68A400009449 /* Number+Date.swift */,
 				9FAF7566208C68A400009449 /* UITableView+Extension.swift */,
 				9FAF7567208C68A400009449 /* Array+Extension.swift */,
+				9FC3B225209DD99A00A05E83 /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1229,10 +1247,12 @@
 				9F96C2AD207A47E6004970D2 /* Main.storyboard in Resources */,
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9FC3B206209D4B0A00A05E83 /* GoodsHeaderCell.xib in Resources */,
+				9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */,
 				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
 				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
 				9F08EE9F207B38920021F4DD /* SortTitleCell.xib in Resources */,
 				9FC3B1FE209C4F3F00A05E83 /* GoodsCell.xib in Resources */,
+				9FC3B222209DD27D00A05E83 /* GoodsPostageCell.xib in Resources */,
 				9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
@@ -1580,12 +1600,14 @@
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9FAF7572208C68A500009449 /* UIImage+Extension.swift in Sources */,
 				9FAF74B9208C1F3700009449 /* TapTextElement.swift in Sources */,
+				9FC3B224209DD74000A05E83 /* GoodsPostageSectionItem.swift in Sources */,
 				9FC3B1F8209C3DB400A05E83 /* TopSelectView.swift in Sources */,
 				9FAF7574208C68A500009449 /* UIViewController+Extension.swift in Sources */,
 				9FC3B1F4209C34C600A05E83 /* GoodsListController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
 				9F08EEA1207B3F170021F4DD /* ClassifyFactory.swift in Sources */,
 				9FAF74AA208C1F3700009449 /* StackArrange.swift in Sources */,
+				9FC3B226209DD99A00A05E83 /* UILabel+Extension.swift in Sources */,
 				9F96C2A0207A0453004970D2 /* MagazineController.swift in Sources */,
 				9FAF7573208C68A500009449 /* IGListAdapter+Extension.swift in Sources */,
 				9F3778292078AF0C00DFCC38 /* CommoditySectionController.swift in Sources */,
@@ -1603,12 +1625,14 @@
 				9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */,
 				9FAF74B0208C1F3700009449 /* TwoArrange.swift in Sources */,
 				9FAF74F3208C2F1C00009449 /* CalculateService.swift in Sources */,
+				9FC3B229209DE0E400A05E83 /* GoodsCommentCoverCell.swift in Sources */,
 				9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */,
 				9FAF749F208C1F3700009449 /* FormStorable.swift in Sources */,
 				9FAF7568208C68A500009449 /* TopViewController.swift in Sources */,
 				9FAF74B6208C1F3700009449 /* PasswordTextFieldElement.swift in Sources */,
 				9FBEBEF5209AC48700C03102 /* Category.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
+				9FC3B221209DD27D00A05E83 /* GoodsPostageCell.swift in Sources */,
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
 				9F4459712099B04800892F9B /* MineAPI.swift in Sources */,
 				9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */,
