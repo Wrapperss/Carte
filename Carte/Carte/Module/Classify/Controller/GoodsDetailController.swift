@@ -16,6 +16,8 @@ class GoodsDetailController: BaseListViewController {
     
     let banerView = GoodBanerView.initFromNib()
     
+    var isCollect: Bool = false
+    
     init(goodsId: Int) {
         self.goodsId = goodsId
         super.init(nibName: nil, bundle: nil)
@@ -42,6 +44,12 @@ class GoodsDetailController: BaseListViewController {
     
     private func setupNavigation() {
         title = "商品详情"
+        let rightItem = UIBarButtonItem(title: "收藏", style: UIBarButtonItemStyle.plain, target: self, action: #selector(addCollection))
+        if isCollect {
+            rightItem.title = "已收藏"
+            rightItem.tintColor = UIColor(r: 252, g: 29, b: 44)
+        }
+        navigationItem.rightBarButtonItem = rightItem
     }
     
     override func addConstraints() {
@@ -56,6 +64,19 @@ class GoodsDetailController: BaseListViewController {
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             make.height.equalTo(60)
+        }
+    }
+    
+    
+    @objc
+    private func addCollection() {
+        isCollect = !isCollect
+        if isCollect {
+            navigationItem.rightBarButtonItem?.title = "已收藏"
+            navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 252, g: 29, b: 44)
+        } else {
+            navigationItem.rightBarButtonItem?.title = "收藏"
+            navigationItem.rightBarButtonItem?.tintColor = .black
         }
     }
 }
@@ -102,7 +123,7 @@ extension GoodsDetailController: GoodsInfoSectionControllerDelegate, GoodsCommen
 
 extension GoodsDetailController: GoodBanerViewDelegate {
     func toCart() {
-        
+        navigationController?.pushViewController(CartController(), animated: true)
     }
     
     func addCart() {

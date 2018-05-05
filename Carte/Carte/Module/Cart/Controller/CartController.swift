@@ -27,8 +27,8 @@ class CartController: BaseListViewController {
     }
     
     func setNavigationBar()  {
+        title = "购物车"
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "编辑", style: .plain, target: self, action: #selector(edit))
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     
