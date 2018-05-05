@@ -42,7 +42,6 @@ class GoodsListController: BaseListViewController {
         topView.delegate = self
         
         adapter.dataSource = self
-        
         collectionView.addPullToRefresh {
             self.fetch()
         }
@@ -142,6 +141,6 @@ extension GoodsListController: TopSelectViewDelegate {
 
 extension GoodsListController: GoodsSectionControllerDelegate {
     func selectGoodsItem(_ id: Int) {
-        print(id)
+        navigationController?.pushViewController(GoodsDetailController(goodsId: id), animated: true)
     }
 }

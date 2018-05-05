@@ -15,6 +15,7 @@ enum ClassifyAPI {
     case goodsInCategory(Int)
     case goodsInCategoryByVolume(Int)
     case goodsInCategoryByPrice(Int)
+    case goodDetail(Int)
 }
 
 
@@ -29,6 +30,8 @@ extension ClassifyAPI: TargetType {
             return "api/goods/category/price/\(categoryId)"
         case .goodsInCategoryByVolume(let categoryId):
             return "api/goods/category/volume/\(categoryId)"
+        case .goodDetail(let goodsId):
+            return "api/goods/\(goodsId)"
         }
     }
     
@@ -63,5 +66,9 @@ extension ClassifyAPI {
     
     static func fetchGoodsInCategoryByPrice(_ categoyrId: Int) -> Promise<[Goods]> {
         return Request<ClassifyAPI>().requestList(.goodsInCategoryByPrice(categoyrId))
+    }
+    
+    static func fetchGoodsDetail(_ goodsId: Int) -> Promise<Goods> {
+        return Request<ClassifyAPI>().request(.goodDetail(goodsId))
     }
 }

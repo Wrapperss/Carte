@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import IGListKit
 
 extension DataFactory.viewRequired {
     
@@ -39,6 +40,13 @@ extension DataFactory.viewRequired {
                                      goodsId: goods.id ?? 0)
         })
     }
+    
+    fileprivate static func matchGoodsHeaderCellRequired(_ goods: Goods) -> GoodsHeaderCellRequired {
+        return GoodsHeaderCellRequired(iamge: goods.picture ?? "",
+                                       title: goods.name ?? "",
+                                       description: goods.descriptionField ?? "",
+                                       price: "¥\(goods.price ?? 0)", orginalPrice: "¥\(goods.originalPrice ?? 0)")
+    }
 }
 
 extension DataFactory.sectionItem {
@@ -49,5 +57,13 @@ extension DataFactory.sectionItem {
     
     public static func prepareGoodsItem(_ requireds: [GoodsCellRequired]) -> [GoodsSectionItem] {
         return requireds.map { GoodsSectionItem(data: $0) }
+    }
+    
+    
+    public static func prepareGoodsDetailItem(_ goods: Goods) -> [ListDiffable] {
+       let headerItem = GoodsHeaderSectionItem(data:  DataFactory.viewRequired.matchGoodsHeaderCellRequired(goods))
+        
+        
+        return [headerItem]
     }
 }

@@ -31,9 +31,7 @@ class GoodsController extends Controller {
       const { ctx, service} = this;
       const goodsId = ctx.params;
       const goods = await service.goods.find(goodsId);
-      ctx.body = {
-          goods
-      };
+      ctx.body = goods
       ctx.state = 200
   }
 }
