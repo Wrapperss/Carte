@@ -14,6 +14,8 @@ class GoodsDetailController: BaseListViewController {
     
     var goodsId: Int
     
+    let banerView = GoodBanerView.initFromNib()
+    
     init(goodsId: Int) {
         self.goodsId = goodsId
         super.init(nibName: nil, bundle: nil)
@@ -31,8 +33,11 @@ class GoodsDetailController: BaseListViewController {
     
     private func setupUI() {
         setupNavigation()
-        view.backgroundColor = UIColor.backgroundColor
+        collectionView.backgroundColor = UIColor.backgroundColor
+        view.backgroundColor = .white
         adapter.dataSource = self
+        
+        banerView.delegate = self
     }
     
     private func setupNavigation() {
@@ -42,7 +47,15 @@ class GoodsDetailController: BaseListViewController {
     override func addConstraints() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-60)
+        }
+        
+        view.addSubview(banerView)
+        banerView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(60)
         }
     }
 }
@@ -60,6 +73,9 @@ extension GoodsDetailController: ListAdapterDataSource {
         if object is GoodsInfoSectionItem {
             return GoodsInfoSectionController(delegate: self)
         }
+        if object is GoodsFeaturesSectionItem {
+            return GoodsFeaturesSectionController()
+        }
         return ListSectionController()
     }
     
@@ -71,6 +87,20 @@ extension GoodsDetailController: ListAdapterDataSource {
 extension GoodsDetailController: GoodsInfoSectionControllerDelegate{
     func tapToMoreInfo() {
         navigationController?.pushViewController(MoreInfoController.init(goodsId: goodsId), animated: true)
+    }
+}
+
+extension GoodsDetailController: GoodBanerViewDelegate {
+    func toCart() {
+        
+    }
+    
+    func addCart() {
+        
+    }
+    
+    func toBuy() {
+        
     }
 }
 

@@ -156,6 +156,11 @@
 		9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */; };
 		9FC3B20E209D801500A05E83 /* GoodsInfoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */; };
 		9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B20F209D865600A05E83 /* MoreInfoController.swift */; };
+		9FC3B213209D913C00A05E83 /* GoodsFeaturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B211209D913C00A05E83 /* GoodsFeaturesCell.swift */; };
+		9FC3B214209D913C00A05E83 /* GoodsFeaturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B212209D913C00A05E83 /* GoodsFeaturesCell.xib */; };
+		9FC3B218209D961B00A05E83 /* GoodsFeaturesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */; };
+		9FC3B21A209DAF7E00A05E83 /* GoodBanerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */; };
+		9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -351,6 +356,11 @@
 		9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsInfoCell.xib; sourceTree = "<group>"; };
 		9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsInfoSectionController.swift; sourceTree = "<group>"; };
 		9FC3B20F209D865600A05E83 /* MoreInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoController.swift; sourceTree = "<group>"; };
+		9FC3B211209D913C00A05E83 /* GoodsFeaturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsFeaturesCell.swift; sourceTree = "<group>"; };
+		9FC3B212209D913C00A05E83 /* GoodsFeaturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsFeaturesCell.xib; sourceTree = "<group>"; };
+		9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsFeaturesSectionController.swift; sourceTree = "<group>"; };
+		9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBanerView.swift; sourceTree = "<group>"; };
+		9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodBanerView.xib; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -456,6 +466,11 @@
 				9FC3B209209D7B0600A05E83 /* GoodsInfoCell.swift */,
 				9FC3B20A209D7B0600A05E83 /* GoodsInfoCell.xib */,
 				9FC3B20D209D801500A05E83 /* GoodsInfoSectionController.swift */,
+				9FC3B211209D913C00A05E83 /* GoodsFeaturesCell.swift */,
+				9FC3B212209D913C00A05E83 /* GoodsFeaturesCell.xib */,
+				9FC3B217209D961B00A05E83 /* GoodsFeaturesSectionController.swift */,
+				9FC3B219209DAF7E00A05E83 /* GoodBanerView.swift */,
+				9FC3B21D209DAFB000A05E83 /* GoodBanerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1206,9 +1221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */,
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
 				9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */,
 				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
+				9FC3B214209D913C00A05E83 /* GoodsFeaturesCell.xib in Resources */,
 				9F96C2AD207A47E6004970D2 /* Main.storyboard in Resources */,
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9FC3B206209D4B0A00A05E83 /* GoodsHeaderCell.xib in Resources */,
@@ -1485,6 +1502,7 @@
 				9FAF7519208C325F00009449 /* UserDefaultsExtension.swift in Sources */,
 				9FAF7500208C2F6700009449 /* UIScrollView+MJRefresh+RxSwift.swift in Sources */,
 				9FAF756E208C68A500009449 /* UIButton+Extension.swift in Sources */,
+				9FC3B218209D961B00A05E83 /* GoodsFeaturesSectionController.swift in Sources */,
 				9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */,
 				9FAF7576208C68A500009449 /* UIScreen+Extension.swift in Sources */,
 				9FAF74A4208C1F3700009449 /* ButtonElement.swift in Sources */,
@@ -1496,6 +1514,7 @@
 				9F427F4D207E55C5009ACA76 /* RegistViewController.swift in Sources */,
 				9F08EE9E207B38920021F4DD /* SortTitleCell.swift in Sources */,
 				9F4459792099B7B800892F9B /* CreamsDispatchQueuePool.m in Sources */,
+				9FC3B21A209DAF7E00A05E83 /* GoodBanerView.swift in Sources */,
 				9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */,
 				9FAF74B7208C1F3700009449 /* CustomFormItemDemo.swift in Sources */,
 				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
@@ -1506,6 +1525,7 @@
 				9FAF757C208C68A500009449 /* UITableView+Extension.swift in Sources */,
 				9FAF74F6208C2F1C00009449 /* AutoTestService.swift in Sources */,
 				9F4459762099B6A300892F9B /* HUD.swift in Sources */,
+				9FC3B213209D913C00A05E83 /* GoodsFeaturesCell.swift in Sources */,
 				9FAF74F2208C2F1C00009449 /* DataPrepareService.swift in Sources */,
 				9FAF7579208C68A500009449 /* SwiftError+Extension.swift in Sources */,
 				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,

@@ -49,10 +49,14 @@ extension DataFactory.viewRequired {
     }
     
     fileprivate static func matchGoodsInfoSectionItem(_ goods: Goods) -> GoodsInfoCellRequired {
-        return GoodsInfoCellRequired.init(orgin: goods.origin ?? "",
-                                          brand: goods.brand ?? "",
-                                          sheifLife: goods.shelfLife ?? "",
-                                          storage: goods.storage ?? "")
+        return GoodsInfoCellRequired(orgin: goods.origin ?? "",
+                                     brand: goods.brand ?? "",
+                                     sheifLife: goods.shelfLife ?? "",
+                                     storage: goods.storage ?? "")
+    }
+    
+    fileprivate static func matchGoodsFeaturesCellRequired(_ goods: Goods) -> GoodsFeaturesCellRequired {
+        return GoodsFeaturesCellRequired(content: goods.feature ?? "", image: goods.featurePic ?? "")
     }
 }
 
@@ -70,7 +74,7 @@ extension DataFactory.sectionItem {
     public static func prepareGoodsDetailItem(_ goods: Goods) -> [ListDiffable] {
         let headerItem = GoodsHeaderSectionItem(data:  DataFactory.viewRequired.matchGoodsHeaderCellRequired(goods))
         let infoItem = GoodsInfoSectionItem(data: DataFactory.viewRequired.matchGoodsInfoSectionItem(goods))
-        
-        return [headerItem, infoItem]
+        let featureItem = GoodsFeaturesSectionItem(data: DataFactory.viewRequired.matchGoodsFeaturesCellRequired(goods))
+        return [headerItem, infoItem, featureItem]
     }
 }

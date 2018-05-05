@@ -25,6 +25,7 @@ class GoodsInfoCell: UICollectionViewCell {
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var shelfLifeLabel: UILabel!
     @IBOutlet weak var storageLabel: UILabel!
+    @IBOutlet weak var lineView: UIView!
     
     var model: GoodsInfoCellRequired? {
         didSet {
@@ -35,7 +36,7 @@ class GoodsInfoCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lineView.cornerRadius = 5
     }
 
     private func config() {

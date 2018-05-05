@@ -28,6 +28,8 @@ struct Goods: Unboxable {
     let manufacturer: String?
     let type: String?
     let packing: String?
+    let feature: String?
+    let featurePic: String?
     
     init(unboxer: Unboxer) throws {
         brand = unboxer.unbox(key: "brand")
@@ -47,6 +49,8 @@ struct Goods: Unboxable {
         manufacturer = unboxer.unbox(key: "manufacturer")
         type = unboxer.unbox(key: "type")
         packing = unboxer.unbox(key: "packing")
+        feature = unboxer.unbox(key: "feature")
+        featurePic = unboxer.unbox(key: "featurePic")
     }
     
 }
