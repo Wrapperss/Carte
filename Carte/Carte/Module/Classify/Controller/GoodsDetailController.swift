@@ -79,6 +79,9 @@ extension GoodsDetailController: ListAdapterDataSource {
         if object is GoodsPostageSectionItem {
             return GoodsPostageSectionController()
         }
+        if object is GoodsCommentCoverSectionItem {
+            return GoodsCommentCoverSectionController(delegate: self)
+        }
         return ListSectionController()
     }
     
@@ -87,9 +90,13 @@ extension GoodsDetailController: ListAdapterDataSource {
     }
 }
 
-extension GoodsDetailController: GoodsInfoSectionControllerDelegate{
+extension GoodsDetailController: GoodsInfoSectionControllerDelegate, GoodsCommentCoverSectionControllerDelegate{
     func tapToMoreInfo() {
         navigationController?.pushViewController(MoreInfoController.init(goodsId: goodsId), animated: true)
+    }
+    
+    func didSelectCommentCoverItem() {
+        
     }
 }
 

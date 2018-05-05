@@ -76,6 +76,10 @@ extension DataFactory.sectionItem {
         let infoItem = GoodsInfoSectionItem(data: DataFactory.viewRequired.matchGoodsInfoSectionItem(goods))
         let featureItem = GoodsFeaturesSectionItem(data: DataFactory.viewRequired.matchGoodsFeaturesCellRequired(goods))
         let postageItem = GoodsPostageSectionItem(data: "¥\(goods.postage ?? 0)")
-        return [headerItem, infoItem, featureItem, postageItem]
+        
+        let commentCoverItem = GoodsCommentCoverSectionItem.init(data: GoodsCommentCoverCellRequired(userName: "Wrappers",
+                                                                                                     scoreString: "描述相符 5.0 | 物流相符 5.0 | 推荐指数 5.0",
+                                                                                                     content: "店家人很好"))
+        return [headerItem, commentCoverItem, infoItem, featureItem, postageItem]
     }
 }

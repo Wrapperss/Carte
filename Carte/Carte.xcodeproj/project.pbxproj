@@ -167,6 +167,7 @@
 		9FC3B226209DD99A00A05E83 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B225209DD99A00A05E83 /* UILabel+Extension.swift */; };
 		9FC3B229209DE0E400A05E83 /* GoodsCommentCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */; };
 		9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */; };
+		9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -373,6 +374,7 @@
 		9FC3B225209DD99A00A05E83 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCommentCoverCell.swift; sourceTree = "<group>"; };
 		9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentCoverCell.xib; sourceTree = "<group>"; };
+		9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCommentCoverSectionController.swift; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 				9FC3B223209DD74000A05E83 /* GoodsPostageSectionItem.swift */,
 				9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */,
 				9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */,
+				9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1587,6 +1590,7 @@
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
 				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,
+				9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FAF756B208C68A500009449 /* UIAlertViewController+Extension.swift in Sources */,
