@@ -16,6 +16,9 @@
 		9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F08EEA9207BA6A50021F4DD /* CommodityContentCell.xib */; };
 		9F0AA601209EAAC3003B0436 /* CollectionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA600209EAAC3003B0436 /* CollectionAPI.swift */; };
 		9F0AA603209EAE8F003B0436 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA602209EAE8F003B0436 /* Collection.swift */; };
+		9F0AA605209EC61F003B0436 /* AddressListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA604209EC61F003B0436 /* AddressListController.swift */; };
+		9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA606209ECAD6003B0436 /* AddressCell.swift */; };
+		9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AA607209ECAD6003B0436 /* AddressCell.xib */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -219,6 +222,9 @@
 		9F08EEA9207BA6A50021F4DD /* CommodityContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommodityContentCell.xib; sourceTree = "<group>"; };
 		9F0AA600209EAAC3003B0436 /* CollectionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAPI.swift; sourceTree = "<group>"; };
 		9F0AA602209EAE8F003B0436 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		9F0AA604209EC61F003B0436 /* AddressListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListController.swift; sourceTree = "<group>"; };
+		9F0AA606209ECAD6003B0436 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		9F0AA607209ECAD6003B0436 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -623,6 +629,8 @@
 		9F4E54EC201863DB00FFFF33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F0AA606209ECAD6003B0436 /* AddressCell.swift */,
+				9F0AA607209ECAD6003B0436 /* AddressCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -653,6 +661,7 @@
 				9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */,
 				9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */,
 				9F755B1D209AA2EA00B9F414 /* RechargeController.swift */,
+				9F0AA604209EC61F003B0436 /* AddressListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1272,6 +1281,7 @@
 				9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
+				9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
 				9FC3B1FA209C3DC300A05E83 /* TopSelectView.xib in Resources */,
 				9FBEBEF9209AE6A400C03102 /* CommoditySubItemCell.xib in Resources */,
@@ -1606,6 +1616,7 @@
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
 				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,
+				9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */,
 				9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
@@ -1665,6 +1676,7 @@
 				9FAF7570208C68A500009449 /* UIView+Extension.swift in Sources */,
 				9FAF757B208C68A500009449 /* Number+Date.swift in Sources */,
 				9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */,
+				9F0AA605209EC61F003B0436 /* AddressListController.swift in Sources */,
 				9F671E322022F7B5004C4D51 /* User.swift in Sources */,
 				9FAF74A2208C1F3700009449 /* ImageElement.swift in Sources */,
 				9FAF74AE208C1F3700009449 /* ArrangeUtil.swift in Sources */,

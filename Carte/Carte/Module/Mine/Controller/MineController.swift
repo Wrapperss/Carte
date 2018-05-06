@@ -46,7 +46,8 @@ extension MineController {
             
         } else if indexPath.row == 3 { //我喜欢的商品
             
-        } else if indexPath.row == 4 { //我的礼券
+        } else if indexPath.row == 4 { //我的地址
+            navigationController?.pushViewController(AddressListController(), animated: true)
             
         } else if indexPath.row == 6 { //设置
             
