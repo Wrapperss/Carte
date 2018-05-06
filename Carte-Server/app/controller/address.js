@@ -6,6 +6,9 @@ class AddressController extends Controller {
   async create() {
       const { ctx, service } = this;
       const address = await service.address.create(ctx.request.body) 
+      if (address.isDefault == 1) {
+          await service.address.setDefault(address.userId, address.id)
+      }
       ctx.body = address;
       ctx.status = 201;
   }
@@ -16,7 +19,10 @@ class AddressController extends Controller {
     const { id  } = ctx.params;
     let address = ctx.request.body;
     address.id = id;
-    await service.address.update(address) 
+    await service.address.update(address);
+    if (address.isDefault == 1) {
+        await service.address.setDefault(address.userId, id)
+    }
     ctx.body = {
         id
     };

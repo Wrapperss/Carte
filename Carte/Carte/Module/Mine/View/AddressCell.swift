@@ -18,6 +18,8 @@ struct AddressCellRequired {
 
 class AddressCell: UITableViewCell {
 
+    @IBOutlet weak var addressLabelLeading: NSLayoutConstraint!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var defaultLabel: UILabel!
@@ -39,8 +41,10 @@ class AddressCell: UITableViewCell {
         addressLabel.text = model.address
         if model.isDefault {
             defaultLabel.text = "[默认]"
+            addressLabelLeading.constant = 64
         } else {
             defaultLabel.text = ""
+            addressLabelLeading.constant = 20
         }
     }
     

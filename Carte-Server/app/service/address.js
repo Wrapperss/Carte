@@ -22,7 +22,18 @@ class AddressService extends Service {
     const addresses = await this.app.mysql.query(`
     SELECT * FROM Address WHERE userId = ?
     `, [userId]);
-    return addresses
+    return addresses;
+  }
+
+  async setDefault(userId, id) {
+    console.log("运行了")
+    console.log(id)
+    console.log(userId)
+    const result = await this.app.mysql.query(`
+    UPDATE Address SET isDefault = 0 WHERE ( userId = ? AND id != ?)
+    ` [userId, id]);
+    console.log(result)
+    return result;
   }
 }
 

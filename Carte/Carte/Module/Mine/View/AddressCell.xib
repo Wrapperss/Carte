@@ -46,7 +46,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="X0p-GP-iGa" firstAttribute="leading" secondItem="xRt-f7-OcO" secondAttribute="leading" id="2HN-zj-bpp"/>
-                    <constraint firstItem="lhC-Av-y4a" firstAttribute="leading" secondItem="X0p-GP-iGa" secondAttribute="trailing" constant="5" id="DWv-c7-Lki"/>
+                    <constraint firstItem="lhC-Av-y4a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="KZ9-gx-e9f"/>
                     <constraint firstAttribute="trailing" secondItem="lhC-Av-y4a" secondAttribute="trailing" constant="20" id="SrS-uR-MoQ"/>
                     <constraint firstItem="xRt-f7-OcO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bJ3-ap-8Nq"/>
                     <constraint firstItem="CeB-vv-d1T" firstAttribute="centerY" secondItem="xRt-f7-OcO" secondAttribute="centerY" id="cuG-Wp-cTh"/>
@@ -59,6 +59,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addressLabel" destination="lhC-Av-y4a" id="c42-BO-GRi"/>
+                <outlet property="addressLabelLeading" destination="KZ9-gx-e9f" id="zXt-XY-6hh"/>
                 <outlet property="defaultLabel" destination="X0p-GP-iGa" id="Nu3-pF-JQN"/>
                 <outlet property="nameLabel" destination="xRt-f7-OcO" id="PXL-ch-jzj"/>
                 <outlet property="phoneLabel" destination="CeB-vv-d1T" id="1jT-IC-viB"/>
