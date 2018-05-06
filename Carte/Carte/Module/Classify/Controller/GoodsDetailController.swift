@@ -9,6 +9,7 @@
 import Foundation
 import SnapKit
 import IGListKit
+import PromiseKit
 
 class GoodsDetailController: BaseListViewController {
     
@@ -16,7 +17,17 @@ class GoodsDetailController: BaseListViewController {
     
     let banerView = GoodBanerView.initFromNib()
     
-    var isCollect: Bool = false
+    var isCollect: Bool = false {
+        didSet {
+            if isCollect {
+                navigationItem.rightBarButtonItem?.title = "已收藏"
+                navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 252, g: 29, b: 44)
+            } else {
+                navigationItem.rightBarButtonItem?.title = "收藏"
+                navigationItem.rightBarButtonItem?.tintColor = .black
+            }
+        }
+    }
     
     init(goodsId: Int) {
         self.goodsId = goodsId
@@ -31,6 +42,7 @@ class GoodsDetailController: BaseListViewController {
         super.viewDidLoad()
         setupUI()
         fetch()
+        fetchIsCollect()
     }
     
     private func setupUI() {
@@ -45,10 +57,6 @@ class GoodsDetailController: BaseListViewController {
     private func setupNavigation() {
         title = "商品详情"
         let rightItem = UIBarButtonItem(title: "收藏", style: UIBarButtonItemStyle.plain, target: self, action: #selector(addCollection))
-        if isCollect {
-            rightItem.title = "已收藏"
-            rightItem.tintColor = UIColor(r: 252, g: 29, b: 44)
-        }
         navigationItem.rightBarButtonItem = rightItem
     }
     
@@ -71,12 +79,23 @@ class GoodsDetailController: BaseListViewController {
     @objc
     private func addCollection() {
         isCollect = !isCollect
+        HUD.wait()
         if isCollect {
-            navigationItem.rightBarButtonItem?.title = "已收藏"
-            navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 252, g: 29, b: 44)
+            CollectionAPI
+                .postCollectGoods(userId: Default.Account.integer(forKey: .userId), goodsId: goodsId)
+                .always { [weak self] in
+                    HUD.clear()
+                    self?.navigationItem.rightBarButtonItem?.title = "已收藏"
+                    self?.navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 252, g: 29, b: 44)
+                }
         } else {
-            navigationItem.rightBarButtonItem?.title = "收藏"
-            navigationItem.rightBarButtonItem?.tintColor = .black
+            CollectionAPI
+                .deleteCollectGoods(userId: Default.Account.integer(forKey: .userId), goodsId: goodsId)
+                .always { [weak self] in
+                    HUD.clear()
+                    self?.navigationItem.rightBarButtonItem?.title = "收藏"
+                    self?.navigationItem.rightBarButtonItem?.tintColor = .black
+            }
         }
     }
 }
@@ -150,5 +169,16 @@ extension GoodsDetailController {
             .catch { (_) in
                 HUD.showError("发送错误")
         }
+    }
+    
+    fileprivate func fetchIsCollect() {
+        CollectionAPI
+            .fetchIsCollectGoods(userId: Default.Account.integer(forKey: .userId), goodsId: goodsId)
+            .then { [weak self] (_) -> Void in
+                self?.isCollect = true
+            }
+            .catch { (_) in
+                self.isCollect = false
+            }
     }
 }
