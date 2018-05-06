@@ -66,7 +66,7 @@ class AddressListController: BaseViewController {
     
     @objc
     private func addAddress() {
-        
+        navigationController?.pushViewController(AddAddressController.initFromStoryboard(name: .mine), animated: true)
     }
 }
 

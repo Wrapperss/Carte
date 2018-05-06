@@ -19,6 +19,7 @@
 		9F0AA605209EC61F003B0436 /* AddressListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA604209EC61F003B0436 /* AddressListController.swift */; };
 		9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA606209ECAD6003B0436 /* AddressCell.swift */; };
 		9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AA607209ECAD6003B0436 /* AddressCell.xib */; };
+		9F0AA60B209ED24C003B0436 /* AddAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA60A209ED24C003B0436 /* AddAddressController.swift */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -61,6 +62,10 @@
 		9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E732029554D006D08A4 /* SeparatorLine.swift */; };
 		9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1D209AA2EA00B9F414 /* RechargeController.swift */; };
 		9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */; };
+		9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */; };
+		9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */; };
+		9F7BD212209EDDDE000B32CF /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD20C209EDDDE000B32CF /* Address.plist */; };
+		9F7BD213209EDDDE000B32CF /* LZCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20F209EDDDE000B32CF /* LZCityPickerController.m */; };
 		9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */; };
 		9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */; };
 		9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */; };
@@ -225,6 +230,7 @@
 		9F0AA604209EC61F003B0436 /* AddressListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListController.swift; sourceTree = "<group>"; };
 		9F0AA606209ECAD6003B0436 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		9F0AA607209ECAD6003B0436 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		9F0AA60A209ED24C003B0436 /* AddAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressController.swift; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -275,6 +281,13 @@
 		9F737E732029554D006D08A4 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		9F755B1D209AA2EA00B9F414 /* RechargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyAPI.swift; sourceTree = "<group>"; };
+		9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerView.m; sourceTree = "<group>"; };
+		9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerModel.m; sourceTree = "<group>"; };
+		9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerController.h; sourceTree = "<group>"; };
+		9F7BD20C209EDDDE000B32CF /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		9F7BD20D209EDDDE000B32CF /* LZPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPickerModel.h; sourceTree = "<group>"; };
+		9F7BD20E209EDDDE000B32CF /* LZCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerView.h; sourceTree = "<group>"; };
+		9F7BD20F209EDDDE000B32CF /* LZCityPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerController.m; sourceTree = "<group>"; };
 		9F7CFBBA202AB085004F3ABE /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		9F7CFBBC202AD7E3004F3ABE /* HeadlineSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineSectionController.swift; sourceTree = "<group>"; };
 		9F7CFBBE202AE4C7004F3ABE /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
@@ -662,6 +675,7 @@
 				9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */,
 				9F755B1D209AA2EA00B9F414 /* RechargeController.swift */,
 				9F0AA604209EC61F003B0436 /* AddressListController.swift */,
+				9F0AA60A209ED24C003B0436 /* AddAddressController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -795,6 +809,20 @@
 				9F737E6D2029542E006D08A4 /* Storable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9F7BD208209EDDDE000B32CF /* LZCityPickerClass */ = {
+			isa = PBXGroup;
+			children = (
+				9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */,
+				9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */,
+				9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */,
+				9F7BD20C209EDDDE000B32CF /* Address.plist */,
+				9F7BD20D209EDDDE000B32CF /* LZPickerModel.h */,
+				9F7BD20E209EDDDE000B32CF /* LZCityPickerView.h */,
+				9F7BD20F209EDDDE000B32CF /* LZCityPickerController.m */,
+			);
+			path = LZCityPickerClass;
 			sourceTree = "<group>";
 		};
 		9F96C29D207A042F004970D2 /* Magazine */ = {
@@ -1092,6 +1120,7 @@
 		9FF559BF20108427004EB3F2 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9F7BD208209EDDDE000B32CF /* LZCityPickerClass */,
 				9F4459722099B68200892F9B /* HUD */,
 				9FC8BB8E20999FAD00A3CF02 /* Refresh */,
 				9FAF7515208C325F00009449 /* Storage */,
@@ -1263,6 +1292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7BD212209EDDDE000B32CF /* Address.plist in Resources */,
 				9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */,
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
 				9FC3B230209DEB3B00A05E83 /* CartBottomView.xib in Resources */,
@@ -1595,6 +1625,7 @@
 				9F7CFBBB202AB085004F3ABE /* HeadlineCell.swift in Sources */,
 				9FC3B208209D4DB500A05E83 /* GoodsHeaderSectionController.swift in Sources */,
 				9FAF7580208C69EC00009449 /* Typealias.swift in Sources */,
+				9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */,
 				9FAF74B8208C1F3700009449 /* BlankFormItem.swift in Sources */,
 				9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */,
 				9FC3B22E209DEB2900A05E83 /* CartBottomView.swift in Sources */,
@@ -1613,12 +1644,14 @@
 				9F3778642078CBC000DFCC38 /* SVInfiniteScrollingLoadingView.m in Sources */,
 				9FAF7501208C2F6700009449 /* UIViewController+Loading+RxSwift.swift in Sources */,
 				9FAF74A3208C1F3700009449 /* TextFieldElement.swift in Sources */,
+				9F7BD213209EDDDE000B32CF /* LZCityPickerController.m in Sources */,
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
 				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,
 				9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */,
 				9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
+				9F0AA60B209ED24C003B0436 /* AddAddressController.swift in Sources */,
 				9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */,
 				9FAF756B208C68A500009449 /* UIAlertViewController+Extension.swift in Sources */,
 				9FAF74A9208C1F3700009449 /* CoverArrange.swift in Sources */,
@@ -1636,6 +1669,7 @@
 				9FAF7574208C68A500009449 /* UIViewController+Extension.swift in Sources */,
 				9FC3B1F4209C34C600A05E83 /* GoodsListController.swift in Sources */,
 				9F7CFBBD202AD7E3004F3ABE /* HeadlineSectionController.swift in Sources */,
+				9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */,
 				9F08EEA1207B3F170021F4DD /* ClassifyFactory.swift in Sources */,
 				9FAF74AA208C1F3700009449 /* StackArrange.swift in Sources */,
 				9FC3B226209DD99A00A05E83 /* UILabel+Extension.swift in Sources */,

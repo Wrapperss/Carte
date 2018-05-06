@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeB-vv-d1T">
-                        <rect key="frame" x="281" y="17" width="29" height="17"/>
+                        <rect key="frame" x="271" y="17" width="29" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="具体地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhC-Av-y4a">
-                        <rect key="frame" x="64" y="42.5" width="246" height="17"/>
+                        <rect key="frame" x="64" y="42.5" width="236" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,12 +47,12 @@
                 <constraints>
                     <constraint firstItem="X0p-GP-iGa" firstAttribute="leading" secondItem="xRt-f7-OcO" secondAttribute="leading" id="2HN-zj-bpp"/>
                     <constraint firstItem="lhC-Av-y4a" firstAttribute="leading" secondItem="X0p-GP-iGa" secondAttribute="trailing" constant="5" id="DWv-c7-Lki"/>
-                    <constraint firstAttribute="trailing" secondItem="lhC-Av-y4a" secondAttribute="trailing" constant="10" id="SrS-uR-MoQ"/>
+                    <constraint firstAttribute="trailing" secondItem="lhC-Av-y4a" secondAttribute="trailing" constant="20" id="SrS-uR-MoQ"/>
                     <constraint firstItem="xRt-f7-OcO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bJ3-ap-8Nq"/>
                     <constraint firstItem="CeB-vv-d1T" firstAttribute="centerY" secondItem="xRt-f7-OcO" secondAttribute="centerY" id="cuG-Wp-cTh"/>
                     <constraint firstItem="xRt-f7-OcO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="tmC-CN-k5h"/>
                     <constraint firstItem="lhC-Av-y4a" firstAttribute="centerY" secondItem="X0p-GP-iGa" secondAttribute="centerY" id="vy7-AO-KmD"/>
-                    <constraint firstAttribute="trailing" secondItem="CeB-vv-d1T" secondAttribute="trailing" constant="10" id="yZx-Ur-qC5"/>
+                    <constraint firstAttribute="trailing" secondItem="CeB-vv-d1T" secondAttribute="trailing" constant="20" id="yZx-Ur-qC5"/>
                     <constraint firstAttribute="bottom" secondItem="X0p-GP-iGa" secondAttribute="bottom" constant="15" id="z68-ka-x78"/>
                 </constraints>
             </tableViewCellContentView>
