@@ -10,6 +10,5 @@ import UIKit
 
 class CartBottomView: UIView {
 
-    @IBOutlet weak var checkButton: BEMCheckBox!
 
 }
