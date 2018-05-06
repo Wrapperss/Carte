@@ -168,6 +168,8 @@
 		9FC3B229209DE0E400A05E83 /* GoodsCommentCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */; };
 		9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */; };
 		9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */; };
+		9FC3B22E209DEB2900A05E83 /* CartBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3B22D209DEB2900A05E83 /* CartBottomView.swift */; };
+		9FC3B230209DEB3B00A05E83 /* CartBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC3B22F209DEB3B00A05E83 /* CartBottomView.xib */; };
 		9FC8BB902099A00400A3CF02 /* CarteRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */; };
 		9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8BB912099A47100A3CF02 /* UserInfoController.swift */; };
 		9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC7DBA20785D7200E5B89F /* Mine.storyboard */; };
@@ -375,6 +377,8 @@
 		9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCommentCoverCell.swift; sourceTree = "<group>"; };
 		9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentCoverCell.xib; sourceTree = "<group>"; };
 		9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCommentCoverSectionController.swift; sourceTree = "<group>"; };
+		9FC3B22D209DEB2900A05E83 /* CartBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBottomView.swift; sourceTree = "<group>"; };
+		9FC3B22F209DEB3B00A05E83 /* CartBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartBottomView.xib; sourceTree = "<group>"; };
 		9FC8BB8F2099A00400A3CF02 /* CarteRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteRefresh.swift; sourceTree = "<group>"; };
 		9FC8BB912099A47100A3CF02 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		9FCC7DBA20785D7200E5B89F /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 				9F3778242078A79B00DFCC38 /* CommodityCell.swift */,
 				9F3778252078A79B00DFCC38 /* CommodityCell.xib */,
 				9F3778282078AF0C00DFCC38 /* CommoditySectionController.swift */,
+				9FC3B22D209DEB2900A05E83 /* CartBottomView.swift */,
+				9FC3B22F209DEB3B00A05E83 /* CartBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1244,6 +1250,7 @@
 			files = (
 				9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */,
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
+				9FC3B230209DEB3B00A05E83 /* CartBottomView.xib in Resources */,
 				9FF5599A200F8D28004EB3F2 /* LaunchScreen.storyboard in Resources */,
 				9F3778612078CBC000DFCC38 /* loader_ring.json in Resources */,
 				9FC3B214209D913C00A05E83 /* GoodsFeaturesCell.xib in Resources */,
@@ -1572,6 +1579,7 @@
 				9FAF7580208C69EC00009449 /* Typealias.swift in Sources */,
 				9FAF74B8208C1F3700009449 /* BlankFormItem.swift in Sources */,
 				9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */,
+				9FC3B22E209DEB2900A05E83 /* CartBottomView.swift in Sources */,
 				9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */,
 				9FAF750E208C313600009449 /* Request.swift in Sources */,
 				9FC3B202209D488200A05E83 /* GoodsDetailController.swift in Sources */,

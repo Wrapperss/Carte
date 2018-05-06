@@ -52,7 +52,7 @@ class UserController extends Controller {
     ctx.body = {
       id
     };
-    ctx.status = 200
+    ctx.status = 200;
   }
 }
 

@@ -23,6 +23,15 @@ module.exports = app => {
   app.get('/api/category', app.controller.category.showAll);
 
   //新建订单 修改订单 删除订单
-  app.resources('order', '/api/order', 'order')
+  app.resources('order', '/api/order', 'order');
+
+  //收藏
+  app.post('/api/collection', app.controller.collection.create);
+  //取消收藏
+  app.delete('/api/collection/:userId/:goodsId', app.controller.collection.remove);
+  //查看是否收藏
+  app.get('/api/collection/:userId/:goodsId', app.controller.collection.findCollection);
+  //获取收藏的商品
+  app.get('/api/collection/:userId', app.controller.collection.collectGoods);
 
 };

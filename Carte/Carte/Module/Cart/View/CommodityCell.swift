@@ -21,7 +21,7 @@ struct CommodityCellRequired {
 
 class CommodityCell: UICollectionViewCell {
 
-    static let size = CGSize.init(width: UIScreen.screenWidth, height: 120)
+    static let size = CGSize(width: UIScreen.screenWidth, height: 120)
     
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var reduceButton: UIButton!
