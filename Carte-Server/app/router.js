@@ -8,6 +8,11 @@ module.exports = app => {
   
   //用户信息的操作
   app.resources('users', '/api/users', 'user');
+
+  app.resources('address', '/api/address', app.controller.address);
+
+  app.get('/api/user/address/:userId', app.controller.address.findUserAddress)
+
   //查看该分类下的商品 默认排序
   app.get('/api/goods/category/:categoryId', app.controller.goods.showClassifyGoods);
   //按销量排
