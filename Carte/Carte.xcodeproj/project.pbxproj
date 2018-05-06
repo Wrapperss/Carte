@@ -20,6 +20,8 @@
 		9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA606209ECAD6003B0436 /* AddressCell.swift */; };
 		9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0AA607209ECAD6003B0436 /* AddressCell.xib */; };
 		9F0AA60B209ED24C003B0436 /* AddAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA60A209ED24C003B0436 /* AddAddressController.swift */; };
+		9F0D4841209F04A100329EAA /* AddressApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4840209F04A100329EAA /* AddressApi.swift */; };
+		9F0D4843209F05BD00329EAA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4842209F05BD00329EAA /* Address.swift */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -231,6 +233,8 @@
 		9F0AA606209ECAD6003B0436 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		9F0AA607209ECAD6003B0436 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		9F0AA60A209ED24C003B0436 /* AddAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressController.swift; sourceTree = "<group>"; };
+		9F0D4840209F04A100329EAA /* AddressApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressApi.swift; sourceTree = "<group>"; };
+		9F0D4842209F05BD00329EAA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -630,6 +634,7 @@
 			children = (
 				9F671E272022ECCD004C4D51 /* MineFactory.swift */,
 				9F4459702099B04800892F9B /* MineAPI.swift */,
+				9F0D4840209F04A100329EAA /* AddressApi.swift */,
 				9FCC7DBA20785D7200E5B89F /* Mine.storyboard */,
 				9F4E54EF201863F200FFFF33 /* Controller */,
 				9F4E54EE201863EA00FFFF33 /* Model */,
@@ -660,6 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				9F671E312022F7B5004C4D51 /* User.swift */,
+				9F0D4842209F05BD00329EAA /* Address.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1630,10 +1636,12 @@
 				9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */,
 				9FC3B22E209DEB2900A05E83 /* CartBottomView.swift in Sources */,
 				9F37785F2078CBC000DFCC38 /* CreamsRefreshView.swift in Sources */,
+				9F0D4843209F05BD00329EAA /* Address.swift in Sources */,
 				9FAF750E208C313600009449 /* Request.swift in Sources */,
 				9FC3B202209D488200A05E83 /* GoodsDetailController.swift in Sources */,
 				9FBEBEFB209AE9CB00C03102 /* CommodityContentSectionController.swift in Sources */,
 				9FAF74E9208C220000009449 /* UIAppearance.swift in Sources */,
+				9F0D4841209F04A100329EAA /* AddressApi.swift in Sources */,
 				9FAF74AB208C1F3700009449 /* FourArrange.swift in Sources */,
 				9FAF74A5208C1F3700009449 /* TextViewElement.swift in Sources */,
 				9F3778262078A79B00DFCC38 /* CommodityCell.swift in Sources */,

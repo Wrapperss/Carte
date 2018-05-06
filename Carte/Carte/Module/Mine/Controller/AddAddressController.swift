@@ -12,18 +12,31 @@ import IQKeyboardManagerSwift
 import RxSwift
 import RxCocoa
 import IQKeyboardManagerSwift
+import PromiseKit
 
 class AddAddressController: UIViewController {
+    
+    enum Operate {
+        case add
+        case modify(Address)
+    }
     
     @IBOutlet weak var defaultButton: BEMCheckBox!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextfield: UITextField!
     @IBOutlet weak var cityTextfield: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
+    var operate = Operate.add
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addData()
     }
     
     private func setupUI() {
@@ -51,7 +64,12 @@ class AddAddressController: UIViewController {
             checkStringAvailable(cityTextfield.text),
             checkStringAvailable(detailTextView.text) {
             if PhoneNumberRule().validate(phoneTextfield.text!) {
-                
+                post(Address(contract: nameTextField.text!,
+                             phoneNum: phoneTextfield.text!,
+                             city: cityTextfield.text!,
+                             detail: detailTextView.text!,
+                             isDefault: defaultButton.on ? 1 : 0,
+                             userId: Default.Account.integer(forKey: .userId)))
             } else {
                 HUD.showError("手机号格式错误")
             }
@@ -79,3 +97,60 @@ extension AddAddressController: UITextFieldDelegate {
         }
     }
 }
+
+extension AddAddressController {
+    fileprivate func addData() {
+        switch operate {
+        case .modify(let address):
+            nameTextField.text = address.contract ?? ""
+            phoneTextfield.text = address.phoneNum ?? ""
+            detailTextView.text = address.detail ?? ""
+            cityTextfield.text = address.city ?? ""
+            if address.isDefault == 1 {
+                defaultButton.on = true
+            } else {
+                defaultButton.on = false
+            }
+        default:
+            break
+        }
+    }
+    
+    fileprivate func post(_ address: Address) {
+        HUD.wait()
+        switch operate {
+        case .add:
+            AddressAPI
+                .postAddress(address: address)
+                .always {
+                    HUD.clear()
+                }
+                .then { [weak self] (_) -> Void in
+                    HUD.showSuccess("保存成功")
+                    Delay(time: 1.0, task: {
+                        self?.navigationController?.popViewController(animated: true)
+                    })
+                }
+                .catch { (_) in
+                    HUD.showError("发生错误")
+            }
+            
+        case .modify(let oldAddress):
+            AddressAPI
+                .updataUserAddres(addressId: oldAddress.id ?? 0, address: address)
+                .always {
+                    HUD.clear()
+                }
+                .then { [weak self] (_) -> Void in
+                    HUD.showSuccess("保存成功")
+                    Delay(time: 1.0, task: {
+                        self?.navigationController?.popViewController(animated: true)
+                    })
+                }
+                .catch { (_) in
+                    HUD.showError("发生错误")
+            }
+        }
+    }
+}
+

@@ -15,13 +15,16 @@ class AddressListController: BaseViewController {
     let addButton = UIButton()
     let tableView = UITableView()
     var source = [AddressCellRequired]()
+    var addressSource = [Address]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        source.append(AddressCellRequired(name: "张力明", phone: "17826806391", address: "浙江省杭州市萧山区蜀山街道高桥路天香华庭10栋2单元2201石", isDefault: true))
-        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetch()
     }
     
     private func setupUI() {
@@ -70,6 +73,25 @@ class AddressListController: BaseViewController {
     }
 }
 
+extension AddressListController {
+    fileprivate func fetch() {
+        HUD.wait()
+        AddressAPI
+            .fetchUserAddress(userId: Default.Account.integer(forKey: .userId))
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (addresses) -> Void in
+                self?.addressSource = addresses
+                self?.source = addresses.map { DataFactory.viewRequired.matchAddressCellRequired($0) }
+                self?.tableView.reloadData()
+            }
+            .catch { (_) in
+                HUD.showError("发生错误")
+        }
+    }
+}
+
 extension AddressListController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -91,6 +113,9 @@ extension AddressListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let controller = AddAddressController.initFromStoryboard(name: .mine)
+        controller.operate = .modify(addressSource[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
