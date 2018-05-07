@@ -37,6 +37,8 @@ extension CartAPI: TargetType {
             return .post
         case .update:
             return  .put
+        case .remove:
+            return .delete
         default:
             return .get
         }

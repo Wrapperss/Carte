@@ -10,12 +10,17 @@ import Foundation
 import IGListKit
 
 extension DataFactory.viewRequired {
-    
+    static func matchCommodityCellRequired(goods: Goods, cart: Cart) -> CommodityCellRequired {
+        return CommodityCellRequired(title: goods.name ?? "",
+                                     description: goods.descriptionField ?? "",
+                                     price: "单价 \(goods.price ?? 0.0)元", count: "\(cart.quantity ?? 1)",
+                                     imageUrl: goods.picture ?? "")
+    }
 }
 
 extension DataFactory.sectionItem {
-    static func prepareCommoditySectionItem() -> [CommoditySectionItem] {
-        return [CommoditySectionItem(data: CommodityCellRequired(title: "牛很鲜潮汕牛肉火锅", description: "类型：双人餐", price: "单价：155元", count: "1", imageUrl: ""))]
+    static func prepareCommoditySectionItem(_ requireds: [Cart]) -> [CommoditySectionItem] {
+        return requireds.map { CommoditySectionItem.init(data: $0) }
     }
 }
 

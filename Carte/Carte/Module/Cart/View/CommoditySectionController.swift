@@ -9,19 +9,29 @@
 import Foundation
 import IGListKit
 
+protocol CommoditySectionControllerDelegate: class {
+    func deleteCartItem(_ cart: Cart)
+}
+
 class CommoditySectionItem: NormalDiffableItem {
-    let data: CommodityCellRequired
+    let data: Cart
     
-    init(data: CommodityCellRequired) {
+    init(data: Cart) {
         self.data = data
         super.init()
     }
 }
 
-
 class CommoditySectionController: ListSectionController {
     var object: CommoditySectionItem?
 
+    var delegate: CommoditySectionControllerDelegate?
+    
+    init(delegate: CommoditySectionControllerDelegate) {
+        self.delegate = delegate
+        super.init()
+    }
+    
     override func numberOfItems() -> Int {
         return 1
     }
@@ -35,11 +45,21 @@ class CommoditySectionController: ListSectionController {
         guard let data = object?.data else {
             return cell
         }
-        cell.model = data
+        cell.cart = data
+        cell.delegate = self
         return cell
     }
     
     override func didUpdate(to object: Any) {
         self.object = object as? CommoditySectionItem
+    }
+}
+
+extension CommoditySectionController: CommodityCellDelegate {
+    func deleteCartItem(_ cart: Cart?) {
+        guard let cart = cart else {
+            return
+        }
+        delegate?.deleteCartItem(cart)
     }
 }

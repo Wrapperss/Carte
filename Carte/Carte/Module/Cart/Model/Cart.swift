@@ -13,7 +13,7 @@ struct Cart: Unboxable, DictionaryConvertible {
     
     let goodsId: Int?
     let id: Int?
-    let quantity: Int?
+    var quantity: Int?
     let userId: Int?
     
     init(id: Int? = nil, goodsId: Int, userId: Int, quantity: Int) {
