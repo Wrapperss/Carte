@@ -11,6 +11,7 @@ import BEMCheckBox
 
 protocol CartBottomViewDelegate: class {
     func redButtonTap()
+    func didTapCheckButton(isOn: Bool)
 }
 
 class CartBottomView: UIView {
@@ -42,6 +43,8 @@ class CartBottomView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        
+        checkButton.delegate = self
     }
     
     
@@ -60,5 +63,11 @@ class CartBottomView: UIView {
     
     @IBAction func buttomTap(_ sender: Any) {
         delegate?.redButtonTap()
+    }
+}
+
+extension CartBottomView: BEMCheckBoxDelegate {
+    func didTap(_ checkBox: BEMCheckBox) {
+        delegate?.didTapCheckButton(isOn: checkBox.on)
     }
 }

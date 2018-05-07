@@ -189,6 +189,10 @@ extension CartController: CartBottomViewDelegate {
             break
         }
     }
+    
+    func didTapCheckButton(isOn: Bool) {
+        NotificationCenter.postNotification(name: .selectCartItem, userInfo: ["isOn": isOn])
+    }
 }
 
 extension CartController {

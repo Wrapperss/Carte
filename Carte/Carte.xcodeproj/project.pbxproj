@@ -67,6 +67,7 @@
 		9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E732029554D006D08A4 /* SeparatorLine.swift */; };
 		9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1D209AA2EA00B9F414 /* RechargeController.swift */; };
 		9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */; };
+		9F77B51A20A080E500F8E91B /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51920A080E500F8E91B /* NotificationCenterExtension.swift */; };
 		9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */; };
 		9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */; };
 		9F7BD212209EDDDE000B32CF /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD20C209EDDDE000B32CF /* Address.plist */; };
@@ -291,6 +292,7 @@
 		9F737E732029554D006D08A4 /* SeparatorLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
 		9F755B1D209AA2EA00B9F414 /* RechargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyAPI.swift; sourceTree = "<group>"; };
+		9F77B51920A080E500F8E91B /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 		9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerView.m; sourceTree = "<group>"; };
 		9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerModel.m; sourceTree = "<group>"; };
 		9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerController.h; sourceTree = "<group>"; };
@@ -1012,6 +1014,7 @@
 		9FAF7551208C68A400009449 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9F77B51920A080E500F8E91B /* NotificationCenterExtension.swift */,
 				9FAF7552208C68A400009449 /* TopViewController.swift */,
 				9FAF7553208C68A400009449 /* UIColor+Extension.swift */,
 				9FAF7554208C68A400009449 /* UIWindow+Extension.swift */,
@@ -1628,6 +1631,7 @@
 				9FC3B213209D913C00A05E83 /* GoodsFeaturesCell.swift in Sources */,
 				9FAF74F2208C2F1C00009449 /* DataPrepareService.swift in Sources */,
 				9FAF7579208C68A500009449 /* SwiftError+Extension.swift in Sources */,
+				9F77B51A20A080E500F8E91B /* NotificationCenterExtension.swift in Sources */,
 				9F7CFBC3202B0187004F3ABE /* CarouseCompositionCell.swift in Sources */,
 				9FC3B20E209D801500A05E83 /* GoodsInfoSectionController.swift in Sources */,
 				9F7CFBBF202AE4C7004F3ABE /* CarouselCell.swift in Sources */,

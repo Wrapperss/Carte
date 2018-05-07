@@ -68,6 +68,11 @@ class CommodityCell: UICollectionViewCell {
         setupUI()
         
         checkButton.delegate = self
+        NotificationCenter.registerNotification(self, #selector(change(notification:)), name: .selectCartItem)
+    }
+    
+    deinit {
+        NotificationCenter.remove(self)
     }
     
     func setupUI() {
@@ -158,6 +163,18 @@ class CommodityCell: UICollectionViewCell {
             .catch { (_) in
             }
     }
+    
+    @objc
+    func change(notification: Notification) {
+        let info = notification.userInfo
+        let isOn: Bool = info?["isOn"] as! Bool
+        checkButton.on = isOn
+        guard let cart = cart, let goods = goods else {
+            return
+        }
+        delegate?.checkBoxChange(isAdd: isOn, cart: cart, goods: goods)
+    }
+    
 }
 
 extension CommodityCell: BEMCheckBoxDelegate {
