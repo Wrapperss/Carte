@@ -12,6 +12,8 @@ import MJRefresh
 
 class CartController: BaseListViewController {
     
+    let bottomView = CartBottomView.initFromNib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -37,9 +39,17 @@ class CartController: BaseListViewController {
     }
     
     override func addConstraints() {
+        view.addSubview(bottomView)
+        bottomView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(60)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalTo(bottomView.snp.top)
         }
     }
 }

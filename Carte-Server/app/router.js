@@ -11,6 +11,9 @@ module.exports = app => {
 
   app.resources('address', '/api/address', app.controller.address);
 
+  //购物车
+  app.resources('cart', '/api/cart', app.controller.cart)
+
   app.get('/api/user/address/:userId', app.controller.address.findUserAddress)
 
   //查看该分类下的商品 默认排序

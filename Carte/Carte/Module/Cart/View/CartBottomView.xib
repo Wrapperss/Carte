@@ -15,9 +15,59 @@
         <view contentMode="scaleToFill" restorationIdentifier="CartBottomView" id="iN0-l3-epB" customClass="CartBottomView" customModule="Carte" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxc-OM-XQe" customClass="BEMCheckBox">
+                    <rect key="frame" x="15" y="19.5" width="20" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="0i7-yA-RTK"/>
+                        <constraint firstAttribute="width" constant="20" id="4KC-TE-sLd"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="N5G-HR-qou"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全选" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGZ-SQ-pNM">
+                    <rect key="frame" x="40" y="19" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to9-Of-ZPg">
+                    <rect key="frame" x="275" y="10" width="80" height="40"/>
+                    <color key="backgroundColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="bOE-hi-Lj2"/>
+                        <constraint firstAttribute="height" constant="40" id="xEa-8m-6Ad"/>
+                    </constraints>
+                    <state key="normal" title="去结算">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M80-sZ-0vT">
+                    <rect key="frame" x="185" y="19.5" width="80" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.9882352941176471" green="0.11764705882352941" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="to9-Of-ZPg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Aww-Ed-fe8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="to9-Of-ZPg" secondAttribute="bottom" constant="10" id="Fsm-pr-35d"/>
+                <constraint firstItem="to9-Of-ZPg" firstAttribute="leading" secondItem="M80-sZ-0vT" secondAttribute="trailing" constant="10" id="Q7r-hZ-ooW"/>
+                <constraint firstItem="kGZ-SQ-pNM" firstAttribute="centerY" secondItem="dxc-OM-XQe" secondAttribute="centerY" id="ZEY-sL-XaW"/>
+                <constraint firstItem="kGZ-SQ-pNM" firstAttribute="leading" secondItem="dxc-OM-XQe" secondAttribute="trailing" constant="5" id="ZLq-ZK-i05"/>
+                <constraint firstItem="M80-sZ-0vT" firstAttribute="centerY" secondItem="to9-Of-ZPg" secondAttribute="centerY" id="eOX-lf-Hcl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="to9-Of-ZPg" secondAttribute="trailing" constant="20" id="i6i-6M-rmq"/>
+                <constraint firstItem="dxc-OM-XQe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="m7u-RA-p9M"/>
+                <constraint firstItem="dxc-OM-XQe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tpm-Z9-MLY"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="allCountLabel" destination="M80-sZ-0vT" id="pgG-JT-DCf"/>
+                <outlet property="buyButton" destination="to9-Of-ZPg" id="Rwx-RE-6Jj"/>
+                <outlet property="checkButton" destination="dxc-OM-XQe" id="8dM-6K-fl3"/>
+            </connections>
             <point key="canvasLocation" x="-221" y="68"/>
         </view>
     </objects>

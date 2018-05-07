@@ -18,7 +18,6 @@ class OrderController extends Controller {
   async create() {
     const { ctx, service } = this;
     const order = await service.order.create(ctx.request.body.order);
-    console.log(order)
     const orderGoods = ctx.request.body.orderGoods
     for (let index = 0; index < orderGoods.length; index++) {
       orderGoods[index].orderId = order.insertId

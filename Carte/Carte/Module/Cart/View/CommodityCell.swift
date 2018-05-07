@@ -47,11 +47,11 @@ class CommodityCell: UICollectionViewCell {
     
     func setupUI() {
         plusButton.cornerRadius = 2
-        plusButton.layer.borderColor = UIColor.black.cgColor
+        plusButton.layer.borderColor = UIColor.lightGray.cgColor
         plusButton.layer.borderWidth = 1
         
         reduceButton.cornerRadius = 2
-        reduceButton.layer.borderColor = UIColor.black.cgColor
+        reduceButton.layer.borderColor = UIColor.lightGray.cgColor
         reduceButton.layer.borderWidth = 1
         
         checkButton.onFillColor = UIColor.init(r: 251, g: 38, b: 44)
