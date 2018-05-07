@@ -26,9 +26,7 @@ class CartController extends Controller {
     let cart = ctx.request.body;
     cart.id = id;
     await service.cart.update(cart);
-    ctx.body = {
-        id
-    };
+    ctx.body = await service.cart.findOneCart(id)
     ctx.status = 200;
   }
 

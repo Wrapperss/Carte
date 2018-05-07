@@ -27,6 +27,11 @@ class CartService extends Service {
     const cart = await this.app.mysql.get('Cart', { userId, goodsId });
     return cart
   }
+
+  async findOneCart(id) {
+    const cart = await this.app.mysql.get('Cart', { id });
+    return cart
+  }
 }
 
 module.exports = CartService;

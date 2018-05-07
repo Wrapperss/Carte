@@ -12,6 +12,8 @@ import Kingfisher
 
 protocol CommodityCellDelegate: class {
     func deleteCartItem(_ cart: Cart?)
+    func checkBoxChange(isAdd: Bool, cart: Cart, goods: Goods)
+    func changeCart(cart: Cart, goods: Goods)
 }
 
 struct CommodityCellRequired {
@@ -34,9 +36,16 @@ class CommodityCell: UICollectionViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
     
+    var isFirst: Bool = true
+    
+    var goods: Goods?
+    
     var cart: Cart? {
         didSet {
-            fetch()
+            if isFirst {
+                fetch()
+                isFirst = false
+            }
         }
     }
     
@@ -57,6 +66,8 @@ class CommodityCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        
+        checkButton.delegate = self
     }
     
     func setupUI() {
@@ -95,6 +106,7 @@ class CommodityCell: UICollectionViewCell {
         ClassifyAPI
             .fetchGoodsDetail(cart.goodsId ?? 0)
             .then { [weak self] (goods) -> Void in
+                self?.goods = goods
                 self?.model = DataFactory.viewRequired.matchCommodityCellRequired(goods: goods, cart: cart)
             }
             .catch { [weak self] (_) in
@@ -108,12 +120,26 @@ class CommodityCell: UICollectionViewCell {
 
     @IBAction func addButtonTap(_ sender: Any) {
         count = count + 1
+        if checkButton.on {
+            cart?.quantity = count
+            guard  let cart = cart, let goods = goods else {
+                return
+            }
+            delegate?.changeCart(cart: cart, goods: goods)
+        }
     }
     
     @IBAction func lessButtonTap(_ sender: Any) {
         count = count - 1
         if count == 0 {
             delegate?.deleteCartItem(cart)
+        }
+        if checkButton.on {
+            cart?.quantity = count
+            guard  let cart = cart, let goods = goods else {
+                return
+            }
+            delegate?.changeCart(cart: cart, goods: goods)
         }
     }
     
@@ -125,10 +151,20 @@ class CommodityCell: UICollectionViewCell {
         newCart.quantity = count
         CartAPI
             .updateCart(cartId: cart.id ?? 0, cart: newCart)
-            .then { [weak self] (_) -> Void in
+            .then { [weak self] (cart) -> Void in
+                self?.cart = cart
                 self?.countLabel.text = "\(self?.count ?? 0)"
             }
             .catch { (_) in
             }
+    }
+}
+
+extension CommodityCell: BEMCheckBoxDelegate {
+    func didTap(_ checkBox: BEMCheckBox) {
+        guard let cart = cart, let goods = goods else {
+            return
+        }
+        delegate?.checkBoxChange(isAdd: checkBox.on, cart: cart, goods: goods)
     }
 }

@@ -69,7 +69,7 @@ extension CartAPI {
         return Request<CartAPI>().request(.remove(cartId))
     }
     
-    static func updateCart(cartId: Int, cart: Cart) -> Promise<BlankResponse> {
+    static func updateCart(cartId: Int, cart: Cart) -> Promise<Cart> {
         return Request<CartAPI>().request(.update(cartId, cart))
     }
 }

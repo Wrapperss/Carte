@@ -11,6 +11,9 @@ import IGListKit
 
 protocol CommoditySectionControllerDelegate: class {
     func deleteCartItem(_ cart: Cart)
+    func itemChange(isOn: Bool, cart: Cart, goods: Goods)
+    func didSelectCartItem(_ cart: Cart)
+    func changeCart(cart: Cart, goods: Goods)
 }
 
 class CommoditySectionItem: NormalDiffableItem {
@@ -50,16 +53,31 @@ class CommoditySectionController: ListSectionController {
         return cell
     }
     
+    override func didSelectItem(at index: Int) {
+        guard let cart = object?.data else {
+            return
+        }
+        delegate?.didSelectCartItem(cart)
+    }
+    
     override func didUpdate(to object: Any) {
         self.object = object as? CommoditySectionItem
     }
 }
 
 extension CommoditySectionController: CommodityCellDelegate {
+    func checkBoxChange(isAdd: Bool, cart: Cart, goods: Goods) {
+        delegate?.itemChange(isOn: isAdd, cart: cart, goods: goods)
+    }
+
     func deleteCartItem(_ cart: Cart?) {
         guard let cart = cart else {
             return
         }
         delegate?.deleteCartItem(cart)
+    }
+    
+    func changeCart(cart: Cart, goods: Goods) {
+        delegate?.changeCart(cart: cart, goods: goods)
     }
 }

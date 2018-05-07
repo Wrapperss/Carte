@@ -41,6 +41,9 @@
                     <state key="normal" title="去结算">
                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="buttomTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="SNI-yq-p5j"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M80-sZ-0vT">
                     <rect key="frame" x="185" y="19.5" width="80" height="21"/>

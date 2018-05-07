@@ -9,12 +9,35 @@
 import UIKit
 import BEMCheckBox
 
+protocol CartBottomViewDelegate: class {
+    func redButtonTap()
+}
+
 class CartBottomView: UIView {
+    
+    enum State {
+        case buy
+        case edit
+    }
 
     @IBOutlet weak var checkButton: BEMCheckBox!
     @IBOutlet weak var allCountLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
     
+    var delegate: CartBottomViewDelegate?
+    
+    var currentState: State = State.buy {
+        didSet {
+            switch currentState {
+            case .buy:
+                allCountLabel.isHidden = false
+                buyButton.setTitle("结算", for: .normal)
+            case .edit:
+                allCountLabel.isHidden = true
+                buyButton.setTitle("删除", for: .normal)
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,5 +55,10 @@ class CartBottomView: UIView {
         
         let line = SeparatorLine.init(position: .top, margin: (0, 0), height: 0.5)
         line.work(with: self)
+    }
+    
+    
+    @IBAction func buttomTap(_ sender: Any) {
+        delegate?.redButtonTap()
     }
 }
