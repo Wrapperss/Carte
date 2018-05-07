@@ -45,10 +45,9 @@ extension MineController {
         } else if indexPath.row == 2 { //订单分类
             
         } else if indexPath.row == 3 { //我喜欢的商品
-            
+            navigationController?.pushViewController(CollectionGoodsController(), animated: true)
         } else if indexPath.row == 4 { //我的地址
             navigationController?.pushViewController(AddressListController(), animated: true)
-            
         } else if indexPath.row == 6 { //设置
             
         } else if indexPath.row == 7 { //用户协议
