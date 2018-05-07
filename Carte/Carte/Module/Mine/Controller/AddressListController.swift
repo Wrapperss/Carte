@@ -127,7 +127,18 @@ extension AddressListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        source.remove(at: indexPath.row)
-        tableView.deselectRow(at: indexPath, animated: true)
+
+        HUD.wait()
+        AddressAPI
+            .deleteAddress(addressId: addressSource[indexPath.row].id ?? 0)
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (_) -> Void in
+                self?.tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            .catch { (_) in
+                HUD.showError("发生错误")
+            }
     }
 }
