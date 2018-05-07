@@ -44,4 +44,8 @@ module.exports = app => {
   //获取收藏的商品
   app.get('/api/collection/:userId', app.controller.collection.collectGoods);
 
+  //评论
+  app.post('/api/comment', app.controller.comment.create)
+  app.get('/api/comment/;goodsId', app.controller.comment.getGoodsComment)
+
 };
