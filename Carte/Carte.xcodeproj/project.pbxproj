@@ -56,6 +56,8 @@
 		9F671E322022F7B5004C4D51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E312022F7B5004C4D51 /* User.swift */; };
 		9F671E3F20235F58004C4D51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E3E20235F58004C4D51 /* MainTabBarController.swift */; };
 		9F6E0018209FE71500EDE3C2 /* CollectionGoodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E0017209FE71500EDE3C2 /* CollectionGoodsController.swift */; };
+		9F6E001B209FFB7400EDE3C2 /* CartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */; };
+		9F6E001D209FFCD800EDE3C2 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E001C209FFCD800EDE3C2 /* Cart.swift */; };
 		9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86D4202C36F400C6AF17 /* CarouseSectionController.swift */; };
 		9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F704521208C792C00561480 /* PersonalInfoController.swift */; };
 		9F737E3120294B04006D08A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F737E3020294B04006D08A4 /* HomeViewController.swift */; };
@@ -278,6 +280,8 @@
 		9F671E312022F7B5004C4D51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F671E3E20235F58004C4D51 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9F6E0017209FE71500EDE3C2 /* CollectionGoodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGoodsController.swift; sourceTree = "<group>"; };
+		9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAPI.swift; sourceTree = "<group>"; };
+		9F6E001C209FFCD800EDE3C2 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		9F6F86D4202C36F400C6AF17 /* CarouseSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseSectionController.swift; sourceTree = "<group>"; };
 		9F704521208C792C00561480 /* PersonalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoController.swift; sourceTree = "<group>"; };
 		9F737E3020294B04006D08A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -569,6 +573,7 @@
 		9F37781E2078A19F00DFCC38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F6E001C209FFCD800EDE3C2 /* Cart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -723,6 +728,7 @@
 				9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */,
 				9F4459702099B04800892F9B /* MineAPI.swift */,
 				9F0D4840209F04A100329EAA /* AddressAPI.swift */,
+				9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1617,6 +1623,7 @@
 				9FAF74F5208C2F1C00009449 /* UIService.swift in Sources */,
 				9FAF757C208C68A500009449 /* UITableView+Extension.swift in Sources */,
 				9FAF74F6208C2F1C00009449 /* AutoTestService.swift in Sources */,
+				9F6E001B209FFB7400EDE3C2 /* CartAPI.swift in Sources */,
 				9F4459762099B6A300892F9B /* HUD.swift in Sources */,
 				9FC3B213209D913C00A05E83 /* GoodsFeaturesCell.swift in Sources */,
 				9FAF74F2208C2F1C00009449 /* DataPrepareService.swift in Sources */,
@@ -1680,6 +1687,7 @@
 				9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */,
 				9FAF7577208C68A500009449 /* UICollectionView+Extension.swift in Sources */,
 				9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */,
+				9F6E001D209FFCD800EDE3C2 /* Cart.swift in Sources */,
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9FAF7572208C68A500009449 /* UIImage+Extension.swift in Sources */,
 				9FAF74B9208C1F3700009449 /* TapTextElement.swift in Sources */,

@@ -12,9 +12,11 @@ module.exports = app => {
   app.resources('address', '/api/address', app.controller.address);
 
   //购物车
-  app.resources('cart', '/api/cart', app.controller.cart)
+  app.resources('cart', '/api/cart', app.controller.cart);
 
-  app.get('/api/user/address/:userId', app.controller.address.findUserAddress)
+  app.get('/api/cart/user/:userId', app.controller.cart.showUserCart);
+
+  app.get('/api/user/address/:userId', app.controller.address.findUserAddress);
 
   //查看该分类下的商品 默认排序
   app.get('/api/goods/category/:categoryId', app.controller.goods.showClassifyGoods);

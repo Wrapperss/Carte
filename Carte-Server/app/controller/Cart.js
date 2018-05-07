@@ -10,7 +10,7 @@ class CartController extends Controller {
       if (checkCart === null) {
         const result = await service.cart.create(cart)
         ctx.body = result;
-        ctx.status = 200;
+        ctx.status = 201;
       } else {
           let quantity = checkCart.quantity
           checkCart.quantity = parseInt(quantity) + 1
@@ -39,6 +39,14 @@ class CartController extends Controller {
     ctx.body = {
         id
     };
+    ctx.status = 200;
+  }
+
+  async showUserCart() {
+    const { ctx, service } = this;
+    const { userId } = ctx.params;
+    let cart = await service.cart.find(userId);
+    ctx.body = cart
     ctx.status = 200;
   }
 }

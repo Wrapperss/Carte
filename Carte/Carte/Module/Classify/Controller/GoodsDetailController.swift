@@ -146,7 +146,20 @@ extension GoodsDetailController: GoodBanerViewDelegate {
     }
     
     func addCart() {
-        
+        HUD.wait()
+        CartAPI
+            .addCart(Cart(goodsId: goodsId,
+                          userId: Default.Account.integer(forKey: .userId),
+                          quantity: 1))
+            .always {
+                HUD.clear()
+            }
+            .then { (_) -> Void in
+                HUD.showSuccess("添加购物车成功")
+            }
+            .catch { (_) in
+                HUD.showError("添加购物车失败")
+            }
     }
     
     func toBuy() {

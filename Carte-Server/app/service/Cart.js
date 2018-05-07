@@ -9,7 +9,7 @@ class CartService extends Service {
   }
 
   async find(userId) {
-    const cart = await this.app.mysql.get('Cart', { userId });
+    const cart = await this.app.mysql.select('Cart', { userId });
     return cart
   }
 
