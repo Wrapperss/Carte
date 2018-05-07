@@ -166,7 +166,25 @@ extension CartController: CartBottomViewDelegate {
     func redButtonTap() {
         switch currentState {
         case .edit:
-            break
+            for select in selectCart {
+                var index = 0
+                for i in 0 ..< cartSource.count {
+                    if cartSource[i].data.id ?? 0 == select.id {
+                        index = i
+                        CartAPI
+                            .removeCart(select.id ?? 0)
+                            .then { [weak self] (_) -> Void in
+                                self?.cartSource.remove(at: index)
+                                self?.adapter.performUpdates(animated: true, completion: nil)
+                            }
+                            .catch { (_) in
+                            }
+                        break
+                    }
+                }
+            }
+            bottomView.checkButton.on = false
+            bottomView.allCountLabel.text = "合计：0元"
         case .buy:
             break
         }
