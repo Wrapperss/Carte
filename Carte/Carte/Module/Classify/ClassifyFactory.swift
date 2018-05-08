@@ -58,6 +58,12 @@ extension DataFactory.viewRequired {
     fileprivate static func matchGoodsFeaturesCellRequired(_ goods: Goods) -> GoodsFeaturesCellRequired {
         return GoodsFeaturesCellRequired(content: goods.feature ?? "", image: goods.featurePic ?? "")
     }
+    
+    fileprivate static func matchGoodsCommentCoverCellRequired(_ comment: Comment) -> GoodsCommentCoverCellRequired {
+        return GoodsCommentCoverCellRequired(userName: comment.userName ?? "",
+                                             scoreString: "描述相符 \(comment.descriptionMark ?? 0).0 | 物流相符 \(comment.logisticsMark ?? 0).0 | 推荐指数 \(comment.recommendMark ?? 0).0",
+            content: comment.content ?? "")
+    }
 }
 
 extension DataFactory.sectionItem {
@@ -71,15 +77,23 @@ extension DataFactory.sectionItem {
     }
     
     
-    public static func prepareGoodsDetailItem(_ goods: Goods) -> [ListDiffable] {
+    public static func prepareGoodsDetailItem(_ goods: Goods, comment: Comment? = nil) -> [ListDiffable] {
         let headerItem = GoodsHeaderSectionItem(data:  DataFactory.viewRequired.matchGoodsHeaderCellRequired(goods))
         let infoItem = GoodsInfoSectionItem(data: DataFactory.viewRequired.matchGoodsInfoSectionItem(goods))
         let featureItem = GoodsFeaturesSectionItem(data: DataFactory.viewRequired.matchGoodsFeaturesCellRequired(goods))
         let postageItem = GoodsPostageSectionItem(data: "¥\(goods.postage ?? 0)")
         
-        let commentCoverItem = GoodsCommentCoverSectionItem.init(data: GoodsCommentCoverCellRequired(userName: "Wrappers",
-                                                                                                     scoreString: "描述相符 5.0 | 物流相符 5.0 | 推荐指数 5.0",
-                                                                                                     content: "店家人很好"))
+        guard let comment = comment else {
+            return [headerItem, infoItem, featureItem, postageItem]
+        }
+        
+        let commentCoverItem = GoodsCommentCoverSectionItem(data: GoodsCommentCoverCellRequired(userName: comment.userName ?? "",
+                                                                                                     scoreString: "描述相符 \(comment.descriptionMark ?? 0).0 | 物流相符 \(comment.logisticsMark ?? 0).0 | 推荐指数 \(comment.recommendMark ?? 0).0",
+                                                                                                     content: comment.content ?? ""))
         return [headerItem, commentCoverItem, infoItem, featureItem, postageItem]
+    }
+    
+    public static func prepareGoodsCommentItem(_ comment: Comment) -> GoodsCommentCoverSectionItem {
+        return GoodsCommentCoverSectionItem(data: DataFactory.viewRequired.matchGoodsCommentCoverCellRequired(comment), shap: .content)
     }
 }

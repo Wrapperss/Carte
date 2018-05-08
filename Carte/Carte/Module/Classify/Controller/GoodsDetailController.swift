@@ -17,6 +17,8 @@ class GoodsDetailController: BaseListViewController {
     
     let banerView = GoodBanerView.initFromNib()
     
+    var comments = [Comment]()
+    
     var isCollect: Bool = false {
         didSet {
             if isCollect {
@@ -136,7 +138,7 @@ extension GoodsDetailController: GoodsInfoSectionControllerDelegate, GoodsCommen
     }
     
     func didSelectCommentCoverItem() {
-        
+        navigationController?.pushViewController(CommentListController(comments: comments), animated: true)
     }
 }
 
@@ -176,8 +178,20 @@ extension GoodsDetailController {
                 HUD.clear()
             }
             .then { [weak self] (goods) -> Void in
-                self?.source = DataFactory.sectionItem.prepareGoodsDetailItem(goods)
-                self?.adapter.reloadData(completion: nil)
+                CommentAPI
+                    .fetchGoddsComment(self?.goodsId ?? 0)
+                    .then(execute: { (comments) -> Void in
+                        if comments.count > 0 {
+                            self?.comments = comments
+                            self?.source = DataFactory.sectionItem.prepareGoodsDetailItem(goods, comment: comments.first!)
+                        } else {
+                            self?.source = DataFactory.sectionItem.prepareGoodsDetailItem(goods)
+                        }
+                        self?.adapter.reloadData(completion: nil)
+                    })
+                    .catch(execute: { (_) in
+                        HUD.showError("发生错误")
+                    })
             }
             .catch { (_) in
                 HUD.showError("发送错误")

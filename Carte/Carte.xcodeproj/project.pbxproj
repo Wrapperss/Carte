@@ -68,6 +68,9 @@
 		9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1D209AA2EA00B9F414 /* RechargeController.swift */; };
 		9F755B20209AAB3B00B9F414 /* ClassifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */; };
 		9F77B51A20A080E500F8E91B /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51920A080E500F8E91B /* NotificationCenterExtension.swift */; };
+		9F77B51C20A12AFA00F8E91B /* CommentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */; };
+		9F77B51E20A12B5B00F8E91B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51D20A12B5B00F8E91B /* Comment.swift */; };
+		9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51F20A12F8200F8E91B /* CommentListController.swift */; };
 		9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */; };
 		9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */; };
 		9F7BD212209EDDDE000B32CF /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD20C209EDDDE000B32CF /* Address.plist */; };
@@ -293,6 +296,9 @@
 		9F755B1D209AA2EA00B9F414 /* RechargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeController.swift; sourceTree = "<group>"; };
 		9F755B1F209AAB3B00B9F414 /* ClassifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyAPI.swift; sourceTree = "<group>"; };
 		9F77B51920A080E500F8E91B /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
+		9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPI.swift; sourceTree = "<group>"; };
+		9F77B51D20A12B5B00F8E91B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9F77B51F20A12F8200F8E91B /* CommentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListController.swift; sourceTree = "<group>"; };
 		9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerView.m; sourceTree = "<group>"; };
 		9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerModel.m; sourceTree = "<group>"; };
 		9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerController.h; sourceTree = "<group>"; };
@@ -493,6 +499,7 @@
 				9FC3B1F3209C34C600A05E83 /* GoodsListController.swift */,
 				9FC3B201209D488200A05E83 /* GoodsDetailController.swift */,
 				9FC3B20F209D865600A05E83 /* MoreInfoController.swift */,
+				9F77B51F20A12F8200F8E91B /* CommentListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -731,6 +738,7 @@
 				9F4459702099B04800892F9B /* MineAPI.swift */,
 				9F0D4840209F04A100329EAA /* AddressAPI.swift */,
 				9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */,
+				9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1061,6 +1069,7 @@
 			children = (
 				9FBEBEF4209AC48700C03102 /* Category.swift */,
 				9FC3B1F5209C36A100A05E83 /* Goods.swift */,
+				9F77B51D20A12B5B00F8E91B /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1618,6 +1627,7 @@
 				9F4459792099B7B800892F9B /* CreamsDispatchQueuePool.m in Sources */,
 				9FC3B21A209DAF7E00A05E83 /* GoodBanerView.swift in Sources */,
 				9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */,
+				9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */,
 				9FAF74B7208C1F3700009449 /* CustomFormItemDemo.swift in Sources */,
 				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
 				9F4459802099C94100892F9B /* ModifyUserInfoController.swift in Sources */,
@@ -1729,6 +1739,7 @@
 				9FBEBEF5209AC48700C03102 /* Category.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
 				9FC3B221209DD27D00A05E83 /* GoodsPostageCell.swift in Sources */,
+				9F77B51E20A12B5B00F8E91B /* Comment.swift in Sources */,
 				9FAF74A7208C1F3700009449 /* WrapperElement.swift in Sources */,
 				9F4459712099B04800892F9B /* MineAPI.swift in Sources */,
 				9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */,
@@ -1743,6 +1754,7 @@
 				9FAF757B208C68A500009449 /* Number+Date.swift in Sources */,
 				9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */,
 				9F0AA605209EC61F003B0436 /* AddressListController.swift in Sources */,
+				9F77B51C20A12AFA00F8E91B /* CommentAPI.swift in Sources */,
 				9F671E322022F7B5004C4D51 /* User.swift in Sources */,
 				9FAF74A2208C1F3700009449 /* ImageElement.swift in Sources */,
 				9FAF74AE208C1F3700009449 /* ArrangeUtil.swift in Sources */,

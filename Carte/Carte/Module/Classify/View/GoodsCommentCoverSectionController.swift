@@ -15,9 +15,11 @@ protocol GoodsCommentCoverSectionControllerDelegate: class {
 
 class GoodsCommentCoverSectionItem: NormalDiffableItem {
     var data: GoodsCommentCoverCellRequired
+    var shap: GoodsCommentCoverCell.Shap
     
-    init(data: GoodsCommentCoverCellRequired) {
+    init(data: GoodsCommentCoverCellRequired, shap: GoodsCommentCoverCell.Shap = .cover) {
         self.data = data
+        self.shap = shap
         super.init()
     }
     
@@ -25,9 +27,9 @@ class GoodsCommentCoverSectionItem: NormalDiffableItem {
 
 class GoodsCommentCoverSectionController: ListSectionController {
     var object: GoodsCommentCoverSectionItem?
-    var delegate: GoodsCommentCoverSectionControllerDelegate
+    var delegate: GoodsCommentCoverSectionControllerDelegate?
     
-    init(delegate: GoodsCommentCoverSectionControllerDelegate) {
+    init(delegate: GoodsCommentCoverSectionControllerDelegate? = nil) {
         self.delegate = delegate
         super.init()
         inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
@@ -38,17 +40,19 @@ class GoodsCommentCoverSectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: UIScreen.screenWidth, height: 170)
+        return CGSize(width: UIScreen.screenWidth,
+                      height: GoodsCommentCoverCell.calculateHeight(content: object?.data.content ?? "", shap: object?.shap ?? .cover))
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell: GoodsCommentCoverCell = collectionContext?.dequeueReusableCell(withNibName: GoodsCommentCoverCell.reuseIdentifier, bundle: nil, for: self, at: index) as! GoodsCommentCoverCell
         cell.model = object?.data
+        cell.shap = object?.shap ?? .cover
         return cell
     }
     
     override func didSelectItem(at index: Int) {
-        delegate.didSelectCommentCoverItem()
+        delegate?.didSelectCommentCoverItem()
     }
     
     override func didUpdate(to object: Any) {

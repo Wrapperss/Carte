@@ -64,11 +64,11 @@
                 <constraint firstItem="CXS-wv-kq8" firstAttribute="leading" secondItem="f6E-ax-ylP" secondAttribute="leading" id="4re-qx-EFo"/>
                 <constraint firstAttribute="trailing" secondItem="CXS-wv-kq8" secondAttribute="trailing" constant="15" id="5hp-wu-G1J"/>
                 <constraint firstAttribute="trailing" secondItem="ipz-xm-ix6" secondAttribute="trailing" constant="15" id="5rs-jN-Jjs"/>
-                <constraint firstItem="6DT-sZ-jpp" firstAttribute="top" secondItem="7Cz-YI-iZB" secondAttribute="bottom" constant="10" id="5z1-Tz-4ya"/>
                 <constraint firstItem="6DT-sZ-jpp" firstAttribute="leading" secondItem="7Cz-YI-iZB" secondAttribute="leading" id="JHC-5z-bCo"/>
                 <constraint firstAttribute="trailing" secondItem="QRY-NC-vo4" secondAttribute="trailing" constant="15" id="KGY-C1-hfr"/>
                 <constraint firstItem="QRY-NC-vo4" firstAttribute="centerY" secondItem="7Cz-YI-iZB" secondAttribute="centerY" id="Nrg-6c-Gqk"/>
                 <constraint firstItem="ipz-xm-ix6" firstAttribute="leading" secondItem="6DT-sZ-jpp" secondAttribute="trailing" constant="5" id="Soa-b3-gzv"/>
+                <constraint firstItem="6DT-sZ-jpp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="51" id="VRn-vU-MaR"/>
                 <constraint firstItem="7Cz-YI-iZB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="XZ2-j6-wg1"/>
                 <constraint firstItem="f6E-ax-ylP" firstAttribute="top" secondItem="6DT-sZ-jpp" secondAttribute="bottom" constant="5" id="dzb-je-4bP"/>
                 <constraint firstItem="f6E-ax-ylP" firstAttribute="leading" secondItem="6DT-sZ-jpp" secondAttribute="leading" id="gjs-k5-UEC"/>
@@ -79,10 +79,13 @@
             <size key="customSize" width="375" height="171"/>
             <connections>
                 <outlet property="contentLabel" destination="CXS-wv-kq8" id="SIv-Zy-zfo"/>
+                <outlet property="imageToTop" destination="VRn-vU-MaR" id="WSw-jJ-2J4"/>
+                <outlet property="moreLabel" destination="QRY-NC-vo4" id="RiO-kq-tYN"/>
                 <outlet property="nameLabel" destination="ipz-xm-ix6" id="dro-5W-X63"/>
                 <outlet property="sourceLabel" destination="f6E-ax-ylP" id="EFM-ix-jEw"/>
+                <outlet property="titleLabel" destination="7Cz-YI-iZB" id="J3B-qa-9VN"/>
             </connections>
-            <point key="canvasLocation" x="-220.5" y="-9.5"/>
+            <point key="canvasLocation" x="-1318" y="170"/>
         </collectionViewCell>
     </objects>
     <resources>
