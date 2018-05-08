@@ -71,6 +71,14 @@
 		9F77B51C20A12AFA00F8E91B /* CommentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */; };
 		9F77B51E20A12B5B00F8E91B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51D20A12B5B00F8E91B /* Comment.swift */; };
 		9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B51F20A12F8200F8E91B /* CommentListController.swift */; };
+		9F77B52220A1416600F8E91B /* OrderDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52120A1416600F8E91B /* OrderDetailController.swift */; };
+		9F77B52420A141BC00F8E91B /* ConfirmOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */; };
+		9F77B52620A172E200F8E91B /* OrderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52520A172E200F8E91B /* OrderBottomView.swift */; };
+		9F77B52820A1730500F8E91B /* OrderBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F77B52720A1730500F8E91B /* OrderBottomView.xib */; };
+		9F77B52B20A1799400F8E91B /* OrderAdressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52920A1799400F8E91B /* OrderAdressCell.swift */; };
+		9F77B52C20A1799400F8E91B /* OrderAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F77B52A20A1799400F8E91B /* OrderAdressCell.xib */; };
+		9F77B52E20A17ACD00F8E91B /* OrderAdressSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52D20A17ACD00F8E91B /* OrderAdressSectionController.swift */; };
+		9F77B53020A17E6500F8E91B /* OrderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52F20A17E6500F8E91B /* OrderFactory.swift */; };
 		9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */; };
 		9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */; };
 		9F7BD212209EDDDE000B32CF /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD20C209EDDDE000B32CF /* Address.plist */; };
@@ -299,6 +307,14 @@
 		9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPI.swift; sourceTree = "<group>"; };
 		9F77B51D20A12B5B00F8E91B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9F77B51F20A12F8200F8E91B /* CommentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListController.swift; sourceTree = "<group>"; };
+		9F77B52120A1416600F8E91B /* OrderDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailController.swift; sourceTree = "<group>"; };
+		9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderController.swift; sourceTree = "<group>"; };
+		9F77B52520A172E200F8E91B /* OrderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBottomView.swift; sourceTree = "<group>"; };
+		9F77B52720A1730500F8E91B /* OrderBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderBottomView.xib; sourceTree = "<group>"; };
+		9F77B52920A1799400F8E91B /* OrderAdressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAdressCell.swift; sourceTree = "<group>"; };
+		9F77B52A20A1799400F8E91B /* OrderAdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderAdressCell.xib; sourceTree = "<group>"; };
+		9F77B52D20A17ACD00F8E91B /* OrderAdressSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAdressSectionController.swift; sourceTree = "<group>"; };
+		9F77B52F20A17E6500F8E91B /* OrderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFactory.swift; sourceTree = "<group>"; };
 		9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerView.m; sourceTree = "<group>"; };
 		9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerModel.m; sourceTree = "<group>"; };
 		9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerController.h; sourceTree = "<group>"; };
@@ -485,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
+				9F77B52F20A17E6500F8E91B /* OrderFactory.swift */,
 				9FBEBEF3209AC47000C03102 /* Model */,
 				9F08EE9B207B382E0021F4DD /* View */,
 				9F08EE98207B1B0D0021F4DD /* Controller */,
@@ -500,6 +517,8 @@
 				9FC3B201209D488200A05E83 /* GoodsDetailController.swift */,
 				9FC3B20F209D865600A05E83 /* MoreInfoController.swift */,
 				9F77B51F20A12F8200F8E91B /* CommentListController.swift */,
+				9F77B52120A1416600F8E91B /* OrderDetailController.swift */,
+				9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +555,11 @@
 				9FC3B227209DE0E400A05E83 /* GoodsCommentCoverCell.swift */,
 				9FC3B228209DE0E400A05E83 /* GoodsCommentCoverCell.xib */,
 				9FC3B22B209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift */,
+				9F77B52520A172E200F8E91B /* OrderBottomView.swift */,
+				9F77B52720A1730500F8E91B /* OrderBottomView.xib */,
+				9F77B52920A1799400F8E91B /* OrderAdressCell.swift */,
+				9F77B52A20A1799400F8E91B /* OrderAdressCell.xib */,
+				9F77B52D20A17ACD00F8E91B /* OrderAdressSectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1327,6 +1351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F77B52820A1730500F8E91B /* OrderBottomView.xib in Resources */,
 				9F7BD212209EDDDE000B32CF /* Address.plist in Resources */,
 				9FC3B21E209DAFB000A05E83 /* GoodBanerView.xib in Resources */,
 				9FCC7DBB20785D7200E5B89F /* Mine.storyboard in Resources */,
@@ -1338,6 +1363,7 @@
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9FC3B206209D4B0A00A05E83 /* GoodsHeaderCell.xib in Resources */,
 				9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */,
+				9F77B52C20A1799400F8E91B /* OrderAdressCell.xib in Resources */,
 				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
 				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
 				9F08EE9F207B38920021F4DD /* SortTitleCell.xib in Resources */,
@@ -1617,6 +1643,7 @@
 				9F704522208C792C00561480 /* PersonalInfoController.swift in Sources */,
 				9FAF7576208C68A500009449 /* UIScreen+Extension.swift in Sources */,
 				9FAF74A4208C1F3700009449 /* ButtonElement.swift in Sources */,
+				9F77B53020A17E6500F8E91B /* OrderFactory.swift in Sources */,
 				9FC8BB922099A47100A3CF02 /* UserInfoController.swift in Sources */,
 				9FF559C620118DEE004EB3F2 /* Logger.swift in Sources */,
 				9FC3B200209C534E00A05E83 /* GoodsSectionController.swift in Sources */,
@@ -1629,6 +1656,7 @@
 				9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */,
 				9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */,
 				9FAF74B7208C1F3700009449 /* CustomFormItemDemo.swift in Sources */,
+				9F77B52420A141BC00F8E91B /* ConfirmOrderController.swift in Sources */,
 				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
 				9F4459802099C94100892F9B /* ModifyUserInfoController.swift in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
@@ -1655,6 +1683,8 @@
 				9F3778662078CD0700DFCC38 /* Constants.swift in Sources */,
 				9FAF74A1208C1F3700009449 /* TextElement.swift in Sources */,
 				9FC3B205209D4B0A00A05E83 /* GoodsHeaderCell.swift in Sources */,
+				9F77B52B20A1799400F8E91B /* OrderAdressCell.swift in Sources */,
+				9F77B52E20A17ACD00F8E91B /* OrderAdressSectionController.swift in Sources */,
 				9FAF74B5208C1F3700009449 /* GridContentElement.swift in Sources */,
 				9F671E2E2022EFBF004C4D51 /* BaseListViewController.swift in Sources */,
 				9F3B33B0202443E800259540 /* MainNavigationController.swift in Sources */,
@@ -1705,6 +1735,7 @@
 				9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */,
 				9FAF7572208C68A500009449 /* UIImage+Extension.swift in Sources */,
 				9FAF74B9208C1F3700009449 /* TapTextElement.swift in Sources */,
+				9F77B52620A172E200F8E91B /* OrderBottomView.swift in Sources */,
 				9FC3B224209DD74000A05E83 /* GoodsPostageSectionItem.swift in Sources */,
 				9FC3B1F8209C3DB400A05E83 /* TopSelectView.swift in Sources */,
 				9FAF7574208C68A500009449 /* UIViewController+Extension.swift in Sources */,
@@ -1771,6 +1802,7 @@
 				9F755B1E209AA2EA00B9F414 /* RechargeController.swift in Sources */,
 				9FAF74FD208C2F6700009449 /* MJRefresh+RxSwift.swift in Sources */,
 				9FAF756D208C68A500009449 /* Optional+Extension.swift in Sources */,
+				9F77B52220A1416600F8E91B /* OrderDetailController.swift in Sources */,
 				9F96C2A8207A06C9004970D2 /* MagazineCoverCell.swift in Sources */,
 				9F4459742099B68D00892F9B /* SwiftNotice.swift in Sources */,
 				9FAF74B4208C1F3700009449 /* GridWrapperSection.swift in Sources */,

@@ -19,6 +19,8 @@ class GoodsDetailController: BaseListViewController {
     
     var comments = [Comment]()
     
+    var goods: Goods?
+    
     var isCollect: Bool = false {
         didSet {
             if isCollect {
@@ -165,7 +167,12 @@ extension GoodsDetailController: GoodBanerViewDelegate {
     }
     
     func toBuy() {
+        guard let goods = goods else {
+            return
+        }
+        let cart = Cart(goodsId: goods.id ?? 0, userId: Default.Account.integer(forKey: .userId), quantity: 1)
         
+        navigationController?.pushViewController(ConfirmOrderController(cartMsg: [(cart, goods)]), animated: true)
     }
 }
 
@@ -178,6 +185,7 @@ extension GoodsDetailController {
                 HUD.clear()
             }
             .then { [weak self] (goods) -> Void in
+                self?.goods = goods
                 CommentAPI
                     .fetchGoddsComment(self?.goodsId ?? 0)
                     .then(execute: { (comments) -> Void in
