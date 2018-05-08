@@ -79,6 +79,8 @@
 		9F77B52C20A1799400F8E91B /* OrderAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F77B52A20A1799400F8E91B /* OrderAdressCell.xib */; };
 		9F77B52E20A17ACD00F8E91B /* OrderAdressSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52D20A17ACD00F8E91B /* OrderAdressSectionController.swift */; };
 		9F77B53020A17E6500F8E91B /* OrderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B52F20A17E6500F8E91B /* OrderFactory.swift */; };
+		9F77B53220A1D4F300F8E91B /* OrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B53120A1D4F300F8E91B /* OrderAPI.swift */; };
+		9F77B53420A1D5A500F8E91B /* OrderContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77B53320A1D5A500F8E91B /* OrderContent.swift */; };
 		9F7BD210209EDDDE000B32CF /* LZCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */; };
 		9F7BD211209EDDDE000B32CF /* LZPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */; };
 		9F7BD212209EDDDE000B32CF /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7BD20C209EDDDE000B32CF /* Address.plist */; };
@@ -315,6 +317,8 @@
 		9F77B52A20A1799400F8E91B /* OrderAdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderAdressCell.xib; sourceTree = "<group>"; };
 		9F77B52D20A17ACD00F8E91B /* OrderAdressSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAdressSectionController.swift; sourceTree = "<group>"; };
 		9F77B52F20A17E6500F8E91B /* OrderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFactory.swift; sourceTree = "<group>"; };
+		9F77B53120A1D4F300F8E91B /* OrderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAPI.swift; sourceTree = "<group>"; };
+		9F77B53320A1D5A500F8E91B /* OrderContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContent.swift; sourceTree = "<group>"; };
 		9F7BD209209EDDDE000B32CF /* LZCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCityPickerView.m; sourceTree = "<group>"; };
 		9F7BD20A209EDDDE000B32CF /* LZPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerModel.m; sourceTree = "<group>"; };
 		9F7BD20B209EDDDE000B32CF /* LZCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCityPickerController.h; sourceTree = "<group>"; };
@@ -607,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6E001C209FFCD800EDE3C2 /* Cart.swift */,
+				9F77B53320A1D5A500F8E91B /* OrderContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -763,6 +768,7 @@
 				9F0D4840209F04A100329EAA /* AddressAPI.swift */,
 				9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */,
 				9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */,
+				9F77B53120A1D4F300F8E91B /* OrderAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1718,6 +1724,7 @@
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
 				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,
+				9F77B53220A1D4F300F8E91B /* OrderAPI.swift in Sources */,
 				9F0AA608209ECAD6003B0436 /* AddressCell.swift in Sources */,
 				9FC3B22C209DE3C200A05E83 /* GoodsCommentCoverSectionController.swift in Sources */,
 				9FF55995200F8D28004EB3F2 /* Carte.xcdatamodeld in Sources */,
@@ -1727,6 +1734,7 @@
 				9FAF74A9208C1F3700009449 /* CoverArrange.swift in Sources */,
 				9FF559C320118693004EB3F2 /* BaseViewController.swift in Sources */,
 				9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */,
+				9F77B53420A1D5A500F8E91B /* OrderContent.swift in Sources */,
 				9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */,
 				9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */,
 				9FAF7577208C68A500009449 /* UICollectionView+Extension.swift in Sources */,
