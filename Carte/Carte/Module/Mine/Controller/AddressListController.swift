@@ -12,10 +12,26 @@ import SnapKit
 
 class AddressListController: BaseViewController {
     
+    enum `Type` {
+        case modify
+        case select
+    }
+    
     let addButton = UIButton()
     let tableView = UITableView()
     var source = [AddressCellRequired]()
     var addressSource = [Address]()
+    
+    var type: Type
+    
+    init(type: Type = .modify) {
+        self.type = type
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,13 +129,24 @@ extension AddressListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let controller = AddAddressController.initFromStoryboard(name: .mine)
-        controller.operate = .modify(addressSource[indexPath.row])
-        navigationController?.pushViewController(controller, animated: true)
+        switch type {
+        case .modify:
+            let controller = AddAddressController.initFromStoryboard(name: .mine)
+            controller.operate = .modify(addressSource[indexPath.row])
+            navigationController?.pushViewController(controller, animated: true)
+        case .select:
+            NotificationCenter.postNotification(name: .selectAddress, userInfo: ["address": addressSource[indexPath.row]])
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        switch type {
+        case .modify:
+            return true
+        case .select:
+            return false
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
@@ -127,7 +154,7 @@ extension AddressListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-
+        
         HUD.wait()
         AddressAPI
             .deleteAddress(addressId: addressSource[indexPath.row].id ?? 0)

@@ -16,6 +16,16 @@ class ConfirmOrderController: BaseListViewController {
     let bottomView = OrderBottomView.initFromNib()
     let cartMsg: [(cart: Cart, goods: Goods)]
     
+    var selectAddress: Address? {
+        didSet {
+            guard let selectAddress = selectAddress else {
+                return
+            }
+            source = DataFactory.sectionItem.prepareOrderConfirmSoure(address: selectAddress, cartMsg: (cartMsg))
+            adapter.reloadData(completion: nil)
+        }
+    }
+    
     init(cartMsg: [(cart: Cart, goods: Goods)]) {
         self.cartMsg = cartMsg
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +39,11 @@ class ConfirmOrderController: BaseListViewController {
         super.viewDidLoad()
         setupUI()
         fetch()
+        NotificationCenter.registerNotification(self, #selector(updateAddress(notification:)), name: .selectAddress)
+    }
+    
+    deinit {
+        NotificationCenter.remove(self)
     }
     
     private func setupUI() {
@@ -58,6 +73,11 @@ class ConfirmOrderController: BaseListViewController {
             make.bottom.equalTo(bottomView.snp.top)
         }
     }
+    
+    @objc
+    private func updateAddress(notification: Notification) {
+        selectAddress = notification.userInfo!["address"] as? Address
+    }
 }
 
 extension ConfirmOrderController {
@@ -71,8 +91,7 @@ extension ConfirmOrderController {
             .then { [weak self] addresses -> Void in
                 let defaultAddress = addresses.filter { $0.isDefault ?? 0 == 1 }
                 if defaultAddress.count > 0 {
-                    self?.source = DataFactory.sectionItem.prepareOrderConfirmSoure(address: defaultAddress.first!, cartMsg: (self?.cartMsg)!)
-                    self?.adapter.reloadData(completion: nil)
+                    self?.selectAddress = defaultAddress.first
                 } else {
                     
                 }
@@ -103,7 +122,7 @@ extension ConfirmOrderController: ListAdapterDataSource {
 
 extension ConfirmOrderController: OrderAdressSectionControllerDelegate {
     func didSelectOrderAddressItem() {
-        navigationController?.pushViewController(AddressListController(), animated: true)
+        navigationController?.pushViewController(AddressListController(type: .select), animated: true)
     }
 }
 
