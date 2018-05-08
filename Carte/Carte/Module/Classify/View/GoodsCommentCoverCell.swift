@@ -52,7 +52,8 @@ class GoodsCommentCoverCell: UICollectionViewCell {
     }
     
     static func calculateHeight(content: String, shap: Shap) -> CGFloat {
-        let height =  CalculateService.Text.calculateSize(NSAttributedString.attribute(content, .black, fontSize: 17), CalculateService.Text.Base.width(UIScreen.screenWidth - 30)).height
+        let height =  CalculateService.Text.calculateSize(NSAttributedString.attribute(content, .black, fontSize: 17),
+                                                          CalculateService.Text.Base.width(UIScreen.screenWidth - 30)).height
         switch shap {
         case .cover:
             return height + 130
@@ -63,7 +64,6 @@ class GoodsCommentCoverCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     private func config() {
