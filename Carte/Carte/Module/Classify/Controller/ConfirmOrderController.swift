@@ -52,11 +52,13 @@ class ConfirmOrderController: BaseListViewController {
         bottomView.delegate = self
         adapter.dataSource = self
         
-        var allCoust: Double = 0.0
+        var allPostage: Double = 0.0
+        var allCost: Double = 0.0
         for msg in cartMsg {
-            allCoust = allCoust + Double(msg.cart.quantity ?? 0) * (msg.goods.price ?? 0.0)
+            allPostage = allPostage + (msg.goods.postage ?? 0.0)
+            allCost = allCost + Double(msg.cart.quantity ?? 0) * (msg.goods.price ?? 0.0)
         }
-        bottomView.countLabel.text = "合计：\(allCoust)元"
+        bottomView.countLabel.text = "合计：\(allPostage + allCost)元"
     }
     
     override func addConstraints() {
