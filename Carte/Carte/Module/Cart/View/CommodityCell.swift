@@ -111,6 +111,7 @@ class CommodityCell: UICollectionViewCell {
         ClassifyAPI
             .fetchGoodsDetail(cart.goodsId ?? 0)
             .then { [weak self] (goods) -> Void in
+                NotificationCenter.postNotification(name: .getGoodsDetail, userInfo: ["goods": goods])
                 self?.goods = goods
                 self?.model = DataFactory.viewRequired.matchCommodityCellRequired(goods: goods, cart: cart)
             }

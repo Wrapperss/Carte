@@ -18,6 +18,8 @@ class CartController: BaseListViewController {
     
     var currentState = CartBottomView.State.buy
     
+    var selectGoods = [Goods]()
+    
     var allCart = [Cart]()
     var selectCart = [Cart]()
     
@@ -33,11 +35,22 @@ class CartController: BaseListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        NotificationCenter.registerNotification(self, #selector(addGoods(notification:)), name: CreamsNotificationName.getGoodsDetail)
+    }
+    
+    deinit {
+        NotificationCenter.remove(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetch()
+    }
+    
+    @objc
+    private func addGoods(notification: Notification) {
+        let goods = notification.userInfo!["goods"] as! Goods
+        selectGoods.append(goods)
     }
     
     private func setupUI() {
@@ -186,7 +199,17 @@ extension CartController: CartBottomViewDelegate {
             bottomView.checkButton.on = false
             bottomView.allCountLabel.text = "合计：0元"
         case .buy:
-            break
+            var cartMsg = [(cart: Cart, goods: Goods)]()
+            for cart in selectCart {
+                for goods in selectGoods {
+                    if cart.goodsId ?? 0 == goods.id ?? 0 {
+                        cartMsg.append((cart, goods))
+                    }
+                }
+            }
+            
+            let controller = ConfirmOrderController(cartMsg: cartMsg)
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
     
