@@ -7,6 +7,11 @@ class OrderGoodsService extends Service {
     const result = await this.app.mysql.insert('Order_Goods', targets)
     return result.insertId;
   }
+
+  async findByOrderId(orderId) {
+    const result = await this.app.mysql.select("Order_Goods", { orderId });
+    return result;
+  }
 }
 
 module.exports = OrderGoodsService;

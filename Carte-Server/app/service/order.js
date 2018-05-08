@@ -10,11 +10,12 @@ class OrderService extends Service {
 
   async find(id) {
     const order = await this.app.mysql.get('Order', { id });
+    console.log(order);
     return order;
   }
 
-  async findall() {
-    const orders = await this.app.mysql.get('Order');
+  async findAll() {
+    const orders = await this.app.mysql.select('Order');
     return orders
   }
 
@@ -26,6 +27,11 @@ class OrderService extends Service {
   async update(target) {
     const result = await this.app.mysql.update('Order', target)
     return result.affectedRows === 1;
+  }
+
+  async findOrderByUserId(userId) {
+    const orders = await this.app.mysql.select('Order', { userId });
+    return orders;
   }
 }
 

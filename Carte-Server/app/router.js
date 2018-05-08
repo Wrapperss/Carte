@@ -48,4 +48,8 @@ module.exports = app => {
   app.post('/api/comment', app.controller.comment.create);
   app.get('/api/goods/comment/:goodsId', app.controller.comment.getGoodsComment);
 
+
+  //新建订单
+  app.resources('order', '/api/order', 'order');
+  app.get('/api/order/user/:userId', app.controller.order.findUserOrder)
 };
