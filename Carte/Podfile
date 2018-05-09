@@ -34,7 +34,7 @@ pod 'Onboard' # 引导页
 pod 'HBDNavigationBar'
 pod 'PasswordTextField'
 pod 'BEMCheckBox' #确认操作的动画库
-pod 'WMPageController', :git => 'https://github.com/LeeShiYoung/WMPageController.git'
+pod 'WMPageController', '~> 2.4.0' 
 # 动画
 pod 'SkeletonView'
 pod 'Hero'

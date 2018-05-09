@@ -50,6 +50,8 @@
 		9F4459802099C94100892F9B /* ModifyUserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */; };
 		9F4B737A20A2905B0030E8E2 /* Classify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B737920A2905B0030E8E2 /* Classify.storyboard */; };
 		9F4B737C20A291980030E8E2 /* PayForGoodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */; };
+		9F58E5C320A2D0A700499DAB /* OrderListRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58E5C220A2D0A700499DAB /* OrderListRootController.swift */; };
+		9F58E5C520A2D30E00499DAB /* OrderListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58E5C420A2D30E00499DAB /* OrderListController.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
 		9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E292022EF19004C4D51 /* MineController.swift */; };
@@ -290,6 +292,8 @@
 		9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserInfoController.swift; sourceTree = "<group>"; };
 		9F4B737920A2905B0030E8E2 /* Classify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Classify.storyboard; sourceTree = "<group>"; };
 		9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForGoodsController.swift; sourceTree = "<group>"; };
+		9F58E5C220A2D0A700499DAB /* OrderListRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListRootController.swift; sourceTree = "<group>"; };
+		9F58E5C420A2D30E00499DAB /* OrderListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListController.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
 		9F671E292022EF19004C4D51 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
@@ -509,7 +513,6 @@
 			isa = PBXGroup;
 			children = (
 				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
-				9F77B52F20A17E6500F8E91B /* OrderFactory.swift */,
 				9F4B737920A2905B0030E8E2 /* Classify.storyboard */,
 				9FBEBEF3209AC47000C03102 /* Model */,
 				9F08EE9B207B382E0021F4DD /* View */,
@@ -526,9 +529,6 @@
 				9FC3B201209D488200A05E83 /* GoodsDetailController.swift */,
 				9FC3B20F209D865600A05E83 /* MoreInfoController.swift */,
 				9F77B51F20A12F8200F8E91B /* CommentListController.swift */,
-				9F77B52120A1416600F8E91B /* OrderDetailController.swift */,
-				9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */,
-				9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -617,7 +617,6 @@
 			isa = PBXGroup;
 			children = (
 				9F6E001C209FFCD800EDE3C2 /* Cart.swift */,
-				9F77B53320A1D5A500F8E91B /* OrderContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -733,6 +732,36 @@
 				9F6E0017209FE71500EDE3C2 /* CollectionGoodsController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F58E5BF20A2D04B00499DAB /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9F58E5C120A2D08300499DAB /* Model */,
+				9F58E5C020A2D05E00499DAB /* Controller */,
+				9F77B52F20A17E6500F8E91B /* OrderFactory.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		9F58E5C020A2D05E00499DAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F77B52120A1416600F8E91B /* OrderDetailController.swift */,
+				9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */,
+				9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */,
+				9F58E5C220A2D0A700499DAB /* OrderListRootController.swift */,
+				9F58E5C420A2D30E00499DAB /* OrderListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F58E5C120A2D08300499DAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F77B53320A1D5A500F8E91B /* OrderContent.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9F671E232022E990004C4D51 /* Factory */ = {
@@ -1176,6 +1205,7 @@
 		9FF559BD201083C4004EB3F2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9F58E5BF20A2D04B00499DAB /* Order */,
 				9F6E0019209FE7AC00EDE3C2 /* API */,
 				9F671E3920231C01004C4D51 /* Main */,
 				9F96C2AE207A50A9004970D2 /* Authentication */,
@@ -1799,6 +1829,7 @@
 				9F96C2B1207A523C004970D2 /* LoginViewController.swift in Sources */,
 				9FAF7570208C68A500009449 /* UIView+Extension.swift in Sources */,
 				9FAF757B208C68A500009449 /* Number+Date.swift in Sources */,
+				9F58E5C320A2D0A700499DAB /* OrderListRootController.swift in Sources */,
 				9F671E2C2022EF57004C4D51 /* MineViewModel.swift in Sources */,
 				9F0AA605209EC61F003B0436 /* AddressListController.swift in Sources */,
 				9F77B51C20A12AFA00F8E91B /* CommentAPI.swift in Sources */,
@@ -1812,6 +1843,7 @@
 				9F37785E2078CBC000DFCC38 /* SVInfiniteNoMoreDataView.m in Sources */,
 				9FAF74FE208C2F6700009449 /* Indicator.swift in Sources */,
 				9FAF7575208C68A500009449 /* String+Extension.swift in Sources */,
+				9F58E5C520A2D30E00499DAB /* OrderListController.swift in Sources */,
 				9FAF74A0208C1F3700009449 /* FormUtil.swift in Sources */,
 				9FF5598D200F8D28004EB3F2 /* AppDelegate.swift in Sources */,
 				9FAF74B2208C1F3700009449 /* ImageElementBox.swift in Sources */,

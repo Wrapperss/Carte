@@ -41,7 +41,7 @@ extension MineController {
         if indexPath.row == 0 { // 个人信息
             
         } else if indexPath.row == 1 { //我的订单
-            
+            navigationController?.pushViewController(OrderListRootController(), animated: true)
         } else if indexPath.row == 2 { //订单分类
             
         } else if indexPath.row == 3 { //我喜欢的商品

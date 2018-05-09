@@ -90,7 +90,7 @@ PODS:
   - UPYUN/class (2.0.2)
   - UPYUN/class_deprecated (2.0.2)
   - ViewAnimator (1.0.4)
-  - WMPageController (2.5.0)
+  - WMPageController (2.4.3)
   - XXNibBridge (2.3.1)
   - YYText (1.0.7)
 
@@ -135,7 +135,7 @@ DEPENDENCIES:
   - Unbox
   - UPYUN (~> 2.0.2)
   - ViewAnimator
-  - WMPageController (from `https://github.com/LeeShiYoung/WMPageController.git`)
+  - WMPageController (~> 2.4.0)
   - XXNibBridge (from `https://github.com/sunnyxx/XXNibBridge.git`)
   - YYText
 
@@ -146,8 +146,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/LeeShiYoung/NVActivityIndicatorView.git
   SVProgressHUD:
     :git: https://github.com/LeeShiYoung/SVProgressHUD.git
-  WMPageController:
-    :git: https://github.com/LeeShiYoung/WMPageController.git
   XXNibBridge:
     :git: https://github.com/sunnyxx/XXNibBridge.git
 
@@ -161,9 +159,6 @@ CHECKOUT OPTIONS:
   SVProgressHUD:
     :commit: 05a4a64bab727d349987d645c307225870d89bba
     :git: https://github.com/LeeShiYoung/SVProgressHUD.git
-  WMPageController:
-    :commit: 8f5153baac1a8136b43a27de981e9879d615b11a
-    :git: https://github.com/LeeShiYoung/WMPageController.git
   XXNibBridge:
     :commit: 57c6b7703a811e96b75190c1421f0a61a0638a99
     :git: https://github.com/sunnyxx/XXNibBridge.git
@@ -210,10 +205,10 @@ SPEC CHECKSUMS:
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
   UPYUN: daef9046168c4cd860814a31698411cbe02b1302
   ViewAnimator: 1f3fa25f3c9010ab0dda06cf9e3e49a4b55834ff
-  WMPageController: 9dfb2e5a3dd2cc623df19e608a96ee00c03bbfa2
+  WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: c40adc90421f2ed74776e19d690593c9d28d328d
+PODFILE CHECKSUM: 53cfdf0ba19f3eb334471350d0b9ac5bb124dfb4
 
 COCOAPODS: 1.4.0
