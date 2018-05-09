@@ -15,6 +15,7 @@ enum CartAPI {
     case create(Cart)
     case remove(Int)
     case update(Int, Cart)
+    case mutilRemove([Int])
 }
 
 extension CartAPI: TargetType {
@@ -28,12 +29,14 @@ extension CartAPI: TargetType {
             return "api/cart/\(cartId)"
         case .update(let cartId, _):
             return "api/cart/\(cartId)"
+        case .mutilRemove:
+            return "api/mutilRemove/cart"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .create:
+        case .create, .mutilRemove:
             return .post
         case .update:
             return  .put
@@ -50,6 +53,8 @@ extension CartAPI: TargetType {
             return cart.toDictionary()
         case .update(_, let cart):
             return cart.toDictionary()
+        case .mutilRemove(let ids):
+            return ["ids": ids]
         default:
             return nil
         }
@@ -71,5 +76,9 @@ extension CartAPI {
     
     static func updateCart(cartId: Int, cart: Cart) -> Promise<Cart> {
         return Request<CartAPI>().request(.update(cartId, cart))
+    }
+    
+    static func postMutilRemoveCart(_ ids: [Int]) -> Promise<BlankResponse> {
+        return Request<CartAPI>().request(.mutilRemove(ids))
     }
 }

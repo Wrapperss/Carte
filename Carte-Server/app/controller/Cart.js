@@ -40,6 +40,16 @@ class CartController extends Controller {
     ctx.status = 200;
   }
 
+  async mutilRemove() {
+    const { ctx, service } = this;
+    const { ids } = ctx.request.body;
+    for (let index in ids ) {
+      await service.cart.remove(parseInt(ids[index]))
+    }
+    ctx.body = ids;
+    ctx.status = 200;
+  }
+
   async showUserCart() {
     const { ctx, service } = this;
     const { userId } = ctx.params;

@@ -208,8 +208,10 @@ extension CartController: CartBottomViewDelegate {
                 }
             }
             
-            let controller = ConfirmOrderController(cartMsg: cartMsg)
-            navigationController?.pushViewController(controller, animated: true)
+            if cartMsg.count > 0 {
+                let controller = ConfirmOrderController(cartMsg: cartMsg, isFromCart: true)
+                navigationController?.pushViewController(controller, animated: true)
+            }
         }
     }
     
@@ -230,6 +232,8 @@ extension CartController {
                 self?.allCart = carts
                 self?.cartSource = DataFactory.sectionItem.prepareCommoditySectionItem(carts)
                 self?.adapter.reloadData(completion: nil)
+                self?.bottomView.checkButton.on = false
+                self?.bottomView.allCountLabel.text = "合计：0元"
             }
             .catch { (_) in
                 HUD.showError("发生错误")

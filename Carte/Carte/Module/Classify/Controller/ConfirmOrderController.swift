@@ -18,6 +18,7 @@ class ConfirmOrderController: BaseListViewController {
     
     var allPostage: Double = 0.0
     var allCost: Double = 0.0
+    var isFromCart: Bool = false
     
     var selectAddress: Address? {
         didSet {
@@ -29,8 +30,9 @@ class ConfirmOrderController: BaseListViewController {
         }
     }
     
-    init(cartMsg: [(cart: Cart, goods: Goods)]) {
+    init(cartMsg: [(cart: Cart, goods: Goods)], isFromCart: Bool = false) {
         self.cartMsg = cartMsg
+        self.isFromCart = isFromCart
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -106,6 +108,16 @@ extension ConfirmOrderController {
                 HUD.showError("发生错误")
             }
     }
+    
+    fileprivate func removeFromCart() {
+        let ids = cartMsg.map { $0.cart.id ?? 0 }
+        CartAPI
+            .postMutilRemoveCart(ids)
+            .then { (_) -> Void in
+            }
+            .catch { (_) in
+            }
+    }
 }
 
 extension ConfirmOrderController: ListAdapterDataSource {
@@ -146,8 +158,12 @@ extension ConfirmOrderController: OrderBottomViewDelegate {
             .always {
                 HUD.clear()
             }
-            .then { (id) -> Void in
+            .then { [weak self] (id) -> Void in
                 HUD.showSuccess("创建订单成功")
+                if self?.isFromCart ?? false {
+                    self?.removeFromCart()
+                }
+                
                 Delay(time: 1.0, task: { [weak self] in
                     let controller = PayForGoodsController.initFromStoryboard(name: .classify)
                     order.id = id

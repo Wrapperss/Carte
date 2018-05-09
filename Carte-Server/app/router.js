@@ -13,6 +13,9 @@ module.exports = app => {
 
   //购物车
   app.resources('cart', '/api/cart', app.controller.cart);
+  //批量删除购物车
+  app.post('/api/mutilRemove/cart', app.controller.cart.mutilRemove)
+
 
   app.get('/api/cart/user/:userId', app.controller.cart.showUserCart);
 

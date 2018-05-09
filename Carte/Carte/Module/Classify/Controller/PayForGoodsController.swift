@@ -52,7 +52,6 @@ class PayForGoodsController: UIViewController {
                     errpr.showHUD()
                 })
         }
-        
     }
     
     @IBAction func backAction(_ sender: Any) {
