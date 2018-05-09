@@ -22,6 +22,23 @@ class OrderListController: BaseListViewController {
         case needToReceipt
         case needToFreeBack
         case needToRefund
+        
+        func confit(text: String) -> Bool {
+            switch self {
+            case .all:
+                return true
+            case .needToPay:
+                return text == "待付款"
+            case .needToDeliver:
+                return text == "待发货"
+            case .needToReceipt:
+                return text == "待收货"
+            case .needToFreeBack:
+                return text == "待反馈"
+            case .needToRefund:
+                return text == "退款"
+            }
+        }
     }
     
     var status: Status
@@ -31,7 +48,7 @@ class OrderListController: BaseListViewController {
             guard let orderContents = orderContents else {
                 return
             }
-            source = orderContents.flatMap { DataFactory.sectionItem.prepareOrderListCell($0) }
+            source = orderContents.flatMap { DataFactory.sectionItem.prepareOrderListCell($0, status: status) }
             adapter.reloadData(completion: nil)
         }
     }
@@ -70,7 +87,7 @@ extension OrderListController {
         OrderAPI
             .fetchUserOrder(Default.Account.integer(forKey: .userId))
             .then { [weak self] orderContents -> Void in
-                self?.orderContents = orderContents
+                self?.orderContents = orderContents.filter { (self?.status ?? .all).confit(text: $0.order?.status ?? "") }
             }
             .catch { (_) in
                 HUD.showError("发生错误")
@@ -88,7 +105,7 @@ extension OrderListController: ListAdapterDataSource {
         if object is OrderSectionItem {
             return OrderSectionController(delegate: self)
         } else if object is FormItem {
-            return FormSectionController()
+            return FormSectionController(inset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
         }
         return ListSectionController()
     }

@@ -62,7 +62,7 @@ class OrderCell: UICollectionViewCell {
                 self?.model = OrderCellRequired(coverImage: goods.picture ?? "",
                                                 title: goods.name ?? "",
                                                 description: goods.descriptionField ?? "",
-                                                priceString: "￥\(goods.price ?? 0.0)")
+                                                priceString: "￥\(goods.price ?? 0.0) * \(orderGoods.quantity ?? 0)")
             }
             .catch { (_) in
             }

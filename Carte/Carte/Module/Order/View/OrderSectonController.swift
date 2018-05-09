@@ -32,6 +32,7 @@ class OrderSectionController: ListSectionController {
     init(delegate: OrderSectionControllerDelegate) {
         self.delegate = delegate
         super.init()
+        inset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
     override func numberOfItems() -> Int {
@@ -39,7 +40,7 @@ class OrderSectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: UIScreen.screenWidth, height: 100)
+        return CGSize(width: UIScreen.screenWidth - 20, height: 100)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -53,6 +54,10 @@ class OrderSectionController: ListSectionController {
             return
         }
         delegate.didSelectGoodsItem(goodsId)
+    }
+    
+    override func didUpdate(to object: Any) {
+        self.object = object as? OrderSectionItem
     }
 }
 

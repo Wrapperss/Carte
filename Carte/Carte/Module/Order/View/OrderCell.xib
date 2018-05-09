@@ -46,7 +46,7 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="pHR-3a-WmN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5bQ-e1-dAV"/>
                 <constraint firstItem="Qi5-UB-1q9" firstAttribute="trailing" secondItem="6LH-Lo-h6P" secondAttribute="trailing" id="EGN-fe-s7v"/>
@@ -68,7 +68,7 @@
                 <outlet property="priceLabel" destination="Qi5-UB-1q9" id="auS-bh-IaZ"/>
                 <outlet property="titleLabel" destination="h1O-7f-Nc7" id="CjW-Xo-2l6"/>
             </connections>
-            <point key="canvasLocation" x="-253" y="-73"/>
+            <point key="canvasLocation" x="-726" y="-68"/>
         </collectionViewCell>
     </objects>
 </document>
