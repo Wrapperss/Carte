@@ -24,6 +24,7 @@ class OrderListRootController: WMPageController {
     private func setupUI() {
         setupNavigaion()
         view.backgroundColor = .backgroundColor
+        menuView?.backgroundColor = .white
     }
     
     private func setupNavigaion() {

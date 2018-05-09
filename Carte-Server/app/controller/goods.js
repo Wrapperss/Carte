@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class GoodsController extends Controller {
   async showClassifyGoods() {
       const { ctx, service } = this;
-      const categoryId = ctx.params;
+      const { categoryId } = ctx.params;
       const goods = await service.goods.showPartGoods(categoryId);
       ctx.body = goods;
       ctx.state = 200;
@@ -13,7 +13,7 @@ class GoodsController extends Controller {
 
   async showClassifyGoodsOrderByVolume() {
       const {ctx, service} = this;
-      const categoryId = ctx.params;
+      const { categoryId } = ctx.params;
       const goods = await service.goods.showPartGoodsOrderByVolume(categoryId);
       ctx.body = goods;
       ctx.state = 200;
@@ -21,7 +21,7 @@ class GoodsController extends Controller {
 
   async showClassifyGoodsOrderByPrice() {
     const {ctx, service} = this;
-    const categoryId = ctx.params;
+    const { categoryId } = ctx.params;
     const goods = await service.goods.showClassifyGoodsOrderByPrice(categoryId);
     ctx.body = goods;
     ctx.state = 200;
@@ -29,8 +29,8 @@ class GoodsController extends Controller {
 
   async showGoodDetail() {
       const { ctx, service} = this;
-      const goodsId = ctx.params;
-      const goods = await service.goods.find(goodsId);
+      const { id } = ctx.params;
+      const goods = await service.goods.find(id);
       ctx.body = goods
       ctx.state = 200
   }

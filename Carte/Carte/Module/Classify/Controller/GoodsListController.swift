@@ -74,8 +74,8 @@ extension GoodsListController {
         switch currentSelect {
         case .defaultSelect:
             ClassifyAPI
-                //            .fetchGoodsInCategory(category.categoryId)
-                .fetchGoodsInCategory(1)
+                .fetchGoodsInCategory(category.categoryId)
+//                .fetchGoodsInCategory(1)
                 .always {
                     HUD.clear()
                 }
@@ -88,8 +88,8 @@ extension GoodsListController {
             }
         case .sales:
             ClassifyAPI
-                //            .fetchGoodsInCategoryByVolume(category.categoryId)
-                .fetchGoodsInCategoryByVolume(1)
+                .fetchGoodsInCategoryByVolume(category.categoryId)
+//                .fetchGoodsInCategoryByVolume(1)
                 .always {
                     HUD.clear()
                 }
@@ -102,8 +102,8 @@ extension GoodsListController {
             }
         case .price:
             ClassifyAPI
-                //            .fetchGoodsInCategoryByPrice(category.categoryId)
-                .fetchGoodsInCategoryByPrice(1)
+                .fetchGoodsInCategoryByPrice(category.categoryId)
+//                .fetchGoodsInCategoryByPrice(1)
                 .always {
                     HUD.clear()
                 }

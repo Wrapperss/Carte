@@ -65,18 +65,19 @@ class GoodsDetailController: BaseListViewController {
     }
     
     override func addConstraints() {
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-60)
-        }
-        
         view.addSubview(banerView)
         banerView.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             make.height.equalTo(60)
         }
+        
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(banerView.snp.top)
+        }
+        
     }
     
     
