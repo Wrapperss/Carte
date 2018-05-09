@@ -64,6 +64,27 @@ class OrderController extends Controller {
     ctx.body = result;
     ctx.status = 200;
   }
+
+  async payForTheOrder() {
+    const { ctx, service } = this;
+    const { userId, orderId } = ctx.params;
+    const user = await service.user.find(userId);
+    const order = await service.order.find(orderId);
+    if (parseFloat(user.balance) < parseFloat(order.payment)) {
+      ctx.body = { "error": "余额不足" };
+      ctx.status = 403;
+    } else {
+      user.blaance = parseFloat(user.balance) - parseFloat(order.payment);
+      const userResult = await service.user.update(user);
+      order.state = "待发货";
+      const orderResult = await service.order.update(order);
+      ctx.body = {
+        userResult,
+        orderResult
+      }
+      ctx.status = 201
+    }
+  }
 }
 
 module.exports = OrderController;

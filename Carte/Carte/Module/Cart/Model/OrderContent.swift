@@ -9,22 +9,33 @@
 import Foundation
 import Unbox
 
-struct OrderContent: Unboxable {
+struct OrderContent: Unboxable, DictionaryConvertible {
     
     struct Order: Unboxable, DictionaryConvertible {
         
-        let amount: Int?
+        let amount: Double?
         let createDate: String?
         let dealDate: String?
-        let fare: Int?
+        let fare: Double?
         let id: Int?
-        let numbering: String?
         let payDate: String?
-        let payment: Int?
+        let payment: Double?
         let shipDate: String?
         let status: String?
         let userId: Int?
         
+        init(id: Int? = nil, userId: Int, amount: Double, fare: Double, payment: Double, createDate: String, status: String = "待付款", dealDate: String? = nil, payDate: String? = nil, shipDate: String? = nil) {
+            self.id = id
+            self.userId = userId
+            self.amount = amount
+            self.fare = fare
+            self.payment = payment
+            self.createDate = createDate
+            self.status = status
+            self.dealDate = dealDate
+            self.payDate = payDate
+            self.shipDate = shipDate
+        }
         
         init(unboxer: Unboxer) throws {
             amount = unboxer.unbox(key: "amount")
@@ -32,7 +43,6 @@ struct OrderContent: Unboxable {
             dealDate = unboxer.unbox(key: "dealDate")
             fare = unboxer.unbox(key: "fare")
             id = unboxer.unbox(key: "id")
-            numbering = unboxer.unbox(key: "numbering")
             payDate = unboxer.unbox(key: "payDate")
             payment = unboxer.unbox(key: "payment")
             shipDate = unboxer.unbox(key: "shipDate")
@@ -42,13 +52,19 @@ struct OrderContent: Unboxable {
         
     }
     
-    struct OrderGoods: Unboxable {
+    struct OrderGoods: Unboxable, DictionaryConvertible {
         
         let goodsId: Int?
         let id: Int?
         let orderId: Int?
         let quantity: Int?
         
+        init(id: Int? = nil, goodsId: Int, orderId: Int? = nil, quantity: Int) {
+            self.id = id
+            self.goodsId = goodsId
+            self.orderId = orderId
+            self.quantity = quantity
+        }
         
         init(unboxer: Unboxer) throws {
             goodsId = unboxer.unbox(key: "goodsId")
@@ -61,6 +77,11 @@ struct OrderContent: Unboxable {
     
     let orderGoods: [OrderGoods]?
     let order: Order?
+    
+    init(orderGoods: [OrderGoods], order: Order) {
+        self.order = order
+        self.orderGoods = orderGoods
+    }
     
     
     init(unboxer: Unboxer) throws {

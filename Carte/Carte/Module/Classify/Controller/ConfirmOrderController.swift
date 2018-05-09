@@ -16,6 +16,9 @@ class ConfirmOrderController: BaseListViewController {
     let bottomView = OrderBottomView.initFromNib()
     let cartMsg: [(cart: Cart, goods: Goods)]
     
+    var allPostage: Double = 0.0
+    var allCost: Double = 0.0
+    
     var selectAddress: Address? {
         didSet {
             guard let selectAddress = selectAddress else {
@@ -52,8 +55,8 @@ class ConfirmOrderController: BaseListViewController {
         bottomView.delegate = self
         adapter.dataSource = self
         
-        var allPostage: Double = 0.0
-        var allCost: Double = 0.0
+        allPostage = 0.0
+        allCost = 0.0
         for msg in cartMsg {
             allPostage = allPostage + (msg.goods.postage ?? 0.0)
             allCost = allCost + Double(msg.cart.quantity ?? 0) * (msg.goods.price ?? 0.0)
@@ -130,6 +133,24 @@ extension ConfirmOrderController: OrderAdressSectionControllerDelegate {
 
 extension ConfirmOrderController: OrderBottomViewDelegate {
     func payButtonTap() {
+        HUD.wait()
+        let order = OrderContent.Order(userId: Default.Account.integer(forKey: .userId),
+                                       amount: allCost,
+                                       fare: allPostage,
+                                       payment: (allPostage + allCost),
+                                       createDate: Date().fullString())
+        let orderGoods: [OrderContent.OrderGoods] = cartMsg.map { OrderContent.OrderGoods(goodsId: $0.goods.id ?? 0, quantity: $0.cart.quantity ?? 0) }
         
+        OrderAPI
+            .postOrder(OrderContent(orderGoods: orderGoods, order: order))
+            .always {
+                HUD.clear()
+            }
+            .then { (_) -> Void in
+                
+            }
+            .catch { (_) in
+                HUD.showError("提交订单失败")
+            }
     }
 }

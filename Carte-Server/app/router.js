@@ -51,5 +51,9 @@ module.exports = app => {
 
   //新建订单
   app.resources('order', '/api/order', 'order');
+  //查看用户的订单
   app.get('/api/order/user/:userId', app.controller.order.findUserOrder)
+
+  //支付订单
+  app.put('/api/pay/order/:userId/:orderId', app.controller.order.payForTheOrder);
 };

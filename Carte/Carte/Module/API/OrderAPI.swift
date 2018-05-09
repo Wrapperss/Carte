@@ -11,9 +11,10 @@ import Moya
 import PromiseKit
 
 enum OrderAPI {
-    case create(OrderContent.Order)
+    case create(OrderContent)
     case update(Int, OrderContent.Order)
     case usersOrder(Int)
+    case payTheOrderr(Int, Int)
 }
 
 extension OrderAPI: TargetType {
@@ -25,6 +26,8 @@ extension OrderAPI: TargetType {
             return "api/order/\(orderId)"
         case .usersOrder(let userId):
             return "api/order/user/\(userId)"
+        case .payTheOrderr(let userId, let orderId):
+            return "api/pay/order/\(userId)/\(orderId)"
         }
     }
     
@@ -32,7 +35,7 @@ extension OrderAPI: TargetType {
         switch self {
         case .create:
             return .post
-        case .update:
+        case .update, .payTheOrderr:
             return .put
         case .usersOrder:
             return .get
@@ -45,14 +48,14 @@ extension OrderAPI: TargetType {
             return order.toDictionary()
         case .update(_, let order):
             return order.toDictionary()
-        case .usersOrder:
+        case .usersOrder, .payTheOrderr:
             return nil
         }
     }
 }
 
 extension OrderAPI {
-    static func postOrder(_ order: OrderContent.Order) -> Promise<BlankResponse> {
+    static func postOrder(_ order: OrderContent) -> Promise<BlankResponse> {
         return Request<OrderAPI>().request(.create(order))
     }
     
@@ -62,5 +65,9 @@ extension OrderAPI {
     
     static func fetchUserOrder(_ userId: Int) -> Promise<[OrderContent]> {
         return Request<OrderAPI>().requestList(.usersOrder(userId))
+    }
+    
+    static func putPayForTheOrder(userId: Int, orderId: Int) -> Promise<BlankResponse> {
+        return Request<OrderAPI>().request(.payTheOrderr(userId, orderId))
     }
 }

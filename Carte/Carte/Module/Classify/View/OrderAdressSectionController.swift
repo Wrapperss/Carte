@@ -31,7 +31,7 @@ class OrderAdressSectionController: ListSectionController {
     init(delegate: OrderAdressSectionControllerDelegate) {
         self.delegate = delegate
         super.init()
-        inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        inset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
     override func numberOfItems() -> Int {
