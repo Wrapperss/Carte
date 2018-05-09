@@ -31,7 +31,7 @@ class AnyCancelable: Cancellable {
 final class Request<Target>: MoyaProvider<Target> where Target: TargetType {
     
     public init(plugins: [PluginType] = []) {
-        var extenPlugins: [PluginType] = [PluginType]()
+        var extenPlugins: [PluginType] = [RequestErrorPlugin.default]
         #if DEBUG
         extenPlugins.append(RequestLoggerPlugin(verbose: true))
         #endif

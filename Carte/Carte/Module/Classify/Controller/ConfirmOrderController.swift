@@ -134,7 +134,7 @@ extension ConfirmOrderController: OrderAdressSectionControllerDelegate {
 extension ConfirmOrderController: OrderBottomViewDelegate {
     func payButtonTap() {
         HUD.wait()
-        let order = OrderContent.Order(userId: Default.Account.integer(forKey: .userId),
+        var order = OrderContent.Order(userId: Default.Account.integer(forKey: .userId),
                                        amount: allCost,
                                        fare: allPostage,
                                        payment: (allPostage + allCost),
@@ -146,11 +146,17 @@ extension ConfirmOrderController: OrderBottomViewDelegate {
             .always {
                 HUD.clear()
             }
-            .then { (_) -> Void in
-                
+            .then { (id) -> Void in
+                HUD.showSuccess("创建订单成功")
+                Delay(time: 1.0, task: { [weak self] in
+                    let controller = PayForGoodsController.initFromStoryboard(name: .classify)
+                    order.id = id
+                    controller.order = order
+                    self?.navigationController?.pushViewController(controller, animated: true)
+                })
             }
             .catch { (_) in
-                HUD.showError("提交订单失败")
+                HUD.showError("创建订单失败")
             }
     }
 }

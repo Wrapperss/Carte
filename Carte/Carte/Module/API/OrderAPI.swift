@@ -55,8 +55,8 @@ extension OrderAPI: TargetType {
 }
 
 extension OrderAPI {
-    static func postOrder(_ order: OrderContent) -> Promise<BlankResponse> {
-        return Request<OrderAPI>().request(.create(order))
+    static func postOrder(_ order: OrderContent) -> Promise<Int> {
+        return Request<OrderAPI>().requestPlainData(.create(order))
     }
     
     static func updateOrder(orderId: Int, order: OrderContent.Order) -> Promise<BlankResponse> {

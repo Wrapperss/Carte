@@ -10,17 +10,8 @@ import UIKit
 
 enum StoryboardName: String {
     case main = "Main"
-    case building = "Building"
-    case merchant = "Merchant"
-    case authentication = "Authentication"
-    case analysis = "DataAnalysisStoryboard"
-    case search = "Search"
-    case contract = "Contract"
-    case workflow = "Workflow"
+    case classify = "Classify"
     case mine = "Mine"
-    case microBook = "MicroBook"
-    case common = "Common"
-    case navigation = "NavigationEntry"
 
     func storyboard() -> UIStoryboard {
         let storyboard = UIStoryboard(name: self.rawValue, bundle:nil)

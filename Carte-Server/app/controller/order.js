@@ -12,9 +12,7 @@ class OrderController extends Controller {
       orderGoods[index].orderId = order.insertId
       await service.orderGoods.create(orderGoods[index])
     }
-    ctx.body = {
-      order
-    };
+    ctx.body = order.insertId;
     ctx.status = 201;
   }
 
@@ -74,9 +72,9 @@ class OrderController extends Controller {
       ctx.body = { "error": "余额不足" };
       ctx.status = 403;
     } else {
-      user.blaance = parseFloat(user.balance) - parseFloat(order.payment);
+      user.balance = parseFloat(user.balance) - parseFloat(order.payment);
       const userResult = await service.user.update(user);
-      order.state = "待发货";
+      order.status = "待发货";
       const orderResult = await service.order.update(order);
       ctx.body = {
         userResult,

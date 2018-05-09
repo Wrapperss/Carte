@@ -17,7 +17,7 @@ struct OrderContent: Unboxable, DictionaryConvertible {
         let createDate: String?
         let dealDate: String?
         let fare: Double?
-        let id: Int?
+        var id: Int?
         let payDate: String?
         let payment: Double?
         let shipDate: String?

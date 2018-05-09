@@ -48,6 +48,8 @@
 		9F44597C2099B85B00892F9B /* Dispatch_After.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44597B2099B85B00892F9B /* Dispatch_After.swift */; };
 		9F44597E2099B98A00892F9B /* Adaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44597D2099B98A00892F9B /* Adaptor.swift */; };
 		9F4459802099C94100892F9B /* ModifyUserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */; };
+		9F4B737A20A2905B0030E8E2 /* Classify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B737920A2905B0030E8E2 /* Classify.storyboard */; };
+		9F4B737C20A291980030E8E2 /* PayForGoodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */; };
 		9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E242022E9D2004C4D51 /* DataFactory.swift */; };
 		9F671E282022ECCD004C4D51 /* MineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E272022ECCD004C4D51 /* MineFactory.swift */; };
 		9F671E2A2022EF19004C4D51 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F671E292022EF19004C4D51 /* MineController.swift */; };
@@ -286,6 +288,8 @@
 		9F44597B2099B85B00892F9B /* Dispatch_After.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch_After.swift; sourceTree = "<group>"; };
 		9F44597D2099B98A00892F9B /* Adaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adaptor.swift; sourceTree = "<group>"; };
 		9F44597F2099C94100892F9B /* ModifyUserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserInfoController.swift; sourceTree = "<group>"; };
+		9F4B737920A2905B0030E8E2 /* Classify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Classify.storyboard; sourceTree = "<group>"; };
+		9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayForGoodsController.swift; sourceTree = "<group>"; };
 		9F671E242022E9D2004C4D51 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		9F671E272022ECCD004C4D51 /* MineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFactory.swift; sourceTree = "<group>"; };
 		9F671E292022EF19004C4D51 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
@@ -506,6 +510,7 @@
 			children = (
 				9F08EEA0207B3F170021F4DD /* ClassifyFactory.swift */,
 				9F77B52F20A17E6500F8E91B /* OrderFactory.swift */,
+				9F4B737920A2905B0030E8E2 /* Classify.storyboard */,
 				9FBEBEF3209AC47000C03102 /* Model */,
 				9F08EE9B207B382E0021F4DD /* View */,
 				9F08EE98207B1B0D0021F4DD /* Controller */,
@@ -523,6 +528,7 @@
 				9F77B51F20A12F8200F8E91B /* CommentListController.swift */,
 				9F77B52120A1416600F8E91B /* OrderDetailController.swift */,
 				9F77B52320A141BC00F8E91B /* ConfirmOrderController.swift */,
+				9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1369,6 +1375,7 @@
 				9F3778272078A79B00DFCC38 /* CommodityCell.xib in Resources */,
 				9FC3B206209D4B0A00A05E83 /* GoodsHeaderCell.xib in Resources */,
 				9FC3B22A209DE0E400A05E83 /* GoodsCommentCoverCell.xib in Resources */,
+				9F4B737A20A2905B0030E8E2 /* Classify.storyboard in Resources */,
 				9F77B52C20A1799400F8E91B /* OrderAdressCell.xib in Resources */,
 				9F96C29C2079FF82004970D2 /* Assets.xcassets in Resources */,
 				9F96C2A9207A06C9004970D2 /* MagazineCoverCell.xib in Resources */,
@@ -1641,6 +1648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F3778182078939700DFCC38 /* SettingController.swift in Sources */,
+				9F4B737C20A291980030E8E2 /* PayForGoodsController.swift in Sources */,
 				9FAF74BA208C1F3700009449 /* TitleHeaderFormGroup.swift in Sources */,
 				9FAF7519208C325F00009449 /* UserDefaultsExtension.swift in Sources */,
 				9FAF7500208C2F6700009449 /* UIScrollView+MJRefresh+RxSwift.swift in Sources */,
