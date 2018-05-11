@@ -25,6 +25,12 @@
 		9F1ECA0B20A52A0E00F6EE75 /* OrderContentFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */; };
 		9F1ECA0D20A537D100F6EE75 /* AddCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0C20A537D100F6EE75 /* AddCommentController.swift */; };
 		9F1ECA0F20A57FB400F6EE75 /* CommentGoodsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0E20A57FB400F6EE75 /* CommentGoodsListController.swift */; };
+		9F1ECA1220A5A64400F6EE75 /* HomeCategoaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1020A5A64400F6EE75 /* HomeCategoaryCell.swift */; };
+		9F1ECA1320A5A64400F6EE75 /* HomeCategoaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1120A5A64400F6EE75 /* HomeCategoaryCell.xib */; };
+		9F1ECA1720A5B0DA00F6EE75 /* HomeCategoarySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1620A5B0DA00F6EE75 /* HomeCategoarySectionController.swift */; };
+		9F1ECA1920A5B87A00F6EE75 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1820A5B87A00F6EE75 /* HomeAPI.swift */; };
+		9F1ECA1B20A5BA9800F6EE75 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1A20A5BA9800F6EE75 /* HomeModel.swift */; };
+		9F1ECA1D20A5BC5100F6EE75 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA1C20A5BC5100F6EE75 /* HomeFactory.swift */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -266,6 +272,12 @@
 		9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContentFormItem.swift; sourceTree = "<group>"; };
 		9F1ECA0C20A537D100F6EE75 /* AddCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentController.swift; sourceTree = "<group>"; };
 		9F1ECA0E20A57FB400F6EE75 /* CommentGoodsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGoodsListController.swift; sourceTree = "<group>"; };
+		9F1ECA1020A5A64400F6EE75 /* HomeCategoaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoaryCell.swift; sourceTree = "<group>"; };
+		9F1ECA1120A5A64400F6EE75 /* HomeCategoaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCategoaryCell.xib; sourceTree = "<group>"; };
+		9F1ECA1620A5B0DA00F6EE75 /* HomeCategoarySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoarySectionController.swift; sourceTree = "<group>"; };
+		9F1ECA1820A5B87A00F6EE75 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		9F1ECA1A20A5BA9800F6EE75 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		9F1ECA1C20A5BC5100F6EE75 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -833,6 +845,7 @@
 				9F6E001A209FFB7400EDE3C2 /* CartAPI.swift */,
 				9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */,
 				9F77B53120A1D4F300F8E91B /* OrderAPI.swift */,
+				9F1ECA1820A5B87A00F6EE75 /* HomeAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -869,7 +882,7 @@
 		9F737E2A20294AD0006D08A4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9F737E2F20294AF2006D08A4 /* Factory */,
+				9F1ECA1C20A5BC5100F6EE75 /* HomeFactory.swift */,
 				9F737E2E20294AE6006D08A4 /* Controller */,
 				9F737E2D20294AE1006D08A4 /* Model */,
 				9F737E2C20294ADB006D08A4 /* ViewModel */,
@@ -887,6 +900,9 @@
 				9F7CFBC2202B0187004F3ABE /* CarouseCompositionCell.swift */,
 				9F7CFBC4202B0222004F3ABE /* CarouseCompositionSectionController.swift */,
 				9F6F86D4202C36F400C6AF17 /* CarouseSectionController.swift */,
+				9F1ECA1020A5A64400F6EE75 /* HomeCategoaryCell.swift */,
+				9F1ECA1120A5A64400F6EE75 /* HomeCategoaryCell.xib */,
+				9F1ECA1620A5B0DA00F6EE75 /* HomeCategoarySectionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -901,6 +917,7 @@
 		9F737E2D20294AE1006D08A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F1ECA1A20A5BA9800F6EE75 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -911,13 +928,6 @@
 				9F737E3020294B04006D08A4 /* HomeViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9F737E2F20294AF2006D08A4 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		9F737E3220295237006D08A4 /* View */ = {
@@ -1444,6 +1454,7 @@
 				9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
+				9F1ECA1320A5A64400F6EE75 /* HomeCategoaryCell.xib in Resources */,
 				9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
 				9FC3B1FA209C3DC300A05E83 /* TopSelectView.xib in Resources */,
@@ -1730,6 +1741,7 @@
 				9F08EE9E207B38920021F4DD /* SortTitleCell.swift in Sources */,
 				9F4459792099B7B800892F9B /* CreamsDispatchQueuePool.m in Sources */,
 				9FC3B21A209DAF7E00A05E83 /* GoodBanerView.swift in Sources */,
+				9F1ECA1D20A5BC5100F6EE75 /* HomeFactory.swift in Sources */,
 				9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */,
 				9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */,
 				9F58E5CC20A2EB1500499DAB /* OrderSectonController.swift in Sources */,
@@ -1744,6 +1756,7 @@
 				9FAF74F6208C2F1C00009449 /* AutoTestService.swift in Sources */,
 				9F6E001B209FFB7400EDE3C2 /* CartAPI.swift in Sources */,
 				9F4459762099B6A300892F9B /* HUD.swift in Sources */,
+				9F1ECA1720A5B0DA00F6EE75 /* HomeCategoarySectionController.swift in Sources */,
 				9FC3B213209D913C00A05E83 /* GoodsFeaturesCell.swift in Sources */,
 				9FAF74F2208C2F1C00009449 /* DataPrepareService.swift in Sources */,
 				9FAF7579208C68A500009449 /* SwiftError+Extension.swift in Sources */,
@@ -1757,6 +1770,7 @@
 				9F0AA603209EAE8F003B0436 /* Collection.swift in Sources */,
 				9F44597E2099B98A00892F9B /* Adaptor.swift in Sources */,
 				9F0AA601209EAAC3003B0436 /* CollectionAPI.swift in Sources */,
+				9F1ECA1920A5B87A00F6EE75 /* HomeAPI.swift in Sources */,
 				9FAF74AF208C1F3700009449 /* OneArrange.swift in Sources */,
 				9F3778662078CD0700DFCC38 /* Constants.swift in Sources */,
 				9FAF74A1208C1F3700009449 /* TextElement.swift in Sources */,
@@ -1847,10 +1861,12 @@
 				9FAF74F3208C2F1C00009449 /* CalculateService.swift in Sources */,
 				9FC3B229209DE0E400A05E83 /* GoodsCommentCoverCell.swift in Sources */,
 				9F737E7220295506006D08A4 /* IGListDiffableItem.swift in Sources */,
+				9F1ECA1220A5A64400F6EE75 /* HomeCategoaryCell.swift in Sources */,
 				9FAF749F208C1F3700009449 /* FormStorable.swift in Sources */,
 				9FAF7568208C68A500009449 /* TopViewController.swift in Sources */,
 				9FAF74B6208C1F3700009449 /* PasswordTextFieldElement.swift in Sources */,
 				9FBEBEF5209AC48700C03102 /* Category.swift in Sources */,
+				9F1ECA1B20A5BA9800F6EE75 /* HomeModel.swift in Sources */,
 				9F08EE9A207B1B220021F4DD /* ClassifyController.swift in Sources */,
 				9FC3B221209DD27D00A05E83 /* GoodsPostageCell.swift in Sources */,
 				9F77B51E20A12B5B00F8E91B /* Comment.swift in Sources */,

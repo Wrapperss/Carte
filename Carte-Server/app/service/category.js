@@ -7,6 +7,11 @@ class CategoryService extends Service {
       const categorys = await this.app.mysql.select('Category');
       return categorys;
   }
+
+  async find(id) {
+    const category = await this.app.mysql.get('Category', { id });
+    return category;
+  }
 }
 
 module.exports = CategoryService;

@@ -59,4 +59,6 @@ module.exports = app => {
 
   //支付订单
   app.put('/api/pay/order/:userId/:orderId', app.controller.order.payForTheOrder);
+
+  app.get('/api/home', app.controller.category.home);
 };

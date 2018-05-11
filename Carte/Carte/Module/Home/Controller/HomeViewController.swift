@@ -16,39 +16,13 @@ class HomeViewController: BaseListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupUI()
+        fetch()
     }
     
-    private func setup() {
+    private func setupUI() {
         adapter.dataSource = self
-        
-        collectionView.backgroundColor = UIColor.white
-        
-        source = [
-            HeadlineSectionItem(HeadlineRequired(title: "今日推荐",
-                                                 description: "全方位的生活指南，每天都有新乐趣",
-                                                 type: HeadlineRequired.HeadlineType.instructions,
-                                                 imageCount: 6)),
-            CarouseSectionItem(CarouseCellRequired(data: [CarouseCompositionRequired(imageUrl: "https://pic4.zhimg.com/v2-78592608c30de9557bd454da2ab7cabb.jpg",
-                                                                                     redTitle: "今日福利",
-                                                                                     mediumTitle: "喜迎春节，超值闪购低至3折！",
-                                                                                     grayTitle: "更多福利请进入活动页，一起HIGH起来吧！"),
-                                                          CarouseCompositionRequired(imageUrl: "https://pic4.zhimg.com/v2-78592608c30de9557bd454da2ab7cabb.jpg",
-                                                                                      redTitle: "今日福利",
-                                                                                      mediumTitle: "喜迎春节，超值闪购低至3折！",
-                                                                                      grayTitle: "更多福利请进入活动页，一起HIGH起来吧！"),
-                                                          CarouseCompositionRequired(imageUrl: "https://pic4.zhimg.com/v2-78592608c30de9557bd454da2ab7cabb.jpg",
-                                                                                      redTitle: "今日福利",
-                                                                                      mediumTitle: "喜迎春节，超值闪购低至3折！",
-                                                                                      grayTitle: "更多福利请进入活动页，一起HIGH起来吧！")]))]
-        adapter.reloadData(completion: nil)
-        
-        collectionView.addPullToRefresh {
-        }
-        
-        collectionView.addLoadMore {
-            
-        }
+        collectionView.backgroundColor = .backgroundColor
     }
     
     override func addConstraints() {
@@ -59,22 +33,47 @@ class HomeViewController: BaseListViewController {
     }
 }
 
+extension HomeViewController {
+    fileprivate func fetch() {
+        HUD.wait()
+        HomeAPI
+            .fetchHome()
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] homeModel -> Void in
+                guard let category = homeModel.category else {
+                    return
+                }
+                self?.source = [DataFactory.sectionItem.prepareHomeCategoarySectionItem(category)]
+                self?.adapter.reloadData(completion: nil)
+            }
+            .catch { (error) in
+                error.showHUD()
+            }
+    }
+}
+
 extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return source
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if object is HeadlineSectionItem {
-            return HeadlineSectionController()
-        }
-        if object is CarouseSectionItem {
-            return CarouseSectionController()
+        if object is HomeCategoarySectionItem {
+            return HomeCategoarySectionController(delegate: self)
         }
         return ListSectionController()
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
+        return emptyLabel(message: "暂无数据")
     }
+}
+
+extension HomeViewController: HomeCategoarySectionControllerDelegate {
+    func didSelectCategorySectionItem(_ category: Category) {
+        let cate = CommoditySubItemCellRequired.init(categoryId: category.id ?? 0, cover: category.cover ?? "", title: category.name ?? "")
+        navigationController?.pushViewController(GoodsListController(category: cate), animated: true)
+    }   
 }
