@@ -23,6 +23,7 @@
 		9F0D4841209F04A100329EAA /* AddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4840209F04A100329EAA /* AddressAPI.swift */; };
 		9F0D4843209F05BD00329EAA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4842209F05BD00329EAA /* Address.swift */; };
 		9F1ECA0B20A52A0E00F6EE75 /* OrderContentFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */; };
+		9F1ECA0D20A537D100F6EE75 /* AddCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0C20A537D100F6EE75 /* AddCommentController.swift */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -262,6 +263,7 @@
 		9F0D4840209F04A100329EAA /* AddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAPI.swift; sourceTree = "<group>"; };
 		9F0D4842209F05BD00329EAA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContentFormItem.swift; sourceTree = "<group>"; };
+		9F1ECA0C20A537D100F6EE75 /* AddCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentController.swift; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -764,6 +766,7 @@
 				9F4B737B20A291980030E8E2 /* PayForGoodsController.swift */,
 				9F58E5C220A2D0A700499DAB /* OrderListRootController.swift */,
 				9F58E5C420A2D30E00499DAB /* OrderListController.swift */,
+				9F1ECA0C20A537D100F6EE75 /* AddCommentController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1834,6 +1837,7 @@
 				9F6F86D5202C36F400C6AF17 /* CarouseSectionController.swift in Sources */,
 				9F737E70202954B1006D08A4 /* Associate.swift in Sources */,
 				9FAF74A8208C1F3700009449 /* ViewElement.swift in Sources */,
+				9F1ECA0D20A537D100F6EE75 /* AddCommentController.swift in Sources */,
 				9F7CFBC5202B0222004F3ABE /* CarouseCompositionSectionController.swift in Sources */,
 				9F671E252022E9D2004C4D51 /* DataFactory.swift in Sources */,
 				9FAF74B0208C1F3700009449 /* TwoArrange.swift in Sources */,
