@@ -8,6 +8,7 @@
 
 import Foundation
 import IGListKit
+import Then
 
 extension DataFactory.viewRequired {
     
@@ -58,14 +59,34 @@ extension DataFactory.sectionItem {
         guard let stutus = orderContent.order?.status else {
             return source
         }
+
+        
         
         switch stutus {
         case "待付款":
-            break
+            let actionItem = OrderContentFormItem(elements: [TextElement(text: NSAttributedString.attribute("去支付", UIColor.init(r: 252, g: 29, b: 44), fontSize: 17))],
+                                                  arrange: OneArrange(location: (horizontal: OneArrange.AxisLocation.center,
+                                                                                 vertical: OneArrange.AxisLocation.center)), height: 50, separator: SeparatorLine(position: .top,
+                                                                                                                                                                  margin: (0,0),
+                                                                                                                                                                  height: 0.5))
+            actionItem.orderContent = orderContent
+            source.append(actionItem)
         case "待收货":
-            break
+            let actionItem = OrderContentFormItem(elements: [TextElement(text: NSAttributedString.attribute("确认收货", UIColor.init(r: 252, g: 29, b: 44), fontSize: 17))],
+                                                  arrange: OneArrange(location: (horizontal: OneArrange.AxisLocation.center,
+                                                                                 vertical: OneArrange.AxisLocation.center)), height: 50, separator: SeparatorLine(position: .top,
+                                                                                                                                                                  margin: (0,0),
+                                                                                                                                                                  height: 0.5))
+            actionItem.orderContent = orderContent
+            source.append(actionItem)
         case "待反馈":
-            break
+            let actionItem = OrderContentFormItem(elements: [TextElement(text: NSAttributedString.attribute("去反馈", UIColor.init(r: 252, g: 29, b: 44), fontSize: 17))],
+                                                  arrange: OneArrange(location: (horizontal: OneArrange.AxisLocation.center,
+                                                                                 vertical: OneArrange.AxisLocation.center)), height: 50, separator: SeparatorLine(position: .top,
+                                                                                                                                                                  margin: (0,0),
+                                                                                                                                                                  height: 0.5))
+            actionItem.orderContent = orderContent
+            source.append(actionItem)
         default:
             break
         }

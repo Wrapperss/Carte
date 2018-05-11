@@ -7,6 +7,7 @@ PODS:
     - ChameleonFramework/Default
   - DGActivityIndicatorView (2.1.1)
   - Gemini (1.2.0)
+  - GRStarsView (0.1.0)
   - HBDNavigationBar (1.1.0)
   - Hero (1.0.1)
   - IGListKit (3.1.1):
@@ -101,6 +102,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - DGActivityIndicatorView
   - Gemini
+  - GRStarsView
   - HBDNavigationBar
   - Hero
   - IGListKit (~> 3.0)
@@ -170,6 +172,7 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   Gemini: acff98012273066f1b83c887731260abfaf18ec5
+  GRStarsView: a9cf0b315dd4ab5f547a2004943eef86e935a792
   HBDNavigationBar: a2a0c5b8236c14d7329d485f0d8cb4f2dfc7304f
   Hero: cee286821578e170d8c0c9c9cda7897357401112
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
@@ -209,6 +212,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 53cfdf0ba19f3eb334471350d0b9ac5bb124dfb4
+PODFILE CHECKSUM: a11839f542e2cce6109e9d05887d410782f70428
 
 COCOAPODS: 1.4.0

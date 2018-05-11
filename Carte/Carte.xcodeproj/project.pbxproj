@@ -22,6 +22,7 @@
 		9F0AA60B209ED24C003B0436 /* AddAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AA60A209ED24C003B0436 /* AddAddressController.swift */; };
 		9F0D4841209F04A100329EAA /* AddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4840209F04A100329EAA /* AddressAPI.swift */; };
 		9F0D4843209F05BD00329EAA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D4842209F05BD00329EAA /* Address.swift */; };
+		9F1ECA0B20A52A0E00F6EE75 /* OrderContentFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */; };
 		9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */; };
 		9F2F67DD209A9CBC0014F7A9 /* BlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */; };
 		9F3778182078939700DFCC38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3778172078939700DFCC38 /* SettingController.swift */; };
@@ -260,6 +261,7 @@
 		9F0AA60A209ED24C003B0436 /* AddAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressController.swift; sourceTree = "<group>"; };
 		9F0D4840209F04A100329EAA /* AddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAPI.swift; sourceTree = "<group>"; };
 		9F0D4842209F05BD00329EAA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderContentFormItem.swift; sourceTree = "<group>"; };
 		9F2F67DA2099EE590014F7A9 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		9F2F67DC209A9CBC0014F7A9 /* BlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanceController.swift; sourceTree = "<group>"; };
 		9F3778172078939700DFCC38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
@@ -780,6 +782,7 @@
 				9F58E5C720A2E71E00499DAB /* OrderCell.swift */,
 				9F58E5C820A2E71E00499DAB /* OrderCell.xib */,
 				9F58E5CB20A2EB1500499DAB /* OrderSectonController.swift */,
+				9F1ECA0A20A52A0E00F6EE75 /* OrderContentFormItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1550,6 +1553,7 @@
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/GRStarsView/GRStarsView.framework",
 				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 				"${BUILT_PRODUCTS_DIR}/HBDNavigationBar/HBDNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
@@ -1596,6 +1600,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRStarsView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HBDNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
@@ -1782,6 +1787,7 @@
 				9FAF7501208C2F6700009449 /* UIViewController+Loading+RxSwift.swift in Sources */,
 				9FAF74A3208C1F3700009449 /* TextFieldElement.swift in Sources */,
 				9F7BD213209EDDDE000B32CF /* LZCityPickerController.m in Sources */,
+				9F1ECA0B20A52A0E00F6EE75 /* OrderContentFormItem.swift in Sources */,
 				9FAF756F208C68A500009449 /* NSObject+Extension.swift in Sources */,
 				9FC3B20B209D7B0600A05E83 /* GoodsInfoCell.swift in Sources */,
 				9F2F67DB2099EE590014F7A9 /* DictionaryConvertible.swift in Sources */,

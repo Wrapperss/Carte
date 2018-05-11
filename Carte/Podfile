@@ -50,6 +50,7 @@ pod 'SwiftRichString', '0.9.10'
 pod 'IQKeyboardManagerSwift'
 # 手势
 pod 'SJFullscreenPopGesture' #全局返回手势
+pod 'GRStarsView'
 
 # 网络框架
 pod 'Alamofire', '~> 4.5'

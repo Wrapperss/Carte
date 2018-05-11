@@ -65,6 +65,10 @@ class OrderListController: BaseListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetch()
     }
     
@@ -105,7 +109,7 @@ extension OrderListController: ListAdapterDataSource {
         if object is OrderSectionItem {
             return OrderSectionController(delegate: self)
         } else if object is FormItem {
-            return FormSectionController(inset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
+            return FormSectionController(delegate: self, inset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
         }
         return ListSectionController()
     }
@@ -114,6 +118,52 @@ extension OrderListController: ListAdapterDataSource {
         return emptyLabel(message: "暂无数据")
     }
 }
+
+extension OrderListController: FormSectionControllerDelegate {
+    func didSelectForm(item: FormItemProtocol, in sectionController: FormSectionController) {
+        if item is OrderContentFormItem {
+            let orderContentFormItem = item as! OrderContentFormItem
+            guard let order = orderContentFormItem.orderContent?.order else {
+                return
+            }
+            switch order.status ?? "" {
+            case "待付款":
+                let controller = PayForGoodsController.initFromStoryboard(name: .classify)
+                controller.order = order
+                controller.singleBack = true
+                navigationController?.pushViewController(controller, animated: true)
+            case "待收货":
+                let alert = UIAlertController.init(title: "确认已经收到商品？", message: "确认后将不能进行修改！", preferredStyle: .alert)
+                let confirmAction = UIAlertAction.init(title: "确定", style: .default) { (_) in
+                    HUD.wait()
+                    var newOrder = order
+                    newOrder.status = "待反馈"
+                    OrderAPI
+                        .updateOrder(orderId: order.id ?? 0, order: newOrder)
+                        .always {
+                            HUD.clear()
+                        }
+                        .then(execute: { [weak self] (_) -> Void in
+                            HUD.showSuccess("确认收货成功")
+                            Delay(time: 1.0, task: {
+                                self?.fetch()
+                            })
+                        })
+                        .catch(execute: { (error) in
+                            error.showHUD()
+                        })
+                }
+                let cancelAction = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+                alert.addAction(confirmAction)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true, completion: nil)
+            default:
+                break
+            }
+        }
+    }
+}
+
 
 extension OrderListController: OrderSectionControllerDelegate {
     func didSelectGoodsItem(_ id: Int) {

@@ -21,7 +21,7 @@ struct OrderContent: Unboxable, DictionaryConvertible {
         let payDate: String?
         let payment: Double?
         let shipDate: String?
-        let status: String?
+        var status: String?
         let userId: Int?
         
         init(id: Int? = nil, userId: Int, amount: Double, fare: Double, payment: Double, createDate: String, status: String = "待付款", dealDate: String? = nil, payDate: String? = nil, shipDate: String? = nil) {

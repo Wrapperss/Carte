@@ -14,6 +14,8 @@ class PayForGoodsController: UIViewController {
     
     var order: OrderContent.Order?
     
+    var singleBack = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -45,7 +47,11 @@ class PayForGoodsController: UIViewController {
                 .then(execute: { (_) -> Void in
                     HUD.showSuccess("支付成功")
                     Delay(time: 1.0, task: { [weak self] in
-                        self?.navigationController?.popToRootViewController(animated: true)
+                        if self?.singleBack ?? false {
+                            self?.navigationController?.popViewController(animated: true)
+                        } else {
+                            self?.navigationController?.popToRootViewController(animated: true)
+                        }
                     })
                 })
                 .catch(execute: { (errpr) in
@@ -55,6 +61,10 @@ class PayForGoodsController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        if singleBack {
+            navigationController?.popViewController(animated: true)
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
