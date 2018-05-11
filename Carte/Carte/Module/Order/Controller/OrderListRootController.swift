@@ -13,7 +13,7 @@ import WMPageController
 
 class OrderListRootController: WMPageController {
     
-    let titleSource = ["全部", "待付款", "待发货", "待收货", "待反馈", "退款"]
+    let titleSource = ["全部", "待付款", "待发货", "待收货", "待反馈", "完成"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +70,7 @@ extension OrderListRootController {
         } else if index == 4 {
             return OrderListController.Status.needToFreeBack
         } else {
-            return OrderListController.Status.needToRefund
+            return OrderListController.Status.done
         }
     }
 }

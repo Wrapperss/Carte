@@ -25,8 +25,22 @@ class AddCommentController: BaseViewController {
     
     let comfirmButton = UIButton()
     
+    let goodsId: Int
+    var user: User?
+    
+    init(goodsId: Int) {
+        self.goodsId = goodsId
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetch()
         setupUI()
     }
     
@@ -130,7 +144,48 @@ class AddCommentController: BaseViewController {
     
     @objc
     private func comfirmButtonTap() {
+        guard checkStringAvailable(textView.text), let user = user else {
+            HUD.showError("请输入评论内容！")
+            return
+        }
+        let comment = Comment(content: textView.text!,
+                              goodsId: goodsId,
+                              descriptionMark: Int((desStarView?.score)!),
+                              logisticsMark: Int((logisStarView?.score)!),
+                              recommendMark: Int((recomendStarView?.score)!),
+                              userId: user.id ?? 0,
+                              userName: user.name ?? "")
         
+        HUD.wait()
+        CommentAPI
+            .postNewCommnet(comment)
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (_) -> Void in
+                NotificationCenter.postNotification(name: .allReadyComment, userInfo: ["goodsId": self?.goodsId ?? 0])
+                self?.navigationController?.popViewController(animated: true)
+            }
+            .catch { (eroor) in
+                eroor.showHUD()
+        }
     }
 }
 
+
+extension AddCommentController {
+    fileprivate func fetch() {
+        HUD.wait()
+        MineAPI
+            .fetchUserInfo(Default.Account.integer(forKey: .userId))
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (user) -> Void in
+                self?.user = user
+            }
+            .catch { (error) in
+                error.showHUD()
+            }
+    }
+}

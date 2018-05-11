@@ -44,6 +44,12 @@
                         <color key="textColor" red="0.41945509040880502" green="0.41945509040880502" blue="0.41945509040880502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ve-i7-rrT">
+                        <rect key="frame" x="322" y="42" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.9882352941176471" green="0.20784313725490197" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,17 +64,20 @@
                 <constraint firstItem="6LH-Lo-h6P" firstAttribute="trailing" secondItem="h1O-7f-Nc7" secondAttribute="trailing" id="ep3-6F-t0s"/>
                 <constraint firstItem="Qi5-UB-1q9" firstAttribute="leading" secondItem="6LH-Lo-h6P" secondAttribute="leading" id="gbZ-hf-96U"/>
                 <constraint firstAttribute="trailing" secondItem="h1O-7f-Nc7" secondAttribute="trailing" constant="10" id="gsb-dV-iuW"/>
+                <constraint firstItem="0Ve-i7-rrT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="jwo-CL-dfs"/>
                 <constraint firstAttribute="bottom" secondItem="pHR-3a-WmN" secondAttribute="bottom" constant="10" id="mfy-4p-8n0"/>
+                <constraint firstAttribute="trailing" secondItem="0Ve-i7-rrT" secondAttribute="trailing" constant="10" id="qXJ-rI-I7k"/>
                 <constraint firstItem="h1O-7f-Nc7" firstAttribute="leading" secondItem="pHR-3a-WmN" secondAttribute="trailing" constant="10" id="rHO-NT-Zy3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="commentLabel" destination="0Ve-i7-rrT" id="Ht4-0e-lCE"/>
                 <outlet property="coverImage" destination="pHR-3a-WmN" id="Db2-05-yMj"/>
                 <outlet property="decriptionLabel" destination="6LH-Lo-h6P" id="nUg-Fk-iFm"/>
                 <outlet property="priceLabel" destination="Qi5-UB-1q9" id="auS-bh-IaZ"/>
                 <outlet property="titleLabel" destination="h1O-7f-Nc7" id="CjW-Xo-2l6"/>
             </connections>
-            <point key="canvasLocation" x="-726" y="-68"/>
+            <point key="canvasLocation" x="-1056" y="-44"/>
         </collectionViewCell>
     </objects>
 </document>

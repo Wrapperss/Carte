@@ -22,6 +22,7 @@ class OrderCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var decriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
     
     var orderGoods: OrderContent.OrderGoods? {
         didSet {
@@ -39,12 +40,19 @@ class OrderCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         coverImage.cornerRadius = 4
+        commentLabel.isHidden = true
+        NotificationCenter.registerNotification(self, #selector(recive(notification:)), name: .allReadyComment)
+    }
+    
+    deinit {
+        NotificationCenter.remove(self)
     }
 
     private func config() {
         guard let model = model else {
             return
         }
+        commentLabel.isHidden = true
         coverImage.kf.setImage(with: model.coverImage.imageUrl)
         titleLabel.text = model.title
         decriptionLabel.text = model.description
@@ -66,5 +74,15 @@ class OrderCell: UICollectionViewCell {
             }
             .catch { (_) in
             }
+    }
+    
+    @objc
+    private func recive(notification: Notification) {
+        let id = notification.userInfo!["goodsId"] as! Int
+        if id == orderGoods?.goodsId ?? 0 {
+            commentLabel.isHidden = false
+        } else {
+            commentLabel.isHidden = true
+        }
     }
 }

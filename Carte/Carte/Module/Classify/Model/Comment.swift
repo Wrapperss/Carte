@@ -20,6 +20,17 @@ struct Comment: Unboxable, DictionaryConvertible {
     let userId: Int?
     let userName: String?
     
+    init(id: Int? = nil, content: String, goodsId: Int, descriptionMark: Int, logisticsMark: Int, recommendMark: Int, userId: Int, userName: String) {
+        self.id = id
+        self.content = content
+        self.goodsId = goodsId
+        self.descriptionMark = descriptionMark
+        self.logisticsMark = logisticsMark
+        self.recommendMark = recommendMark
+        self.userId = userId
+        self.userName = userName
+    }
+    
     
     init(unboxer: Unboxer) throws {
         content = unboxer.unbox(key: "content")

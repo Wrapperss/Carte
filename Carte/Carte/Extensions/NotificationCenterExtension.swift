@@ -32,4 +32,5 @@ enum CreamsNotificationName: String {
     case selectCartItem = "selectCartItem"
     case selectAddress = "selectAddress"
     case getGoodsDetail = "getGoodsDetail"
+    case allReadyComment = "allReadyComment"
 }

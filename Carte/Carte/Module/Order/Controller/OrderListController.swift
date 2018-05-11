@@ -21,7 +21,7 @@ class OrderListController: BaseListViewController {
         case needToDeliver
         case needToReceipt
         case needToFreeBack
-        case needToRefund
+        case done
         
         func confit(text: String) -> Bool {
             switch self {
@@ -35,8 +35,8 @@ class OrderListController: BaseListViewController {
                 return text == "待收货"
             case .needToFreeBack:
                 return text == "待反馈"
-            case .needToRefund:
-                return text == "退款"
+            case .done:
+                return text == "完成"
             }
         }
     }
@@ -158,7 +158,7 @@ extension OrderListController: FormSectionControllerDelegate {
                 alert.addAction(cancelAction)
                 self.present(alert, animated: true, completion: nil)
             case "待反馈":
-                navigationController?.pushViewController(AddCommentController(), animated: true)
+                navigationController?.pushViewController(CommentGoodsListController(orderContent: orderContentFormItem.orderContent!), animated: true)
             default:
                 break
             }
