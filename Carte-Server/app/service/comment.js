@@ -18,8 +18,8 @@ class CommentService extends Service {
     return comments;
   }
 
-  async find(goodsId) {
-      const comments = await this.app.mysql.select('Comment', { goodsId });
+  async findByGoods(goodsId) {
+      const comments = await this.app.mysql.query(`select * from Comment where goodsId = ? `, [ goodsId ] );
       return comments
   }
 }

@@ -13,7 +13,7 @@ class CategoryController extends Controller {
 
   async home() {
     const { ctx, service } = this;
-    const category = await service.category.find(14);
+    const category = await service.category.find(17);
     ctx.body = {
       category
     };

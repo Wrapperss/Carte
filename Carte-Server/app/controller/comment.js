@@ -13,7 +13,7 @@ class CommentController extends Controller {
   async getGoodsComment() {
       const { ctx, service } = this;
       const { goodsId } = ctx.params;
-      const comments = await service.comment.find(goodsId);
+      const comments = await service.comment.findByGoods(goodsId);
       ctx.body = comments;
       ctx.status = 200
   }
