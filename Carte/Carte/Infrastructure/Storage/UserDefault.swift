@@ -22,7 +22,7 @@ struct Default {
     struct Flag: BoolDefaultSettable {
         
         enum BoolKey: String {
-            case responseLoggerSwitch
+            case firstLaunch
         }
     }
 }

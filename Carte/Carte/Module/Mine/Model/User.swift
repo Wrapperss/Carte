@@ -13,21 +13,29 @@ import Unbox
 
 struct User: Unboxable, DictionaryConvertible {
     
-    var balance : Double?
-    var email : String?
-    let id : Int?
-    let mobile : String?
-    var name : String?
-    let password : String?
+    var balance: Double?
+    let createdAt: String?
+    var email: String?
+    let id: Int?
+    let mobile: String?
+    var name: String?
+    let password: String?
+    let portrait: String?
+    let token: String?
+    let updatedAt: String?
     
     
     init(unboxer: Unboxer) throws {
         balance = unboxer.unbox(key: "balance")
+        createdAt = unboxer.unbox(key: "created_at")
         email = unboxer.unbox(key: "email")
         id = unboxer.unbox(key: "id")
         mobile = unboxer.unbox(key: "mobile")
         name = unboxer.unbox(key: "name")
         password = unboxer.unbox(key: "password")
+        portrait = unboxer.unbox(key: "portrait")
+        token = unboxer.unbox(key: "token")
+        updatedAt = unboxer.unbox(key: "updated_at")
     }
     
 }

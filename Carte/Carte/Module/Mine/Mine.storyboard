@@ -247,6 +247,9 @@
                                                     <state key="normal" title="待付款">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button1Click:" destination="Vik-L5-qJ9" eventType="touchUpInside" id="buD-XS-CsP"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOY-F7-ESx">
                                                     <rect key="frame" x="84.5" y="11" width="68.5" height="38"/>
@@ -254,6 +257,9 @@
                                                     <state key="normal" title="待发货">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button2Click:" destination="Vik-L5-qJ9" eventType="touchUpInside" id="gNU-Ut-lW3"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FL8-tv-cTz">
                                                     <rect key="frame" x="153" y="11" width="69" height="38"/>
@@ -261,6 +267,9 @@
                                                     <state key="normal" title="待收货">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button3Click:" destination="Vik-L5-qJ9" eventType="touchUpInside" id="Ovs-MT-fUU"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6i-ld-fpT">
                                                     <rect key="frame" x="222" y="11" width="68.5" height="38"/>
@@ -268,6 +277,9 @@
                                                     <state key="normal" title="待反馈">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button4Click:" destination="Vik-L5-qJ9" eventType="touchUpInside" id="WSc-96-II9"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ye-Ws-MbA">
                                                     <rect key="frame" x="290.5" y="11" width="68.5" height="38"/>
@@ -275,6 +287,9 @@
                                                     <state key="normal" title="完成">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button5Click:" destination="Vik-L5-qJ9" eventType="touchUpInside" id="3a9-xX-s3U"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ye-Gu-FlD">
                                                     <rect key="frame" x="15" y="59" width="345" height="1"/>
@@ -454,21 +469,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="URq-Bv-MBl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="URq-Bv-MBl">
                                         <rect key="frame" x="0.0" y="520" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="URq-Bv-MBl" id="Cx7-hs-8ec">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系我们" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-AJ-MYs">
-                                                    <rect key="frame" x="20" y="18" width="82" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出登陆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-AJ-MYs">
+                                                    <rect key="frame" x="146.5" y="18" width="82" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.98431372549019602" green="0.14117647058823529" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rn3-0a-6LE">
-                                                    <rect key="frame" x="15" y="59" width="341" height="1"/>
+                                                    <rect key="frame" x="15" y="59" width="375" height="1"/>
                                                     <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="D7r-U2-tA5"/>
@@ -479,9 +494,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Rn3-0a-6LE" secondAttribute="bottom" id="30U-ub-DSk"/>
                                                 <constraint firstItem="Rn3-0a-6LE" firstAttribute="leading" secondItem="Cx7-hs-8ec" secondAttribute="leading" constant="15" id="6Pd-VY-de6"/>
-                                                <constraint firstItem="4S2-AJ-MYs" firstAttribute="centerY" secondItem="Cx7-hs-8ec" secondAttribute="centerY" id="BqD-6e-NPL"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rn3-0a-6LE" secondAttribute="trailing" constant="-15" id="Kef-XY-YtY"/>
-                                                <constraint firstItem="4S2-AJ-MYs" firstAttribute="leading" secondItem="Cx7-hs-8ec" secondAttribute="leading" constant="20" id="mCf-il-ZAF"/>
+                                                <constraint firstItem="4S2-AJ-MYs" firstAttribute="centerX" secondItem="Cx7-hs-8ec" secondAttribute="centerX" id="Ovx-1f-fdE"/>
+                                                <constraint firstItem="4S2-AJ-MYs" firstAttribute="centerY" secondItem="Cx7-hs-8ec" secondAttribute="centerY" id="PfV-Ni-Iku"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

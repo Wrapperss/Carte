@@ -28,7 +28,33 @@ class LoginViewController: UIViewController {
         confirmButton.cornerRadius = 4
     }
     @IBAction func confirmButtonClick(_ sender: Any) {
-        
+        guard checkStringAvailable(accoutTextField.text), checkStringAvailable(passwordTextField.text) else {
+            HUD.showInfo("请输入完整信息")
+            return
+        }
+        HUD.wait()
+        AutherticationAPI
+            .userLogin(mobile: accoutTextField.text ?? "", password: passwordTextField.text ?? "")
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] user -> Void in
+                Default.Account.set(user.id ?? 0, forKey: .userId)
+                let animation = {
+                    let oldState = UIView.areAnimationsEnabled
+                    UIView.setAnimationsEnabled(false)
+                    UIApplication.shared.keyWindow?.rootViewController = MainTabBarController()
+                    UIView.setAnimationsEnabled(oldState)
+                }
+                UIView.transition(with: self!.view,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: animation,
+                                  completion: nil)
+            }
+            .catch { (error) in
+                HUD.showError("登陆失败")
+            }
     }
     
     @IBAction func dismissButtonClick(_ sender: Any) {

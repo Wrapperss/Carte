@@ -9,6 +9,8 @@ module.exports = app => {
   //用户信息的操作
   app.resources('users', '/api/users', 'user');
 
+  app.get('/api/login/:mobile/:password', app.controller.user.login);
+
   app.resources('address', '/api/address', app.controller.address);
 
   //购物车
@@ -27,7 +29,6 @@ module.exports = app => {
   app.get('/api/goods/category/volume/:categoryId', app.controller.goods.showClassifyGoodsOrderByVolume);
   //按价格排
   app.get('/api/goods/category/price/:categoryId', app.controller.goods.showClassifyGoodsOrderByPrice);
-
 
   //商品详情
   app.get('/api/goods/:id', app.controller.goods.showGoodDetail);
@@ -50,7 +51,6 @@ module.exports = app => {
   //评论
   app.post('/api/comment', app.controller.comment.create);
   app.get('/api/goods/comment/:goodsId', app.controller.comment.getGoodsComment);
-
 
   //新建订单
   app.resources('order', '/api/order', 'order');

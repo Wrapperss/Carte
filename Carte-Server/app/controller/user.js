@@ -16,9 +16,7 @@ class UserController extends Controller {
       password: { type: 'string', required: true },
     }));
     const user = await service.user.create(ctx.request.body);
-    ctx.body = {
-      user
-    };
+    ctx.body = user;
     ctx.status = 201
   }
 
@@ -52,6 +50,14 @@ class UserController extends Controller {
     ctx.body = {
       id
     };
+    ctx.status = 200;
+  }
+
+  async login() {
+    const { ctx, service } = this;
+    const { mobile, password } = ctx.params;
+    const result = await service.user.login(mobile, password);
+    ctx.body = result;
     ctx.status = 200;
   }
 }

@@ -183,6 +183,7 @@
 		9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7567208C68A400009449 /* Array+Extension.swift */; };
 		9FAF7580208C69EC00009449 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF757F208C69EC00009449 /* Typealias.swift */; };
 		9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF7581208C6ADC00009449 /* RegexHelper.swift */; };
+		9FBAC32A20A704E000D3694C /* AutherticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAC32920A704DF00D3694C /* AutherticationAPI.swift */; };
 		9FBEBEF5209AC48700C03102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF4209AC48700C03102 /* Category.swift */; };
 		9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */; };
 		9FBEBEF9209AE6A400C03102 /* CommoditySubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */; };
@@ -441,6 +442,7 @@
 		9FAF7567208C68A400009449 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		9FAF757F208C69EC00009449 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		9FAF7581208C6ADC00009449 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
+		9FBAC32920A704DF00D3694C /* AutherticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutherticationAPI.swift; sourceTree = "<group>"; };
 		9FBEBEF4209AC48700C03102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommoditySubItemCell.swift; sourceTree = "<group>"; };
 		9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommoditySubItemCell.xib; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 				9F77B51B20A12AFA00F8E91B /* CommentAPI.swift */,
 				9F77B53120A1D4F300F8E91B /* OrderAPI.swift */,
 				9F1ECA1820A5B87A00F6EE75 /* HomeAPI.swift */,
+				9FBAC32920A704DF00D3694C /* AutherticationAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1823,6 +1826,7 @@
 				9FAF757D208C68A500009449 /* Array+Extension.swift in Sources */,
 				9F77B53420A1D5A500F8E91B /* OrderContent.swift in Sources */,
 				9FAF7582208C6ADD00009449 /* RegexHelper.swift in Sources */,
+				9FBAC32A20A704E000D3694C /* AutherticationAPI.swift in Sources */,
 				9FC3B210209D865600A05E83 /* MoreInfoController.swift in Sources */,
 				9FAF7577208C68A500009449 /* UICollectionView+Extension.swift in Sources */,
 				9F37781C2078A18B00DFCC38 /* CartController.swift in Sources */,

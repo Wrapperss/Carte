@@ -21,15 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let tab = MainTabBarController()
-
-        window?.rootViewController = tab
+        let userId = Default.Account.integer(forKey: .userId)
+        
+        if userId == 0 {
+            let login = LoginViewController.initFromStoryboard(name: .main)
+            window?.rootViewController = login
+        } else {
+            let tab = MainTabBarController()
+            window?.rootViewController = tab
+        }
         
         window?.makeKeyAndVisible()
-        
         IQKeyboardManager.sharedManager().enable = true
         
-        Default.Account.set(1, forKey: .userId)
         return true
     }
 

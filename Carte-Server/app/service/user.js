@@ -30,6 +30,11 @@ class UserService extends Service {
     }, target));
     return result.affectedRows === 1;
   }
+
+  async login(mobile, password) {
+    const result = await this.app.mysql.get('User', {mobile, password});
+    return result;
+  }
 }
 
 module.exports = UserService;

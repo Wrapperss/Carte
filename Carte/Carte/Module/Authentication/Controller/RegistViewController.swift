@@ -21,7 +21,16 @@ class RegistViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
+    @IBAction func comfirmAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backItem(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func regist() {
         navigationController?.popViewController(animated: true)
     }
+    
 }

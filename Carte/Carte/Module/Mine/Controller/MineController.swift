@@ -32,6 +32,37 @@ class MineController: UITableViewController {
         fetch()
     }
     
+    @IBAction func button1Click(_ sender: Any) {
+        let controller = OrderListRootController()
+        controller.selectIndex = 1
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func button2Click(_ sender: Any) {
+        let controller = OrderListRootController()
+        controller.selectIndex = 2
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func button3Click(_ sender: Any) {
+        let controller = OrderListRootController()
+        controller.selectIndex = 3
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func button4Click(_ sender: Any) {
+        let controller = OrderListRootController()
+        controller.selectIndex = 4
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    @IBAction func button5Click(_ sender: Any) {
+        let controller = OrderListRootController()
+        controller.selectIndex = 5
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 extension MineController {
@@ -53,7 +84,25 @@ extension MineController {
         } else if indexPath.row == 7 { //用户协议
             
         } else if indexPath.row == 8 { //联系我们
-            
+            let alert = UIAlertController.init(title: "确定退出登陆？", message: nil, preferredStyle: .alert)
+            let action = UIAlertAction.init(title: "确定", style: .destructive) { [weak self] _ in
+                Default.Account.set(0, forKey: .userId)
+                let animation = {
+                    let oldState = UIView.areAnimationsEnabled
+                    UIView.setAnimationsEnabled(false)
+                    UIApplication.shared.keyWindow?.rootViewController = LoginViewController.initFromStoryboard()
+                    UIView.setAnimationsEnabled(oldState)
+                }
+                UIView.transition(with: self!.view,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: animation,
+                                  completion: nil)
+            }
+            let cancel = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+            alert.addAction(action)
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
         }
     }
 }
@@ -73,4 +122,8 @@ extension MineController {
                 HUD.showInfo("获取用户信息失败")
         }
     }
+}
+
+extension MineController {
+    
 }

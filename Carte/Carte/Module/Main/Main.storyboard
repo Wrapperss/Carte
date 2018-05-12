@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCf-Ab-ir0">
-                                <rect key="frame" x="99.5" y="120" width="176" height="84"/>
+                                <rect key="frame" x="100" y="120" width="176" height="84"/>
                                 <attributedString key="attributedText">
                                     <fragment content="C">
                                         <attributes>
@@ -58,10 +58,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9x-lD-hdT">
-                                        <rect key="frame" x="69" y="19.5" width="286" height="17"/>
+                                        <rect key="frame" x="69" y="20" width="286" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUB-kc-YNJ">
                                         <rect key="frame" x="20" y="52" width="335" height="1"/>
@@ -78,7 +78,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-6i-gIi" customClass="PasswordTextField" customModule="PasswordTextField">
-                                        <rect key="frame" x="69" y="67.5" width="286" height="17"/>
+                                        <rect key="frame" x="69" y="68" width="286" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -134,30 +134,22 @@
                                     <constraint firstItem="HGe-US-Lgx" firstAttribute="trailing" secondItem="HDN-CK-FLq" secondAttribute="trailing" id="zzD-qK-Xb5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J19-WP-HKn">
-                                <rect key="frame" x="20" y="30" width="25" height="25"/>
-                                <state key="normal" image="cross"/>
-                                <connections>
-                                    <action selector="dismissButtonClick:" destination="4bz-mS-fWb" eventType="touchUpInside" id="Ipi-3A-xnC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7W-sD-XFQ">
-                                <rect key="frame" x="324" y="27.5" width="31" height="30"/>
+                                <rect key="frame" x="324" y="28" width="31" height="30"/>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" red="0.99607843137254903" green="0.19607843137254902" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="registerButtonClick:" destination="4bz-mS-fWb" eventType="touchUpInside" id="f0f-nn-AeE"/>
+                                    <segue destination="Kna-GZ-W23" kind="show" id="GVX-LX-OnX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="p7W-sD-XFQ" firstAttribute="centerY" secondItem="J19-WP-HKn" secondAttribute="centerY" id="1P9-x8-Tl8"/>
+                            <constraint firstItem="p7W-sD-XFQ" firstAttribute="top" secondItem="fPL-t5-hyj" secondAttribute="top" constant="8" id="1pc-kt-Np9"/>
                             <constraint firstItem="fPL-t5-hyj" firstAttribute="trailing" secondItem="p7W-sD-XFQ" secondAttribute="trailing" constant="20" id="Riq-nY-LDg"/>
                             <constraint firstItem="wmD-8C-CU2" firstAttribute="top" secondItem="uCf-Ab-ir0" secondAttribute="bottom" constant="60" id="Y3n-9p-wz5"/>
-                            <constraint firstItem="J19-WP-HKn" firstAttribute="top" secondItem="fPL-t5-hyj" secondAttribute="top" constant="10" id="bUB-8k-MHB"/>
-                            <constraint firstItem="J19-WP-HKn" firstAttribute="leading" secondItem="fPL-t5-hyj" secondAttribute="leading" constant="20" id="j9K-JP-N7V"/>
                             <constraint firstItem="uCf-Ab-ir0" firstAttribute="top" secondItem="fPL-t5-hyj" secondAttribute="top" constant="100" id="vSI-mr-rdD"/>
                             <constraint firstItem="uCf-Ab-ir0" firstAttribute="centerX" secondItem="BGc-jU-aiy" secondAttribute="centerX" id="wQI-aH-5gM"/>
                             <constraint firstItem="wmD-8C-CU2" firstAttribute="leading" secondItem="fPL-t5-hyj" secondAttribute="leading" id="yYe-qW-W2g"/>
@@ -175,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-770.39999999999998" y="168.6656671664168"/>
         </scene>
-        <!--Regist View Controller-->
+        <!--注册-->
         <scene sceneID="4eb-3w-y73">
             <objects>
                 <tableViewController storyboardIdentifier="RegistViewController" id="FXV-jE-RXj" customClass="RegistViewController" customModule="Carte" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,15 +316,46 @@
                             <outlet property="delegate" destination="FXV-jE-RXj" id="Vey-Ub-T4C"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="注册" largeTitleDisplayMode="never" id="tke-wn-lJT">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="UZC-e9-txB">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="backItem:" destination="FXV-jE-RXj" id="hmS-Gg-9Wf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="KrF-hn-uys">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="comfirmAction:" destination="FXV-jE-RXj" id="pg6-3d-tpA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TC-74-0jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="169"/>
+            <point key="canvasLocation" x="1087.2" y="168.6656671664168"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pG3-GK-yiJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kna-GZ-W23" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6kF-Qy-LiU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FXV-jE-RXj" kind="relationship" relationship="rootViewController" id="yuQ-ch-C6F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2DR-Sd-6yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="168.6656671664168"/>
         </scene>
     </scenes>
     <resources>
         <image name="IQButtonBarArrowDown.png" width="21" height="12"/>
         <image name="IQButtonBarArrowUp.png" width="21" height="12"/>
-        <image name="cross" width="25" height="25"/>
     </resources>
 </document>
