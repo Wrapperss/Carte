@@ -30,8 +30,6 @@ class HomeCategoaryCell: UICollectionViewCell {
         super.awakeFromNib()
         imageView.cornerRadius = 5
         imageView.shadowRadius = 5
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowOffset = CGSize(width: 10, height: 10)
     }
     
 

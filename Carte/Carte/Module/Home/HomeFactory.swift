@@ -10,7 +10,7 @@ import Foundation
 
 extension DataFactory.viewRequired {
     fileprivate static func matchHomeCategoaryCellRequired(_ category: Category) -> HomeCategoaryCellRequired {
-        return HomeCategoaryCellRequired(title: category.name ?? "", decription: "dadadadadad", image: category.cover ?? "")
+        return HomeCategoaryCellRequired(title: category.name ?? "", decription: "超值活动中！！！", image: category.cover ?? "")
     }
 }
 
