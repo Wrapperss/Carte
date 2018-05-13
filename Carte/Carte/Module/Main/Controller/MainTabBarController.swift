@@ -47,7 +47,7 @@ class MainTabBarController: UITabBarController {
         
         self.viewControllers = [MainNavigationController(rootViewController: 精选),
                                 MainNavigationController(rootViewController: 分类),
-                                MainNavigationController(rootViewController: 杂志),
+//                                MainNavigationController(rootViewController: 杂志),
                                 MainNavigationController(rootViewController: 购物车),
                                 MainNavigationController(rootViewController: 我)]
     }
