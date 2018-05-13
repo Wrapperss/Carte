@@ -13,10 +13,12 @@ struct HomeModel: Unboxable {
     
     let category: Category?
     let goods: [Goods]?
+    let singleGoods: Goods?
     
     init(unboxer: Unboxer) throws {
         category = unboxer.unbox(key: "category")
         goods = unboxer.unbox(key: "goods")
+        singleGoods = unboxer.unbox(key: "singleGoods")
     }
     
 }

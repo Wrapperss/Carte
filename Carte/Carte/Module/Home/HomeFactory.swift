@@ -17,6 +17,15 @@ extension DataFactory.viewRequired {
         return HomeGoodsCellRequired(image: goods.picture ?? "", title: goods.name ?? "", price: "¥\(goods.price ?? 0.0)", orginPrice: "¥\(goods.originalPrice ?? 0.0)", goodsId: goods.id ?? 0)
     }
     
+    fileprivate static func matchHomeSingelCellRequired(_ singleGoods: Goods) -> HomeSingelCellRequired {
+        return HomeSingelCellRequired(title: "24小时热卖",
+                                      des: "", iamge: singleGoods.picture ?? "",
+                                      goodsName: singleGoods.name ?? "",
+                                      goodsDes: singleGoods.descriptionField ?? "",
+                                      goodPrice: "¥\(singleGoods.price ?? 0.0)",
+                                     goodsOrginPrice: "¥\(singleGoods.originalPrice ?? 0.0)")
+    }
+    
 }
 
 extension DataFactory.sectionItem {
@@ -29,5 +38,9 @@ extension DataFactory.sectionItem {
             DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.first!),
             DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.last!)],
                                          categoryId: categoryId)
+    }
+    
+    public static func prepareHomeSingelSectionItem(_ singleGoods: Goods) -> HomeSingelSectionItem {
+        return HomeSingelSectionItem.init(data: DataFactory.viewRequired.matchHomeSingelCellRequired(singleGoods), goodsId: singleGoods.id ?? 0)
     }
 }

@@ -42,7 +42,7 @@ extension HomeViewController {
                 HUD.clear()
             }
             .then { [weak self] homeModel -> Void in
-                guard let category = homeModel.category, let goodses = homeModel.goods else {
+                guard let category = homeModel.category, let goodses = homeModel.goods, let singleGoods = homeModel.singleGoods else {
                     return
                 }
                 self?.source = []
@@ -50,6 +50,8 @@ extension HomeViewController {
                 if goodses.count >= 2 {
                     self?.source.append(DataFactory.sectionItem.prepareHomeGoodsSectionItem(goodses, categoryId: 14))
                 }
+                self?.source.append(DataFactory.sectionItem.prepareHomeSingelSectionItem(singleGoods))
+                
                 self?.adapter.reloadData(completion: nil)
             }
             .catch { (error) in
@@ -71,9 +73,8 @@ extension HomeViewController: ListAdapterDataSource {
             return HomeGoodsSectionController(delegate: self)
         }
         if object is HomeSingelSectionItem {
-            return HomeSingelSectionController.init(delegate: self)
+            return HomeSingelSectionController(delegate: self)
         }
-        
         return ListSectionController()
     }
     

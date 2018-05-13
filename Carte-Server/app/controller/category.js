@@ -23,9 +23,11 @@ class CategoryController extends Controller {
     const { ctx, service } = this;
     const category = await service.category.find(17);
     const goods = await service.goods.showPartGoods(14);
+    const singleGoods = await service.goods.find(7);
     ctx.body = {
       category,
-      goods
+      goods,
+      singleGoods
     };
     ctx.status = 200;
   }
