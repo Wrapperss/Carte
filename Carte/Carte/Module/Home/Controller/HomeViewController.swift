@@ -84,12 +84,19 @@ extension HomeViewController: HomeCategoarySectionControllerDelegate {
 extension HomeViewController: HomeGoodsSectionControllerDelegate {
     func didSelectHomeGoodsItem(_ categoryId: Int) {
         
+        HUD.wait()
         ClassifyAPI
-            
-        
-        
-        
-        
-        let controller = GoodsListController.init(category: CommoditySubItemCellRequired)
+            .fetchCategoryDetail(categoryId)
+            .always {
+                HUD.clear()
+            }
+            .then { [weak self] (category) -> Void in
+                let required = CommoditySubItemCellRequired(categoryId: category.id ?? 0, cover: category.cover ?? "", title: category.name ?? "")
+                let controller = GoodsListController(category: required)
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
+            .catch { (error) in
+                error.showHUD()
+            }
     }
 }
