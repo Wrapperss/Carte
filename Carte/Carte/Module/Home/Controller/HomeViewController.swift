@@ -63,6 +63,9 @@ extension HomeViewController: ListAdapterDataSource {
         if object is HomeCategoarySectionItem {
             return HomeCategoarySectionController(delegate: self)
         }
+        if object is HomeGoodsSectionItem {
+            return HomeGoodsSectionController(delegate: self)
+        }
         return ListSectionController()
     }
     
@@ -76,4 +79,17 @@ extension HomeViewController: HomeCategoarySectionControllerDelegate {
         let cate = CommoditySubItemCellRequired.init(categoryId: category.id ?? 0, cover: category.cover ?? "", title: category.name ?? "")
         navigationController?.pushViewController(GoodsListController(category: cate), animated: true)
     }   
+}
+
+extension HomeViewController: HomeGoodsSectionControllerDelegate {
+    func didSelectHomeGoodsItem(_ categoryId: Int) {
+        
+        ClassifyAPI
+            
+        
+        
+        
+        
+        let controller = GoodsListController.init(category: CommoditySubItemCellRequired)
+    }
 }

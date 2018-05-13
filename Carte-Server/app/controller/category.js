@@ -10,6 +10,14 @@ class CategoryController extends Controller {
       ctx.status = 200;
   }
 
+  async categoryDetail() {
+      const { ctx, service } = this;
+      const { id } = ctx.params;
+      const category = await service.category.find(id);
+      ctx.body = category;
+      ctx.status = 200;
+  }
+
 
   async home() {
     const { ctx, service } = this;
