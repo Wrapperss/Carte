@@ -19,11 +19,12 @@ extension DataFactory.viewRequired {
     
     fileprivate static func matchHomeSingelCellRequired(_ singleGoods: Goods) -> HomeSingelCellRequired {
         return HomeSingelCellRequired(title: "24小时热卖",
-                                      des: "", iamge: singleGoods.picture ?? "",
+                                      des: "一天中最畅销的商品",
+                                      iamge: singleGoods.picture ?? "",
                                       goodsName: singleGoods.name ?? "",
                                       goodsDes: singleGoods.descriptionField ?? "",
                                       goodPrice: "¥\(singleGoods.price ?? 0.0)",
-                                     goodsOrginPrice: "¥\(singleGoods.originalPrice ?? 0.0)")
+                                      goodsOrginPrice: "¥\(singleGoods.originalPrice ?? 0.0)")
     }
     
 }
