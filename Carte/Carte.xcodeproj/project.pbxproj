@@ -181,6 +181,9 @@
 		9FBAC32D20A7D04100D3694C /* HomeGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAC32B20A7D04100D3694C /* HomeGoodsCell.swift */; };
 		9FBAC32E20A7D04100D3694C /* HomeGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBAC32C20A7D04100D3694C /* HomeGoodsCell.xib */; };
 		9FBAC33020A7D84500D3694C /* HomeGoodsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAC32F20A7D84500D3694C /* HomeGoodsSectionController.swift */; };
+		9FBAC33320A7FD6A00D3694C /* HomeSingelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAC33120A7FD6A00D3694C /* HomeSingelCell.swift */; };
+		9FBAC33420A7FD6A00D3694C /* HomeSingelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBAC33220A7FD6A00D3694C /* HomeSingelCell.xib */; };
+		9FBAC33620A801C200D3694C /* HomeSingelSectoinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAC33520A801C200D3694C /* HomeSingelSectoinController.swift */; };
 		9FBEBEF5209AC48700C03102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF4209AC48700C03102 /* Category.swift */; };
 		9FBEBEF8209AE6A400C03102 /* CommoditySubItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */; };
 		9FBEBEF9209AE6A400C03102 /* CommoditySubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */; };
@@ -437,6 +440,9 @@
 		9FBAC32B20A7D04100D3694C /* HomeGoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoodsCell.swift; sourceTree = "<group>"; };
 		9FBAC32C20A7D04100D3694C /* HomeGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeGoodsCell.xib; sourceTree = "<group>"; };
 		9FBAC32F20A7D84500D3694C /* HomeGoodsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoodsSectionController.swift; sourceTree = "<group>"; };
+		9FBAC33120A7FD6A00D3694C /* HomeSingelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSingelCell.swift; sourceTree = "<group>"; };
+		9FBAC33220A7FD6A00D3694C /* HomeSingelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSingelCell.xib; sourceTree = "<group>"; };
+		9FBAC33520A801C200D3694C /* HomeSingelSectoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSingelSectoinController.swift; sourceTree = "<group>"; };
 		9FBEBEF4209AC48700C03102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9FBEBEF6209AE6A400C03102 /* CommoditySubItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommoditySubItemCell.swift; sourceTree = "<group>"; };
 		9FBEBEF7209AE6A400C03102 /* CommoditySubItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommoditySubItemCell.xib; sourceTree = "<group>"; };
@@ -897,6 +903,9 @@
 				9FBAC32B20A7D04100D3694C /* HomeGoodsCell.swift */,
 				9FBAC32C20A7D04100D3694C /* HomeGoodsCell.xib */,
 				9FBAC32F20A7D84500D3694C /* HomeGoodsSectionController.swift */,
+				9FBAC33120A7FD6A00D3694C /* HomeSingelCell.swift */,
+				9FBAC33220A7FD6A00D3694C /* HomeSingelCell.xib */,
+				9FBAC33520A801C200D3694C /* HomeSingelSectoinController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1448,6 +1457,7 @@
 				9FC3B20C209D7B0600A05E83 /* GoodsInfoCell.xib in Resources */,
 				9F3778602078CBC000DFCC38 /* simple_loader.json in Resources */,
 				9FAF74F1208C2F1C00009449 /* Service_README.md in Resources */,
+				9FBAC33420A7FD6A00D3694C /* HomeSingelCell.xib in Resources */,
 				9F1ECA1320A5A64400F6EE75 /* HomeCategoaryCell.xib in Resources */,
 				9F0AA609209ECAD6003B0436 /* AddressCell.xib in Resources */,
 				9F08EEAB207BA6A50021F4DD /* CommodityContentCell.xib in Resources */,
@@ -1739,10 +1749,12 @@
 				9F1ECA1D20A5BC5100F6EE75 /* HomeFactory.swift in Sources */,
 				9FC3B1F6209C36A100A05E83 /* Goods.swift in Sources */,
 				9F77B52020A12F8200F8E91B /* CommentListController.swift in Sources */,
+				9FBAC33620A801C200D3694C /* HomeSingelSectoinController.swift in Sources */,
 				9F58E5CC20A2EB1500499DAB /* OrderSectonController.swift in Sources */,
 				9FAF74B7208C1F3700009449 /* CustomFormItemDemo.swift in Sources */,
 				9F77B52420A141BC00F8E91B /* ConfirmOrderController.swift in Sources */,
 				9F3778632078CBC000DFCC38 /* SVPullToRefreshLoadingView.m in Sources */,
+				9FBAC33320A7FD6A00D3694C /* HomeSingelCell.swift in Sources */,
 				9F4459802099C94100892F9B /* ModifyUserInfoController.swift in Sources */,
 				9F737E742029554E006D08A4 /* SeparatorLine.swift in Sources */,
 				9FBAC33020A7D84500D3694C /* HomeGoodsSectionController.swift in Sources */,

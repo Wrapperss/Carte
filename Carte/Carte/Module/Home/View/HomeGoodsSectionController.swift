@@ -11,6 +11,7 @@ import IGListKit
 
 protocol HomeGoodsSectionControllerDelegate: class {
     func didSelectHomeGoodsItem(_ categoryId: Int)
+    func didSelectGoodsItem(_ goodsId: Int)
 }
 
 class HomeGoodsSectionItem: NormalDiffableItem {
@@ -51,6 +52,7 @@ class HomeGoodsSectionController: ListSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell: HomeGoodsCell = collectionContext?.dequeueReusableCell(withNibName: HomeGoodsCell.reuseIdentifier, bundle: nil, for: self, at: index) as! HomeGoodsCell
         cell.model = object?.requireds
+        cell.delegate = self
         return cell
     }
     
@@ -63,5 +65,11 @@ class HomeGoodsSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.object = object as? HomeGoodsSectionItem
+    }
+}
+
+extension HomeGoodsSectionController: HomeGoodsCellDelegate {
+    func didSelectGoodsItem(_ goodsId: Int) {
+        delegate.didSelectGoodsItem(goodsId)
     }
 }

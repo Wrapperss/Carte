@@ -12,10 +12,11 @@ import Unbox
 struct HomeModel: Unboxable {
     
     let category: Category?
-    
+    let goods: [Goods]?
     
     init(unboxer: Unboxer) throws {
         category = unboxer.unbox(key: "category")
+        goods = unboxer.unbox(key: "goods")
     }
     
 }

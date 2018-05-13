@@ -12,10 +12,22 @@ extension DataFactory.viewRequired {
     fileprivate static func matchHomeCategoaryCellRequired(_ category: Category) -> HomeCategoaryCellRequired {
         return HomeCategoaryCellRequired(title: category.name ?? "", decription: "超值活动中！！！", image: category.cover ?? "")
     }
+    
+    fileprivate static func matchHomeGoodsCellRequired(_ goods: Goods) -> HomeGoodsCellRequired {
+        return HomeGoodsCellRequired(image: goods.picture ?? "", title: goods.name ?? "", price: "¥\(goods.price ?? 0.0)", orginPrice: "¥\(goods.originalPrice ?? 0.0)", goodsId: goods.id ?? 0)
+    }
+    
 }
 
 extension DataFactory.sectionItem {
     public static func prepareHomeCategoarySectionItem(_ categpry: Category) -> HomeCategoarySectionItem {
         return HomeCategoarySectionItem(data: DataFactory.viewRequired.matchHomeCategoaryCellRequired(categpry), category: categpry)
+    }
+    
+    public static func prepareHomeGoodsSectionItem(_ goodses: [Goods], categoryId: Int) -> HomeGoodsSectionItem {
+        return HomeGoodsSectionItem.init(requireds: [
+            DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.first!),
+            DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.last!)],
+                                         categoryId: categoryId)
     }
 }

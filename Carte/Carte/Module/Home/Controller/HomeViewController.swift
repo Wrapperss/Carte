@@ -42,10 +42,14 @@ extension HomeViewController {
                 HUD.clear()
             }
             .then { [weak self] homeModel -> Void in
-                guard let category = homeModel.category else {
+                guard let category = homeModel.category, let goodses = homeModel.goods else {
                     return
                 }
-                self?.source = [DataFactory.sectionItem.prepareHomeCategoarySectionItem(category)]
+                self?.source = []
+                self?.source.append(DataFactory.sectionItem.prepareHomeCategoarySectionItem(category))
+                if goodses.count >= 2 {
+                    self?.source.append(DataFactory.sectionItem.prepareHomeGoodsSectionItem(goodses, categoryId: 14))
+                }
                 self?.adapter.reloadData(completion: nil)
             }
             .catch { (error) in
@@ -66,6 +70,10 @@ extension HomeViewController: ListAdapterDataSource {
         if object is HomeGoodsSectionItem {
             return HomeGoodsSectionController(delegate: self)
         }
+        if object is HomeSingelSectionItem {
+            return HomeSingelSectionController.init(delegate: self)
+        }
+        
         return ListSectionController()
     }
     
@@ -82,6 +90,10 @@ extension HomeViewController: HomeCategoarySectionControllerDelegate {
 }
 
 extension HomeViewController: HomeGoodsSectionControllerDelegate {
+    func didSelectGoodsItem(_ goodsId: Int) {
+        navigationController?.pushViewController(GoodsDetailController.init(goodsId: goodsId), animated: true)
+    }
+    
     func didSelectHomeGoodsItem(_ categoryId: Int) {
         
         HUD.wait()
@@ -98,5 +110,11 @@ extension HomeViewController: HomeGoodsSectionControllerDelegate {
             .catch { (error) in
                 error.showHUD()
             }
+    }
+}
+
+extension HomeViewController: HomeSingelSectionControllerDelegate {
+    func didSelectSingleItem(_ goodsId: Int) {
+        navigationController?.pushViewController(GoodsDetailController.init(goodsId: goodsId), animated: true)
     }
 }

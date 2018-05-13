@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 protocol HomeGoodsCellDelegate: class {
-    func didSelectItem(_ goodsId: Int)
+    func didSelectGoodsItem(_ goodsId: Int)
 }
 
 struct HomeGoodsCellRequired {
@@ -55,14 +55,14 @@ class HomeGoodsCell: UICollectionViewCell {
         guard let goodsId = model?.first?.goodsId else {
             return
         }
-        delegate?.didSelectItem(goodsId)
+        delegate?.didSelectGoodsItem(goodsId)
     }
     
     @IBAction func secondButtonAction(_ sender: Any) {
         guard let goodsId = model?.last?.goodsId else {
             return
         }
-        delegate?.didSelectItem(goodsId)
+        delegate?.didSelectGoodsItem(goodsId)
     }
     
     private func config() {
@@ -76,7 +76,7 @@ class HomeGoodsCell: UICollectionViewCell {
         orginPriceLabel.text = model.first?.orginPrice
         
         imageView2.kf.setImage(with: model.last?.image.imageUrl)
-        titleLabel1.text = model.last?.title
+        titleLabel2.text = model.last?.title
         priceLabel2.text = model.last?.price
         orginPriceLabel.text = model.last?.orginPrice
     }
