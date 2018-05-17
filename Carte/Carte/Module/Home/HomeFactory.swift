@@ -35,7 +35,7 @@ extension DataFactory.sectionItem {
     }
     
     public static func prepareHomeGoodsSectionItem(_ goodses: [Goods], categoryId: Int) -> HomeGoodsSectionItem {
-        return HomeGoodsSectionItem.init(requireds: [
+        return HomeGoodsSectionItem(requireds: [
             DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.first!),
             DataFactory.viewRequired.matchHomeGoodsCellRequired(goodses.last!)],
                                          categoryId: categoryId)

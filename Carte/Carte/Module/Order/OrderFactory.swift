@@ -24,6 +24,8 @@ extension DataFactory.sectionItem {
         let addressItem = OrderAdressSectionItem(data: DataFactory.viewRequired.matchOrderAdressCellRequired(address))
         source.append(addressItem)
         
+        
+        //利用FormItem来组装Cell
         let cartItems = cartMsg.flatMap {
             [
                 FormItem(elements: [TextElement(text: NSAttributedString.attribute("包裹", .black, fontSize: 15))],

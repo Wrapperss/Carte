@@ -27,11 +27,14 @@ class LoginViewController: UIViewController {
     private func setupUI() {
         confirmButton.cornerRadius = 4
     }
+    //登陆按钮流程
     @IBAction func confirmButtonClick(_ sender: Any) {
+        //验证输入完整性
         guard checkStringAvailable(accoutTextField.text), checkStringAvailable(passwordTextField.text) else {
             HUD.showInfo("请输入完整信息")
             return
         }
+        //发送网络请求
         HUD.wait()
         AutherticationAPI
             .userLogin(mobile: accoutTextField.text ?? "", password: passwordTextField.text ?? "")
@@ -61,6 +64,7 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //进入注册页面
     @IBAction func registerButtonClick(_ sender: Any) {
         navigationController?.pushViewController(RegistViewController.initFromStoryboard(), animated: true)
     }

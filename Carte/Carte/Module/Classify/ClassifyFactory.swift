@@ -72,6 +72,7 @@ extension DataFactory.sectionItem {
         return CommodityContentItem(required)
     }
     
+    //组装成GoodsSectionItem
     public static func prepareGoodsItem(_ requireds: [GoodsCellRequired]) -> [GoodsSectionItem] {
         return requireds.map { GoodsSectionItem(data: $0) }
     }
