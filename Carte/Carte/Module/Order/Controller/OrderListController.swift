@@ -81,7 +81,7 @@ class OrderListController: BaseListViewController {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.leading.top.trailing.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(UIScreen.screenHeight - 150)
         }
     }
 }

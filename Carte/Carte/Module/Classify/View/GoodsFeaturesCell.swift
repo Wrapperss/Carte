@@ -33,7 +33,7 @@ class GoodsFeaturesCell: UICollectionViewCell {
         
         let height = CalculateService.Text.calculateSize(NSAttributedString.attribute(content, .black, fontSize: 17),
                                                          CalculateService.Text.Base.width(UIScreen.screenWidth - 30)).height
-        return CGSize(width: UIScreen.screenWidth, height: height + 360 + 20)
+        return CGSize(width: UIScreen.screenWidth, height: height + 410)
     }
     
     override func awakeFromNib() {

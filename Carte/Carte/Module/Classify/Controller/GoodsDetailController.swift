@@ -90,6 +90,7 @@ class GoodsDetailController: BaseListViewController {
                 .postCollectGoods(userId: Default.Account.integer(forKey: .userId), goodsId: goodsId)
                 .always { [weak self] in
                     HUD.clear()
+                    HUD.showSuccess("收藏成功")
                     self?.navigationItem.rightBarButtonItem?.title = "已收藏"
                     self?.navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 252, g: 29, b: 44)
                 }
@@ -98,6 +99,7 @@ class GoodsDetailController: BaseListViewController {
                 .deleteCollectGoods(userId: Default.Account.integer(forKey: .userId), goodsId: goodsId)
                 .always { [weak self] in
                     HUD.clear()
+                    HUD.showInfo("取消收藏")
                     self?.navigationItem.rightBarButtonItem?.title = "收藏"
                     self?.navigationItem.rightBarButtonItem?.tintColor = .black
             }
