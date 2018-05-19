@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import PromiseKit
 
 class RegistViewController: UITableViewController {
+    
+    @IBOutlet weak var usernameTextfield: UITextField!
+    @IBOutlet weak var phoneTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,21 +21,37 @@ class RegistViewController: UITableViewController {
         
         navigationController?.navigationBar.isHidden = false
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "注册", style: .done, target: self, action: #selector(regist))
-        
         tableView.tableFooterView = UIView()
     }
     
     @IBAction func comfirmAction(_ sender: Any) {
+        guard checkStringAvailable(usernameTextfield.text), checkStringAvailable(phoneTextfield.text), checkStringAvailable(passwordTextfield.text) else {
+            HUD.showError("请填写完整信息")
+            return
+        }
+        
+        if PhoneNumberRule().validate(phoneTextfield.text!) {
+            let user = User(balance: 0.0, createdAt: nil, email: nil, mobile: phoneTextfield.text!, password: passwordTextfield.text!, portrait: nil, token: nil, updatedAt: nil, name: usernameTextfield.text!)
+            HUD.wait()
+            AutherticationAPI
+                .userRegist(user)
+                .always {
+                    HUD.clear()
+                }
+                .then { [weak self] (userId) -> Void in
+                    Default.Account.set(userId, forKey: .userId)
+                    self?.navigationController?.popViewController(animated: true)
+                }
+                .catch { (error) in
+                    error.showHUD()
+            }
+        } else {
+            HUD.showError("请输入正确格式的手机号")
+        }
         
     }
     
     @IBAction func backItem(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    @objc func regist() {
-        navigationController?.popViewController(animated: true)
-    }
-    
 }

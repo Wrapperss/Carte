@@ -25,6 +25,19 @@ struct User: Unboxable, DictionaryConvertible {
     let updatedAt: String?
     
     
+    init(id: Int? = nil, balance: Double?, createdAt: String?, email: String?, mobile: String?, password: String?, portrait: String?, token: String?, updatedAt: String?, name: String?) {
+        self.id = id
+        self.balance = balance
+        self.createdAt = createdAt
+        self.email = email
+        self.mobile = mobile
+        self.password = password
+        self.portrait = portrait
+        self.token = token
+        self.updatedAt = updatedAt
+        self.name = name
+    }
+    
     init(unboxer: Unboxer) throws {
         balance = unboxer.unbox(key: "balance")
         createdAt = unboxer.unbox(key: "created_at")

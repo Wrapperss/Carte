@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -221,66 +220,22 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yud-Qt-1wJ">
-                                                    <rect key="frame" x="85" y="20.5" width="166" height="17"/>
+                                                    <rect key="frame" x="85" y="20.5" width="104" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-SW-tTr">
-                                                    <rect key="frame" x="261" y="11.5" width="88" height="35"/>
-                                                    <color key="backgroundColor" red="1" green="0.49019607843137253" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="7vn-ay-zJa"/>
-                                                        <constraint firstAttribute="height" constant="35" id="dEC-bZ-zxu"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                    <state key="normal" title="发送验证码">
-                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="r2r-SW-tTr" firstAttribute="leading" secondItem="Yud-Qt-1wJ" secondAttribute="trailing" constant="10" id="MOO-Pc-E14"/>
-                                                <constraint firstItem="r2r-SW-tTr" firstAttribute="centerY" secondItem="Yud-Qt-1wJ" secondAttribute="centerY" id="YUV-jd-oGD"/>
                                                 <constraint firstItem="Yud-Qt-1wJ" firstAttribute="leading" secondItem="3aJ-yp-zz1" secondAttribute="trailing" constant="30" id="d5N-QG-f3q"/>
                                                 <constraint firstItem="3aJ-yp-zz1" firstAttribute="centerY" secondItem="BhZ-SV-vto" secondAttribute="centerY" id="drW-NS-wPG"/>
                                                 <constraint firstItem="3aJ-yp-zz1" firstAttribute="leading" secondItem="BhZ-SV-vto" secondAttribute="leading" constant="20" id="k9e-TO-zaP"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="r2r-SW-tTr" secondAttribute="trailing" constant="10" id="owr-9I-TVN"/>
                                                 <constraint firstItem="Yud-Qt-1wJ" firstAttribute="centerY" secondItem="3aJ-yp-zz1" secondAttribute="centerY" id="uJx-gG-KFS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="fxw-0u-ndH">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fxw-0u-ndH" id="zRF-qp-C1Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-13-GCC">
-                                                    <rect key="frame" x="20" y="19" width="52" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-PY-AD8">
-                                                    <rect key="frame" x="87" y="20.5" width="268" height="17"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rGG-PY-AD8" firstAttribute="centerY" secondItem="RiU-13-GCC" secondAttribute="centerY" id="Zi5-hs-bPA"/>
-                                                <constraint firstItem="RiU-13-GCC" firstAttribute="centerY" secondItem="zRF-qp-C1Y" secondAttribute="centerY" id="kEC-RS-zha"/>
-                                                <constraint firstItem="RiU-13-GCC" firstAttribute="leading" secondItem="zRF-qp-C1Y" secondAttribute="leading" constant="20" id="kuQ-8x-tO3"/>
-                                                <constraint firstItem="rGG-PY-AD8" firstAttribute="leading" secondItem="RiU-13-GCC" secondAttribute="trailing" constant="15" id="o3N-Xu-G4c"/>
-                                                <constraint firstAttribute="trailing" secondItem="rGG-PY-AD8" secondAttribute="trailing" constant="20" id="xsx-g1-nki"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="E4q-ig-mk9">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E4q-ig-mk9" id="mDH-3T-3HP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -330,6 +285,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="DFi-DW-loD" id="eJ4-fo-PmF"/>
+                        <outlet property="phoneTextfield" destination="Yud-Qt-1wJ" id="vvs-lO-MB0"/>
+                        <outlet property="usernameTextfield" destination="Xbt-hv-QBA" id="ekR-av-vCF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TC-74-0jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
