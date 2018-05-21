@@ -45,8 +45,8 @@ class ClassifyController: BaseListViewController {
     }
     
     private func setupNavigation() {
-        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(toSearch))
-        navigationItem.rightBarButtonItem = item
+//        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(toSearch))
+//        navigationItem.rightBarButtonItem = item
     }
     
     @objc
